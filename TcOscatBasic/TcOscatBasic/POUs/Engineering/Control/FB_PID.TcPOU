@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+  <POU Name="FB_PID" Id="{9148ddd9-4f6e-4c4f-98a6-9a43459fe84e}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_PID
+(* This PID controller implements an integrator anti-windup method (back-calculation). 
+For this the difference between the unlimited control output the limited control output is added to the integrator input. 
+This is done continously, allowing to track and correct the gain of the integrator.
+*)
+VAR_INPUT
+	xSet:	REAL; 	// Set value
+	xAct:	REAL;	// measured Value	
+
+	Kp  :  	REAL;  	// proportional factor
+	Ti  :  	REAL;  	// integral time
+	Td  :	REAL; 	// derivative time
+	Ni  :	REAL := 0.9; 	// time for anti-wiundup compensation
+		
+	LimLow	:	REAL; 	// lower limit of output
+	LimHigh	: 	REAL; 	// upper limit of output
+	StartY	:	REAL;	// Y to use as offset
+	
+	bReverseActing 	:	BOOL;	// True for reverse acting
+	
+	RST		:	BOOL; 	// True, if integrator should be resetted
+	inStart	:	REAL := 0; 	// Value to which Integrator is resetted if RST is True
+END_VAR
+VAR_OUTPUT
+	Y : REAL;		// controller output
+	LIM : BOOL;		// True, if output reaches LimLow or LimHigh
+END_VAR
+VAR
+	e			 :  REAL;		// control difference
+	yOffset		 :  REAL	:= 0;		// constant offset used on Y	
+	fbDerivative :  FT_DERIV; 	// function block for derivation
+	fbIntegrate  :	FB_Integrate;	// function block for integration
+	
+	e_gaintrack	:  REAL;		// control difference for integrator
+	Y_gaintrack	:  REAL := 0;	// tracking gain of y for Anti-windup
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF StartY <> yOffset THEN
+	yOffset := StartY;
+	fbIntegrate(RST:=TRUE, inStart:=inStart);
+END_IF
+IF RST THEN
+	fbIntegrate(RST:=TRUE, inStart:=inStart);
+END_IF
+
+//determine direct or reverse acting
+IF bReverseActing THEN
+	e := xAct - xSet;
+ELSE
+	e := xSet - xAct;	
+END_IF;
+
+// correct control for integrator error based on previous integrations
+e_gaintrack := e + Y_gaintrack/(Kp*Ni);
+
+IF Ti>0 THEN
+	//derivative and integral calculation
+	fbDerivative(in:=e,run:=TRUE);
+	fbIntegrate(run:= TRUE, in := e_gaintrack, RST:=RST);
+	Y := Kp * (e + 1/Ti * fbIntegrate.out + Td * fbDerivative.out) + yOffset;
+ELSE
+	//derivative  calculation
+	fbDerivative(in:=e,run:=TRUE);
+	Y := Kp * (e + Td * fbDerivative.out) + yOffset;
+END_IF
+
+// check limits and track gain for adjusting next control error of integrator
+IF Y < LimLow THEN
+	Y_gaintrack := LimLow - Y;	
+	Y := LimLow;
+ELSIF Y > LimHigh THEN
+	Y_gaintrack := LimHigh - Y;
+	Y := LimHigh;
+ELSE		
+	Y_gaintrack := 0;
+END_IF
+
+
+(*
+fse 17.10.2023:
+- adjust anti-windup according to AixLib implementation
+
+pos 23.10.2020:
+- no anti-wind up on reset
+- possibility to provide an offset value for Y
+
+aku 24.09.2019: 
+- first implementation
+*)]]></ST>
+    </Implementation>
+    <LineIds Name="FB_PID">
+      <LineId Id="305" Count="1" />
+      <LineId Id="309" Count="0" />
+      <LineId Id="304" Count="0" />
+      <LineId Id="301" Count="0" />
+      <LineId Id="299" Count="0" />
+      <LineId Id="208" Count="0" />
+      <LineId Id="206" Count="0" />
+      <LineId Id="38" Count="0" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="34" Count="0" />
+      <LineId Id="36" Count="1" />
+      <LineId Id="35" Count="0" />
+      <LineId Id="269" Count="0" />
+      <LineId Id="268" Count="0" />
+      <LineId Id="267" Count="0" />
+      <LineId Id="77" Count="0" />
+      <LineId Id="76" Count="0" />
+      <LineId Id="106" Count="0" />
+      <LineId Id="109" Count="0" />
+      <LineId Id="104" Count="0" />
+      <LineId Id="80" Count="1" />
+      <LineId Id="107" Count="1" />
+      <LineId Id="83" Count="0" />
+      <LineId Id="79" Count="0" />
+      <LineId Id="294" Count="0" />
+      <LineId Id="272" Count="0" />
+      <LineId Id="275" Count="1" />
+      <LineId Id="291" Count="0" />
+      <LineId Id="277" Count="1" />
+      <LineId Id="286" Count="0" />
+      <LineId Id="279" Count="1" />
+      <LineId Id="273" Count="0" />
+      <LineId Id="87" Count="0" />
+      <LineId Id="99" Count="0" />
+      <LineId Id="169" Count="0" />
+      <LineId Id="295" Count="0" />
+      <LineId Id="297" Count="0" />
+      <LineId Id="296" Count="0" />
+      <LineId Id="201" Count="2" />
+      <LineId Id="200" Count="0" />
+      <LineId Id="172" Count="0" />
+      <LineId Id="298" Count="0" />
+      <LineId Id="173" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
