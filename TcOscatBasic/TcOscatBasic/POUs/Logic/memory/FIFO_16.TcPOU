@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FIFO_16" Id="{60dedcd3-b158-448b-b775-960e00fde748}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK FIFO_16
+    <Declaration><![CDATA[FUNCTION_BLOCK FIFO_16
 VAR_INPUT
 	Din : DWORD;
 	E : BOOL := TRUE;
@@ -31,11 +30,9 @@ programmer 	hugo
 tested by		oscat
 
 16 Dword FIFO memory
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF RST THEN
+      <ST><![CDATA[IF RST THEN
 	pw := pr;
 	FULL := FALSE;
 	EMPTY := TRUE;

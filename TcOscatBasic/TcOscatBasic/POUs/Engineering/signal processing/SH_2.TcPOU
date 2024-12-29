@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SH_2" Id="{43264e6f-ced7-4c4f-8e5c-3ade81b08303}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK SH_2
+    <Declaration><![CDATA[FUNCTION_BLOCK SH_2
 VAR_INPUT
 	in : REAL;
 	PT : TIME;
@@ -42,11 +41,9 @@ if disc = 1 the lowest value is ignored,
 if disc = 2 the lowest and highest values are ignored, 
 and so on.....
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-(* read system time *)
+      <ST><![CDATA[(* read system time *)
 tx := DWORD_TO_TIME(T_PLC_MS());
 d2 := SHR(disc,1);
 
@@ -108,8 +105,7 @@ hm	14. jun. 2008	rev 1.5
 hm	10. mar. 2009	rev 1.6
 	added type conversion for compatibility reasons
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

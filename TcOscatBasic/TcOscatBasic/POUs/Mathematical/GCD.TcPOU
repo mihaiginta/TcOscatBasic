@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="GCD" Id="{1cb2e13f-979f-471e-9d43-d20b56aea082}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION GCD : INT
+    <Declaration><![CDATA[FUNCTION GCD : INT
 VAR_INPUT
 	A : DINT;
 	B : DINT;
@@ -19,11 +18,9 @@ tested by	tobias
 
 this function calculates the gretaest common divisor of two numbers A and B
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF A = 0 THEN
+      <ST><![CDATA[IF A = 0 THEN
 	GCD := DINT_TO_INT(ABS(B));
 ELSIF B = 0 THEN
 	GCD := DINT_TO_INT(ABS(A));
@@ -52,8 +49,7 @@ END_IF;
 hm	19. jan. 2011	rev 1.0
 	original version
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="T_PLC_MS" Id="{c51d627f-0f55-4730-877f-57de7f86df1f}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION T_PLC_MS : DWORD
+    <Declaration><![CDATA[FUNCTION T_PLC_MS : DWORD
 VAR CONSTANT
 	debug : BOOL := 0;
 	N : INT := 0;
@@ -21,11 +20,9 @@ T_PLC_MS reads the internal PLC timer and return the time, it has the advantage 
 and speed up the counter to test the plc timer overrun which occurs every 50 days respectively 25 days at siemens S7
 this routine also allows to correct the behavior of s7 where the internal plc counter will not count all 32 bits.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-tx := TIME();
+      <ST><![CDATA[tx := TIME();
 T_PLC_MS := TIME_TO_DWORD(Tx);
 (* hier muss die korrektur für step7 stattfinden
 plctime muss den vollen wertebereich von time ausnutzen:
@@ -48,8 +45,7 @@ hm	12. nov 2007	rev 1.1
 
 hm	16. nov. 2008	rev 1.2
 	initialized constants with 0 for compatibility reasons
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

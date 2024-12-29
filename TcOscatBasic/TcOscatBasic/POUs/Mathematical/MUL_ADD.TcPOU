@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MUL_ADD" Id="{afd6d914-7b75-48aa-969c-5c093309963d}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION MUL_ADD : REAL
+    <Declaration><![CDATA[FUNCTION MUL_ADD : REAL
 VAR_INPUT
 	X : REAL;
 	K : REAL;
@@ -17,11 +16,9 @@ tested by		tobias
 
 this function multiplies an input X with K and adds Offset O to the result.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-MUL_ADD := X * K + O;
+      <ST><![CDATA[MUL_ADD := X * K + O;
 
 (* revision history
 hm	28. feb 2007
@@ -30,8 +27,7 @@ hm	28. feb 2007
 hm	11.nov 2007		rev 1.1
 	deleted preset values for K and O this makes no sense for a function
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

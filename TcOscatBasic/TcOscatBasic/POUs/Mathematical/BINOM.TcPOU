@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BINOM" Id="{095c177a-4271-4976-84c3-42f3b53cc52d}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION BINOM : DINT
+    <Declaration><![CDATA[FUNCTION BINOM : DINT
 VAR_INPUT
 	N : INT;
 	K : INT;
@@ -20,11 +19,9 @@ tested by		tobias
 
 this function calculates the binomialkoefficient (N over k)
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF 2 * K > n THEN
+      <ST><![CDATA[IF 2 * K > n THEN
 	k := n - k;
 END_IF;
 IF k > n THEN
@@ -62,8 +59,7 @@ hm	25. oct. 2008	rev 1.0
 	original version
 
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

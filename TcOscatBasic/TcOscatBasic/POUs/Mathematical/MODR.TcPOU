@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MODR" Id="{6a3530cd-a74c-42d5-9149-e1cd120e0415}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION MODR : REAL
+    <Declaration><![CDATA[FUNCTION MODR : REAL
 VAR_INPUT
 	IN : REAL;
 	DIVI : REAL;
@@ -20,8 +19,7 @@ modr(5.5,2.5) = 0.5
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF divi = 0.0 THEN
+      <ST><![CDATA[IF divi = 0.0 THEN
 	MODR := 0.0;
 ELSE
 	MODR := in - DINT_TO_REAL(FLOOR2(in / divi)) * divi;
@@ -46,8 +44,7 @@ hm	31. oct. 2008	rev 1.4
 hm	10. mar. 2009	rev 1.5
 	real constants updated to new systax using dot
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

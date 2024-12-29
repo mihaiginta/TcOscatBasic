@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="GOLD" Id="{29c238b0-59be-4990-ac0b-5c9a6a30112e}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION GOLD : REAL
+    <Declaration><![CDATA[FUNCTION GOLD : REAL
 VAR_INPUT
 	X : REAL;
 END_VAR
@@ -15,11 +14,9 @@ tested by		tobias
 
 this function calculates the golden function.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-GOLD := (X + SQRT(X*X + 4.0)) * 0.5;
+      <ST><![CDATA[GOLD := (X + SQRT(X*X + 4.0)) * 0.5;
 
 
 (* revision history

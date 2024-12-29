@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="V3_DPRO" Id="{71ab7d6f-d08e-4269-9bac-09b430d8f362}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION V3_DPRO : REAL
+    <Declaration><![CDATA[FUNCTION V3_DPRO : REAL
 VAR_INPUT
 	A : Vector_3;
 	B : Vector_3;
@@ -16,19 +15,16 @@ tested by		tobias
 
 this function calculates the dot product of two vectors in 3 dimensional space
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-V3_DPRO := A.X * B.X + A.Y * B.Y + A.Z * B.Z;
+      <ST><![CDATA[V3_DPRO := A.X * B.X + A.Y * B.Y + A.Z * B.Z;
 
 
 (* revision history
 hm		11 dec 2007	rev 1.0
 	original version
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

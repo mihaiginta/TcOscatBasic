@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="IS_NUM" Id="{87216ead-0dbc-42ee-8597-a21ace37a599}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION IS_NUM : BOOL
+    <Declaration><![CDATA[FUNCTION IS_NUM : BOOL
 VAR_INPUT
 	str : STRING(STRING_LENGTH);
 END_VAR
@@ -19,11 +18,9 @@ tested by		hugo
 
 IS_NUM testet ob in einem string nur Zahlen 0..9 vorkommen.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-PT := ADR(str);
+      <ST><![CDATA[PT := ADR(str);
 L := LEN(str);
 FOR pos := 1 TO L DO
 	IF NOT (ISC_NUM(pt^)) THEN
@@ -41,8 +38,7 @@ hm	29. feb 2008	rev 1.0
 
 hm	29. mar. 2008	rev 1.1
 	changed STRING to STRING(STRING_LENGTH)
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

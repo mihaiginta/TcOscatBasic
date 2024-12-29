@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TUNE2" Id="{afce120a-a269-4cd0-9b4a-73b8a47608c3}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK TUNE2
+    <Declaration><![CDATA[FUNCTION_BLOCK TUNE2
 VAR_INPUT
 	SET : BOOL;
 	SU, SD : BOOL;
@@ -44,8 +43,7 @@ up to 4 switsches can be used to tune the signal up or down.
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-(* read system time *)
+      <ST><![CDATA[(* read system time *)
 tx := T_PLC_MS();
 
 IF rst THEN
@@ -121,8 +119,7 @@ hm	16. 3. 2008	rev 1.1
 hm	11. mar. 2009	rev 1.2
 	real constants updated to new systax using dot																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

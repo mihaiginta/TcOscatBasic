@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CLK_PULSE" Id="{cfda9adc-4de2-4c75-80e3-9924c30209a8}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK CLK_PULSE
+    <Declaration><![CDATA[FUNCTION_BLOCK CLK_PULSE
 VAR_INPUT
 	PT : TIME;
 	N : INT;
@@ -30,11 +29,9 @@ the first cycle after start is a clk pulse and then depending on the programmed 
 every pulse is only valid for one cycle so that a edge trigger is not necessary
 clk_prg depending on the accuracy of the system clock.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-tx := T_PLC_MS();		(* read system *)
+      <ST><![CDATA[tx := T_PLC_MS();		(* read system *)
 Q := FALSE;				(* reset Q we generate pulses only for one cycle *)
 RUN := CNT < N;
 
@@ -60,8 +57,7 @@ hm		17. sep 2007	rev 1.1
 
 hm		16. feb. 2011	rev 1.2
 	fixed an error when timer overflows 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

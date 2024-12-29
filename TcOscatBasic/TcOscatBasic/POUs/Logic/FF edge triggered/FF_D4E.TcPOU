@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FF_D4E" Id="{44b56fa3-3b1e-4c92-ab7c-a21f4c70b9ea}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK FF_D4E
+    <Declaration><![CDATA[FUNCTION_BLOCK FF_D4E
 VAR_INPUT
 	D0 : BOOL;
 	D1 : BOOL;
@@ -32,8 +31,7 @@ quad D-type flip flop with reset and rising clock trigger
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF rst THEN
+      <ST><![CDATA[IF rst THEN
 	Q0 := FALSE;
 	Q1 := FALSE;
 	Q2 := FALSE;

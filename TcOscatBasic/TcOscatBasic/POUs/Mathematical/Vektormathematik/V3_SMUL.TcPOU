@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="V3_SMUL" Id="{2d6578dd-4363-457d-810e-3d4fe8e3125e}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION V3_SMUL : vector_3
+    <Declaration><![CDATA[FUNCTION V3_SMUL : vector_3
 VAR_INPUT
 	A : Vector_3;
 	M : REAL;
@@ -16,11 +15,9 @@ tested by		tobias
 
 this function multiplies a vectors in a 3 dimensional space with a skalar M
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-V3_SMUL.X := A.X * M;
+      <ST><![CDATA[V3_SMUL.X := A.X * M;
 V3_SMUL.Y := A.Y * M;
 V3_SMUL.Z := A.Z * M;
 
@@ -30,8 +27,7 @@ V3_SMUL.Z := A.Z * M;
 hm		11 dec 2007	rev 1.0
 	original version
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

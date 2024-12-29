@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BIT_LOAD_B" Id="{f20ddadb-a9c3-4849-a385-9faacee41306}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION BIT_LOAD_B : BYTE
+    <Declaration><![CDATA[FUNCTION BIT_LOAD_B : BYTE
 VAR_INPUT
 	IN : BYTE;
 	VAL : BOOL;
@@ -18,11 +17,9 @@ programmer 	hugo
 tested by	tobias
 
 this function loads a bit into a byte at position pos.
- *)
-]]></Declaration>
+ *)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF VAL THEN
+      <ST><![CDATA[IF VAL THEN
 	BIT_LOAD_B := in OR SHL(dat,pos);
 ELSE
 	BIT_LOAD_B := in AND (NOT SHL(dat,pos));

@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SGN" Id="{792c4c97-b445-4ae6-a3fd-c997c8bda93b}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION SGN : INT
+    <Declaration><![CDATA[FUNCTION SGN : INT
 VAR_INPUT
 	X : REAL;
 END_VAR
@@ -18,8 +17,7 @@ sgn returns 0 when X = 0 , -1 when X < 1 and +1 when X > 1
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF X > 0 THEN
+      <ST><![CDATA[IF X > 0 THEN
 	SGN := 1;
 ELSIF X < 0 THEN
 	SGN := -1;
@@ -36,8 +34,7 @@ hm	16. oct 2007	rev 1.0
 hm	11. nov 2007	rev 1.1
 	changed type of function from real to int
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

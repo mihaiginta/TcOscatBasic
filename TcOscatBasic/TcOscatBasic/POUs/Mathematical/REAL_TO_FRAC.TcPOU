@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="REAL_TO_FRAC" Id="{f7eaaace-fb42-42c1-a3af-3f65a7d4e137}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION REAL_TO_FRAC : FRACTION
+    <Declaration><![CDATA[FUNCTION REAL_TO_FRAC : FRACTION
 VAR_INPUT
 	X : REAL;					(* in einen Bruch umzuwandelnder Wert *)
 	N : INT;					(* maximale Größe des Nenners *)
@@ -30,8 +29,7 @@ this function calculates the closest fraction for a real number
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF X < 0.0 THEN
+      <ST><![CDATA[IF X < 0.0 THEN
 	sign := TRUE;								(* Vorzeichen merken *)
 	X := ABS(X);								(* Absolutwert berechnen *)
 END_IF;
@@ -80,8 +78,7 @@ hm		19. jan. 2011	rev 1.0
 
 ad		06. apr. 2011	rev 1.1
 	optimized code
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

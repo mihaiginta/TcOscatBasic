@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SH_1" Id="{e9a32855-8dc4-4ac1-a50e-ffe333bf533c}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK SH_1
+    <Declaration><![CDATA[FUNCTION_BLOCK SH_1
 VAR_INPUT
 	in : REAL;
 	PT : TIME;
@@ -24,11 +23,9 @@ tested by		tobias
 this sample and hold module samples an input every PT seconds.
 after a ample is taken the output Trig will be active for one cycle.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-(* read system time *)
+      <ST><![CDATA[(* read system time *)
 tx := DWORD_TO_TIME(T_PLC_MS());
 
 IF tx - last >= PT THEN
@@ -47,6 +44,7 @@ HM	6.1.2007	rev 1.1
 HM	17.9.2007	rev 1.2
 	replaced time() with T_PLC_MS() for compatibility reasons
 *)
+
 ]]></ST>
     </Implementation>
   </POU>

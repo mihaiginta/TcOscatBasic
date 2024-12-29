@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="INTEGRATE" Id="{d77fb0a2-81a5-4889-be05-02e40c4c1ca1}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK INTEGRATE
+    <Declaration><![CDATA[FUNCTION_BLOCK INTEGRATE
 VAR_INPUT
 	E : BOOL := TRUE;
 	X : REAL;
@@ -27,11 +26,9 @@ tested by	oscat
 integrate is a plain integrator with I/O for out.
 
  
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-(*read system time *)
+      <ST><![CDATA[(*read system time *)
 tx := T_PLC_MS();
 
 IF NOT init THEN

@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MANUAL" Id="{ba4174db-05b5-48a1-b4c7-20e5a4eb6a8d}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION MANUAL : BOOL
+    <Declaration><![CDATA[FUNCTION MANUAL : BOOL
 VAR_INPUT
 	IN : BOOL;
 	ON : BOOL;
@@ -20,11 +19,9 @@ when on and off = FALSE, the output follows IN.
 ON = TRUE forces the output high, and OFF = TRUE forces the output low.
 
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-MANUAL := NOT OFF AND (IN OR ON);
+      <ST><![CDATA[MANUAL := NOT OFF AND (IN OR ON);
 
 
 
@@ -33,8 +30,7 @@ hm	21. nov 2008	rev 1.0
 	original version
 
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

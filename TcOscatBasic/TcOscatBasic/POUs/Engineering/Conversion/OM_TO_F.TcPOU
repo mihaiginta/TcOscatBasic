@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="OM_TO_F" Id="{2491f1cc-b18d-4425-8cbd-25501bb6e4db}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION OM_TO_F : REAL
+    <Declaration><![CDATA[FUNCTION OM_TO_F : REAL
 VAR_INPUT
 	OM : REAL;
 END_VAR
@@ -15,11 +14,9 @@ tested by		tobias
 
 this function converts Omega F to frequency
 F = OM / (2*PI)
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-OM_TO_F := OM / math.PI2;
+      <ST><![CDATA[OM_TO_F := OM / math.PI2;
 
 
 (* revision history
@@ -29,8 +26,7 @@ hm	22. jan. 2007	rev 1.0
 hm	18. oct. 2008	rev 1.1
 	using math constants
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

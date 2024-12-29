@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MUX_R4" Id="{d755ab94-a95c-4b64-8f61-8f0abb8121fc}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION MUX_R4 : REAL
+    <Declaration><![CDATA[FUNCTION MUX_R4 : REAL
 VAR_INPUT
 	IN0 : REAL;
 	IN1 : REAL;
@@ -22,11 +21,9 @@ MUX_R4 is an analog Multiplexer.
 one of 4 real inputs are selected and put through to out.
 The Adress input A0 and A1 selects between the 4 Real inputs IN0.. IN1.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF A1 THEN
+      <ST><![CDATA[IF A1 THEN
 	MUX_R4 := SEL(A0, IN2, IN3);
 ELSE
 	MUX_R4 := SEL(A0, IN0, IN1);
@@ -40,8 +37,7 @@ hm	19. jan 2007	rev 1.0
 
 hm	16. oct. 2008	rev 1.1
 	improved performance
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

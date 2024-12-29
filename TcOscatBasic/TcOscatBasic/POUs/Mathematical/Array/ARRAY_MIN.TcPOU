@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ARRAY_MIN" Id="{5993bdea-369f-4886-8c2a-51953d341535}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION ARRAY_MIN : REAL
+    <Declaration><![CDATA[FUNCTION ARRAY_MIN : REAL
 VAR_INPUT
 	pt : POINTER TO ARRAY[0..32000] OF REAL;
 	size : UINT;
@@ -21,11 +20,9 @@ this function will calculate the min value of a given array.
 the function needs to be called:	array_min(adr("array"),sizeof("array"));
 because this function works with pointers its very time efficient and it needs no extra memory.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-stop := (size - SIZEOF(pt)) / SIZEOF(pt);
+      <ST><![CDATA[stop := (size - SIZEOF(pt)) / SIZEOF(pt);
 array_min := pt^[0];
 FOR i := 1 TO stop DO
 	IF pt^[i] < array_min THEN array_min := pt^[i]; END_IF;
@@ -39,8 +36,7 @@ hm		2. oct. 2006
 hm		16. mar. 2008
 	changed type of input size to uint
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

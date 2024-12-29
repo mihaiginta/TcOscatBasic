@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SCALE_B2" Id="{f2dd8390-6d10-4af7-afcf-49538d264e41}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION SCALE_B2 : REAL
+    <Declaration><![CDATA[FUNCTION SCALE_B2 : REAL
 VAR_INPUT
 	in1: BYTE;
 	in2: BYTE;
@@ -28,10 +27,10 @@ the summed output is then scaled by an scale input K and a offset O can be added
 min and max input configurations can be edited in the cfc editor by double clicking the symbol body.
 
 *)
+
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-SCALE_B2 := 	(((in1_max - in1_min)* in1 + (in2_max - in2_min)* in2) * 0.003921569 + in1_min + in2_min) * K + O;
+      <ST><![CDATA[SCALE_B2 := 	(((in1_max - in1_min)* in1 + (in2_max - in2_min)* in2) * 0.003921569 + in1_min + in2_min) * K + O;
 
 
 (* revision History
@@ -49,8 +48,7 @@ hm	26. oct. 2008	rev 1.3
 hm	3. nov. 2008	rev 1.4
 	used wrong factor in formula
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

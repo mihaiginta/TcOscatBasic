@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="V3_ADD" Id="{07f10410-869b-4bab-a527-97b5c93b4047}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION V3_ADD : vector_3
+    <Declaration><![CDATA[FUNCTION V3_ADD : vector_3
 VAR_INPUT
 	A : Vector_3;
 	B : Vector_3;
@@ -16,11 +15,9 @@ tested by		tobias
 
 this function adds two vectors in a 3 dimensional space
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-V3_ADD.X := A.X + B.X;
+      <ST><![CDATA[V3_ADD.X := A.X + B.X;
 V3_ADD.Y := A.Y + B.Y;
 V3_ADD.Z := A.Z + B.Z;
 
@@ -30,8 +27,7 @@ V3_ADD.Z := A.Z + B.Z;
 hm		11 dec 2007	rev 1.0
 	original version
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

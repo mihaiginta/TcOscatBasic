@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="LIST_ADD" Id="{e3024b6d-f12d-4f76-98c2-ccb4e38816af}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION LIST_ADD : BOOL
+    <Declaration><![CDATA[FUNCTION LIST_ADD : BOOL
 VAR_INPUT
 	SEP : BYTE;
 	INS : STRING(LIST_LENGTH);
@@ -25,11 +24,9 @@ die liste liegt als string von elementen vor die mit den zeichen SEP am anfang m
 (*All VAR_IN_OUT variables have been moved to the end of the declaration due to compatibility reasons*)
 VAR_IN_OUT
 	LIST : STRING(LIST_LENGTH);
-END_VAR
-]]></Declaration>
+END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-sx := CHR_TO_STRING(SEP);			(* convert separation character to string *)
+      <ST><![CDATA[sx := CHR_TO_STRING(SEP);			(* convert separation character to string *)
 INS := CONCAT(sx, INS);					(* start element with separation character *)
 
 IF LEN(LIST) + LEN(INS) > LIST_LENGTH THEN

@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TANC" Id="{20223278-639f-4b22-808a-904003b1ba02}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION TANC : REAL
+    <Declaration><![CDATA[FUNCTION TANC : REAL
 VAR_INPUT
 	X : REAL;
 END_VAR
@@ -15,11 +14,9 @@ tested by		oscat
 
 this function calculates the tanc function.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF X = 0.0 THEN
+      <ST><![CDATA[IF X = 0.0 THEN
 	TANC := 1.0;
 ELSE
 	TANC := TAN(x) / x;
@@ -33,8 +30,7 @@ hm	23. oct. 2008	rev 1.0
 hm 10. mar. 2009	rev 1.1
 	real constants updated to new systax using dot																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MINUTE" Id="{b88e7e41-73c1-4b5d-9935-1cf159f404bb}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION MINUTE : INT
+    <Declaration><![CDATA[FUNCTION MINUTE : INT
 VAR_INPUT
 	itod : TOD;
 END_VAR
@@ -15,19 +14,16 @@ tested by	tobias
 
 extracts the minutes out of TOD truncating the seconds 
 
-*)  
-]]></Declaration>
+*)  ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-MINUTE := DWORD_TO_INT(TOD_TO_DWORD(itod) / 60000 - TOD_TO_DWORD(itod) / 3600000 * 60);
+      <ST><![CDATA[MINUTE := DWORD_TO_INT(TOD_TO_DWORD(itod) / 60000 - TOD_TO_DWORD(itod) / 3600000 * 60);
 
 
 (* change history
 
 2.10.2006 changes name of input to itod
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

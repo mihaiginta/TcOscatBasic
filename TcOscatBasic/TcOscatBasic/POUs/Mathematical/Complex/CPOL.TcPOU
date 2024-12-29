@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CPOL" Id="{ee3697be-dab7-4e44-ad54-b59dc6e3b274}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION CPOL : complex
+    <Declaration><![CDATA[FUNCTION CPOL : complex
 VAR_INPUT
 	L : REAL;
 	A : REAL;
@@ -16,11 +15,9 @@ tested by	oscat
 
 this function creates a complex numbers for the polar form with the inputs L (length) an A for Angle.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-CPOL.re := L * COS(A);
+      <ST><![CDATA[CPOL.re := L * COS(A);
 CPOL.im := L * SIN(A);
 
 
@@ -28,8 +25,7 @@ CPOL.im := L * SIN(A);
 hm	21. feb 2008	rev 1.0
 	original version
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FSTRING_TO_WEEKDAY" Id="{f984d6f6-641c-4d32-94a8-4d047f01ea75}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION FSTRING_TO_WEEKDAY : INT
+    <Declaration><![CDATA[FUNCTION FSTRING_TO_WEEKDAY : INT
 VAR_INPUT
 	WDAY : STRING(20);
 	LANG : INT;
@@ -21,11 +20,9 @@ tested by	oscat
 
 FSTRING_TO_WEEKDAY converts a weekday string into an integer 1..7.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF LANG = 0 THEN ly := LANGUAGE.DEFAULT; ELSE ly := MIN(LANG, LANGUAGE.LMAX); END_IF;
+      <ST><![CDATA[IF LANG = 0 THEN ly := LANGUAGE.DEFAULT; ELSE ly := MIN(LANG, LANGUAGE.LMAX); END_IF;
 (* tmp needs to be calculated first otherwise find can return wrong values *)
 tmp := TRIM(wday);
 tmp := CAPITALIZE(LOWERCASE(tmp));

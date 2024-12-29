@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DEC_TO_INT" Id="{ccf3fa63-609d-4fb0-aa5e-439c11e8d6de}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION DEC_TO_INT : INT
+    <Declaration><![CDATA[FUNCTION DEC_TO_INT : INT
 VAR_INPUT
 	DEC : STRING(10);
 END_VAR
@@ -21,11 +20,9 @@ tested by	oscat
 
 DEC_TO_INT converts a decimal string into an Integer.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-pt := ADR(dec);
+      <ST><![CDATA[pt := ADR(dec);
 stop := LEN(dec);
 FOR I := 1 TO stop DO
 	(* read the first character and subtract 48 to get value in decimal 0 = 48 *)

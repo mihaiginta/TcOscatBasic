@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FT_PIDW" Id="{8849db7f-8036-4993-b2ac-aa548a3e2e35}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK FT_PIDW
+    <Declaration><![CDATA[FUNCTION_BLOCK FT_PIDW
 VAR_INPUT
 	IN : REAL;
 	KP : REAL := 1.0;
@@ -37,8 +36,7 @@ default values for KP = 1, KI = 1, ILIM_L = -1E37, iLIM_H = +1E38.
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-(* run the integrator *)
+      <ST><![CDATA[(* run the integrator *)
 IF tn = 0.0 OR rst THEN
 	integ(E := FALSE, Y := YI);
 	YI := 0.0;
@@ -76,8 +74,7 @@ hm	5. nov. 2008	rev 1.1
 hm	11. mar. 2009	rev 1.2
 	real constants updated to new systax using dot
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

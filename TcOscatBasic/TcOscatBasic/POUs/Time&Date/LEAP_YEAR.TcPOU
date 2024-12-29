@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="LEAP_YEAR" Id="{52cbd841-80eb-4cb9-8556-5bd6233ce58a}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION LEAP_YEAR : BOOL
+    <Declaration><![CDATA[FUNCTION LEAP_YEAR : BOOL
 VAR_INPUT
 	yr : INT;
 END_VAR
@@ -16,11 +15,9 @@ tested by	tobias
 
 leap_year is true if the tested year is a leap year  
   
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-LEAP_YEAR := SHL(yr,14) = 0;
+      <ST><![CDATA[LEAP_YEAR := SHL(yr,14) = 0;
 
 (* this code was used prior to rev 1.1
 
@@ -39,8 +36,7 @@ hm 	2.10.2006		rev 1.1
 
 hm	1. oct 2007		rev 1.2
 	chaged code for higher performance
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

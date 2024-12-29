@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FF_RSE" Id="{ea22d04b-806c-4960-abda-68f05f020b09}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK FF_RSE
+    <Declaration><![CDATA[FUNCTION_BLOCK FF_RSE
 VAR_INPUT
 	CS : BOOL;
 	CR : BOOL;
@@ -27,8 +26,7 @@ CR has priority over CS.
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF rst THEN
+      <ST><![CDATA[IF rst THEN
 	(* asynchronous reset *)
 	Q := FALSE;
 ELSIF CR AND NOT er THEN
@@ -48,6 +46,9 @@ hm	16. jul. 2008	rev 1.0
 	original version
 
 *)
+
+
+
 ]]></ST>
     </Implementation>
   </POU>

@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SEQUENCE_4" Id="{40004f87-c396-4b1f-a1b7-59bd56f79551}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK SEQUENCE_4
+    <Declaration><![CDATA[FUNCTION_BLOCK SEQUENCE_4
 VAR_INPUT
 	in0 : BOOL := TRUE;
 	in1 : BOOL := TRUE;
@@ -56,11 +55,9 @@ after the first output is turened on the sequencer switches from q0 to q1 and so
 if an input signal is not detected during a wait period, the sequencer will display the error number ( 1 for in0, 2 for in1 .... ).
 when an error is present and the config variable stop_on_error is set then the sequencer will stop. otherwise it will continue.
 The status output will also display 110 for waiting and 111 for sequence running.
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-(* read sps timer *)
+      <ST><![CDATA[(* read sps timer *)
 tx := DWORD_TO_TIME(T_PLC_MS());
 
 (* initialize on startup *)
@@ -176,8 +173,7 @@ hm	17.sep 2007	rev 1.4
 hm	13. mar. 2009	rev 1.5
 	renamed output any to qx for compatibility resons
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

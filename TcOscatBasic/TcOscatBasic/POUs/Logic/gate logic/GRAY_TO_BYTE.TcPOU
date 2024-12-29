@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="GRAY_TO_BYTE" Id="{4c905afd-6394-4bc6-a6e5-298e7cce765c}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION GRAY_TO_BYTE : BYTE
+    <Declaration><![CDATA[FUNCTION GRAY_TO_BYTE : BYTE
 VAR_INPUT
 	IN : BYTE;
 END_VAR
@@ -18,8 +17,7 @@ this function converts a gray code into binary
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-GRAY_TO_BYTE := SHR(IN,4) XOR IN;
+      <ST><![CDATA[GRAY_TO_BYTE := SHR(IN,4) XOR IN;
 GRAY_TO_BYTE := SHR(GRAY_TO_BYTE,2) XOR GRAY_TO_BYTE;
 GRAY_TO_BYTE := SHR(GRAY_TO_BYTE,1) XOR GRAY_TO_BYTE;
 
@@ -27,8 +25,7 @@ GRAY_TO_BYTE := SHR(GRAY_TO_BYTE,1) XOR GRAY_TO_BYTE;
 hm	9. nov. 2009	rev 1.0
 	original version
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

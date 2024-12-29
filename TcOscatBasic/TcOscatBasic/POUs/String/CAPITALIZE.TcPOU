@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CAPITALIZE" Id="{93abd8d0-0c2e-4be9-a43c-62aa852e2bdd}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION CAPITALIZE : STRING(STRING_LENGTH)
+    <Declaration><![CDATA[FUNCTION CAPITALIZE : STRING(STRING_LENGTH)
 VAR_INPUT
 	str : STRING(STRING_LENGTH);
 END_VAR
@@ -20,11 +19,9 @@ tested by		tobias
 
 capitalize returns str with all first letters after a blank or beginning of the string are converted to uppercase.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-PT := ADR(CAPITALIZE);
+      <ST><![CDATA[PT := ADR(CAPITALIZE);
 CAPITALIZE := str;
 L := LEN(str);
 FOR pos := 1 TO l DO

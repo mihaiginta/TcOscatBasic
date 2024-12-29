@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="AIN" Id="{db9d7c30-49b8-4281-b6ad-01b012c12701}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION AIN : REAL
+    <Declaration><![CDATA[FUNCTION AIN : REAL
 VAR_INPUT
 	in : DWORD;
 END_VAR
@@ -32,11 +31,9 @@ the output signal is then conditioned to range from low to high values for a 0 t
 for example a 15bit input (bits := 12) with sign at bit 15 (0..15) will deliver 0.0 (low value at 0) for an input value of 2#0000_0000_0000
 an input value of 2#1111_1111_1111 will deliver 10.0 on the output (high value set to 10).
 
-*) 
-]]></Declaration>
+*) ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-(* extract the sign bit *)
+      <ST><![CDATA[(* extract the sign bit *)
 IF sign < 32 THEN
 	temp1 := SHR(in,sign);
 	sx := temp1.0;
@@ -63,8 +60,7 @@ hm	2. dec 2007	rev 1.4
 
 hm	16. mar 2008	rev 1.5
 	added type conversions to avoid warnings under codesys 30
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="R2_MUL" Id="{7b5f2f4e-ad25-412d-99ed-b41720b1ed3a}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION R2_MUL : REAL2
+    <Declaration><![CDATA[FUNCTION R2_MUL : REAL2
 VAR_INPUT
 	X : REAL2;
 	Y : REAL;
@@ -16,11 +15,9 @@ tested by		tobias
 
 R2_mul multiplies a real with a double real which extends the accuracy of a real to twice as many digits
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-R2_MUL.RX := X.RX * Y;
+      <ST><![CDATA[R2_MUL.RX := X.RX * Y;
 R2_MUL.R1 := X.R1 * Y;
 
 
@@ -28,8 +25,7 @@ R2_MUL.R1 := X.R1 * Y;
 hm		20.3.2008	rev 1.0
 	original version
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

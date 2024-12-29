@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ERFC" Id="{d16983be-2e46-4790-9707-f8f05f7233f3}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION ERFC : REAL
+    <Declaration><![CDATA[FUNCTION ERFC : REAL
 VAR_INPUT
 	X : REAL;
 END_VAR
@@ -15,11 +14,9 @@ tested by		tobias
 
 this function calculates the inverse erf (error) function.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-ERFC := 1.0 - ERF(X);
+      <ST><![CDATA[ERFC := 1.0 - ERF(X);
 
 (* revision history
 hm	7. apr. 2008	rev 1.0
@@ -28,8 +25,7 @@ hm	7. apr. 2008	rev 1.0
 hm	10. mar. 2009	rev 1.1
 	real constants updated to new systax using dot
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <DUT Name="IO_TERMINAL_PARAMETERS" Id="{f3369846-c2c6-4bc7-a0c5-f550e9f350e4}">
-    <Declaration><![CDATA[
-TYPE IO_TERMINAL_PARAMETERS :
+    <Declaration><![CDATA[TYPE IO_TERMINAL_PARAMETERS :
 STRUCT
 	cValue1Raw 				: REAL;			//Maximaler Klemmenwert (z.B. 32767)
 	cValue2Raw				: REAL;			//Minimaler Klemmenwert (z.B. 0)

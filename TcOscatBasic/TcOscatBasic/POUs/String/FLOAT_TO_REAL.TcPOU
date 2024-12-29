@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FLOAT_TO_REAL" Id="{4cddfea1-dff8-451b-bd96-4e6ef3d26da8}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION FLOAT_TO_REAL : REAL
+    <Declaration><![CDATA[FUNCTION FLOAT_TO_REAL : REAL
 VAR_INPUT
 	FLT : STRING(20);
 END_VAR
@@ -27,11 +26,9 @@ the comma can be , or .
 the exponent has to start with capital E or lowercase e .
 
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-pt := ADR(FLT);
+      <ST><![CDATA[pt := ADR(FLT);
 stop := LEN(FLT);
 
 (* we first check for sign and exit if first number or dot is reached *)

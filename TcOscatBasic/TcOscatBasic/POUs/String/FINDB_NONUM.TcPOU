@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FINDB_NONUM" Id="{cfec6602-1297-413d-81db-49a37e8e8c7d}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION FINDB_NONUM : INT
+    <Declaration><![CDATA[FUNCTION FINDB_NONUM : INT
 VAR_INPUT
 	str : STRING(STRING_LENGTH);
 END_VAR
@@ -19,11 +18,9 @@ tested by	oscat
 findB_noNum searches str backwards and returns the last position which is not a number.
 a number is characterized by a letter "0..9" or "."
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-pt := ADR(str) + LEN(str) - 1;
+      <ST><![CDATA[pt := ADR(str) + LEN(str) - 1;
 FOR pos := LEN(str) TO 1 BY -1 DO;
 	IF (PT^ < 48 AND PT^ <> 46) OR PT^ > 57 THEN
 		FINDB_NONUM := pos;
@@ -46,8 +43,7 @@ hm	29. mar. 2008	rev 1.2
 
 hm	21. oct. 2008	rev 1.3
 	optimized code
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

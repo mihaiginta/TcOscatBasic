@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="REFLECT" Id="{776b91c1-3f1d-414e-8d5e-bed5efb8f7c3}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION REFLECT : DWORD
+    <Declaration><![CDATA[FUNCTION REFLECT : DWORD
 VAR_INPUT
 	D : DWORD;
 	L : INT;
@@ -22,8 +21,7 @@ This function reverses the specified amount of bits from bit 0 to bit n within a
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-REFLECT := 0;
+      <ST><![CDATA[REFLECT := 0;
 FOR i := 1 TO L DO
 	REFLECT := SHL(REFLECT, 1) OR BOOL_TO_DWORD(D.0);
 	D := SHR(D, 1);
@@ -34,8 +32,7 @@ REFLECT := REFLECT OR SHL(D, L);
 hm	 16. jan 2011
 	new module
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

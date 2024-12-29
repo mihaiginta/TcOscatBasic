@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="F_LIN2" Id="{68821e1f-0547-4460-b6db-235e3d4ffaef}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION F_LIN2 : REAL
+    <Declaration><![CDATA[FUNCTION F_LIN2 : REAL
 VAR_INPUT
 	X : REAL;
 	X1: REAL;
@@ -19,11 +18,9 @@ tested by		tobias
 
 this function calculates the linear equation f_lin = a*x + b given by two points x1/y1 and x2/y2.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-F_LIN2 := (Y2 - Y1) / (X2 - X1) * (X - X1) + Y1;
+      <ST><![CDATA[F_LIN2 := (Y2 - Y1) / (X2 - X1) * (X - X1) + Y1;
 
 
 (* revision history
@@ -33,8 +30,7 @@ hm	1. jan. 2007	rev 1.0
 hm	17. dec. 2008	rev 1.1
 	optimized formula
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

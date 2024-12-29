@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ARRAY_VAR" Id="{e34ba509-c711-4875-9b6b-618099e85b30}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION ARRAY_VAR : REAL
+    <Declaration><![CDATA[FUNCTION ARRAY_VAR : REAL
 VAR_INPUT
 	pt : POINTER TO ARRAY[0..32000] OF REAL;
 	size : UINT;
@@ -22,11 +21,9 @@ this function will calculate the variance of a given array.
 the function needs to be called:	array_var(adr("array"),sizeof("array"));
 because this function works with pointers its very time efficient and it needs no extra memory.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-(* at first we calualte the arithmetic average of the array *)
+      <ST><![CDATA[(* at first we calualte the arithmetic average of the array *)
 
 stop := SHR(size,2)-1;
 avg := pt^[0];
@@ -55,8 +52,7 @@ hm	16. mar. 2008	rev 1.2
 
 hm	10. mar. 2009	rev 1.3
 	added type conversions for compatibility reasons
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

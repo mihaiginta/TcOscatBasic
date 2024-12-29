@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PID" Id="{9148ddd9-4f6e-4c4f-98a6-9a43459fe84e}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK FB_PID
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_PID
 (* This PID controller implements an integrator anti-windup method (back-calculation). 
 For this the difference between the unlimited control output the limited control output is added to the integrator input. 
 This is done continously, allowing to track and correct the gain of the integrator.
@@ -40,8 +39,7 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF StartY <> yOffset THEN
+      <ST><![CDATA[IF StartY <> yOffset THEN
 	yOffset := StartY;
 	fbIntegrate(RST:=TRUE, inStart:=inStart);
 END_IF
@@ -92,8 +90,7 @@ pos 23.10.2020:
 
 aku 24.09.2019: 
 - first implementation
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

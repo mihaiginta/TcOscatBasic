@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="_RMP_W" Id="{b8f3c28c-c965-49e2-95df-3e071980c22e}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK _RMP_W
+    <Declaration><![CDATA[FUNCTION_BLOCK _RMP_W
 VAR_INPUT
 	DIR : BOOL;
 	E : BOOL := TRUE;
@@ -28,11 +27,9 @@ tested by	oscat
 _RMP_B generates a ramp on an external var of type byte
 tr is the total ramp time, E is an enable and dir the direction of the ramp
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-tx := T_PLC_MS();
+      <ST><![CDATA[tx := T_PLC_MS();
 IF E AND init THEN
 	(* we need to set tl = tx when direction changes *)
 	IF dir XOR last_dir THEN
@@ -66,8 +63,7 @@ hm	20. nov. 2008	rev 1.1
 	set default for E to be TRUE
 	added init
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

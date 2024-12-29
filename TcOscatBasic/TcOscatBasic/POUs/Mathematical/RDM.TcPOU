@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="RDM" Id="{1d01317c-dfd9-4138-9e8c-3b43e41514c2}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION RDM : REAL
+    <Declaration><![CDATA[FUNCTION RDM : REAL
 VAR_INPUT
 	last : REAL;
 END_VAR
@@ -21,11 +20,9 @@ this function calculates a pseudo random number
 to generate the number it reads the sps timer and calculates a random number between 0 and 1:
 in order to use rdm more then once within one sps cycle it need to be called with different seed numbers LAST.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-tn := T_PLC_MS();
+      <ST><![CDATA[tn := T_PLC_MS();
 tc := BIT_COUNT(tn);
 tn.31 := tn.2;
 tn.30 := tn.5;
@@ -77,8 +74,7 @@ hm	18. oct. 2008		rev 1.8
 hm	10. mar. 2009		rev 1.9
 	real constants updated to new systax using dot
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

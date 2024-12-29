@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MID3" Id="{df42bf43-3d24-4597-9c92-59b2549b1451}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION MID3 : REAL
+    <Declaration><![CDATA[FUNCTION MID3 : REAL
 VAR_INPUT
 	IN1 : REAL;
 	IN2 : REAL;
@@ -20,8 +19,7 @@ returns the mid value of 3 real inputs.
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF IN1 > IN2 THEN MID3 := IN1; IN1 := IN2; IN2 := MID3; END_IF;
+      <ST><![CDATA[IF IN1 > IN2 THEN MID3 := IN1; IN1 := IN2; IN2 := MID3; END_IF;
 IF IN2 > IN3 THEN IN2 := IN3; END_IF;
 MID3 := SEL(IN1 > IN2, IN2, IN1);
 
@@ -32,8 +30,7 @@ hm	1.1.2007	rev 1.1
 
 hm	18. mar. 2011	rev 1.2
 	improve performance
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

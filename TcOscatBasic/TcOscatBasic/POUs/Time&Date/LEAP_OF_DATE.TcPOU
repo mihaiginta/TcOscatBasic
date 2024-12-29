@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="LEAP_OF_DATE" Id="{6e6fbd3e-113b-44cd-8b0b-cdeacaca7d16}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION LEAP_OF_DATE : BOOL
+    <Declaration><![CDATA[FUNCTION LEAP_OF_DATE : BOOL
 VAR_INPUT
 	idate : DATE;
 END_VAR
@@ -18,8 +17,7 @@ leap_of_date is true if current year is a leap year
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-LEAP_OF_DATE := SHL(((DATE_TO_DWORD(idate) + 43200) / 31557600), 30) = 16#80000000;
+      <ST><![CDATA[LEAP_OF_DATE := SHL(((DATE_TO_DWORD(idate) + 43200) / 31557600), 30) = 16#80000000;
 
 
 (* change history
@@ -33,8 +31,7 @@ the function now works for any year from 1970 to 2100
 
 28. jan. 2011	rev 1.3
 	improved performance
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

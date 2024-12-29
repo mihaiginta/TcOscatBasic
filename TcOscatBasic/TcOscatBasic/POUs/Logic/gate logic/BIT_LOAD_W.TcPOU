@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BIT_LOAD_W" Id="{f5b77e37-a0cb-4d32-b0ba-76aa4481dfab}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION BIT_LOAD_W : WORD
+    <Declaration><![CDATA[FUNCTION BIT_LOAD_W : WORD
 VAR_INPUT
 	IN : WORD;
 	VAL : BOOL;
@@ -18,11 +17,9 @@ programmer 	hugo
 tested by	tobias
 
 this function loads a bit into a Word at position pos.
- *)
-]]></Declaration>
+ *)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF val THEN
+      <ST><![CDATA[IF val THEN
 	BIT_LOAD_W := in OR SHL(dat,pos);
 ELSE
 	BIT_LOAD_W := in AND (NOT SHL(dat,pos));

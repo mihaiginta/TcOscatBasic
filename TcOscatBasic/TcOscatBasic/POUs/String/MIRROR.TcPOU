@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MIRROR" Id="{73fbd403-ec2c-41b4-8618-0786ffa7bb9a}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION MIRROR : STRING(STRING_LENGTH)
+    <Declaration><![CDATA[FUNCTION MIRROR : STRING(STRING_LENGTH)
 VAR_INPUT
 	str : STRING(STRING_LENGTH);
 END_VAR
@@ -20,11 +19,9 @@ tested by	tobias
 
 this function reverses an input string.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-pi := ADR(str);
+      <ST><![CDATA[pi := ADR(str);
 po := ADR(mirror);
 lx := LEN(str);
 FOR i := lx TO 1 BY - 1 DO

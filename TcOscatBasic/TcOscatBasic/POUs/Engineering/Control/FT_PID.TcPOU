@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FT_PID" Id="{12330e34-1f84-45a1-a1c1-134ba0db6102}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK FT_PID
+    <Declaration><![CDATA[FUNCTION_BLOCK FT_PID
 VAR_INPUT
 	IN : REAL;
 	KP : REAL := 1.0;
@@ -37,8 +36,7 @@ default values for KP = 1, KI = 1, ILIM_L = -1E37, iLIM_H = +1E38.
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-(* run integrator only if TN > 0 *)
+      <ST><![CDATA[(* run integrator only if TN > 0 *)
 IF TN > 0.0 THEN
 	integ(IN := IN, K := 1.0 / TN, RUN := IEN, RST := RST, OUT_MIN := ILIM_L, OUT_MAX := ILIM_H);
 ELSE
@@ -63,8 +61,7 @@ hm 3. jun. 2008 	rev 2.0
 hm	11. mar. 2009	rev 2.1
 	real constants updated to new systax using dot
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

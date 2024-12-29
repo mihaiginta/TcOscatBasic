@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="_RMP_B" Id="{de81fd1a-7726-4369-9d1c-5466069c7911}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK _RMP_B
+    <Declaration><![CDATA[FUNCTION_BLOCK _RMP_B
 VAR_INPUT
 	DIR : BOOL;  (* true = up *)
 	E : BOOL := TRUE;
@@ -27,11 +26,9 @@ tested by		oscat
 _RMP_B generates a ramp on an external var of type byte
 tr is the total ramp time, E is an enable and dir the direction of the ramp
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-(* read system timer *)
+      <ST><![CDATA[(* read system timer *)
 tx := DWORD_TO_TIME(T_PLC_MS());
 
 IF E AND init AND (dir = last_dir) AND (RMP <> SEL(DIR, 0, 255)) AND TR = tn THEN
@@ -56,8 +53,7 @@ hm	20. nov. 2008	rev 1.1
 
 hm	19. nov. 2011	rev 1.2
 	new code
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DT2_TO_SDT" Id="{05066a3c-64e9-439e-b954-a6ffe9e06553}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION DT2_TO_SDT : SDT
+    <Declaration><![CDATA[FUNCTION DT2_TO_SDT : SDT
 VAR_INPUT
 	DI : DATE;
 	TI : TOD;
@@ -19,8 +18,7 @@ converts date and time of day to Structured date time (SDT)
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-DT2_TO_SDT.YEAR := YEAR_OF_DATE(di);
+      <ST><![CDATA[DT2_TO_SDT.YEAR := YEAR_OF_DATE(di);
 DT2_TO_SDT.MONTH := MONTH_OF_DATE(di);
 DT2_TO_SDT.DAY := DAY_OF_MONTH(di);
 DT2_TO_SDT.WEEKDAY := DAY_OF_WEEK(di);
@@ -34,8 +32,7 @@ DT2_TO_SDT.HOUR := DWORD_TO_INT(TOD_TO_DWORD(ti) / 3600000);
 hm 18. oct. 2008	rev 1.0
 	original version
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

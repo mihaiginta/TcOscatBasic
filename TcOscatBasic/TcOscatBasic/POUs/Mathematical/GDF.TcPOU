@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="GDF" Id="{3c679fde-fdb5-438b-a263-85efc47277e2}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION GDF : REAL
+    <Declaration><![CDATA[FUNCTION GDF : REAL
 VAR_INPUT
 	X : REAL;
 END_VAR
@@ -15,11 +14,9 @@ tested by		tobias
 
 this function calculates the Gudermannian function.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF X = 0.0 THEN
+      <ST><![CDATA[IF X = 0.0 THEN
 	GDF := 0.0;
 ELSIF X > 15.0 THEN
 	GDF := math.PI05;

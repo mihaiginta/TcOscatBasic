@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MUX_4" Id="{be4d0bf5-36ed-419f-bfa2-a839e9f877c3}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION MUX_4 : BOOL
+    <Declaration><![CDATA[FUNCTION MUX_4 : BOOL
 VAR_INPUT
 	D0: BOOL;
 	D1: BOOL;
@@ -22,11 +21,9 @@ quad input multiplexer
 depending on the value of A0 and A1, one of the 4 inputs will be switched to the Output
 
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF A1 THEN
+      <ST><![CDATA[IF A1 THEN
 	MUX_4 := SEL(A0, D2, D3);
 ELSE
 	MUX_4 := SEL(A0, D0, D1);
@@ -41,8 +38,7 @@ hm 	5.10.2006		rev 1.1
 hm	16. oct. 2008	rev 1.2
 	improved performance
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="PARITY" Id="{f60da960-9e3b-4671-aeeb-b1ffa05ad065}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION PARITY : BOOL
+    <Declaration><![CDATA[FUNCTION PARITY : BOOL
 VAR_INPUT
 	in : DWORD;
 END_VAR
@@ -19,8 +18,7 @@ the output will be true if the amount of high bits are an odd number.
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-WHILE in > 0 DO
+      <ST><![CDATA[WHILE in > 0 DO
 	PARITY := PARITY XOR in.0 XOR in.1 XOR in.2 XOR in.3;
 	in := SHR(in,4);
 END_WHILE;
@@ -46,8 +44,7 @@ rev 1.2	hm	8 dec 2007
 
 rev 1.3	hm	18 feb 2008
 	changed algorithm to improve performance
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

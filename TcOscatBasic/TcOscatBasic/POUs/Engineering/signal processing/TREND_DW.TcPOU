@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TREND_DW" Id="{4a8fa0d9-099e-44bc-9bbc-181697fba3b4}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK TREND_DW
+    <Declaration><![CDATA[FUNCTION_BLOCK TREND_DW
 VAR_INPUT
 	X : DWORD;
 END_VAR
@@ -28,11 +27,9 @@ and  TD will signal a decreasing value on the input X.
 in case of a change the output D will show the delta of the input to the last input value.
 
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF X > last_X THEN
+      <ST><![CDATA[IF X > last_X THEN
 	TU := TRUE;
 	TD := FALSE;
 	D := X - last_X;

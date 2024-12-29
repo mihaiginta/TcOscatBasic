@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ROUND" Id="{00ffa5eb-a397-470c-8f64-1fc3d82f7a6a}" SpecialFunc="None">
-    <Declaration><![CDATA[
- FUNCTION ROUND : REAL
+    <Declaration><![CDATA[ FUNCTION ROUND : REAL
 VAR_INPUT
 	in : REAL;
 	N : INT;
@@ -20,11 +19,9 @@ tested by	tobias
 this function rounds a real down to n digits behind the comma.
 
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-X := setup.DECADES[LIMIT(0,N,8)];
+      <ST><![CDATA[X := setup.DECADES[LIMIT(0,N,8)];
 ROUND := DINT_TO_REAL(REAL_TO_DINT(in * X)) / X;
 
 
@@ -49,6 +46,9 @@ hm	16. mar 2008	rev 1.4
 hm	25. oct. 2008	rev 1.5
 	new code using global constants decades
 *)
+
+
+
 ]]></ST>
     </Implementation>
   </POU>

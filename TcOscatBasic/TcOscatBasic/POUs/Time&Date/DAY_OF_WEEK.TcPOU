@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DAY_OF_WEEK" Id="{f50c1aa7-1059-447e-bb51-21b5683fe4e0}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION DAY_OF_WEEK : INT
+    <Declaration><![CDATA[FUNCTION DAY_OF_WEEK : INT
 VAR_INPUT
 	IDATE : DATE;
 END_VAR
@@ -16,11 +15,9 @@ tested by	tobias
 calculates the weekday of a week according to ISO8601   
 monday = 1 ..... sunday = 7  
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-DAY_OF_WEEK := DWORD_TO_INT((DATE_TO_DWORD(idate) / 86400 + 3) MOD 7) + 1;
+      <ST><![CDATA[DAY_OF_WEEK := DWORD_TO_INT((DATE_TO_DWORD(idate) / 86400 + 3) MOD 7) + 1;
 
 
 (* revision history
@@ -37,6 +34,9 @@ hm	7. oct. 2008	rev 1.4
 	changed name of function from weekday to day_of_week
 
 *)
+
+
+
 ]]></ST>
     </Implementation>
   </POU>

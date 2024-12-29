@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SET_DT" Id="{07380bb5-bb67-481e-b097-ee832194b332}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION SET_DT : DT
+    <Declaration><![CDATA[FUNCTION SET_DT : DT
 VAR_INPUT
 	year : INT;
 	month : INT;
@@ -21,11 +20,9 @@ tested by	tobias
 
 creates a date output from year, month and day of month
 year must be in the form of 4 digits ie 2006 or 1977.
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-SET_DT := DWORD_TO_DT(DATE_TO_DWORD(SET_DATE(YEAR, MONTH, day)) + INT_TO_DWORD(SECOND) + INT_TO_DWORD(MINUTE) * 60 + INT_TO_DWORD(HOUR) * 3600);
+      <ST><![CDATA[SET_DT := DWORD_TO_DT(DATE_TO_DWORD(SET_DATE(YEAR, MONTH, day)) + INT_TO_DWORD(SECOND) + INT_TO_DWORD(MINUTE) * 60 + INT_TO_DWORD(HOUR) * 3600);
 
 
 (* revision history
@@ -48,6 +45,7 @@ hm		1. 11 2007		rev 1.4
 hm		16. mar 2008	rev 1.5
 	added type conversions to avoid warnings under codesys 3.0
 *)
+
 ]]></ST>
     </Implementation>
   </POU>

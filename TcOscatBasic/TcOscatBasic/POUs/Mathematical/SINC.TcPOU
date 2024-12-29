@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SINC" Id="{c951e361-6eb6-413a-b7de-8d008b9f8631}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION SINC : REAL
+    <Declaration><![CDATA[FUNCTION SINC : REAL
 VAR_INPUT
 	X : REAL;
 END_VAR
@@ -15,11 +14,9 @@ tested by		tobias
 
 this function calculates the sinc function.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF X = 0.0 THEN
+      <ST><![CDATA[IF X = 0.0 THEN
 	SINC := 1.0;
 ELSE
 	SINC := SIN(x) / x;
@@ -36,8 +33,7 @@ hm	1.12.2007	rev 1.1
 hm 10. mar. 2009	rev 1.2
 	real constants updated to new systax using dot																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

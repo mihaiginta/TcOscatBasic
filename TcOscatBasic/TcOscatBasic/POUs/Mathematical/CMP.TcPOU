@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CMP" Id="{2f83ab50-56f0-489d-bc96-79394f84bb42}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION CMP : BOOL
+    <Declaration><![CDATA[FUNCTION CMP : BOOL
 VAR_INPUT
 	X,Y : REAL;
 	N : INT;
@@ -20,11 +19,9 @@ END_VAR
 this function checks two inputs x and y if they are identical with the first N digits
 example : cmp(3.141516,3.141517,6 is true.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-tmp := ABS(x);
+      <ST><![CDATA[tmp := ABS(x);
 IF tmp > 0.0 THEN
 	tmp := EXP10(INT_TO_REAL(FLOOR(LOG(tmp))-N+1));
 ELSE
@@ -40,6 +37,7 @@ hm	12. mar. 2008	rev 1.0
 hm	10. mar. 2009	rev 1.1
 	added type conversion for compatibility reasons
 *)
+
 ]]></ST>
     </Implementation>
   </POU>

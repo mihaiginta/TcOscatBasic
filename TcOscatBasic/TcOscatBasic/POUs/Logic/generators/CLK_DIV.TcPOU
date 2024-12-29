@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CLK_DIV" Id="{7bea032c-d3c4-49dc-a77e-b92637308a07}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK CLK_DIV
+    <Declaration><![CDATA[FUNCTION_BLOCK CLK_DIV
 VAR_INPUT
 	clk : BOOL;
 	rst: BOOL;
@@ -35,8 +34,7 @@ the outputs have a 50% duty cycle each.
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF rst THEN
+      <ST><![CDATA[IF rst THEN
 	cnt:= 0;
 	Q0 := 0;
 	Q1 := 0;
@@ -65,8 +63,7 @@ hm	4. aug. 2006	rev 1.0
 hm	2. jan 2008		rev 1.1
 	improved performance
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

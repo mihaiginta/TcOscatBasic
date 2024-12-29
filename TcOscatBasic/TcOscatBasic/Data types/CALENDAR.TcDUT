@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <DUT Name="CALENDAR" Id="{0d179c03-7f5e-410c-bdd9-0f9d048539c7}">
-    <Declaration><![CDATA[
-TYPE CALENDAR :
+    <Declaration><![CDATA[TYPE CALENDAR :
 STRUCT
 	UTC : DT;					(* world time UTC *)
 	LDT : DT;					(* local time *)
@@ -30,7 +29,6 @@ STRUCT
 	HOLY_NAME : STRING(30);	(* name of holiday *)
 	WORK_WEEK : INT;			(* current work week *)
 END_STRUCT
-END_TYPE
-]]></Declaration>
+END_TYPE]]></Declaration>
   </DUT>
 </TcPlcObject>

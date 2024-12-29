@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FT_IMP" Id="{82fd04d9-c7f7-42bf-b3fa-49e09ae7b9d4}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK FT_IMP
+    <Declaration><![CDATA[FUNCTION_BLOCK FT_IMP
 VAR_INPUT
 	in : REAL;
 	T : TIME;
@@ -22,19 +21,16 @@ tested by	oscat
 
 FT_IMP is 	an impulse filter (high pass filter) with the time T and factor K.
  
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-T1(in:= in, T:=T);
+      <ST><![CDATA[T1(in:= in, T:=T);
 out := (in - t1.out) * K;
 
 (*
 hm 3.1.2007	rev 1.1
 	added factor K
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

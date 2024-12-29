@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CCOSH" Id="{8128f1a1-40e3-430d-8c8b-290db95b040d}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION CCOSH : complex
+    <Declaration><![CDATA[FUNCTION CCOSH : complex
 VAR_INPUT
 	X : complex;
 END_VAR
@@ -15,11 +14,9 @@ tested by	oscat
 
 this function calculates the arcus tangens function of a complex number
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-CCOSH.re := cosH(x.re) * COS(x.im);
+      <ST><![CDATA[CCOSH.re := cosH(x.re) * COS(x.im);
 CCOSH.im := sinH(x.re) * SIN(x.im);
 
 
@@ -27,8 +24,7 @@ CCOSH.im := sinH(x.re) * SIN(x.im);
 hm	21. feb 2008	rev 1.0
 	original version
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

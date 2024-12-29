@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="WINDOW2" Id="{f8a19065-3aed-4a51-bc32-390eae077192}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION WINDOW2 : BOOL
+    <Declaration><![CDATA[FUNCTION WINDOW2 : BOOL
 VAR_INPUT
 	LOW : REAL;
 	IN : REAL;
@@ -16,19 +15,16 @@ END_VAR
 	tested BY	tobias
 
 this checks a signal if the signal is between the upper and lower limit including the two limits
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-WINDOW2 := IN >= LOW AND IN <= HIGH;
+      <ST><![CDATA[WINDOW2 := IN >= LOW AND IN <= HIGH;
 
 
 (* revision history
 hm	31.10.2007	rev 1.0
 	original version
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

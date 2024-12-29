@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SCHEDULER_2" Id="{1d5a21e0-71cb-41d6-81a0-bd7f13818d83}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK SCHEDULER_2
+    <Declaration><![CDATA[FUNCTION_BLOCK SCHEDULER_2
 VAR_INPUT
 	E0 : BOOL;
 	E1 : BOOL;
@@ -33,8 +32,7 @@ O0..O3 defines a cycle offset at startup.
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-Q0 := E0 AND (sx MOD C0 - O0 = 0);
+      <ST><![CDATA[Q0 := E0 AND (sx MOD C0 - O0 = 0);
 Q1 := E1 AND (sx MOD C1 - O1 = 0);
 Q2 := E2 AND (sx MOD C2 - O2 = 0);
 Q3 := E3 AND (sx MOD C3 - O3 = 0);
@@ -48,8 +46,7 @@ hm 29. sep. 2008		rev 1.0
 	original version
 
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

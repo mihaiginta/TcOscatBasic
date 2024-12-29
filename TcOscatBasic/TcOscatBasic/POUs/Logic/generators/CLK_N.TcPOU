@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CLK_N" Id="{a8c108c5-aad9-4ebb-94d3-96ab3c9d3b46}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK CLK_N
+    <Declaration><![CDATA[FUNCTION_BLOCK CLK_N
 VAR_INPUT
 	N : INT;
 END_VAR
@@ -27,11 +26,9 @@ The input N controlls the period time of the clock.
 N=0 equals 1ms, N=1 equals 2ms, N=2 equals 4ms, N=3 equals 8ms ....
 
 be careful, 1ms clocks will only work on very powerful sps cpu's
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-stime := SHR(T_PLC_MS(),N);
+      <ST><![CDATA[stime := SHR(T_PLC_MS(),N);
 clk := stime.0;
 Q := clk XOR edge;
 edge := CLK;
@@ -40,8 +37,7 @@ edge := CLK;
 hm	16. dec 2007		rev 1.0
 	original version
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

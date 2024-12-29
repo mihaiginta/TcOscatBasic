@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MUX_R2" Id="{3550e66b-e178-4de9-9418-2d164e6283f5}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION MUX_R2 : REAL
+    <Declaration><![CDATA[FUNCTION MUX_R2 : REAL
 VAR_INPUT
 	IN0 : REAL;
 	IN1 : REAL;
@@ -19,11 +18,9 @@ MUX_R2 is an analog Multiplexer.
 one of 2 real inputs are selected and put through to out.
 The Adress input A selects between 2 Real inputs IN0 and IN1, A=0 > In0, A=1 > in1.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-MUX_R2 := SEL(A, IN0, IN1);
+      <ST><![CDATA[MUX_R2 := SEL(A, IN0, IN1);
 
 
 (* revision history
@@ -34,8 +31,7 @@ hm	16. oct. 2008	rev 1.1
 	improved performance
 
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

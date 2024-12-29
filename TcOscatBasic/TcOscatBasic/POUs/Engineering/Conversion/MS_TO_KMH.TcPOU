@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MS_TO_KMH" Id="{51fdfa69-2063-4fa3-b54e-caf20b6a2a72}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION MS_TO_KMH : REAL
+    <Declaration><![CDATA[FUNCTION MS_TO_KMH : REAL
 VAR_INPUT
 	ms : REAL;
 END_VAR
@@ -15,11 +14,10 @@ tested by		tobias
 
 this function converts velocities from Meters / Second to Kilometers / hour.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-MS_TO_KMH := ms * 3.6;
+      <ST><![CDATA[MS_TO_KMH := ms * 3.6;
+
 ]]></ST>
     </Implementation>
   </POU>

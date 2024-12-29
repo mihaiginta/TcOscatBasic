@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DEC_4" Id="{590de733-56f2-4f64-8a8b-f70cb91c4f1c}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK DEC_4
+    <Declaration><![CDATA[FUNCTION_BLOCK DEC_4
 VAR_INPUT
 	D: BOOL;
 	A0: BOOL;
@@ -25,11 +24,9 @@ a bit input will be decoded to one of the 4 outputs
 dependent on the Adress on A0 and A1
 
 executioin TIME on wago 750-841 = 9us
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-Q0 := D AND NOT A0 AND NOT A1;
+      <ST><![CDATA[Q0 := D AND NOT A0 AND NOT A1;
 Q1 := D AND A0 AND NOT A1;
 Q2 := D AND NOT A0 AND A1;
 Q3 := D AND A0 AND A1;
@@ -38,8 +35,7 @@ Q3 := D AND A0 AND A1;
 hm 3.3.2007	rev 1.1
 	rewritten in ST for better compatibility
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

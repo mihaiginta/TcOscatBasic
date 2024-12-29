@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SEQUENCE_64" Id="{7167bc68-c9de-4c36-bbc8-9191ab1f1ea6}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK SEQUENCE_64
+    <Declaration><![CDATA[FUNCTION_BLOCK SEQUENCE_64
 VAR_INPUT
 	START : BOOL;
 	SMAX : INT;
@@ -30,8 +29,7 @@ sequence generates a sequence of states with a programmable length for each stat
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-(* read system timer *)
+      <ST><![CDATA[(* read system timer *)
 tx := DWORD_TO_TIME(T_PLC_MS());
 TRIG := FALSE;
 
@@ -61,8 +59,7 @@ edge := START;
 hm	29. jun. 2008
 	original version
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

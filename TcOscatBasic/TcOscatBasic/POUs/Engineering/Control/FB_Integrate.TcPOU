@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_Integrate" Id="{78b5c855-9b36-4e73-9f6e-2cf75411e118}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK FB_Integrate
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Integrate
 VAR_INPUT
 	run : BOOL 	:= TRUE;	// Set true for running integration
 	in 	: REAL;				// integrated value
@@ -21,10 +20,10 @@ VAR
 	last: TIME;
 	tx: TIME;
 END_VAR
+
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-(*read system time *)
+      <ST><![CDATA[(*read system time *)
 tx := TIME();
 
 //reset integration
@@ -45,8 +44,7 @@ last := tx;	//save last time
 
 (*
 aku 24.09.2019: first implementation
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FT_INT2" Id="{031d3f91-fdee-438f-ace5-938eb3e6e80d}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK FT_INT2
+    <Declaration><![CDATA[FUNCTION_BLOCK FT_INT2
 VAR_INPUT
 	IN : REAL;
 	K : REAL := 1.0;
@@ -35,11 +34,9 @@ the default for K is 1.
 FT_INT2 has double presision accuracy (14 digits).
 
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF RST THEN
+      <ST><![CDATA[IF RST THEN
 	val := R2_SET(0.0);
 	out := 0.0;
 ELSE

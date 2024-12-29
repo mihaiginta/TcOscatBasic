@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DELAY" Id="{c7fbe950-2dd5-4017-abb2-4088cbbe55b6}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK DELAY
+    <Declaration><![CDATA[FUNCTION_BLOCK DELAY
 VAR_INPUT
 	IN : REAL;
 	N : INT;
@@ -30,11 +29,9 @@ if n = 0 the input will be present on the output without a delay.
 f N > 32 then the output will be delayed by 32 cycles.
 any high on rst will load the buffer with in.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-stop := LIMIT(0,N,32) - 1;
+      <ST><![CDATA[stop := LIMIT(0,N,32) - 1;
 IF rst OR NOT init THEN
 	init := TRUE;
 	FOR i := 0 TO stop DO buf[i] := in; END_FOR;
@@ -66,8 +63,7 @@ hm	23. feb.2009	rev 1.4
 hm	23. mar. 2009	rev 1.5
 	corrected non standard write to input N
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

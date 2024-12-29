@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SDT_TO_DATE" Id="{b5f070f8-74b3-4f81-a781-0dca426c27c5}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION SDT_TO_DATE : DATE
+    <Declaration><![CDATA[FUNCTION SDT_TO_DATE : DATE
 VAR_INPUT
 	DTI : SDT;
 END_VAR
@@ -18,8 +17,7 @@ converts Structured date time (SDT) to Date Time
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-SDT_TO_DATE := SET_DATE(DTI.YEAR, DTI.MONTH, DTI.DAY);
+      <ST><![CDATA[SDT_TO_DATE := SET_DATE(DTI.YEAR, DTI.MONTH, DTI.DAY);
 
 
 
@@ -28,8 +26,7 @@ SDT_TO_DATE := SET_DATE(DTI.YEAR, DTI.MONTH, DTI.DAY);
 hm 18. oct. 2008	rev 1.0
 	original version
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

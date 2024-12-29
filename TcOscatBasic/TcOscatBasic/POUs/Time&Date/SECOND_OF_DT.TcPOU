@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SECOND_OF_DT" Id="{52411eea-16b0-4d2a-aef2-821d1730a9b0}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION SECOND_OF_DT : INT
+    <Declaration><![CDATA[FUNCTION SECOND_OF_DT : INT
 VAR_INPUT
 	XDT : DT;
 END_VAR
@@ -15,18 +14,15 @@ END_VAR
 
 SECOND_OF_DT returns the current second (second of minute) of a DT variable
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-SECOND_OF_DT := DWORD_TO_INT(DT_TO_DWORD(XDT) MOD 60);
+      <ST><![CDATA[SECOND_OF_DT := DWORD_TO_INT(DT_TO_DWORD(XDT) MOD 60);
 
 (* revision history
 hm		6.9.2008	rev 1.0
 	original version
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

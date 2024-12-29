@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ESR_MON_X8" Id="{13c1e283-dfd8-4bd3-a4ec-b24aaf7af7d6}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK ESR_MON_X8
+    <Declaration><![CDATA[FUNCTION_BLOCK ESR_MON_X8
 VAR_INPUT
 	s0, s1, s2, s3, s4, s5, s6, s7 : BYTE;
 	DT_in : DT;
@@ -38,8 +37,7 @@ the adress label of the 8 inputs can be configured individually.
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-(* read system timer *)
+      <ST><![CDATA[(* read system timer *)
 tx := DWORD_TO_TIME(T_PLC_MS());
 
 ESR_Flag := FALSE;
@@ -112,8 +110,7 @@ hm	1. dec. 2009	rev 1.2
 	changed esr_out to be I/O
 
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

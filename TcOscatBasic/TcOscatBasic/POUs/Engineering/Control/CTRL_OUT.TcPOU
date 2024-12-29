@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CTRL_OUT" Id="{49f38692-6623-4150-9104-fe8b6a7fcfb0}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK CTRL_OUT
+    <Declaration><![CDATA[FUNCTION_BLOCK CTRL_OUT
 VAR_INPUT
 	CI, OFFSET, MAN_IN, LIM_L, LIM_H : REAL;
 	MANUAL : BOOL;
@@ -22,8 +21,7 @@ tested by	oscat
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-Y := SEL(MANUAL, CI, MAN_IN) + OFFSET;
+      <ST><![CDATA[Y := SEL(MANUAL, CI, MAN_IN) + OFFSET;
 
 (* Limit the output *)
 IF Y > LIM_L AND Y < LIM_H THEN
@@ -41,8 +39,7 @@ hm 	2. jun. 2008 	rev 1.0
 
 hm	5. nov. 2008	rev 1.1
 	optimized code
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

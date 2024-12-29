@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DEAD_BAND" Id="{9385058b-99ea-45d0-bea8-35c85bbfaa75}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION DEAD_BAND : REAL
+    <Declaration><![CDATA[FUNCTION DEAD_BAND : REAL
 VAR_INPUT
 	X : REAL;
 	L : REAL;
@@ -19,11 +18,9 @@ DEAD_BAND = X - L wenn X > L)
 DEAD_BAND = X + L wenn X < -L
 DEAD_BAND = 0 wenn Abs(X) <= L
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF X > L THEN
+      <ST><![CDATA[IF X > L THEN
 	DEAD_BAND := X - L;
 ELSIF X < -L THEN
 	DEAD_BAND := X + L;
@@ -41,8 +38,7 @@ hm	14. jun. 2008	rev 1.1
 
 hm	18. jan. 2011	rev 1.2
 	assign 0 before return
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TO_LOWER" Id="{c27909ab-0757-4ba2-8846-f7908f409618}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION TO_LOWER : BYTE
+    <Declaration><![CDATA[FUNCTION TO_LOWER : BYTE
 VAR_INPUT
 	IN : BYTE;
 END_VAR
@@ -15,11 +14,9 @@ tested by		tobias
 
 to_lower converts a character from uppercase to lowercase
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF in > 64 AND in < 91 THEN
+      <ST><![CDATA[IF in > 64 AND in < 91 THEN
    TO_LOWER := in OR 16#20;
 ELSIF (in > 191 AND in < 223) AND in <> 215 AND setup.EXTENDED_ASCII THEN
    TO_LOWER := in OR 16#20;
@@ -37,8 +34,7 @@ hm	19. oct. 2008	rev 1.1
 
 ks	25. oct. 2008	rev 1.2
 	optimized code
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

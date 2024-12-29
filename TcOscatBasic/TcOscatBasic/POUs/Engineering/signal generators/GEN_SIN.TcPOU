@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="GEN_SIN" Id="{b779e2d6-a634-4fd9-bbbb-f272fe67e88c}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK GEN_SIN
+    <Declaration><![CDATA[FUNCTION_BLOCK GEN_SIN
 VAR_INPUT
 	PT : TIME;
 	AM : REAL := 1.0;
@@ -31,11 +30,9 @@ The Output waveform will have its max peak at AM/2 + OS and its minimum peak at 
 The delay input can delay a signal up to PT, this can be useful to synchronize different generators 
 and generate interleaving signals. A Cos wave can be generated accordingly.
 in addition to a analog output Out there is a second boolean output Q with the corresponding binary signal.
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-(* read system time and prepare input data *)
+      <ST><![CDATA[(* read system time and prepare input data *)
 tx := DWORD_TO_TIME(T_PLC_MS()) - last;
 DL := MODR(dl,1.0);
 IF dl < 0.0 THEN dl := 1.0 - dl; END_IF;
@@ -82,8 +79,7 @@ hm	18. oct. 2008	rev 1.5
 hm	11. mar. 2009	rev 1.6
 	changed real constants to use dot syntax
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

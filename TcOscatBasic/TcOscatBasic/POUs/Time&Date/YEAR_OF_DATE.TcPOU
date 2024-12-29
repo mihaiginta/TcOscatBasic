@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="YEAR_OF_DATE" Id="{a6e658a7-be6d-4346-9c82-269bf7a39688}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION YEAR_OF_DATE : INT
+    <Declaration><![CDATA[FUNCTION YEAR_OF_DATE : INT
 VAR_INPUT
 	IDATE : DATE;
 END_VAR
@@ -19,8 +18,7 @@ the function works for dates from 1970 - 2099
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-YEAR_OF_DATE := DWORD_TO_INT((DATE_TO_DWORD(idate) + 43200) / 31557600 + 1970);
+      <ST><![CDATA[YEAR_OF_DATE := DWORD_TO_INT((DATE_TO_DWORD(idate) + 43200) / 31557600 + 1970);
 
 
 (* revision history
@@ -40,8 +38,7 @@ hm	7. apr. 2008	rev 1.3
 hm	7. oct. 2008	rev 1.4
 	renamed function (year) to year_of_date
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

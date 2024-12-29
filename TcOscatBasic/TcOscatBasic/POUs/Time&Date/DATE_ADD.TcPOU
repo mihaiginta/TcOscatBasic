@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DATE_ADD" Id="{755d89f8-818c-4361-96fe-e245e5d7b137}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION DATE_ADD : DATE
+    <Declaration><![CDATA[FUNCTION DATE_ADD : DATE
 VAR_INPUT
 	IDATE : DATE;
 	D : INT;
@@ -28,8 +27,7 @@ negative inputs are allowed for subtraction.
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-DATE_ADD := UDINT_TO_DATE(DATE_TO_UDINT(IDATE) + INT_TO_UDINT(D + W * 7) * UDINT#86400);
+      <ST><![CDATA[DATE_ADD := UDINT_TO_DATE(DATE_TO_UDINT(IDATE) + INT_TO_UDINT(D + W * 7) * UDINT#86400);
 yr := Y + YEAR_OF_DATE(DATE_ADD);
 mo := M + MONTH_OF_DATE(DATE_ADD);
 dm := DAY_OF_MONTH(DATE_ADD);
@@ -73,8 +71,7 @@ hm	2. feb. 2011		rev 1.7
 
 hm	22. mar. 2011	rev 1.8
 	fixed an error in formula
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

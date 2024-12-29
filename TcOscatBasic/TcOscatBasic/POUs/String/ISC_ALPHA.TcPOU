@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ISC_ALPHA" Id="{2d031cdd-a8b9-40ab-851c-f229c861b737}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION ISC_ALPHA : BOOL
+    <Declaration><![CDATA[FUNCTION ISC_ALPHA : BOOL
 VAR_INPUT
 	IN : BYTE;
 END_VAR
@@ -15,11 +14,9 @@ tested by	oscat
 
 ISC_ALPHA checks if a character is a..z or A..Z.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF setup.EXTENDED_ASCII THEN
+      <ST><![CDATA[IF setup.EXTENDED_ASCII THEN
 	ISC_ALPHA := (in > 64 AND in < 91) OR (in > 191  AND in <> 215 AND in <> 247) OR (in > 96 AND in < 123);
 ELSE
 	ISC_ALPHA := (IN > 64 AND IN < 91) OR (in > 96 AND in < 123);

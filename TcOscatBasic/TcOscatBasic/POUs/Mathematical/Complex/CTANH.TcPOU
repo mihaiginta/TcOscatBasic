@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CTANH" Id="{e2947180-7115-4a7b-8bc4-6e6b6018ccec}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION CTANH : complex
+    <Declaration><![CDATA[FUNCTION CTANH : complex
 VAR_INPUT
 	X : complex;
 END_VAR
@@ -19,11 +18,9 @@ tested by	oscat
 
 this function calculates the complex hyperbolictangens
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-xi2 := 2.0 * x.im;
+      <ST><![CDATA[xi2 := 2.0 * x.im;
 xr2 := 2.0 * x.re;
 temp := 1.0 / (COSH(xr2) + COS(xi2));
 CTANH.re := temp * SINH(xr2);
@@ -37,8 +34,7 @@ hm	21. feb 2008	rev 1.0
 hm	10. mar. 2009	rev 1.1	
 	new faster code
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

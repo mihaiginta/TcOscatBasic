@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FT_PT1" Id="{a190d358-53b9-4758-b91c-b84922bd1b53}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK FT_PT1
+    <Declaration><![CDATA[FUNCTION_BLOCK FT_PT1
 VAR_INPUT
 	in : REAL;
 	T : TIME;
@@ -24,11 +23,9 @@ tested by		oscat
 
 FT_PT1 is an low pass filter with a programmable time T and faktor K.
  
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-(* read system time *)
+      <ST><![CDATA[(* read system time *)
 tx := T_PLC_US();
 
 (* startup initialisation *)
@@ -78,8 +75,7 @@ hm	11. mar. 2009	rev 1.10
 
 hm	18. jan. 2011	rev 1.11
 	avoid underrun of out
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

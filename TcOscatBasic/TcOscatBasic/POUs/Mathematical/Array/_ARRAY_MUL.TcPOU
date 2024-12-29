@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="_ARRAY_MUL" Id="{c5078c74-5eab-49b7-ab8e-5f170af5b8c3}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION _ARRAY_MUL : BOOL
+    <Declaration><![CDATA[FUNCTION _ARRAY_MUL : BOOL
 VAR_INPUT
 	pt : POINTER TO ARRAY[0..32000] OF REAL;
 	size : UINT;
@@ -23,11 +22,9 @@ Array[i] := ARRAY[i] * X.
 the function needs to be called:	array_avg(adr("array"),sizeof("array"));
 because this function works with pointers its very time efficient and it needs no extra memory.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-stop := SHR(size,2)-1;
+      <ST><![CDATA[stop := SHR(size,2)-1;
 FOR i := 0 TO stop DO
 	PT^[i] := PT^[i] * X;
 END_FOR;
@@ -38,8 +35,7 @@ _ARRAY_MUL := TRUE;
 hm	2. apr 2008		rev 1.0
 	original version
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

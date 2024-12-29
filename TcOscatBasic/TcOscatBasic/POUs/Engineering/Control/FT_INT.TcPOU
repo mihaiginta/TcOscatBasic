@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FT_INT" Id="{1973b49d-2288-4a94-a8cf-84c93b492a2b}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK FT_INT
+    <Declaration><![CDATA[FUNCTION_BLOCK FT_INT
 VAR_INPUT
 	IN : REAL;
 	K : REAL := 1;
@@ -33,11 +32,9 @@ the out_min and out_max values can be set to ,imit the output value range.
 the default for K is 1.
 
  
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF rst THEN
+      <ST><![CDATA[IF rst THEN
 	out := 0.0;
 ELSE
 	integ(X := IN, E := RUN, K := K, Y := out);

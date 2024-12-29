@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ISC_LOWER" Id="{a6c8a8f7-4bb4-414d-ab97-917119f820a4}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION ISC_LOWER : BOOL
+    <Declaration><![CDATA[FUNCTION ISC_LOWER : BOOL
 VAR_INPUT
 	IN : BYTE;
 END_VAR
@@ -15,11 +14,9 @@ tested by	oscat
 
 isc_lower checks if a character is lowercase.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF setup.EXTENDED_ASCII THEN
+      <ST><![CDATA[IF setup.EXTENDED_ASCII THEN
 	ISC_LOWER := ((in > 96) AND (in < 123)) OR ((in > 222) AND (in <> 247));
 ELSE
 	ISC_LOWER := ((in > 96) AND (in < 123));
@@ -31,8 +28,7 @@ hm	6. mar. 2008	rev 1.0
 
 hm	19. oct. 2008	rev 1.1
 	changes setup constants
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

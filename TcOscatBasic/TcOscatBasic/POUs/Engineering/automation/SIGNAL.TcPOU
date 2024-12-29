@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SIGNAL" Id="{c066d4a0-036a-4874-b83f-e38dca541b3c}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK SIGNAL
+    <Declaration><![CDATA[FUNCTION_BLOCK SIGNAL
 VAR_INPUT
 	IN : BOOL;
 	SIG : BYTE;
@@ -30,8 +29,7 @@ ts defaults to 128 ms if not specified.
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF in THEN
+      <ST><![CDATA[IF in THEN
 	(* an alarm is present read system time first *)
 	tx := T_PLC_MS();
 	(* calculate the step counter which is the lowest 3 bits of (time / ts) *)
@@ -52,8 +50,7 @@ END_IF;
 hm	13.12.2007		rev 1.0
 	original version
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

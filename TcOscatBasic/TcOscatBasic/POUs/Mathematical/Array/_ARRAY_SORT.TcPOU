@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="_ARRAY_SORT" Id="{35ac169c-abe2-4943-ad54-dc395d0be0dc}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION _ARRAY_SORT : BOOL
+    <Declaration><![CDATA[FUNCTION _ARRAY_SORT : BOOL
 VAR_INPUT
 	PT : POINTER TO ARRAY[1..32000] OF REAL;
 	SIZE : UINT;
@@ -34,11 +33,9 @@ this function will manipulate a given array.
 the function will not return anything except true, it will instead manipulate the original array.
 because this function works with pointers its very time efficient and it needs no extra memory.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-(* Startwerte zur Arraygröße *)
+      <ST><![CDATA[(* Startwerte zur Arraygröße *)
 links := 1;					(* Anfangselement des Arrays *)
 rechts := SHR(size,2);		(* Endelement des Arrays *)
 stack_count := 1;			(* Laufvariable Stack *)

@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="WORD_OF_BYTE" Id="{159b8e9c-05cb-449b-ae9b-6d57d4250385}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION WORD_OF_BYTE : WORD
+    <Declaration><![CDATA[FUNCTION WORD_OF_BYTE : WORD
 VAR_INPUT
 	B1 : BYTE;
 	B0 : BYTE;
@@ -16,11 +15,9 @@ tested by		tobias
 
 this function creates a word from 2 individual bytes
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-WORD_OF_BYTE := SHL(BYTE_TO_WORD(B1),8) OR BYTE_TO_WORD(B0);
+      <ST><![CDATA[WORD_OF_BYTE := SHL(BYTE_TO_WORD(B1),8) OR BYTE_TO_WORD(B0);
 
 (* revision history
 hm	24. jan 2007	rev 1.0
@@ -38,8 +35,7 @@ hm	23. apr. 2008	rev 1.3
 hm	18. jul. 2009	rev 1.4
 	added type conversions for compatibility reasons
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CAUCHY" Id="{7ad55883-80f8-489f-9706-47274251ce6e}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION CAUCHY : REAL
+    <Declaration><![CDATA[FUNCTION CAUCHY : REAL
 VAR_INPUT
 	X : REAL;
 	T : REAL;
@@ -20,11 +19,9 @@ tested by		tobias
 
 this function calculates the Cauchy distribution function
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-tmp := x - t;
+      <ST><![CDATA[tmp := x - t;
 CAUCHY := math.PI_INV * U / (U*U + tmp*tmp);
 
 
@@ -33,8 +30,7 @@ CAUCHY := math.PI_INV * U / (U*U + tmp*tmp);
 hm	26. oct. 2008	rev 1.0
 	original version
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

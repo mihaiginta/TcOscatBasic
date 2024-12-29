@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="PIN_CODE" Id="{07943bb2-bfc5-448e-890a-0d3975824bdf}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK PIN_CODE
+    <Declaration><![CDATA[FUNCTION_BLOCK PIN_CODE
 VAR_INPUT
 	CB : BYTE;
 	E : BOOL;
@@ -24,11 +23,9 @@ tested by	oscat
 
 MATRIX_CODE scans the input of a key_pad (MATRIX) for a sequence of characters.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-tp := FALSE;
+      <ST><![CDATA[tp := FALSE;
 IF e THEN
 	IF CB = CODE(pin, pos) THEN
 		pos := pos + 1;

@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="F_TO_PT" Id="{396fea13-c652-4b6e-aa00-1e474fc81b35}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION F_TO_PT : TIME
+    <Declaration><![CDATA[FUNCTION F_TO_PT : TIME
 VAR_INPUT
 	F : REAL;
 END_VAR
@@ -14,11 +13,9 @@ programmer 	hugo
 tested by		tobias
 
 this function converts frequency to periode time  
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-F_TO_PT := DWORD_TO_TIME(REAL_TO_DWORD(1.0 / F * 1000.0));
+      <ST><![CDATA[F_TO_PT := DWORD_TO_TIME(REAL_TO_DWORD(1.0 / F * 1000.0));
 
 
 (* revision history

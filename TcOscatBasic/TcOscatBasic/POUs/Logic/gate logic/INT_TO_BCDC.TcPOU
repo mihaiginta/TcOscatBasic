@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="INT_TO_BCDC" Id="{689863d0-7295-4b2d-85f8-2f2324610465}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION INT_TO_BCDC : BYTE
+    <Declaration><![CDATA[FUNCTION INT_TO_BCDC : BYTE
 VAR_INPUT
 	IN : INT;
 END_VAR
@@ -17,8 +16,7 @@ this function converts an integer into a two digit bcd number.
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-INT_TO_BCDC := SHL(INT_TO_BYTE(IN / INT#10),4) OR INT_TO_BYTE(in MOD INT#10);
+      <ST><![CDATA[INT_TO_BCDC := SHL(INT_TO_BYTE(IN / INT#10),4) OR INT_TO_BYTE(in MOD INT#10);
 
 (* revision history
 hm	13.12.2007
@@ -28,8 +26,7 @@ hm	30.6.2008	rev 1.1
 	changed name INT_TO_BCD to INT_TO_BCDC to avoid collision with util.lib
 	corrected error in code
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

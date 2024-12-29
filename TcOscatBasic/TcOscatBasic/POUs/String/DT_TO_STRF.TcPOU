@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DT_TO_STRF" Id="{c941af92-433f-48a7-99bf-0215f3f14369}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION DT_TO_STRF : STRING
+    <Declaration><![CDATA[FUNCTION DT_TO_STRF : STRING
 VAR_INPUT
 	DTI : DT;
 	MS : INT;
@@ -30,11 +29,9 @@ tested by	oscat
 
 DT_TO_STRINGF converts a DATETIME input to a formatted string
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF LANG < 1 THEN ly := language.DEFAULT; ELSE ly := MIN(language.LMAX, LANG); END_IF;
+      <ST><![CDATA[IF LANG < 1 THEN ly := language.DEFAULT; ELSE ly := MIN(language.LMAX, LANG); END_IF;
 
 (* decode date and time information *)
 dx := DT_TO_DATE(DTI);

@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <DUT Name="CONSTANTS_MATH" Id="{36c9fa06-11bc-47d0-8c40-e88d0396089e}">
-    <Declaration><![CDATA[
-TYPE CONSTANTS_MATH :
+    <Declaration><![CDATA[TYPE CONSTANTS_MATH :
 STRUCT
 	PI : REAL := 	3.14159265358979323846264338327950288;		(* Kreiszahl PI *)
 	PI2 : REAL := 	6.28318530717958647692528676655900576;	(* PI * 2 *)
@@ -15,7 +14,6 @@ STRUCT
 	SQ2 : REAL :=	1.4142135623731;							(* Wurzel von 2 *)
 	FACTS : ARRAY[0..12] OF DINT :=[ 1,1,2,6,24,120,720,5040,40320,362880,3628800,39916800,479001600];
 END_STRUCT
-END_TYPE
-]]></Declaration>
+END_TYPE]]></Declaration>
   </DUT>
 </TcPlcObject>

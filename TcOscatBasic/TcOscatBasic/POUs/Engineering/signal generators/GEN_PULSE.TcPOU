@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="GEN_PULSE" Id="{a705c1ba-fbca-4578-9de9-b061f5732b5b}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK GEN_PULSE
+    <Declaration><![CDATA[FUNCTION_BLOCK GEN_PULSE
 VAR_INPUT
 	ENQ : BOOL := TRUE;
 	PTH : TIME;
@@ -27,11 +26,9 @@ the accuracy of gen_pulse is depending on the system timer.
 when time is 0 the high and low times are exactly one cycle.
 ENQ = TRUE will start and ENQ = FALSE will stop the generator.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF enq THEN
+      <ST><![CDATA[IF enq THEN
 	tx := DWORD_TO_TIME(T_PLC_MS());
 	IF NOT init THEN init := TRUE; tn := tx; END_IF;
 	IF tx - tn >= SEL(Q, PTL, PTH) THEN
@@ -62,8 +59,7 @@ hm	16. feb. 2011	rev 1.4
 
 hm	8. apr. 2011	rev 1.5
 	ptl and pth was exchanged
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="COUNT_SUBSTRING" Id="{698acc6e-dc45-47ee-b3fc-9ba8c19f34cf}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION COUNT_SUBSTRING : INT
+    <Declaration><![CDATA[FUNCTION COUNT_SUBSTRING : INT
 VAR_INPUT
    SEARCH : STRING;
    STR : STRING;
@@ -19,11 +18,9 @@ tested by		tobias
 
 count_substring returns the number of occurences of a substring in a string
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-COUNT_SUBSTRING := 0;
+      <ST><![CDATA[COUNT_SUBSTRING := 0;
 size := LEN(SEARCH);
 REPEAT
    pos := FIND(STR,SEARCH);
@@ -40,6 +37,7 @@ ks	20. jan. 2011	rev 1.0
 	original version
 
 *)
+
 ]]></ST>
     </Implementation>
   </POU>

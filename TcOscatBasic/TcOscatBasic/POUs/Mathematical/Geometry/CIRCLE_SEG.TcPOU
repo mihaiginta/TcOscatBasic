@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CIRCLE_SEG" Id="{a6f52f9a-8907-43d2-a61a-87fc4795599c}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION CIRCLE_SEG : REAL
+    <Declaration><![CDATA[FUNCTION CIRCLE_SEG : REAL
 VAR_INPUT
 	RX : REAL;
 	HX : REAL;
@@ -17,11 +16,9 @@ tested by		tobias
 CIRCLE_SEG calculates the Area of a circle segement enclosed between a sectant line and the circumference.
 
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF RX > 0.0 THEN
+      <ST><![CDATA[IF RX > 0.0 THEN
 	CIRCLE_SEG := 2.0 * ACOS(1.0 - LIMIT(0.0, HX / RX, 2.0));
 	CIRCLE_SEG := (CIRCLE_SEG - SIN(CIRCLE_SEG)) *RX * RX / 2.0;
 END_IF;
@@ -31,8 +28,7 @@ END_IF;
 hm	10. mar 2010	rev 1.0
 	original version
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

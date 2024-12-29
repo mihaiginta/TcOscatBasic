@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MULTI_IN" Id="{33c1cf44-6f67-4e9a-b144-83d118eb8a46}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION MULTI_IN : REAL
+    <Declaration><![CDATA[FUNCTION MULTI_IN : REAL
 VAR_INPUT
 	in_1 : REAL;
 	in_2 : REAL;
@@ -43,8 +42,7 @@ multi_in can be configured in different ways:
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-F1 :=  in_1 > in_min AND in_1 < in_max;
+      <ST><![CDATA[F1 :=  in_1 > in_min AND in_1 < in_max;
 F2 :=  in_2 > in_min AND in_2 < in_max;
 F3 :=  in_3 > in_min AND in_3 < in_max;
 
@@ -109,8 +107,7 @@ hm	11. mar. 2009	rev 1.3
 
 hm	18. jul. 2009	rev 1.4
 	improved performance
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

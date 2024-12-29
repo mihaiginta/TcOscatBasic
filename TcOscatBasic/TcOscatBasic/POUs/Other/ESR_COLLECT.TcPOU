@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ESR_COLLECT" Id="{05cb3253-60c9-41af-a89d-89cb2f552b48}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK ESR_COLLECT
+    <Declaration><![CDATA[FUNCTION_BLOCK ESR_COLLECT
 VAR_INPUT
 	ESR_0, ESR_1, ESR_2, ESR_3, ESR_4, ESR_5, ESR_6, ESR_7 : ARRAY [0..3] OF esr_data;
 	rst : BOOL;
@@ -34,8 +33,7 @@ if the array will be full, the buffer will be refilled starting at position 0.
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF rst OR cnt < 0 THEN
+      <ST><![CDATA[IF rst OR cnt < 0 THEN
 	pos := -1;
 ELSE
 	FOR cnt := 0 TO max_in DO
@@ -67,8 +65,7 @@ ks	12. nov. 2009	rev 1.3
 hm	1. dec. 2009	rev 1.4
 	changed pos to be I/O
 	reduced output array size to 32 elements
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

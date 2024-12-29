@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ENERGY" Id="{f3a169f6-1123-4e41-baf6-9f77fd71dc76}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK ENERGY
+    <Declaration><![CDATA[FUNCTION_BLOCK ENERGY
 VAR_INPUT
 	J : REAL;
 	C : REAL;
@@ -23,11 +22,9 @@ tested by		oscat
 this function converts different energy units
 any unused input can simply be left open.
 different inputs connected at the same time will be added up.
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-YJ := J + Wh * 3600.0 + C * 4.1868;
+      <ST><![CDATA[YJ := J + Wh * 3600.0 + C * 4.1868;
 YC := YJ * 0.238845896627496;
 YWh := YJ * 2.7777777778E-004;
 
@@ -52,8 +49,7 @@ hm 16. jan 2010	rev 1.2
 	avoid the string cal in comments for codesys import bug
 
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

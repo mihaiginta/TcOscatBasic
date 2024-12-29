@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FILTER_DW" Id="{8db38ed9-020f-4efd-a5a2-13f4a2cc5250}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK FILTER_DW
+    <Declaration><![CDATA[FUNCTION_BLOCK FILTER_DW
 VAR_INPUT
 	X : DWORD;
 	T : TIME;
@@ -24,11 +23,9 @@ tested by		oscat
 
 FILTER_DW is an low pass filter with a programmable time T used for DWORD format.
  
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-(* read system time *)
+      <ST><![CDATA[(* read system time *)
 tx := T_PLC_MS();
 
 (* startup initialisation *)
@@ -50,8 +47,7 @@ hm 10. oct. 2008	rev 1.0
 
 hm	3. nov. 2008	REV 1.1
 	corrected an overflow problem
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

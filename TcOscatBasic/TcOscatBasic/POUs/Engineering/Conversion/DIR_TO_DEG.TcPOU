@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DIR_TO_DEG" Id="{ffd7ac5c-5a0a-4377-9ffc-226126478cf6}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION DIR_TO_DEG : INT
+    <Declaration><![CDATA[FUNCTION DIR_TO_DEG : INT
 VAR_INPUT
 	DIR : STRING(3);
 	L : INT;
@@ -20,11 +19,9 @@ tested by	oscat
 this function converts compass directions to degrees
 it will recognize up to 3 letter directions in english and german writing.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF L = 0 THEN ly := LANGUAGE.DEFAULT; ELSE ly := MIN(L, LANGUAGE.LMAX); END_IF;
+      <ST><![CDATA[IF L = 0 THEN ly := LANGUAGE.DEFAULT; ELSE ly := MIN(L, LANGUAGE.LMAX); END_IF;
 FOR i := 0 TO 15 DO
 	IF language.DIRS[ly, i] = DIR THEN EXIT; END_IF;
 END_FOR;
@@ -39,8 +36,7 @@ DIR_TO_DEG := SHR(i * 45 + 1, 1);
 hm	22. oct. 2008	rev 1.1
 	original release
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

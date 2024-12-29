@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="GAMMA" Id="{120d79d6-d587-4b06-a377-a60015fe34a5}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION GAMMA : REAL
+    <Declaration><![CDATA[FUNCTION GAMMA : REAL
 VAR_INPUT
 	X : REAL;
 END_VAR
@@ -15,11 +14,9 @@ tested by		oscat
 
 this function calculates the stirling function which is an approximation for the gamma function
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF x > 0.0 THEN
+      <ST><![CDATA[IF x > 0.0 THEN
 	GAMMA := SQRT(math.PI2 / X) * EXPT(math.E_INV * (x + 1.0 / (12.0 * x - 0.1 / X)), X);
 END_IF;
 
@@ -45,8 +42,7 @@ hm	26. oct. 2008	rev 1.2
 hm	10. mar. 2009	rev 1.3
 	real constants updated to new systax using dot
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

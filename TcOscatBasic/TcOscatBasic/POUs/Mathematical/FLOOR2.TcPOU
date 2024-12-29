@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FLOOR2" Id="{6793b20e-aed7-404a-bbfd-70725cdcab5c}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION FLOOR2 : DINT
+    <Declaration><![CDATA[FUNCTION FLOOR2 : DINT
 VAR_INPUT
 	X : REAL;
 END_VAR
@@ -21,8 +20,7 @@ floor2(-3.14) = -4
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-FLOOR2 := REAL_TO_DINT(X);
+      <ST><![CDATA[FLOOR2 := REAL_TO_DINT(X);
 IF DINT_TO_REAL(FLOOR2) > X THEN
 	FLOOR2 := FLOOR2 - 1;
 END_IF;
@@ -33,8 +31,7 @@ hm	21. mar. 2008	rev 1.0
 
 hm	4. apr. 2008	rev 1.1
 	added type conversion to avoid warnings under codesys 3.0
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FT_PT2" Id="{e0b320e0-771c-4e42-8cab-c3e399af9d74}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK FT_PT2
+    <Declaration><![CDATA[FUNCTION_BLOCK FT_PT2
 VAR_INPUT
 	in : REAL;
 	T : TIME;
@@ -28,11 +27,9 @@ tested by		oscat
 
 FT_PT2 is a 2nd grade filter with programmable times T, D and faktor K.
  
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-(* startup initialisation *)
+      <ST><![CDATA[(* startup initialisation *)
 IF NOT init OR T = T#0s THEN
 	init := TRUE;
 	out := K * in;
@@ -64,8 +61,7 @@ hm	3. nov. 2008	rev 1.4
 hm	11. mar. 2009	rev 1.5
 	real constants updated to new systax using dot
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

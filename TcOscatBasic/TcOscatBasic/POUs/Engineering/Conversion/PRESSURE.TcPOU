@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="PRESSURE" Id="{637483bc-de39-4637-bbfa-41b08894c71c}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK PRESSURE
+    <Declaration><![CDATA[FUNCTION_BLOCK PRESSURE
 VAR_INPUT
 	mws : REAL;
 	torr : REAL;
@@ -29,11 +28,9 @@ tested by		oscat
 this function converts different pressure units
 any unused input can simply be left open.
 different inputs connected at the same time will be added up.
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-Ybar := bar +
+      <ST><![CDATA[Ybar := bar +
 		pa * 1.0E-5 +
 		0.980665 * att +
 		1.01325 * atm +
@@ -68,8 +65,7 @@ hm	27. mar. 2007	rev 1.0
 hm	11. mar. 2009	rev 1.1
 	improved code
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

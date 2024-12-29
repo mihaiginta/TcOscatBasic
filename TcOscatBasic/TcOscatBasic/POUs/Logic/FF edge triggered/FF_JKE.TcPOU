@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FF_JKE" Id="{bcee94f9-a3e7-4883-b5fa-1740faa9cad0}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK FF_JKE
+    <Declaration><![CDATA[FUNCTION_BLOCK FF_JKE
 VAR_INPUT
 	SET : BOOL;
 	J : BOOL;
@@ -34,8 +33,7 @@ J=1 and K=1 and CLK >>> toggle output
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF rst OR set THEN
+      <ST><![CDATA[IF rst OR set THEN
 	Q := NOT rst;
 ELSIF clk AND NOT edge THEN
 	IF J XOR K THEN Q := J;
@@ -53,8 +51,7 @@ hm	27. dec 2007	rev 1.1
 
 hm	30. oct. 2008	rev 1.2
 	optimized performance
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

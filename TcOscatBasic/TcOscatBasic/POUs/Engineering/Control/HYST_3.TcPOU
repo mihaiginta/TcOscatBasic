@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="HYST_3" Id="{dd070f39-c634-4226-a02f-6050861ff36d}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION_BLOCK HYST_3
+    <Declaration><![CDATA[FUNCTION_BLOCK HYST_3
 VAR_INPUT
 	in : REAL;
 	hyst : REAL;
@@ -25,11 +24,9 @@ tested BY	oscat
 this is a double hysteresis function. Out1 follows a hysteresis function defined by val1and hyst, while out 2 follows val2 and hyst.
 if the input signal is between the two hysteresis switches (val1 and val2) then non of the outputs is active.
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-X := hyst * 0.5;
+      <ST><![CDATA[X := hyst * 0.5;
 IF in < val1 - X THEN
 	q1 := TRUE;
 ELSIF in > val1 + X THEN

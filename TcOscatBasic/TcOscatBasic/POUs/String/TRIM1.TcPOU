@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TRIM1" Id="{918c6621-c115-4439-a0c9-f417a6cbc577}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION TRIM1 : STRING(STRING_LENGTH)
+    <Declaration><![CDATA[FUNCTION TRIM1 : STRING(STRING_LENGTH)
 VAR_INPUT
 	str : STRING(STRING_LENGTH);
 END_VAR
@@ -18,11 +17,9 @@ tested by		tobias
 the function replaces all multiple blanks within a string by only one blank.
 leading and ending blanks will be deleted
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-TRIM1 := str;
+      <ST><![CDATA[TRIM1 := str;
 REPEAT
 	pos := FIND(trim1,'  ');
 	IF pos > 0 THEN TRIM1 := REPLACE(TRIM1,' ',2,pos); END_IF;
@@ -41,8 +38,7 @@ hm	20. mar. 2008	rev 1.1
 
 hm	29. mar. 2008	rev 1.2
 	changed STRING to STRING(STRING_LENGTH)
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

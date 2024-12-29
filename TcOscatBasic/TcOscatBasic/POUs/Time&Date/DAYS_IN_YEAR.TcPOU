@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DAYS_IN_YEAR" Id="{71d4c627-b3eb-4261-bba4-974c696dd6f8}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION DAYS_IN_YEAR : INT
+    <Declaration><![CDATA[FUNCTION DAYS_IN_YEAR : INT
 VAR_INPUT
 	IDATE : DATE;
 END_VAR
@@ -21,8 +20,7 @@ the function works for dates from 1970 - 2099
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-IF LEAP_OF_DATE(IDATE) THEN
+      <ST><![CDATA[IF LEAP_OF_DATE(IDATE) THEN
 	DAYS_IN_YEAR := 366;
 ELSE
 	DAYS_IN_YEAR := 365;
@@ -33,8 +31,7 @@ END_IF;
 hm	27. mar. 2009		rev 1.0
 	original version
 
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

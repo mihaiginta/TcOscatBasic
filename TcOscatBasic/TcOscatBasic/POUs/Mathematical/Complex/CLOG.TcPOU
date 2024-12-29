@@ -1,8 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CLOG" Id="{e28eef0d-0653-4eeb-a074-a32d084619eb}" SpecialFunc="None">
-    <Declaration><![CDATA[
-FUNCTION CLOG : complex
+    <Declaration><![CDATA[FUNCTION CLOG : complex
 VAR_INPUT
 	X : complex;
 END_VAR
@@ -15,11 +14,9 @@ tested by	oscat
 
 this function calculates the complex natural (base e) logarithm
 
-*)
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-CLOG.re := LN(HYPOT(X.re, X.im));
+      <ST><![CDATA[CLOG.re := LN(HYPOT(X.re, X.im));
 CLOG.im := ATAN2(X.im, X.re);
 
 
@@ -29,8 +26,7 @@ hm	21. feb 2008	rev 1.0
 
 hm	20. apr. 2008	rev 1.1
 	use ATAN2 instead of ATAN
-*)
-]]></ST>
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
