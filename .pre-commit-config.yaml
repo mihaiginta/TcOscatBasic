@@ -4,5 +4,7 @@ repos:
     hooks:
     # checks if the option "Write product version if files" is set to false, see https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/3260207243.html&id=
     -   id: no-product-version
+    # adds new line to ST files to reduce git changes
     -   id: twincat-st-newline
-
+    # remove line ids from ST files
+    #-   id: twincat-lineids-remover
