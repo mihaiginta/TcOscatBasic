@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="PWM_PW" Id="{cbdfb51d-2d65-4151-8d2a-cf05976e0612}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK PWM_PW
+    <Declaration><![CDATA[
+FUNCTION_BLOCK PWM_PW
 VAR_INPUT
 	F : REAL;
 	PW : TIME;
@@ -20,9 +21,11 @@ programmer 	oscat
 tested BY		oscat
 
 this signal generator generates a square wave signal which is specified by the frequency and the pulse width.
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF F > 0.0 THEN
+      <ST><![CDATA[
+IF F > 0.0 THEN
 	CLK(PT := REAL_TO_TIME(1000.0 / F));
 	Pulse(in := clk.Q, pt := pw);
 	Q := pulse.Q;
@@ -45,7 +48,8 @@ hm	19. oct. 2008	rev 1.4
 hm	11. mar. 2009	rev 1.5
 	changed real constants to use dot syntax
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

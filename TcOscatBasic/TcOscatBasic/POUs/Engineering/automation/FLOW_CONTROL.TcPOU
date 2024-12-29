@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FLOW_CONTROL" Id="{8b24ac9a-dc5b-4920-89a2-6b34b019f517}" SpecialFunc="None">
-    <Declaration><![CDATA[ FUNCTION_BLOCK FLOW_CONTROL
+    <Declaration><![CDATA[
+ FUNCTION_BLOCK FLOW_CONTROL
 VAR_INPUT
 	IN : BOOL;
 	REQ : BOOL;
@@ -32,7 +33,8 @@ flow control also limits the maximum ontime of the valve and controls pressure o
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[STATUS := 100;
+      <ST><![CDATA[
+STATUS := 100;
 IF RST THEN
 	Q := FALSE;
 	timer(rst := TRUE);
@@ -63,7 +65,8 @@ Q := (IN AND ENQ) OR timer.Q;
 hm 	28. jun. 2008 	rev 1.0
 	original version
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

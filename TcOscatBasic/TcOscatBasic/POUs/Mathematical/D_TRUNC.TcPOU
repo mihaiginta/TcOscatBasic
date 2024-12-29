@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="D_TRUNC" Id="{4de760eb-c7ff-4117-9f8e-3b93b72a3cdc}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION D_TRUNC : DINT
+    <Declaration><![CDATA[
+FUNCTION D_TRUNC : DINT
 VAR_INPUT
 	X : REAL;
 END_VAR
@@ -18,7 +19,8 @@ also real_to_dint will not deliver the same result on different systems
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[D_TRUNC := REAL_TO_DINT(X);
+      <ST><![CDATA[
+D_TRUNC := REAL_TO_DINT(X);
 IF X > 0.0 THEN
 	IF DINT_TO_REAL(D_TRUNC) > X THEN D_TRUNC := D_TRUNC - 1; END_IF;
 ELSE
@@ -38,7 +40,8 @@ hm	31. oct. 2008	rev 1.1
 
 hm	10. mar. 2009	rev 1.2
 	real constants updated to new systax using dot
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DEAD_BAND_A" Id="{db4da26a-aa57-4830-acb7-617d5c7f0f8a}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK DEAD_BAND_A
+    <Declaration><![CDATA[
+FUNCTION_BLOCK DEAD_BAND_A
 VAR_INPUT
 	X : REAL;
 	T : TIME;
@@ -28,9 +29,11 @@ DEAD_BAND = X wenn Abs(X) > L wenn Abs(X) > L
 DEAD_BAND = 0 wenn Abs(X) <= L
 Die Breite der Totzone wird automatisch aus dem Signalrauschen errechnet.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* filter the input signal *)
+      <ST><![CDATA[
+(* filter the input signal *)
 tp1(in := X, T:= T);
 
 (* filter the HF portion to generate a stable L *)
@@ -55,7 +58,8 @@ hm	14. jun. 2008	rev 1.0
 hm	11. mar. 2009	rev 1.1
 	real constants updated to new systax using dot
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

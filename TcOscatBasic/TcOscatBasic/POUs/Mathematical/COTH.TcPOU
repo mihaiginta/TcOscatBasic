@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="COTH" Id="{f6d273d6-dc19-4d41-872f-825ccc4208cb}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION COTH : REAL
+    <Declaration><![CDATA[
+FUNCTION COTH : REAL
 VAR_INPUT
 	X : REAL;
 END_VAR
@@ -14,9 +15,11 @@ tested by		tobias
 
 this function calculates the cotangens hyperbolicus
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF X > 20.0 THEN
+      <ST><![CDATA[
+IF X > 20.0 THEN
 	COTH :=1.0;
 ELSIF X < -20.0 THEN
 	COTH := -1.0;
@@ -41,7 +44,8 @@ hm	10. mar 2008	rev 1.3
 
 hm	10. mar. 2009	rev 1.4
 	real constants updated to new systax using dot
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CASIN" Id="{23e14132-e616-4f22-80d9-440fd7c2d5bd}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION CASIN : complex
+    <Declaration><![CDATA[
+FUNCTION CASIN : complex
 VAR_INPUT
 	X : complex;
 END_VAR
@@ -16,9 +17,11 @@ tested by	oscat
 
 this function calculates the arcus sinus function of a complex number
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[y.re := -x.im;
+      <ST><![CDATA[
+y.re := -x.im;
 y.im := x.re;
 y := CASINH(y);
 CASIN.re := y.im;
@@ -31,7 +34,8 @@ hm	21. feb 2008	rev 1.0
 	original version
 
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

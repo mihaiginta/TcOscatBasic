@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="IS_CC" Id="{295f8d6b-9a12-4e40-87ae-5b5ecda9c4f6}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION IS_CC : BOOL
+    <Declaration><![CDATA[
+FUNCTION IS_CC : BOOL
 VAR_INPUT
 	str : STRING(STRING_LENGTH);
 	cmp : STRING(STRING_LENGTH);
@@ -18,9 +19,11 @@ tested by	hugo
 
 ISC_CC testet ob ein string nur aus Zeichen des Strings CMP besteht.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[L := LEN(str);
+      <ST><![CDATA[
+L := LEN(str);
 FOR pos := 1 TO L DO
 	IF FIND(CMP,MID(str,1,pos)) = 0 THEN RETURN; END_IF;
 END_FOR;
@@ -34,7 +37,8 @@ hm	19. mar 2008	rev 1.0
 
 hm	29. mar. 2008	rev 1.1
 	changed STRING to STRING(STRING_LENGTH)
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

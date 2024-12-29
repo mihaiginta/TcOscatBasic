@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TO_UML" Id="{14952575-817c-4257-9802-b0ca310ef435}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION TO_UML : STRING(2)
+    <Declaration><![CDATA[
+FUNCTION TO_UML : STRING(2)
 VAR_INPUT
 	IN : BYTE;
 END_VAR
@@ -15,9 +16,11 @@ tested by		tobias
 to_uml converts a character above 127 to a two digit character below 127.
 the character Ä is converted to Ae
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[CASE in OF
+      <ST><![CDATA[
+CASE in OF
 	196:	(* Ä *)
 		TO_UML := 'Ae';
 	214:	(* Ö *)
@@ -45,7 +48,8 @@ hm	29. mar. 2008	rev 1.0
 hm	17. dec. 2008	rev 1.1
 	changes name of function chr to chr_to_string
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

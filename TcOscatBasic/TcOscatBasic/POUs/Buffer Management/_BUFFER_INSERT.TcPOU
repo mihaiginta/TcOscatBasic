@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="_BUFFER_INSERT" Id="{125d3592-a908-4550-b6ec-b75c1e0fe3fd}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION _BUFFER_INSERT : INT
+    <Declaration><![CDATA[
+FUNCTION _BUFFER_INSERT : INT
 VAR_INPUT
 	STR : STRING(STRING_LENGTH);
 	POS : INT;
@@ -26,9 +27,11 @@ this function will manipulate a given array.
 the function manipulates the original array, it returnes the next position after the input string when finished.
 because this function works with pointers its very time efficient and it needs no extra memory.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[lx := LEN(str);
+      <ST><![CDATA[
+lx := LEN(str);
 end := pos + lx;
 (* first move the upper part of the buffer to make space for the string *)
 FOR i := UINT_TO_INT(size) - 1 TO end BY -1 DO
@@ -58,7 +61,8 @@ hm	12. nov. 2009	rev 1.4
 hm 2. jan 2012	rev 1.5
 	function now returns the next position after the input string
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

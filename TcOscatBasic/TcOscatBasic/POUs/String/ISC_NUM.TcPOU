@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ISC_NUM" Id="{ce665d8c-4b3f-4786-8042-d3fdee2eebe8}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION ISC_NUM : BOOL
+    <Declaration><![CDATA[
+FUNCTION ISC_NUM : BOOL
 VAR_INPUT
 	IN : BYTE;
 END_VAR
@@ -14,15 +15,18 @@ tested by		hugo
 
 ISC_NUM checks if a character is 0..9.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[ISC_NUM := IN > 47 AND IN < 58;
+      <ST><![CDATA[
+ISC_NUM := IN > 47 AND IN < 58;
 
 (* revision history
 hm		6. mar. 2008	rev 1.0
 	original version
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

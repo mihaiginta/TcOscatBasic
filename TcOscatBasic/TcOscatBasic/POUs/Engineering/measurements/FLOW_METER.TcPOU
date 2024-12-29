@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FLOW_METER" Id="{46e9cb4c-2924-49b4-9feb-699b474b022e}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FLOW_METER
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FLOW_METER
 VAR_INPUT
 	VX : REAL;
 	E : BOOL;
@@ -38,7 +39,8 @@ Flow meter measures flow according to gated time or pulses.
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF NOT init THEN	(* init on power up *)
+      <ST><![CDATA[
+IF NOT init THEN	(* init on power up *)
 	init := TRUE;
 	tl := tx;
 	x_last := X;

@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CTRL_PID" Id="{13a4f0c7-5f2d-4812-9818-ab2721f8b920}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK CTRL_PID
+    <Declaration><![CDATA[
+FUNCTION_BLOCK CTRL_PID
 VAR_INPUT
 	ACT, SET, SUP, OFS, M_I : REAL;
 	MAN : BOOL;
@@ -39,7 +40,8 @@ the output flags lim will signal that the output limits are active.
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF REV THEN
+      <ST><![CDATA[
+IF REV THEN
 	DIFF := CTRL_IN(ACT, SET, SUP);
 ELSE
 	DIFF := CTRL_IN(SET, ACT, SUP);
@@ -75,7 +77,8 @@ hm	5. jan 2008	rev 1.6
 	
 PhOstmann 09. nov 2020 rev 2.1
 	added the possibility to reverse the control input difference
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

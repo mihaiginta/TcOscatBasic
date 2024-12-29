@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="V3_XPRO" Id="{c02dd35a-4b9d-4503-93be-ca0f8ecbe22f}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION V3_XPRO : vector_3
+    <Declaration><![CDATA[
+FUNCTION V3_XPRO : vector_3
 VAR_INPUT
 	A : Vector_3;
 	B : Vector_3;
@@ -15,9 +16,11 @@ tested by		tobias
 
 this function adds two vectors in a 3 dimensional space
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[V3_XPRO.X := A.Y * B.Z - A.Z * B.Y;
+      <ST><![CDATA[
+V3_XPRO.X := A.Y * B.Z - A.Z * B.Y;
 V3_XPRO.Y := A.Z * B.X - A.X * B.Z;
 V3_XPRO.Z := A.X * B.Y - A.Y * B.X;
 
@@ -27,7 +30,8 @@ V3_XPRO.Z := A.X * B.Y - A.Y * B.X;
 hm		11 dec 2007	rev 1.0
 	original version
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

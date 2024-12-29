@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="HOLIDAY" Id="{ffd40a37-77f4-4fe8-935b-faf9891a903a}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK HOLIDAY
+    <Declaration><![CDATA[
+FUNCTION_BLOCK HOLIDAY
 VAR_INPUT
 	DATE_IN : DATE;
 	LANGU : INT;
@@ -42,9 +43,11 @@ a holiday can be a specific weekday before a fixed date, for example buss und be
 with a simple f_use flag any specific holiday can be turned on or off if needed.
 
 please check the manual for examples of holiday definitions
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* for performance reasons only activate once a day *)
+      <ST><![CDATA[
+(* for performance reasons only activate once a day *)
 IF last_active = date_in THEN RETURN; END_IF;
 last_active := DATE_IN;
 
@@ -147,7 +150,6 @@ hm	18. jan 2011	rev 2.0
 	using user specified array for holidays
 
 *)
-
 ]]></ST>
     </Implementation>
   </POU>

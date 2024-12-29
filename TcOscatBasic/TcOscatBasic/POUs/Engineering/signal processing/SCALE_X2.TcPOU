@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SCALE_X2" Id="{ca9589ad-64e4-473a-bb96-16816a2eabe9}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION SCALE_X2 : REAL
+    <Declaration><![CDATA[
+FUNCTION SCALE_X2 : REAL
 VAR_INPUT
 	IN1: BOOL;
 	IN2: BOOL;
@@ -26,10 +27,10 @@ tested by		tobias
 	the min and max input configurations can be edited in the cfc editor by double clicking the symbol body.
 
 *)
-
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[SCALE_X2 := (SEL(IN1, IN1_MIN, IN1_MAX)+ SEL(IN2, IN2_MIN, IN2_MAX)) * k + o;
+      <ST><![CDATA[
+SCALE_X2 := (SEL(IN1, IN1_MIN, IN1_MAX)+ SEL(IN2, IN2_MIN, IN2_MAX)) * k + o;
 
 
 (* revision history
@@ -39,7 +40,8 @@ hm	19. jan, 2007	rev 1.0
 hm	26. oct. 2008	rev 1.1
 	code optimized
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

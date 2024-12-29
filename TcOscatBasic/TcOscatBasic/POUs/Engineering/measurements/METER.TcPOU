@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="METER" Id="{ac5c727a-806b-47b2-aada-bf26031ea758}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK METER
+    <Declaration><![CDATA[
+FUNCTION_BLOCK METER
 VAR_INPUT
 	M1, M2 : REAL;
 	I1, I2 : BOOL;
@@ -32,9 +33,11 @@ I1 and I2 decide which value is accounted for, I1 = True only counts P1, I2 is T
 and I1 and I2 is true counts P1 and P2.
 the meter can be used for all kind of consumption meters. P1 and P2 can change on the fly.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* measure the last cycle time and make sure we onle execute once every millisecond *)
+      <ST><![CDATA[
+(* measure the last cycle time and make sure we onle execute once every millisecond *)
 tx := T_PLC_MS();
 IF NOT init THEN
 	init := TRUE;

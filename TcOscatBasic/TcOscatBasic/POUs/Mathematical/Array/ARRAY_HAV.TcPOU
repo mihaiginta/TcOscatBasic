@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ARRAY_HAV" Id="{b48223b1-8507-4ce7-8591-5b34e8f4e6cb}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION ARRAY_HAV : REAL
+    <Declaration><![CDATA[
+FUNCTION ARRAY_HAV : REAL
 VAR_INPUT
 	pt : POINTER TO ARRAY[0..32000] OF REAL;
 	size : UINT;
@@ -20,9 +21,11 @@ this function will calculate the harmonic average of a given array.
 the function needs to be called:	array_avg(adr("array"),sizeof("array"));
 because this function works with pointers its very time efficient and it needs no extra memory.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[stop := SHR(size,2)-1;
+      <ST><![CDATA[
+stop := SHR(size,2)-1;
 FOR i := 0 TO stop DO
 	IF pt^[i] <> 0.0 THEN
 		ARRAY_HAV := ARRAY_HAV + 1.0 / pt^[i];
@@ -41,7 +44,8 @@ hm	2. apr 2008	rev 1.0
 hm	10. mar. 2009	rev 1.1
 	real constants updated to new systax using dot
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

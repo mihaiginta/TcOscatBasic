@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DEAD_ZONE2" Id="{de25148b-fc9d-41e5-a52f-46516f9940cb}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK DEAD_ZONE2
+    <Declaration><![CDATA[
+FUNCTION_BLOCK DEAD_ZONE2
 VAR_INPUT
 	X : REAL;
 	L : REAL;
@@ -20,9 +21,11 @@ dead_zone2 is a linear transfer function which follows a linear function except 
 Y = X if abs(x) > L.
 for values of 0 +/- L a hysteresis function will hold the output at + or - L.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF ABS(x) > L THEN
+      <ST><![CDATA[
+IF ABS(x) > L THEN
 	Y := X;
 ELSIF Y > 0.0 THEN
 	Y := L;

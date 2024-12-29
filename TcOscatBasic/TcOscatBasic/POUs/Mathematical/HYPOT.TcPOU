@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="HYPOT" Id="{cfaf4952-2ae6-41c4-a925-a923c4a3b283}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION HYPOT : REAL
+    <Declaration><![CDATA[
+FUNCTION HYPOT : REAL
 VAR_INPUT
 	X : REAL;
 	Y : REAL;
@@ -15,9 +16,11 @@ tested by	oscat
 
 this function calculates the pythagorean function
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[HYPOT := SQRT(x*x + y*y);
+      <ST><![CDATA[
+HYPOT := SQRT(x*x + y*y);
 
 
 (* revision history

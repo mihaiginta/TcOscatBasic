@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FSTRING_TO_MONTH" Id="{848ca0af-e578-4f89-a7f0-63caf9452781}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION FSTRING_TO_MONTH : INT
+    <Declaration><![CDATA[
+FUNCTION FSTRING_TO_MONTH : INT
 VAR_INPUT
 	MTH : STRING(20);
 	LANG : INT;
@@ -19,9 +20,11 @@ tested by	oscat
 FSTRING_TO_MONTH converts a string into a month, the string can be a name for the month or a number.
 the function is language sensitve when LANG > 1 and checks for all languages when LANG = 0
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF LANG = 0 THEN lx := LANGUAGE.DEFAULT; ELSE lx := MIN(LANG, LANGUAGE.LMAX); END_IF;
+      <ST><![CDATA[
+IF LANG = 0 THEN lx := LANGUAGE.DEFAULT; ELSE lx := MIN(LANG, LANGUAGE.LMAX); END_IF;
 MTH := TRIM(mth);
 MTH := CAPITALIZE(LOWERCASE(MTH));
 

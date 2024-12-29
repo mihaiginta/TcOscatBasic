@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="PERIOD" Id="{e390efa0-6fb2-4a0f-a848-7e2167ad062c}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION PERIOD : BOOL
+    <Declaration><![CDATA[
+FUNCTION PERIOD : BOOL
 VAR_INPUT
 	d1 : DATE;
 	dx : DATE;
@@ -19,9 +20,11 @@ tested by		tobias
 PERIOD checks if a given date is between two dates (d1 and d2) d1 is the starting date and d2 the last date for the period.
 the years of the dates are ignored, so the function period cheks for a time period within a year independet of the year.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[day1 := DAY_OF_YEAR(d1);
+      <ST><![CDATA[
+day1 := DAY_OF_YEAR(d1);
 day2 := DAY_OF_YEAR(d2);
 dayx := DAY_OF_YEAR(dx);
 IF NOT LEAP_OF_DATE(dx) AND dayx > 58 THEN dayx := dayx + 1; END_IF;
@@ -62,7 +65,8 @@ hm		4. jan 2008		rev 1.2
 hm		22. mar. 2008	rev 1.3
 	function would deliver wrong results when d1, d2 or dx are a leap_year
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

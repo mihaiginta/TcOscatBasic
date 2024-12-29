@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SELECT_8" Id="{6a86c071-aeae-4078-884f-aa0662ae4231}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK SELECT_8
+    <Declaration><![CDATA[
+FUNCTION_BLOCK SELECT_8
 VAR_INPUT
 	E : BOOL;
 	SET : BOOL;
@@ -27,9 +28,11 @@ END_VAR
 select_8 selects one of 8 outputs at any time. the outputscan be selected by up or down keys and an independent anable switches all outouts off if set false
 
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF rst THEN
+      <ST><![CDATA[
+IF rst THEN
 	state := 0;
 ELSIF set THEN
 	state := IN;
@@ -69,7 +72,8 @@ hm	16. jan 2008	rev 1.0
 
 hm	27. feb. 2009	rev 1.1
 	renamed input en to e
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

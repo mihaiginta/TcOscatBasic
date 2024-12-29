@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SHR_8UDE" Id="{577abd42-694f-4bc3-9c3d-00260185aa60}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK SHR_8UDE
+    <Declaration><![CDATA[
+FUNCTION_BLOCK SHR_8UDE
 VAR_INPUT
 	SET : BOOL;
 	D0: BOOL;
@@ -32,9 +33,11 @@ tested by		tobias
 8 bit shift register with reset
 
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* trig.Q signals a rising edge on clk *)
+      <ST><![CDATA[
+(* trig.Q signals a rising edge on clk *)
 trig(clk := clk);
 
 IF set OR rst THEN
@@ -80,7 +83,8 @@ hm	25. oct. 2008	rev 1.1
 hm	14. mar. 2009	rev 1.2
 	removed double assignments
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

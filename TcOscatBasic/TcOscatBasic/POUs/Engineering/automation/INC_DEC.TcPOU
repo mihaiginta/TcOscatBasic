@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="INC_DEC" Id="{a64ffaa6-7158-401d-bc8a-ec2c509f2b3b}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK INC_DEC
+    <Declaration><![CDATA[
+FUNCTION_BLOCK INC_DEC
 VAR_INPUT
 	CHa : BOOL;
 	CHb : BOOL;
@@ -27,9 +28,11 @@ END_VAR
 
 incremental decoder with quadruple accuracy.
 2 pulses for each channel are created for each directional pulse.
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[axb := cha XOR chb;
+      <ST><![CDATA[
+axb := cha XOR chb;
 
 (* create pulses for channel a *)
 clka := cha XOR edgea;

@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="OSCAT_VERSION" Id="{14dfd48b-8d44-4c26-9a4b-85bb960483a6}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION OSCAT_VERSION : DWORD
+    <Declaration><![CDATA[
+FUNCTION OSCAT_VERSION : DWORD
 VAR_INPUT
 	IN : BOOL;
 END_VAR
@@ -16,9 +17,11 @@ oscat_version returns the version number in dword format
 132 is library version 1.32
 if IN = true, the release date will be returned
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF in THEN
+      <ST><![CDATA[
+IF in THEN
 	OSCAT_VERSION := DATE_TO_DWORD(D#2012-01-02);
 ELSE
 	OSCAT_VERSION := 333;
@@ -31,7 +34,8 @@ hm	6. oct 2006	rev 1.0
 hm	16. dec 2007	rev 1.1
 	added possibility to return date and version depending on IN.
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

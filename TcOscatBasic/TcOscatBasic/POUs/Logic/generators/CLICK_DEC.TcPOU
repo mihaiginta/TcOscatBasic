@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CLICK_DEC" Id="{55fcc3a3-43ea-484f-8775-4be0ad098585}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK CLICK_DEC
+    <Declaration><![CDATA[
+FUNCTION_BLOCK CLICK_DEC
 VAR_INPUT
 	IN : BOOL;
 	TC : TIME;
@@ -27,7 +28,8 @@ if only a rising egde is detected within TC Q0 will respond, Q1 for 1 pulse and 
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* Q shall only be active for one cycle only *)
+      <ST><![CDATA[
+(* Q shall only be active for one cycle only *)
 IF in = FALSE THEN
 	Q0 := FALSE;
 	Q1 := FALSE;
@@ -65,7 +67,8 @@ hm 17. jul. 2008	rev 1.0
 hm	14. mar. 2009	rev 1.1
 	removed double assignments
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

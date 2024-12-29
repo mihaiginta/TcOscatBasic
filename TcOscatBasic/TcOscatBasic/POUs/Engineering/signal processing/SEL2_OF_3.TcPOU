@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SEL2_OF_3" Id="{2b85b740-1ea6-4b33-b07d-beca26a00ef0}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK SEL2_OF_3
+    <Declaration><![CDATA[
+FUNCTION_BLOCK SEL2_OF_3
 VAR_INPUT
 	IN1 : REAL;
 	IN2 : REAL;
@@ -32,7 +33,8 @@ an Error Output E is set True and the last valid Output will remain active until
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[D12 := ABS(IN1-IN2) <= D;
+      <ST><![CDATA[
+D12 := ABS(IN1-IN2) <= D;
 D23 := ABS(IN2-IN3) <= D;
 D31 := ABS(IN3-IN1) <= D;
 
@@ -69,7 +71,8 @@ hm	18. may 2008	rev 1.0
 
 hm	10. mar. 2009	rev 1.1
 	improved code
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

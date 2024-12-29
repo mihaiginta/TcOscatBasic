@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TICKER" Id="{58f1cc29-85bd-471c-86a5-bb346575890d}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK TICKER
+    <Declaration><![CDATA[
+FUNCTION_BLOCK TICKER
 
 VAR_INPUT
 	N : INT;
@@ -27,7 +28,8 @@ tested by		tobias
 
 Ticker sends a substring of text with length N every TD Milliseconds to generate a ticker. 
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[
 (* generate next ticker when delay is low *)
@@ -56,7 +58,8 @@ hm	15. dec. 2007	rev 1.1
 
 hm	29. mar. 2008	rev 1.2
 	changed STRING to STRING(STRING_LENGTH)
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="HYST_1" Id="{bfc0dcef-7b4c-4d9a-b00c-44d437318f87}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK HYST_1
+    <Declaration><![CDATA[
+FUNCTION_BLOCK HYST_1
 VAR_INPUT
 	In : REAL;
 	high : REAL;
@@ -21,9 +22,11 @@ tested BY	oscat
 this hysteresis function switches the output high if the input signal reaches obove high and will switch to low when the input falls back below low value.
 a separate output mid is set if the input stays between low and high value.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF in < low THEN
+      <ST><![CDATA[
+IF in < low THEN
 	Q := FALSE;
 	win := FALSE;
 ELSIF in > high THEN
@@ -42,7 +45,8 @@ hm		4.  aug. 2006	rev 1.0
 
 hm		2. jun. 2008	rev 1.1
 	improved performance
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BIT_COUNT" Id="{bf3167fe-98fd-4d52-b0c0-06f486d4481f}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION BIT_COUNT : INT
+    <Declaration><![CDATA[
+FUNCTION BIT_COUNT : INT
 VAR_INPUT
 	IN : DWORD;
 END_VAR
@@ -15,9 +16,11 @@ tested by		tobias
 BIT_COUNT counts the amount True of bits in a dword.
 for exabple: bit_count(3) returns 2 because two bits (bits 0 and 1) are true and all others are false. 
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[WHILE in > 0 DO
+      <ST><![CDATA[
+WHILE in > 0 DO
 	IF in.0 THEN Bit_Count := Bit_Count + 1; END_IF;
 	in := SHR(in,1);
 END_WHILE;
@@ -31,7 +34,8 @@ END_WHILE;
 	changed algorithm for better performace
 	the execution time has reduced by a factor of 5
 	deleted unused variable temp
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

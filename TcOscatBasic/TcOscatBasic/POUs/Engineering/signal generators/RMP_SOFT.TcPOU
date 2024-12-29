@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="RMP_SOFT" Id="{05b5c570-6a24-4b76-8c01-a0abf1b7d964}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK RMP_SOFT
+    <Declaration><![CDATA[
+FUNCTION_BLOCK RMP_SOFT
 VAR_INPUT
 	IN : BOOL;
 	VAL : BYTE;
@@ -26,9 +27,11 @@ tested BY		oscat
 this soft on/off ramp generator generates a soft on and soft off ramp while the max on value is set by the input
 the time for a full ramp can be set by config variables for up and down ramp.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[tmp := SEL(in, 0, val);
+      <ST><![CDATA[
+tmp := SEL(in, 0, val);
 IF tmp > out THEN
 	(* we need to ramp down *)
 	rmp(dir := TRUE, E := TRUE, TR := PT_ON, rmp := out);

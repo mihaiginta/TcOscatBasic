@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TMAX" Id="{574139da-ad50-4816-b936-3c9fc5670b36}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK TMAX
+    <Declaration><![CDATA[
+FUNCTION_BLOCK TMAX
 VAR_INPUT
 	IN : BOOL;
 	PT : TIME;
@@ -27,7 +28,8 @@ the output Z will be active for one cycle if the output is forced low by the tim
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* read system timer *)
+      <ST><![CDATA[
+(* read system timer *)
 tx := DWORD_TO_TIME(T_PLC_MS());
 
 Z := FALSE;
@@ -50,7 +52,8 @@ last_in := IN;
 hm	20. jul. 2008	rev 1.0
 	original version
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

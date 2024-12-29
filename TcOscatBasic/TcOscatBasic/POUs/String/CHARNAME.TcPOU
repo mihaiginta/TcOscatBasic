@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CHARNAME" Id="{5b40aff5-d993-4448-9ab5-153d9a7dbe08}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION CHARNAME : STRING(10)
+    <Declaration><![CDATA[
+FUNCTION CHARNAME : STRING(10)
 VAR_INPUT
 	C : BYTE;
 END_VAR
@@ -20,9 +21,11 @@ CHARNAME converts a Character code into its HTML character name
 € is converted to 'euro'
 the character itself is returned if no name is available for the character
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF C <> 0 THEN
+      <ST><![CDATA[
+IF C <> 0 THEN
 	(* construct search string from code followed by $ sign, also clear charname string*)
 	CHARNAME := CHR_TO_STRING(C);
 	CHARNAME := CONCAT(CHARNAME,'&');

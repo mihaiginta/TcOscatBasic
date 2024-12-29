@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SUN_TIME" Id="{12340567-74f8-4723-98c5-be7ea89b09cf}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK SUN_TIME
+    <Declaration><![CDATA[
+FUNCTION_BLOCK SUN_TIME
 VAR_INPUT
 	LATITUDE : REAL;				(* latitude of geographical position  *)
 	LONGITUDE : REAL;				(* longitude of geographical position  *)
@@ -30,9 +31,11 @@ for performance reasons the algorithm has been simplified and is accurate within
 the times are calculated in utc and have to be corrected for the given time zone
 this correction is not done within sun_time because it would be a problem on days where dst is enabled or disabled
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[B := latitude * 0.0174532925199433;
+      <ST><![CDATA[
+B := latitude * 0.0174532925199433;
 MIDDAY := SUN_MIDDAY(longitude, utc);
 DK := 0.40954 * SIN(0.0172 * (INT_TO_REAL(DAY_OF_YEAR(utc)) - 79.35));
 sun_declination := DEG(DK);
@@ -67,7 +70,8 @@ hm	25. jan. 2011	rev 1.7
 	using function sun_midday
 	corrected angle of sun_declination
 	added input H
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

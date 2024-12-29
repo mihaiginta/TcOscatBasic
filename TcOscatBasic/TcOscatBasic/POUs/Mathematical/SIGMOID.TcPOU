@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SIGMOID" Id="{bc9e96dd-3015-4e56-bd45-bff070f83264}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION SIGMOID : REAL
+    <Declaration><![CDATA[
+FUNCTION SIGMOID : REAL
 VAR_INPUT
 	X : REAL;
 END_VAR
@@ -14,9 +15,11 @@ tested by		tobias
 
 this function calculates the sigmoid function
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF X > 20.0 THEN
+      <ST><![CDATA[
+IF X > 20.0 THEN
 	SIGMOID := 1.0;
 ELSIF x < -85.0 THEN
 	SIGMOID := 0.0;
@@ -35,7 +38,8 @@ hm	11. mar. 2008		rev 1.1
 hm 10. mar. 2009		rev 1.2
 	real constants updated to new systax using dot																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

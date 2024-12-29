@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FT_PIDWL" Id="{20c76ced-2c30-454f-b81e-43d6d128aee0}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FT_PIDWL
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FT_PIDWL
 VAR_INPUT
 	IN : REAL;
 	KP : REAL := 1.0;
@@ -35,7 +36,8 @@ default values for KP = 1, KI = 1, ILIM_L = -1E37, iLIM_H = +1E38.
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* if rst then *)
+      <ST><![CDATA[
+(* if rst then *)
 IF rst THEN
 	piwl(rst := TRUE);
 	piwl.RST := FALSE;
@@ -79,7 +81,8 @@ hm	11. mar. 2009	rev 1.2
 hm	13. nov. 2009	rev 1.3
 	fixed code for negative KP
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

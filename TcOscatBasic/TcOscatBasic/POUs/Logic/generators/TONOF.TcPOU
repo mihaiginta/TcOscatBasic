@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TONOF" Id="{d444a411-b705-4889-918b-a960a8016291}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK TONOF
+    <Declaration><![CDATA[
+FUNCTION_BLOCK TONOF
 VAR_INPUT
 	IN : BOOL;
 	  T_ON,T_OFF : TIME;
@@ -21,9 +22,11 @@ programmer 	hugo
 tested by		tobias
 
 TONOF generated a TON and TOF Delay for the Input N TON (T1) and TOF (T2) can be configured separately
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF IN XOR old THEN
+      <ST><![CDATA[
+IF IN XOR old THEN
   X(IN := FALSE, PT := SEL(IN,T_OFF,T_ON));
   mode := IN;
   old := IN;

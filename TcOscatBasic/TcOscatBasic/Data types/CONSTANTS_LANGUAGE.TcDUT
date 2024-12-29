@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <DUT Name="CONSTANTS_LANGUAGE" Id="{8804c627-db7c-448f-b4b2-ac6bd659891f}">
-    <Declaration><![CDATA[TYPE CONSTANTS_LANGUAGE :
+    <Declaration><![CDATA[
+TYPE CONSTANTS_LANGUAGE :
 STRUCT
 	(* Language Setup *)
 	DEFAULT : INT := 1; (* 1=english, 2=german 3=french *)
@@ -22,6 +23,7 @@ STRUCT
 													'N', 'NNO', 'NO', 'ONO', 'O', 'OSO', 'SO', 'SSO', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW',
 													'N', 'NNO', 'NO', 'ONO', 'O', 'OSO', 'SO', 'SSO', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'];
 END_STRUCT
-END_TYPE]]></Declaration>
+END_TYPE
+]]></Declaration>
   </DUT>
 </TcPlcObject>

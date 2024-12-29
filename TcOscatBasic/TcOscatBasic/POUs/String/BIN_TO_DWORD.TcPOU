@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BIN_TO_DWORD" Id="{ec179825-e1b0-47bc-88c3-172b6417bfb2}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION BIN_TO_DWORD : DWORD
+    <Declaration><![CDATA[
+FUNCTION BIN_TO_DWORD : DWORD
 VAR_INPUT
 	BIN : STRING(40);
 END_VAR
@@ -19,9 +20,11 @@ tested by		oscat
 
 BINARY_TO_DWORD converts a binary string into a dword.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[pt := ADR(bin);
+      <ST><![CDATA[
+pt := ADR(bin);
 stop := LEN(bin);
 FOR I := 1 TO stop DO
 	x := pt^;

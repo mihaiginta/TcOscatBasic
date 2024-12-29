@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CATANH" Id="{f1d48855-fd35-45f5-a522-72256bfc28d1}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION CATANH : complex
+    <Declaration><![CDATA[
+FUNCTION CATANH : complex
 VAR_INPUT
 	X : complex;
 END_VAR
@@ -17,9 +18,11 @@ tested by	oscat
 
 this function calculates the complex arcus hyperbolic tangens
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[i2 := x.im * x.im;
+      <ST><![CDATA[
+i2 := x.im * x.im;
 num := 1.0 + x.re;
 num := i2 + num * num;
 den := 1.0 - x.re;
@@ -33,7 +36,8 @@ hm	21. feb 2008	rev 1.0
 	original version
 
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="V3_REV" Id="{6685a9a8-e8c0-4797-a3e6-c49a40c528d6}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION V3_REV : vector_3
+    <Declaration><![CDATA[
+FUNCTION V3_REV : vector_3
 VAR_INPUT
 	A : Vector_3;
 END_VAR
@@ -14,9 +15,11 @@ tested by		tobias
 
 this function reverses a vector in a 3 dimensional space
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[V3_REV.X := -A.X;
+      <ST><![CDATA[
+V3_REV.X := -A.X;
 V3_REV.Y := -A.Y;
 V3_REV.Z := -A.Z;
 
@@ -26,7 +29,8 @@ V3_REV.Z := -A.Z;
 hm		11 dec 2007	rev 1.0
 	original version
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

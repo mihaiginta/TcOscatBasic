@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DWORD_TO_STRH" Id="{ba7b0e0f-4c10-40d6-8a64-64aa4b093ce2}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION DWORD_TO_STRH : STRING(8)
+    <Declaration><![CDATA[
+FUNCTION DWORD_TO_STRH : STRING(8)
 VAR_INPUT
 	IN : DWORD;
 END_VAR
@@ -22,7 +23,8 @@ The lowest order Character will be on the right and the high order Character on 
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* read output adress to pointer *)
+      <ST><![CDATA[
+(* read output adress to pointer *)
 pt := ADR(DWORD_TO_STRH) + 8;
 (* wirte the closing byte for the string *)
 pt^:= 0;

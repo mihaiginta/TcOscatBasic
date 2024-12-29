@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SUN_POS" Id="{7ea91562-99e0-4480-b7d6-1fc3cd0019f0}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK SUN_POS
+    <Declaration><![CDATA[
+FUNCTION_BLOCK SUN_POS
 VAR_INPUT
 	latitude : REAL;				(* latitude of geographical position  *)
 	longitude : REAL;				(* longitude of geographical position  *)
@@ -38,7 +39,8 @@ this FUNCTION block calculates the sun position for a given date and time.
 the times are calculated in utc and have to be corrected for the given time zone.
 B is the angle from north and HR is the highth in degrees.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[
 (* n is the julian date and the number of days since 1.1.2000-12:00 midday *)
@@ -100,7 +102,8 @@ hm	7. mar. 2009	rev 2.1
 	refraction is added after angle normalization
 	deleted 10 second lockout
 	added output for astronomical heigth h
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

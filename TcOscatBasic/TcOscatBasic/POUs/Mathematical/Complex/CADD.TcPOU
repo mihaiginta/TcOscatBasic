@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CADD" Id="{b012cf33-51cb-4efd-a354-0f7e80788406}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION CADD : complex
+    <Declaration><![CDATA[
+FUNCTION CADD : complex
 VAR_INPUT
 	X, Y : complex;
 END_VAR
@@ -14,9 +15,11 @@ tested by	oscat
 
 this function add two complex numbers
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[CADD.re := x.re + y.re;
+      <ST><![CDATA[
+CADD.re := x.re + y.re;
 CADD.im := x.im + y.im;
 
 
@@ -24,7 +27,8 @@ CADD.im := x.im + y.im;
 hm	21. feb 2008	rev 1.0
 	original version
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

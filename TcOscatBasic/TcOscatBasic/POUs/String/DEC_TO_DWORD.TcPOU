@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DEC_TO_DWORD" Id="{91cd9e74-7140-4303-80f3-99366ad52a70}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION DEC_TO_DWORD : DWORD
+    <Declaration><![CDATA[
+FUNCTION DEC_TO_DWORD : DWORD
 VAR_INPUT
 	DEC : STRING(20);
 END_VAR
@@ -19,9 +20,11 @@ tested by		oscat
 
 DEC_TO_DWORD converts a decimal string into a DWORD.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[pt := ADR(dec);
+      <ST><![CDATA[
+pt := ADR(dec);
 stop := LEN(dec);
 FOR I := 1 TO stop DO
 	(* read the first character and subtract 48 to get value in decimal 0 = 48 *)

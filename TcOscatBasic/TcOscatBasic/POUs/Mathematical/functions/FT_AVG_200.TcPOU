@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FT_AVG_200" Id="{d89de838-a4ef-4478-9803-d954c8b7d37c}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FT_AVG_200
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FT_AVG_200
 VAR_INPUT
 	IN : REAL;
 	E : BOOL := TRUE;
@@ -15,9 +16,11 @@ VAR
 	buff : DELAY_200;
 	i: INT;
 	init : BOOL;
-END_VAR]]></Declaration>
+END_VAR
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[buff.N := LIMIT(0, N, 200);
+      <ST><![CDATA[
+buff.N := LIMIT(0, N, 200);
 
 IF NOT init OR rst THEN
 	FOR i := 1 TO N DO
@@ -28,7 +31,8 @@ IF NOT init OR rst THEN
 ELSIF E THEN
 	buff(in := in);
 	avg := avg + (in - buff.out ) / INT_TO_REAL(N);
-END_IF;]]></ST>
+END_IF;
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="_ARRAY_MEDIAN" Id="{7221fc8e-ee1f-4e0b-b655-e2a798b3803a}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION _ARRAY_MEDIAN : REAL
+    <Declaration><![CDATA[
+FUNCTION _ARRAY_MEDIAN : REAL
 VAR_INPUT
 	pt : POINTER TO ARRAY[0..32000] OF REAL;
 	size : UINT;
@@ -24,9 +25,11 @@ the function will return the median of the original array.
 for example [12,0,4,7,1] the median is 4 and the array after the function is called is [0,1,4,7,12]
 because this function works with pointers its very time efficient and it needs no extra memory.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[_ARRAY_SORT(pt,size);
+      <ST><![CDATA[
+_ARRAY_SORT(pt,size);
 stop := SHR(size,2)-1;
 IF EVEN(UINT_TO_INT(stop)) THEN
 	_ARRAY_MEDIAN := pt^[SHR(stop,1)];
@@ -69,7 +72,8 @@ hm		14. nov 2007	rev 1.4
 hm		16.3. 2008		rev 1.5
 	changed type of input size to uint
 	performance improvements
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

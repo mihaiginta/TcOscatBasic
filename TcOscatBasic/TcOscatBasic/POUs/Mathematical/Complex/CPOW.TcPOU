@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CPOW" Id="{26f90dbf-6761-46c9-ac0c-44f35d0d1b15}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION CPOW : complex
+    <Declaration><![CDATA[
+FUNCTION CPOW : complex
 VAR_INPUT
 	X : complex;
 	Y : Complex;
@@ -15,16 +16,19 @@ tested by	oscat
 
 this function calculates the complex power function x to the power of y
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[CPOW := CEXP(CMUL(Y,CLOG(X)));
+      <ST><![CDATA[
+CPOW := CEXP(CMUL(Y,CLOG(X)));
 
 
 (* revision history
 hm	21. feb 2008	rev 1.0
 	original version
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="UTC_TO_LTIME" Id="{937a8c33-f239-43f3-8a08-55f9ddc82315}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION UTC_TO_LTIME : DT
+    <Declaration><![CDATA[
+FUNCTION UTC_TO_LTIME : DT
 VAR_INPUT
 	UTC : DT;
 	DST_ENABLE : BOOL;
@@ -29,7 +30,8 @@ if more then one time zone is needed by the systen the clock can be started many
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[tmp := TIME_ZONE_OFFSET * 60 + BOOL_TO_INT(DST_ENABLE AND DST(UTC)) * 3600;
+      <ST><![CDATA[
+tmp := TIME_ZONE_OFFSET * 60 + BOOL_TO_INT(DST_ENABLE AND DST(UTC)) * 3600;
 IF tmp < 0 THEN
 	tmp := ABS(tmp);
 	UTC_TO_LTIME := DWORD_TO_DT(DT_TO_DWORD(UTC) -  INT_TO_DWORD(tmp));
@@ -73,7 +75,8 @@ hm	20. oct. 2008	rev 1.8
 hm	27. feb. 2009	rev 1.9
 	added type conversions to avoid warnings under codesys 3.0
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

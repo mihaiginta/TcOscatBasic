@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BIT_LOAD_B2" Id="{180ed542-a6a2-4945-821d-3e36e0b28ffd}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION BIT_LOAD_B2 : BYTE
+    <Declaration><![CDATA[
+FUNCTION BIT_LOAD_B2 : BYTE
 VAR_INPUT
 	I : BYTE;
 	D : BOOL;
@@ -17,9 +18,11 @@ tested by	tobias
 
 this function loads N bits of D at pos P in Byte I
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF D THEN
+      <ST><![CDATA[
+IF D THEN
 	BIT_LOAD_B2 := ROL(SHR(BYTE#255, 8 - N) OR ROR(i, P), P);
 ELSE
 	BIT_LOAD_B2 := ROL(SHL(BYTE#255, N) AND ROR(I, P), P);

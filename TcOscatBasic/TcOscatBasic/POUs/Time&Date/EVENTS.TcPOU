@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="EVENTS" Id="{87a884e6-6f76-48f3-bc8a-5ee41c4abb95}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK EVENTS
+    <Declaration><![CDATA[
+FUNCTION_BLOCK EVENTS
 VAR_INPUT
 	DATE_IN : DATE;
 	ENA : BOOL;
@@ -32,9 +33,11 @@ tested by		tobias
 
 event checks an array with a list of events and displays the event if today is one.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* for performance reasons only activate once a day *)
+      <ST><![CDATA[
+(* for performance reasons only activate once a day *)
 IF last_active <> date_in THEN
 	last_active := DATE_IN;
 	Y_int := FALSE;
@@ -67,7 +70,6 @@ hm  18. jan. 2011	rev 1.0
 	new module
 
 *)
-
 ]]></ST>
     </Implementation>
   </POU>

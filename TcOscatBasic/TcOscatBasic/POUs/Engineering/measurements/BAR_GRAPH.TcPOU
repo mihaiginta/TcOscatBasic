@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BAR_GRAPH" Id="{b6dc2d72-642d-4688-8a85-e278c1e842e7}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK BAR_GRAPH
+    <Declaration><![CDATA[
+FUNCTION_BLOCK BAR_GRAPH
 VAR_INPUT
 	X : REAL;
 	rst : BOOL;
@@ -35,9 +36,11 @@ bar graph is a muti window comparator which displays an analog input signal on 8
 only one output is active a any given time depending on the value of the input signal.
 the output can be of linear or logarithmic scale.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF NOT init THEN
+      <ST><![CDATA[
+IF NOT init THEN
 	init := TRUE;
 	IF log_scale THEN
 		temp := EXP(LN(Trigger_high / Trigger_low) * 0.166666666666666666666);
@@ -113,7 +116,8 @@ hm	2. dec 2007		rev 1.1
 hm	6. jan 2008		rev 1.2
 	further performance improvement
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

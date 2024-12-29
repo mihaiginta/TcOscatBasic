@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="B_TRIG" Id="{627702fd-989d-4cb1-b3ad-379b4a7cb057}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK B_TRIG
+    <Declaration><![CDATA[
+FUNCTION_BLOCK B_TRIG
 VAR_INPUT
 	CLK : BOOL;
 END_VAR
@@ -22,7 +23,8 @@ this block is similar to R_trig and F_trig but it generates a pulse on rising an
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[Q := clk XOR edge;
+      <ST><![CDATA[
+Q := clk XOR edge;
 edge := CLK;
 
 
@@ -30,7 +32,8 @@ edge := CLK;
 hm		4. aug. 2006	rev 1.0
 	original version
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

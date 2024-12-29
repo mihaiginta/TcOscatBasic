@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TP_1D" Id="{2f5ea096-0e96-4f9e-8350-eb58f4df9056}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK TP_1D
+    <Declaration><![CDATA[
+FUNCTION_BLOCK TP_1D
 VAR_INPUT
 	IN : BOOL;
 	PT1 : TIME;
@@ -35,7 +36,8 @@ after the time PT1 is elapsed, the timer blocks itself for PT2 and only allow ne
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* read system timer *)
+      <ST><![CDATA[
+(* read system timer *)
 tx := DWORD_TO_TIME(T_PLC_MS());
 
 IF RST THEN
@@ -64,7 +66,8 @@ ix := IN;
 hm	28. jun. 2008
 	original version
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

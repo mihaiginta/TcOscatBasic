@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <GVL Name="Constants_2" Id="{06663279-ac8e-4bfb-be96-4dd8e9791db0}">
-    <Declaration><![CDATA[{attribute 'Tc2GvlVarNames'}
+    <Declaration><![CDATA[
+{attribute 'Tc2GvlVarNames'}
 VAR_GLOBAL CONSTANT
 	STRING_LENGTH : INT := 250;
 	LIST_LENGTH : INT := 250;
@@ -65,6 +66,7 @@ hm	13. nov. 2009
 hm	20. jan. 2011
 	removed network buffers
 	added list_length
-*)]]></Declaration>
+*)
+]]></Declaration>
   </GVL>
 </TcPlcObject>

@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <DUT Name="TIMER_EVENT" Id="{f38f251c-6548-4f5c-b694-00cf4a86bda4}">
-    <Declaration><![CDATA[TYPE TIMER_EVENT :
+    <Declaration><![CDATA[
+TYPE TIMER_EVENT :
 STRUCT
 	TYP : BYTE;
 	CHANNEL : BYTE;
@@ -12,6 +13,7 @@ STRUCT
 	LOR : BYTE;
 	LAST : DT;
 END_STRUCT
-END_TYPE]]></Declaration>
+END_TYPE
+]]></Declaration>
   </DUT>
 </TcPlcObject>

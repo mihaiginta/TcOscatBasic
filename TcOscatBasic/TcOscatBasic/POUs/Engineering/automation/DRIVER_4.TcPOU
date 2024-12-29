@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DRIVER_4" Id="{df503d42-55e1-4255-8273-b60c0740b873}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK DRIVER_4
+    <Declaration><![CDATA[
+FUNCTION_BLOCK DRIVER_4
 VAR_INPUT CONSTANT
 	Toggle_Mode : BOOL;
 	Timeout : TIME;
@@ -29,9 +30,11 @@ if a timeout is specified the output Q? will be reset to false automatically aft
 a asynchronous reset and set will force the output high or low respectively.
 an asynchronous set will force all outputs high simultaneously
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[D0(Set:=set, in:=in0, rst:=rst, toggle_mode:=toggle_mode, timeout:=timeout);
+      <ST><![CDATA[
+D0(Set:=set, in:=in0, rst:=rst, toggle_mode:=toggle_mode, timeout:=timeout);
 D1(Set:=set, in:=in1, rst:=rst, toggle_mode:=toggle_mode, timeout:=timeout);
 D2(Set:=set, in:=in2, rst:=rst, toggle_mode:=toggle_mode, timeout:=timeout);
 D3(Set:=set, in:=in3, rst:=rst, toggle_mode:=toggle_mode, timeout:=timeout);
@@ -45,7 +48,8 @@ Q3 := D3.Q;
 hm	2. jan 2008		rev 1.0
 	original version
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

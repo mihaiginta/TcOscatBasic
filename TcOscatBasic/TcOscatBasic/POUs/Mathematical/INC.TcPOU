@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="INC" Id="{4952e8f7-d7e3-490f-8131-cdda3b03b27f}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION INC : INT
+    <Declaration><![CDATA[
+FUNCTION INC : INT
 VAR_INPUT
 	X : INT;
 	D : INT;
@@ -17,9 +18,11 @@ tested by	oscat
 This is a increment function which increments the input X by the value D and compares the result with M.
 if the output exceeds M it will continue to count from 0 again.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[INC := (X + D + M + 1) MOD (M + 1);
+      <ST><![CDATA[
+INC := (X + D + M + 1) MOD (M + 1);
 
 (* revision history
 hm	7. feb 2007		REV 1.0
@@ -28,7 +31,8 @@ hm	7. feb 2007		REV 1.0
 hm	15. jan 2008	rev 1.1
 	allow for neagtive increment
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

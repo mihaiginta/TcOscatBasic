@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="OVERRIDE" Id="{1aab57b0-263d-4553-95a6-f3330fd05b03}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION OVERRIDE : REAL
+    <Declaration><![CDATA[
+FUNCTION OVERRIDE : REAL
 VAR_INPUT
 	X1, X2, X3 : REAL;
 	E1 : BOOL;
@@ -18,9 +19,11 @@ tested by	tobias
 OVERRIDE deliveres the maximum absolute value of the 3 inputs X1, X2 and X3.
 with the inputs E1, E2 and E3 each of the 3 inputs can be turned on or off.
 
-*) ]]></Declaration>
+*) 
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF E1 THEN OVERRIDE := X1; END_IF;
+      <ST><![CDATA[
+IF E1 THEN OVERRIDE := X1; END_IF;
 IF E2 AND ABS(x2) > ABS(OVERRIDE) THEN OVERRIDE := X2; END_IF;
 IF E3 AND ABS(x3) > ABS(OVERRIDE) THEN OVERRIDE := X3; END_IF;
 

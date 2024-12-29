@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DEC_TO_BYTE" Id="{6a4319a0-11c8-482e-b522-47df0f602ebc}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION DEC_TO_BYTE : BYTE
+    <Declaration><![CDATA[
+FUNCTION DEC_TO_BYTE : BYTE
 VAR_INPUT
 	DEC : STRING(10);
 END_VAR
@@ -19,9 +20,11 @@ tested by		oscat
 
 DEC_TO_byte converts a decimal string into a byte.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[pt := ADR(dec);
+      <ST><![CDATA[
+pt := ADR(dec);
 stop := LEN(DEC);
 FOR I := 1 TO stop DO
 	(* read the first character and subtract 48 to get value in decimal 0 = 48 *)

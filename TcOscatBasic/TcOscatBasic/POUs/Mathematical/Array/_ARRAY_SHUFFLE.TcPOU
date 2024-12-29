@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="_ARRAY_SHUFFLE" Id="{b368fd3e-c97f-43e4-82cb-658968ce0cb4}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION _ARRAY_SHUFFLE : BOOL
+    <Declaration><![CDATA[
+FUNCTION _ARRAY_SHUFFLE : BOOL
 VAR_INPUT
 	pt : POINTER TO ARRAY[0..32000] OF REAL;
 	size : UINT;
@@ -20,9 +21,11 @@ programmer 	kurt
 tested by		hugo
 
 this function will randomly shuffle the elements of an array
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[stop := UINT_TO_INT(SHR(size,2)-1);
+      <ST><![CDATA[
+stop := UINT_TO_INT(SHR(size,2)-1);
 FOR i := 0 TO stop DO
         pos := RDM2(i+pos,0,stop);
         (* swap elements *)
@@ -44,7 +47,8 @@ hm	16. mar. 2008	rev 1.1
 hm	30. mar. 2008	rev 1.2
 	changed last in rdm2 fromm pos to i + pos to allow for more randomness
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

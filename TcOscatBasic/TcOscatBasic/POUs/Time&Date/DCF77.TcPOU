@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DCF77" Id="{c65add17-f49f-4d57-b0d8-736930886a0a}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK DCF77
+    <Declaration><![CDATA[
+FUNCTION_BLOCK DCF77
 VAR_INPUT
 	REC : BOOL;
 	SET : BOOL;
@@ -68,7 +69,8 @@ a dst output shows if daylight saving time is enables and the weekday output sho
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* if tp was set it should only be active for 1 cycle *)
+      <ST><![CDATA[
+(* if tp was set it should only be active for 1 cycle *)
 TP := FALSE;
 
 (* read system time *)
@@ -273,8 +275,6 @@ hm	7. oct. 2008	rev 1.10
 	changed function weekday to day_of_week
 
 *)
-
-
 ]]></ST>
     </Implementation>
   </POU>

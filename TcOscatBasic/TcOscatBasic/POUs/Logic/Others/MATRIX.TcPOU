@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MATRIX" Id="{b6528e42-0c66-4b40-9e15-a32240c2a3b5}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK MATRIX
+    <Declaration><![CDATA[
+FUNCTION_BLOCK MATRIX
 VAR_INPUT
 	x1, x2, x3, x4, X5 : BOOL;
 END_VAR
@@ -32,9 +33,11 @@ matrix can send a code while a key is pressed and it sends another code while a 
 the setup variable release is false the code is only sent when the key is pressed.
 the output byte holds the 5 columns in the lowest bits 0..2  and the row number in bits 4..6, while bit 7 is true for a key pressed and false for a key released.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[TP := FALSE;
+      <ST><![CDATA[
+TP := FALSE;
 CODE := 0;
 (* read scan lines *)
 X[line].0 := X1;

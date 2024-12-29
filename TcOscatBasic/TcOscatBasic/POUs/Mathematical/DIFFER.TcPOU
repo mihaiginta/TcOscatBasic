@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DIFFER" Id="{51d7eeb7-22cf-41dc-8346-75a2ab32aece}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION DIFFER : BOOL
+    <Declaration><![CDATA[
+FUNCTION DIFFER : BOOL
 VAR_INPUT
 	in1 : REAL;
 	in2 : REAL;
@@ -17,9 +18,11 @@ tested by		tobias
 this function checks if in1 differs more then x from in2
 the output is true if abs(in1-in2) > X
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[DIFFER := ABS(in1 - in2) > X;
+      <ST><![CDATA[
+DIFFER := ABS(in1 - in2) > X;
 
 (* revision history
 hm		8. oct 2006		rev 1.0
@@ -28,7 +31,8 @@ hm		8. oct 2006		rev 1.0
 hm		16. mar 2008	rev 1.1
 	improverd code for performance
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

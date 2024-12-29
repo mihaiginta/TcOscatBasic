@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="RES_NI" Id="{d3285441-0e33-4a08-b70f-a2b30839d5fe}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION RES_NI : REAL
+    <Declaration><![CDATA[
+FUNCTION RES_NI : REAL
 VAR_INPUT
 	T : REAL;
 	R0 : REAL;
@@ -20,9 +21,11 @@ version 1.2	2 dec 2007
 programmer 	hugo
 tested by		tobias
 
-this function returs the resistance for a nickel sensor for a temperature range from -60..+180 °C *)]]></Declaration>
+this function returs the resistance for a nickel sensor for a temperature range from -60..+180 °C *)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[T2 := T * T;
+      <ST><![CDATA[
+T2 := T * T;
 RES_NI := R0 + A * T + B * T2 + C * T2 * T2;
 
 (* revision history
@@ -54,7 +57,8 @@ hm	2. dec. 2007	rev 1.2
 -20 	89,3 	30 		117,1 	80 	148,3 	130 	183,3 	180 	223,2
 -15 	91,9 	35 		120,0 	85 	151,6 	135 	187,1 	  	 
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

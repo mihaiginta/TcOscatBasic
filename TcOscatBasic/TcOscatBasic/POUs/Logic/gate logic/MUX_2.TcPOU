@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MUX_2" Id="{b58cb87b-fda3-4e4b-a7dd-7e4fb08259b0}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION MUX_2 : BOOL
+    <Declaration><![CDATA[
+FUNCTION MUX_2 : BOOL
 VAR_INPUT
 	D0: BOOL;
 	D1: BOOL;
@@ -18,9 +19,11 @@ END_VAR
 	depending on the value of A0, D0 or D1 will be switched to the Output
 
 	executioin TIME on wago 750-841 = 7us
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[MUX_2 := SEL(A0, D0, D1);
+      <ST><![CDATA[
+MUX_2 := SEL(A0, D0, D1);
 
 
 (*
@@ -31,7 +34,8 @@ hm	5.10.2006		rev 1.1
 hm	16. oct. 2008	rev 1.2
 	improved performance
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

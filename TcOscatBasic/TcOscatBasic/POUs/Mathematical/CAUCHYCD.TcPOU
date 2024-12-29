@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CAUCHYCD" Id="{7d7c77dd-bc1f-4d41-adad-7c0f488b7664}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION CAUCHYCD : REAL
+    <Declaration><![CDATA[
+FUNCTION CAUCHYCD : REAL
 VAR_INPUT
 	X : REAL;
 	T : REAL;
@@ -16,9 +17,11 @@ tested by		tobias
 
 this function calculates the Cauchy distribution function
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[CAUCHYCD := 0.5 + math.PI_INV * ATAN((X - T) / U);
+      <ST><![CDATA[
+CAUCHYCD := 0.5 + math.PI_INV * ATAN((X - T) / U);
 
 
 
@@ -26,7 +29,8 @@ this function calculates the Cauchy distribution function
 hm	26. oct. 2008	rev 1.0
 	original version
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

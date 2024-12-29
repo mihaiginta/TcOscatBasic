@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="LTIME_TO_UTC" Id="{bad013aa-fd94-4731-80de-668ef533faa1}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION LTIME_TO_UTC : DT
+    <Declaration><![CDATA[
+FUNCTION LTIME_TO_UTC : DT
 VAR_INPUT
 	CONVERSION_LTIME : DT;
 	DST : BOOL;
@@ -17,9 +18,11 @@ tested by		oscat
 LTIME_TO_UTC calculates UTC (World Time) from a local time LTIME. utc is calculated 
 by subtracting Time_Zone_Offset from ltime and if dst it true subtracting an additional hour from ltime.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[LTIME_TO_UTC := UDINT_TO_DT(DT_TO_UDINT(CONVERSION_LTIME) - INT_TO_UDINT(TIME_ZONE_OFFSET) * 60);
+      <ST><![CDATA[
+LTIME_TO_UTC := UDINT_TO_DT(DT_TO_UDINT(CONVERSION_LTIME) - INT_TO_UDINT(TIME_ZONE_OFFSET) * 60);
 IF DST THEN LTIME_TO_UTC := LTIME_TO_UTC - T#1h; END_IF;
 
 (* revision history
@@ -47,7 +50,8 @@ hm	27. feb. 2009	rev 1.6
 ks	13. nov. 2009	rev 1.7
 	corrected error in formula
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

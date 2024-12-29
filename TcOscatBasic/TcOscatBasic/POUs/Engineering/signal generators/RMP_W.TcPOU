@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="RMP_W" Id="{37f45f24-34ce-4611-8703-ee30c12cbaf9}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK RMP_W
+    <Declaration><![CDATA[
+FUNCTION_BLOCK RMP_W
 VAR_INPUT
 	SET : BOOL;
 	PT : TIME;
@@ -30,9 +31,11 @@ the ramp is controlled by PT which is the total ramp time for a full sweep from 
 an UD input controlls the direction Up or Down and the E input enables the ramp generation
 a busy output indicates that the ramp is running, busy false means output is stable.
 the outputs low and high will be true when the output has reached its max or min value.
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* generate ramp *)
+      <ST><![CDATA[
+(* generate ramp *)
 rmp(dir := UP, E := E, TR := PT, rmp := out);
 
 (* set or reset operation *)

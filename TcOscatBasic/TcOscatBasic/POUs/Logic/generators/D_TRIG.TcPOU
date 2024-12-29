@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="D_TRIG" Id="{bce1381e-0877-44de-a733-368175ee0286}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK D_TRIG
+    <Declaration><![CDATA[
+FUNCTION_BLOCK D_TRIG
 VAR_INPUT
 	in : DWORD;
 END_VAR
@@ -25,7 +26,8 @@ Example: the input has chaged from 0001 to 0010 then the output x will be 2.
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[Q := in <> last_in;
+      <ST><![CDATA[
+Q := in <> last_in;
 X := in - last_in;
 last_in := in;
 
@@ -37,7 +39,8 @@ hm 	4.09.2007		rev 1.0
 
 hm	19. feb. 2008	rev 1.1
 	performance improvement
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

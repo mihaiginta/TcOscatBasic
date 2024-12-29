@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CYCLE_TIME" Id="{3d521b0c-4bbe-4828-8bf7-8e5c3ec0cac8}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK CYCLE_TIME
+    <Declaration><![CDATA[
+FUNCTION_BLOCK CYCLE_TIME
 VAR_INPUT
 	RST : BOOL;
 END_VAR
@@ -31,9 +32,11 @@ the cycles output is a dword counter which counts the cycles.
 a rst pulse on the input will reset all data.
 
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[tx := DWORD_TO_TIME(T_PLC_MS()) - last_cycle;
+      <ST><![CDATA[
+tx := DWORD_TO_TIME(T_PLC_MS()) - last_cycle;
 IF rst THEN
 	ct_min := t#10h;
 	ct_max := t#0ms;
@@ -66,7 +69,8 @@ hm 10.3.2007			rev 1.2
 hm	16.9.2007		rev 1.2
 	changed Time() in T_PLC_MS() for compatibility resons
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

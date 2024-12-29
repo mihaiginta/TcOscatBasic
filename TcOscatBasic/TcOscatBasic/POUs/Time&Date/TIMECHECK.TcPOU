@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TIMECHECK" Id="{042c2d9b-5d0c-4c55-bdce-3278f1901467}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION TIMECHECK : BOOL
+    <Declaration><![CDATA[
+FUNCTION TIMECHECK : BOOL
 VAR_INPUT
 	TD : TOD;
 	START : TOD;
@@ -17,9 +18,11 @@ tested by		oscat
 this function retruns true if the daytime TD is between start and stop and returns true if so.
 if you want to generate an event to span over midnight, start timemust be later than the stop time.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF stop < start THEN
+      <ST><![CDATA[
+IF stop < start THEN
 	TIMECHECK := start <= TD OR TD < stop;
 ELSE
 	TIMECHECK := start <= TD AND TD < stop;
@@ -31,7 +34,8 @@ END_IF;
 hm 19. jul. 2009	rev 1.0
 	original release
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

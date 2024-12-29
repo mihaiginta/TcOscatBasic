@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="COUNT_BR" Id="{550a55b6-4f0b-4eef-a0f4-3d0a4369c06a}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK COUNT_BR
+    <Declaration><![CDATA[
+FUNCTION_BLOCK COUNT_BR
 VAR_INPUT
 	SET : BOOL;
 	IN : BYTE;
@@ -27,9 +28,11 @@ END_VAR
 Count_BR is a byte counter with independen up and dn inputs. the counter counts from 0 to mx and continues at 0 after is has reached mx
 a step input sets the counters stepping width.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF rst THEN
+      <ST><![CDATA[
+IF rst THEN
 	cnt := 0;
 ELSIF set THEN
 	cnt := LIMIT(0,in,mx);
@@ -45,7 +48,8 @@ last_dn := dn;
 hm	16. jan 2008	rev 1.0
 	original version
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

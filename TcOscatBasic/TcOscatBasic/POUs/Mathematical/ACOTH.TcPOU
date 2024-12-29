@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ACOTH" Id="{c9eb1401-38d4-449a-84dd-b4db8d92a1f6}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION ACOTH : REAL
+    <Declaration><![CDATA[
+FUNCTION ACOTH : REAL
 VAR_INPUT
 	X : REAL;
 END_VAR
@@ -14,9 +15,11 @@ tested by		tobias
 
 this function calculates the arcus cotangens hyperbolicus
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[ACOTH := LN((x+1.0)/(x-1.0))*0.5;
+      <ST><![CDATA[
+ACOTH := LN((x+1.0)/(x-1.0))*0.5;
 
 (* revision history
 hm		12 jan 2007	rev 1.0
@@ -28,7 +31,8 @@ hm		5. jan 2008	rev 1.1
 hm	10. mar. 2009		rev 1.2
 	real constants updated to new systax using dot
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

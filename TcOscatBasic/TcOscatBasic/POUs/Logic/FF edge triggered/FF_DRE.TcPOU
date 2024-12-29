@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FF_DRE" Id="{4ad78505-0dbc-4a07-834b-2bbac1d5b5c6}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FF_DRE
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FF_DRE
 VAR_INPUT
 	SET : BOOL;
 	D : BOOL;
@@ -26,7 +27,8 @@ D-type flip flop with set, reset and rising clock trigger
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF rst OR set THEN
+      <ST><![CDATA[
+IF rst OR set THEN
 	Q := NOT rst;
 ELSIF clk AND NOT edge THEN
 	Q := D;
@@ -42,7 +44,8 @@ hm	27. dec 2007	rev 1.1
 
 hm	30. oct. 2008	rev 1.2
 	optimized performance
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

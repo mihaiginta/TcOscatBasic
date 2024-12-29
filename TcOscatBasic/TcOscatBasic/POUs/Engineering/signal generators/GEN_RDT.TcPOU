@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="GEN_RDT" Id="{bedbd061-6205-4823-af0e-523618a5e013}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK GEN_RDT
+    <Declaration><![CDATA[
+FUNCTION_BLOCK GEN_RDT
 
 VAR_INPUT
 	Enable		 : BOOL := TRUE ;
@@ -43,9 +44,11 @@ FUNCTION_BLOCK RDMTimer
 		 		 		 		 Oscat.lib
 ###############################################################################
 Beschreibung:
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[tonRDMTimer ( IN:= Enable , PT:= tRDMTime );
+      <ST><![CDATA[
+tonRDMTimer ( IN:= Enable , PT:= tRDMTime );
 tof_xQ ( IN:= tonRDMTimer.Q , PT:= TP_Q );
 XQ := tof_xq.Q;
 IF tonRDMTimer.Q THEN
@@ -61,7 +64,8 @@ J. Schohaus	19. nov 2007	rev 1.0
 
 hm	16. mar. 2008			rev 1.1
 	added type conversion to avoid warnings under codesys 3.0
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FINDB_NUM" Id="{a189e0c9-6a54-48bb-9a1e-0851ff96a3ed}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION FINDB_NUM : INT
+    <Declaration><![CDATA[
+FUNCTION FINDB_NUM : INT
 VAR_INPUT
 	str : STRING(STRING_LENGTH);
 END_VAR
@@ -18,9 +19,11 @@ tested by	tobias
 findB_Num searches str backward and returns the last position of a number
 a number is characterized by a letter "0..9" or "."
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[pt := ADR(str) + LEN(str) - 1;
+      <ST><![CDATA[
+pt := ADR(str) + LEN(str) - 1;
 FOR pos := LEN(str) TO 1 BY -1 DO;
 	IF (PT^ > 47 AND PT^ < 58) OR PT^ = 46 THEN
 		FINDB_NUM := pos;
@@ -39,7 +42,8 @@ hm	29. feb 2008	rev 1.1
 
 hm	29. mar. 2008	rev 1.2
 	changed STRING to STRING(STRING_LENGTH)
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CTRL_PI" Id="{979aa03a-ca56-4774-98db-df1fc24909be}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK CTRL_PI
+    <Declaration><![CDATA[
+FUNCTION_BLOCK CTRL_PI
 VAR_INPUT
 	ACT, SET, SUP, OFS, M_I : REAL;
 	MAN : BOOL;
@@ -42,7 +43,8 @@ default values for KP = 1, TN = 1, TV = 1, LIMIT_L = -1000, LIMIT_H = +1000.
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[DIFF := CTRL_IN(SET, ACT, SUP);
+      <ST><![CDATA[
+DIFF := CTRL_IN(SET, ACT, SUP);
 pi(in := DIFF, kp := KP, ki := KI, lim_l := LL, lim_h := LH, rst := RST);
 co(ci := pi.Y, OFFSET := OFS, man_in := M_I, lim_l := LL, lim_h := LH, MANUAL := MAN);
 Y := co.Y;
@@ -65,7 +67,8 @@ hm	5. jan 2008		rev 1.2
 hm	20. jun. 2008	rev 2.0
 	rewritten using new modular approach
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

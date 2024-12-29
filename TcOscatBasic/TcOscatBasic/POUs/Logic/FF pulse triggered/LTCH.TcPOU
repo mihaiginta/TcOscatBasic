@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="LTCH" Id="{11010c2e-3597-4fbf-ac3f-c6734b41ab27}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK LTCH
+    <Declaration><![CDATA[
+FUNCTION_BLOCK LTCH
 VAR_INPUT
 	D : BOOL;
 	L : BOOL;
@@ -23,7 +24,8 @@ Transparent Latch with asynchronous reset
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* as long as L is true, the latch is transparent and and change of D is transferred to Q *)
+      <ST><![CDATA[
+(* as long as L is true, the latch is transparent and and change of D is transferred to Q *)
 (* of course only when there is no asynchronous reset *)
 IF rst THEN				(* if asynchronous reset then Q=0 *)
 	Q := FALSE;
@@ -42,7 +44,8 @@ hm	27. dec 2007	rev 1.1
 hm	30. oct. 2008	rev 1.2
 	deleted unnecessary init with 0
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

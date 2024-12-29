@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="LANGEVIN" Id="{92623ee4-a6e9-49ce-b75b-53a9a03129bc}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION LANGEVIN : REAL
+    <Declaration><![CDATA[
+FUNCTION LANGEVIN : REAL
 VAR_INPUT
 	X : REAL;
 END_VAR
@@ -14,9 +15,11 @@ tested by		tobias
 
 this function calculates the langevin function
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF X = 0.0 THEN
+      <ST><![CDATA[
+IF X = 0.0 THEN
 	LANGEVIN := 0.0;
 ELSE
 	LANGEVIN := COTH(X) - 1.0 / X;
@@ -32,7 +35,8 @@ hm	11. mar 2008	rev 1.1
 hm	10. mar. 2009	rev 1.2
 	real constants updated to new systax using dot
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

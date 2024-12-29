@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CEIL" Id="{244ac244-7f02-4226-ab76-48acb0568835}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION CEIL : INT
+    <Declaration><![CDATA[
+FUNCTION CEIL : INT
 VAR_INPUT
 	X : REAL;
 END_VAR
@@ -17,10 +18,10 @@ ceil(3.14) = 4
 ceil(-3.14) = -3
 
 *)
-
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[CEIL := REAL_TO_INT(x);
+      <ST><![CDATA[
+CEIL := REAL_TO_INT(x);
 IF CEIL < X THEN
 	CEIL := CEIL + 1;
 END_IF;

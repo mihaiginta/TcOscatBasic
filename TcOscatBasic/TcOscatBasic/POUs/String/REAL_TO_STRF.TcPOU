@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="REAL_TO_STRF" Id="{bc22d45e-6210-4e20-ac09-0a18e8954fb7}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION REAL_TO_STRF : STRING(20)
+    <Declaration><![CDATA[
+FUNCTION REAL_TO_STRF : STRING(20)
 VAR_INPUT
 	IN : REAL;
 	N : INT;
@@ -22,10 +23,10 @@ the string will be filles with zeroes to achieve the fixed length N after the de
 the input parameter specifies the decimal separator to be used in the output string.
 
 *)
-
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* LIMIT N to 0 .. 7 *)
+      <ST><![CDATA[
+(* LIMIT N to 0 .. 7 *)
 N := LIMIT(0,N,7);
 (* round the input to N digits and convert to string *)
 O := ABS(in) * EXP10(N);

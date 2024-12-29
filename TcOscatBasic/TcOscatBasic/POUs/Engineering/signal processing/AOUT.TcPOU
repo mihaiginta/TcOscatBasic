@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="AOUT" Id="{42097678-80ab-4723-84f0-2879257b319c}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION AOUT : DWORD
+    <Declaration><![CDATA[
+FUNCTION AOUT : DWORD
 VAR_INPUT
 	in : REAL;
 END_VAR
@@ -31,9 +32,11 @@ the outout min value is set for the specified min input value and the max output
 an input higher or lower then the max or min value will set the respective max or min value or the output.
 
 
-*) ]]></Declaration>
+*) 
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* if sign bit is defined *)
+      <ST><![CDATA[
+(* if sign bit is defined *)
 IF sign < 32 THEN
 	sx := sign_R(in);
 	in2 := ABS(in);
@@ -64,7 +67,8 @@ hm	2. dec 2007		rev 1.3
 
 hm	23. feb 2008	rev 1.4
 	changed code for better performance
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

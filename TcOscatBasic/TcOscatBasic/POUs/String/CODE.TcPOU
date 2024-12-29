@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CODE" Id="{ce8931b2-1659-4370-a3df-59cdeaa56382}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION CODE : BYTE
+    <Declaration><![CDATA[
+FUNCTION CODE : BYTE
 VAR_INPUT
 	STR : STRING(STRING_LENGTH);
 	POS : INT;
@@ -17,9 +18,11 @@ tested by		tobias
 
 code extracts the code of a character at position POS of a string STR.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF pos < 1 OR pos > LEN(str) THEN
+      <ST><![CDATA[
+IF pos < 1 OR pos > LEN(str) THEN
 	CODE := 0;
 	RETURN;
 ELSE
@@ -33,7 +36,8 @@ hm	9. mar. 2008	rev 1.0
 
 hm	29. mar. 2008	rev 1.1
 	changed STRING to STRING(STRING_LENGTH)
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

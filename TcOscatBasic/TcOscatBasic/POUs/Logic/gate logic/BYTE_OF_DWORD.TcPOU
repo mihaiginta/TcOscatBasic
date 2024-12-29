@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BYTE_OF_DWORD" Id="{783b6e76-b84d-470a-aa15-e38da32765b9}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION BYTE_OF_DWORD : BYTE
+    <Declaration><![CDATA[
+FUNCTION BYTE_OF_DWORD : BYTE
 VAR_INPUT
 	in : DWORD;
 	N : BYTE;
@@ -18,7 +19,8 @@ the lower byte (starting with Bit0 from in) is selected with N=0.
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[BYTE_OF_DWORD := DWORD_TO_BYTE(SHR(in,SHL(n,3)));
+      <ST><![CDATA[
+BYTE_OF_DWORD := DWORD_TO_BYTE(SHR(in,SHL(n,3)));
 
 (* revision history
 hm	17. jan 2007	rev 1.0
@@ -30,7 +32,6 @@ hm	2. jan 2008		rev 1.1
 hm	30. oct. 2008	rev 1.2
 	improved performance
 *)
-
 ]]></ST>
     </Implementation>
   </POU>

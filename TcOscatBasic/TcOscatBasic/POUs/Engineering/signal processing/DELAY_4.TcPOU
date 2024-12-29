@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DELAY_4" Id="{d039c1b4-760a-4dc3-a775-fd2b442b1f96}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK DELAY_4
+    <Declaration><![CDATA[
+FUNCTION_BLOCK DELAY_4
 VAR_INPUT
 	in : REAL;
 END_VAR
@@ -24,9 +25,11 @@ this function block delays input values by each programm cycle
 after 4 cycles the in value has shifted to the out 4 and will be discarded after the next cycle
 the blocks can be cascaded.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[out4 := out3;
+      <ST><![CDATA[
+out4 := out3;
 out3 := out2;
 out2 := out1;
 out1 := temp;
@@ -37,7 +40,8 @@ temp := in;
 hm 19.1.2007	rev 1.1
 	added variable temp to add 1 delay  for q1
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

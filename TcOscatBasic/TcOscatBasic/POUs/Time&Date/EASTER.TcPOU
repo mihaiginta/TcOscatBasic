@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="EASTER" Id="{409ba679-1bda-4fea-81e3-b404676bc144}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION EASTER : DATE
+    <Declaration><![CDATA[
+FUNCTION EASTER : DATE
 VAR_INPUT
 	year : INT;
 END_VAR
@@ -18,9 +19,11 @@ tested by	tobias
 easter calculates the day of easter sunday for a given year.
 most other catholic holidays are calculated in reference to easter sunday.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[b := (204 - 11 * (YEAR MOD 19)) MOD 30;
+      <ST><![CDATA[
+b := (204 - 11 * (YEAR MOD 19)) MOD 30;
 IF b > 27 THEN b := b - 1; END_IF;
 c := (year + SHR(year,2) + b - 13) MOD 7;
 oday := 28 + b - c;
@@ -103,7 +106,8 @@ hm	3. feb 2008		rev 1.2
 
 hm	7. apr. 2008	rev 1.3
 	improved performance
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

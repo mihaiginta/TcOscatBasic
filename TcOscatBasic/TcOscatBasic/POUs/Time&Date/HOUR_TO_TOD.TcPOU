@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="HOUR_TO_TOD" Id="{7f2cf2a9-14c9-4295-858e-580b9c9c7a34}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION HOUR_TO_TOD : TOD
+    <Declaration><![CDATA[
+FUNCTION HOUR_TO_TOD : TOD
 VAR_INPUT
 	IN : REAL;
 END_VAR
@@ -14,9 +15,11 @@ tested by		tobias
 
 converts an amount of hours in real to time of day TOD.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[HOUR_TO_TOD := DWORD_TO_TOD(REAL_TO_DWORD(IN * 3600000));
+      <ST><![CDATA[
+HOUR_TO_TOD := DWORD_TO_TOD(REAL_TO_DWORD(IN * 3600000));
 
 
 (* revision history
@@ -28,7 +31,8 @@ hm	14. mar. 2008	rev 1.1
 
 hm	24. feb. 2009	rev 1.2
 	changed input to IN
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

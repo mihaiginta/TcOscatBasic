@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <DUT Name="CONSTANTS_SETUP" Id="{bb30733c-4d22-4c17-a2ae-f9e734fea210}">
-    <Declaration><![CDATA[TYPE CONSTANTS_SETUP :
+    <Declaration><![CDATA[
+TYPE CONSTANTS_SETUP :
 STRUCT
 	(* setup Parameters *)
 	EXTENDED_ASCII : BOOL := TRUE;
@@ -12,6 +13,7 @@ STRUCT
 	MTH_OFS : ARRAY[1..12] OF INT :=[ 0,31,59,90,120,151,181,212,243,273,304,334];
 	DECADES : ARRAY[0..8] OF REAL :=[ 1.0,10.0,100.0,1000.0,10000.0,10000.0,100000.0,1000000.0,10000000.0];
 END_STRUCT
-END_TYPE]]></Declaration>
+END_TYPE
+]]></Declaration>
   </DUT>
 </TcPlcObject>

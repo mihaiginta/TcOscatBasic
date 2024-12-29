@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FT_PD" Id="{4b47ad31-18ca-4fba-84d0-c8e5bcefc96a}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FT_PD
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FT_PD
 VAR_INPUT
 	IN : REAL;
 	KP : REAL := 1.0;
@@ -25,7 +26,8 @@ The PD controller works according to the fomula Y = KP *(IN + DERIV(e) ).
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* run differentiator *)
+      <ST><![CDATA[
+(* run differentiator *)
 diff(IN := IN, K := TV);
 
 (* combine both values *)
@@ -38,7 +40,8 @@ hm 	3. jun. 2008 	rev 1.0
 	original version
 
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

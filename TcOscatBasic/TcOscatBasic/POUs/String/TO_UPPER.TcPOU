@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TO_UPPER" Id="{13ce8417-310f-49d3-9f76-b1fbc1ba0aa0}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION TO_UPPER : BYTE
+    <Declaration><![CDATA[
+FUNCTION TO_UPPER : BYTE
 VAR_INPUT
 	IN : BYTE;
 END_VAR
@@ -14,9 +15,11 @@ tested by		oscat
 
 to_upper converts a character from lowercase to uppercase
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF in > 96 AND in < 123 THEN
+      <ST><![CDATA[
+IF in > 96 AND in < 123 THEN
    TO_UPPER := in AND 16#DF;
 ELSIF in > 223 AND in <> 247 AND in <> 255 AND setup.EXTENDED_ASCII THEN
    TO_UPPER := in AND 16#DF;
@@ -40,7 +43,8 @@ ks	25. oct. 2008	rev 1.2
 hm 16. jan 2009	rev 1.3
 	corrected an error in module
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

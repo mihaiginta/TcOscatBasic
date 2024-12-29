@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BIN_TO_BYTE" Id="{84983ef2-7b4c-4c4c-9029-185b2a883d7f}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION BIN_TO_BYTE : BYTE
+    <Declaration><![CDATA[
+FUNCTION BIN_TO_BYTE : BYTE
 VAR_INPUT
 	BIN : STRING(12);
 END_VAR
@@ -19,9 +20,11 @@ tested by		oscat
 
 BINARY_TO_byte converts a binary string into a byte.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[pt := ADR(bin);
+      <ST><![CDATA[
+pt := ADR(bin);
 stop := LEN(bin);
 FOR I := 1 TO stop DO
 	x := pt^;

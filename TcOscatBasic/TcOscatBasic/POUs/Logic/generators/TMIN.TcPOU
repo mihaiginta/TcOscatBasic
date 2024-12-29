@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TMIN" Id="{15afba2d-6c59-42d4-bcd3-f8cc94b444cc}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK TMIN
+    <Declaration><![CDATA[
+FUNCTION_BLOCK TMIN
 VAR_INPUT
 	IN : BOOL;
 	PT : TIME;
@@ -23,7 +24,8 @@ Q of tMIN will follow IN except that it forces a minimum ontime for the output Q
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[pm(in := IN, PT := PT);
+      <ST><![CDATA[
+pm(in := IN, PT := PT);
 Q := IN OR pm.Q;
 
 
@@ -31,7 +33,8 @@ Q := IN OR pm.Q;
 hm	21. jul. 2008	rev 1.0
 	original version
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

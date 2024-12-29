@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ESR_MON_R4" Id="{6d909245-e640-4433-8b93-8933b05a61c5}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK ESR_MON_R4
+    <Declaration><![CDATA[
+FUNCTION_BLOCK ESR_MON_R4
 VAR_INPUT
 	R0, R1, R2, R3 : REAL;
 	DT_in : DT;
@@ -34,7 +35,8 @@ the module checks 4 inputs for a change of more than the specified sensitivity S
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* read system timer *)
+      <ST><![CDATA[
+(* read system timer *)
 tx := DWORD_TO_TIME(T_PLC_MS());
 P0 := ADR(R0);
 P1 := ADR(R1);

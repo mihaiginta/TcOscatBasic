@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="STORE_8" Id="{fcee5399-b133-4984-9110-e4cae1271c8c}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK STORE_8
+    <Declaration><![CDATA[
+FUNCTION_BLOCK STORE_8
 VAR_INPUT
 	Set : BOOL;
 	D0,D1, D2, D3, D4, D5, D6, D7 : BOOL;
@@ -26,9 +27,11 @@ a set input is used to set all outputs true at the same time, independent of the
 a clear input is used to reset only the lowest priority of the outputs one at a time.
 the lowest priority is q3.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF rst OR set THEN
+      <ST><![CDATA[
+IF rst OR set THEN
 	q0 := NOT rst;
 	q1 := q0;
 	q2 := q0;
@@ -73,7 +76,6 @@ hm	14. mar. 2009	rev 1.2
 	removed double assignments
 
 *)
-
 ]]></ST>
     </Implementation>
   </POU>

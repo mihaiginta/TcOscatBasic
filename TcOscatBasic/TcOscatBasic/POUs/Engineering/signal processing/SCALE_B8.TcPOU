@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SCALE_B8" Id="{c79a6d32-86c4-49b9-960f-9619bfe73102}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION SCALE_B8 : REAL
+    <Declaration><![CDATA[
+FUNCTION SCALE_B8 : REAL
 VAR_INPUT
 	in1: BYTE;
 	in2: BYTE;
@@ -47,7 +48,8 @@ the min and max input configurations can be edited in the cfc editor by double c
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[SCALE_B8 := 	(((in1_max - in1_min)* in1 + (in2_max - in2_min)* in2 + (in3_max - in3_min)* in3 + (in4_max - in4_min)* in4 +
+      <ST><![CDATA[
+SCALE_B8 := 	(((in1_max - in1_min)* in1 + (in2_max - in2_min)* in2 + (in3_max - in3_min)* in3 + (in4_max - in4_min)* in4 +
 				(in5_max - in5_min)* in5 + (in6_max - in6_min)* in6 + (in7_max - in7_min)* in7 + (in8_max - in8_min)* in8) * 0.003921569
 				 + in1_min + in2_min + in3_min + in4_min + in5_min + in6_min + in7_min + in8_min) * K + O;
 
@@ -66,7 +68,8 @@ hm	26. oct. 2008	rev 1.3
 hm	3. nov. 2008	rev 1.4
 	used wrong factor in formula
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

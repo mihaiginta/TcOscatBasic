@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="R2_ADD2" Id="{5f569c2b-cdaf-4743-95b3-cb46c4d7e1e5}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION R2_ADD2 : REAL2
+    <Declaration><![CDATA[
+FUNCTION R2_ADD2 : REAL2
 VAR_INPUT
 	X : Real2;
 	Y : REAL2;
@@ -15,9 +16,11 @@ tested by		tobias
 
 R2_add2 adds a double precision real to a double precision real which extends the accuracy of a real to twice as many digits
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[R2_ADD2.R1 := X.R1 + Y.R1;
+      <ST><![CDATA[
+R2_ADD2.R1 := X.R1 + Y.R1;
 R2_ADD2.RX := X.RX + Y.RX;
 
 
@@ -25,7 +28,8 @@ R2_ADD2.RX := X.RX + Y.RX;
 hm		20.3.2008	rev 1.0
 	original version
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

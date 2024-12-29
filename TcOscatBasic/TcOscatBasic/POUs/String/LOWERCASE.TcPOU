@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="LOWERCASE" Id="{3dd84cc0-d3a0-4395-8f4b-9c7a635f214a}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION LOWERCASE : STRING(STRING_LENGTH)
+    <Declaration><![CDATA[
+FUNCTION LOWERCASE : STRING(STRING_LENGTH)
 VAR_INPUT
 	str : STRING(STRING_LENGTH);
 END_VAR
@@ -18,9 +19,11 @@ tested by		tobias
 
 lowercase returns str while all letters A..Z and Ä.Ö,Ü are converted to lowercase.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[PT := ADR(LOWERCASE);
+      <ST><![CDATA[
+PT := ADR(LOWERCASE);
 lowercase := str;
 l := LEN(str);
 FOR pos := 1 TO l DO

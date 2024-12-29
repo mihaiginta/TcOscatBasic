@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="GEN_BIT" Id="{4ab2fe07-bc30-4624-b474-fc93ee4ef65c}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK GEN_BIT
+    <Declaration><![CDATA[
+FUNCTION_BLOCK GEN_BIT
 VAR_INPUT
 	in0 : DWORD;
 	in1 : DWORD;
@@ -37,9 +38,11 @@ gen_bit is 4 bit sequencial pattern generator with 4 DWORD inputs and 4 serial o
 with the first clock pulse after a reset or after power on, bit 0 of the input DWORDS IN is present on the Outputs Q and the next clock cycle shifts to Bit 1 and so on.
 the input steps defines how many bits of the input dwords will be shifted to the outputs. the sequence can be repetive when rep = 0 or any amount of repetitions can be defined with input rep.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* check if number of runs is finished or rep = 0 which means continuous *)
+      <ST><![CDATA[
+(* check if number of runs is finished or rep = 0 which means continuous *)
 
 IF clk AND NOT rst THEN
 	run := (rep = 0) OR (rx <= rep);
@@ -102,7 +105,8 @@ hm 15. oct. 2008	rev 1.1
 hm	14. mar. 2009	rev 1.2
 	removed double assignments
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

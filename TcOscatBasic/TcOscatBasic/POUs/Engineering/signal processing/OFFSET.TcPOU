@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="OFFSET" Id="{ef8c4db9-0241-419b-8719-6f05a3e88601}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION OFFSET : REAL
+    <Declaration><![CDATA[
+FUNCTION OFFSET : REAL
 VAR_INPUT
 	X : REAL;
 	O1, O2, O3, O4 : BOOL;
@@ -24,9 +25,11 @@ The Function offset adds offsets to an analog signal depending on digital inputs
 all selected offsets are added at the same time.
 with the input D a default value instead of the input X can be used.
 
-*) ]]></Declaration>
+*) 
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF D THEN OFFSET := default; ELSE OFFSET := X; END_IF;
+      <ST><![CDATA[
+IF D THEN OFFSET := default; ELSE OFFSET := X; END_IF;
 IF O1 THEN OFFSET := OFFSET + offset_1; END_IF;
 IF O2 THEN OFFSET := OFFSET + offset_2; END_IF;
 IF O3 THEN OFFSET := OFFSET + offset_3; END_IF;
@@ -39,7 +42,8 @@ hm	12. jan 2007
 	original version
 
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

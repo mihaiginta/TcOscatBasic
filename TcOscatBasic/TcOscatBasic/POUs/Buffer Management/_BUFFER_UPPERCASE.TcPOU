@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="_BUFFER_UPPERCASE" Id="{13cab464-52dc-4fa5-b5c4-187ffffe994f}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION _BUFFER_UPPERCASE : BOOL
+    <Declaration><![CDATA[
+FUNCTION _BUFFER_UPPERCASE : BOOL
 VAR_INPUT
 	PT : POINTER TO ARRAY[0..32000] OF BYTE;
 	SIZE : INT;
@@ -22,9 +23,11 @@ this function will manipulate a given array.
 the function manipulates the original array, it rerturnes true when finished.
 because this function works with pointers its very time efficient and it needs no extra memory.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[pos := 0;
+      <ST><![CDATA[
+pos := 0;
 WHILE pos < size DO
 	PT^[pos] := TO_UPPER(pt^[pos]);
 	pos := pos + 1;
@@ -36,7 +39,8 @@ _BUFFER_UPPERCASE := TRUE;
 hm 	20. jan. 2011	rev 1.0
 	original version
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

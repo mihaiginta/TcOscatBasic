@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CSUB" Id="{b05bbd55-f0ae-4661-b480-1da276452bcd}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION CSUB : complex
+    <Declaration><![CDATA[
+FUNCTION CSUB : complex
 VAR_INPUT
 	X, Y : complex;
 END_VAR
@@ -14,16 +15,19 @@ tested by	oscat
 
 this function subtracts two complex numbers
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[CSUB.re := X.re - Y.re;
+      <ST><![CDATA[
+CSUB.re := X.re - Y.re;
 CSUB.im := X.im - Y.im;
 
 (* revision history
 hm	21. feb 2008	rev 1.0
 	original version
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

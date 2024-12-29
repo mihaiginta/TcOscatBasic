@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <DUT Name="CONTROL_PARAMETERS" Id="{72424fd5-d91e-4b02-ad3c-a13f31754161}">
-    <Declaration><![CDATA[TYPE CONTROL_PARAMETERS :
+    <Declaration><![CDATA[
+TYPE CONTROL_PARAMETERS :
 STRUCT
 	Kp		:	REAL;	
 	Ti		:	REAL;

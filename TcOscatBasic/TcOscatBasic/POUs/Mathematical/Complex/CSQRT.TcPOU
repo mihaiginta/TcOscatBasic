@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CSQRT" Id="{ad227068-dff3-4f47-9949-b75ac5fca78e}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION CSQRT : complex
+    <Declaration><![CDATA[
+FUNCTION CSQRT : complex
 VAR_INPUT
 	X : complex;
 END_VAR
@@ -16,9 +17,11 @@ tested by	oscat
 
 this function calculates the complex sqare root
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[temp := HYPOT(x.re, x.im);
+      <ST><![CDATA[
+temp := HYPOT(x.re, x.im);
 CSQRT.re :=  SQRT(0.5 * (temp + x.re));
 CSQRT.im :=  sgn(x.im) * SQRT(0.5 * (temp - x.re));
 
@@ -27,7 +30,8 @@ CSQRT.im :=  sgn(x.im) * SQRT(0.5 * (temp - x.re));
 hm	21. feb 2008	rev 1.0
 	original version
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

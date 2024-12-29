@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ELLIPSE_A" Id="{f3b754e5-814b-411f-a857-7cd6430cfb7f}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION ELLIPSE_A : REAL
+    <Declaration><![CDATA[
+FUNCTION ELLIPSE_A : REAL
 VAR_INPUT
 	R1 : REAL;
 	R2 : REAL;
@@ -19,7 +20,8 @@ ellipse_A calculates the Area of an ellipe based on the two radians R1 and R2
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[ELLIPSE_A := math.PI * R1 * R2;
+      <ST><![CDATA[
+ELLIPSE_A := math.PI * R1 * R2;
 
 (* revision histroy
 hm	16. oct 2007	rev 1.0
@@ -27,7 +29,8 @@ hm	16. oct 2007	rev 1.0
 
 hm	18. oct. 2008	rev 1.1
 	using math constants
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

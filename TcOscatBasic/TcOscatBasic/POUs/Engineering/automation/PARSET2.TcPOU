@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="PARSET2" Id="{ca8b29f6-a7ca-49ed-8eda-0de4778be351}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK PARSET2
+    <Declaration><![CDATA[
+FUNCTION_BLOCK PARSET2
 VAR_INPUT
 	X : REAL;
 END_VAR
@@ -31,7 +32,8 @@ is ramped by the time TC
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* init sequence *)
+      <ST><![CDATA[
+(* init sequence *)
 IF NOT init THEN
 	init := TRUE;
 	pset(TC:=TC, X01:=X01, X02:=X02, X03:=X03, X04:=X04, X11:=X11, X12:=X12, X13:=X13, X14:=X14, X21:=X21, X22:=X22, X23:=X23, X24:=X24, X31:=X31, X32:=X32, X33:=X33, X34:=X34);

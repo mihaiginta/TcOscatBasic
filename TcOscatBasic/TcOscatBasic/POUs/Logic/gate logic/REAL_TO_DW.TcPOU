@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="REAL_TO_DW" Id="{088548cd-45e5-4177-b519-d99e5ec28b15}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION REAL_TO_DW : DWORD
+    <Declaration><![CDATA[
+FUNCTION REAL_TO_DW : DWORD
 VAR_INPUT
 	X : REAL;
 END_VAR
@@ -18,14 +19,16 @@ this function converts a 32 Bit Real to a dword in a bitwise manner.
 *)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[pt := ADR(X);
+      <ST><![CDATA[
+pt := ADR(X);
 REAL_TO_DW := pt^;
 
 (* revision history
 hm	18. apr. 2008
 	original version
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

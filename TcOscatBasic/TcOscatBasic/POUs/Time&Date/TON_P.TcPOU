@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TON_P" Id="{378602ac-9984-4fb5-817c-f760de97e144}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK TON_P	// Ton pausable
+    <Declaration><![CDATA[
+FUNCTION_BLOCK TON_P	// Ton pausable
 (* If IN is FALSE, Q is FALSE and ET is 0. As soon as IN becomes TRUE, 
 the time will begin to be counted in milliseconds in ET until its value is equal to PT. 
 It will then remain constant. Q is TRUE when IN is TRUE and ET is equal to PT. 
@@ -24,7 +25,8 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF NOT IN THEN
+      <ST><![CDATA[
+IF NOT IN THEN
     tTimePaused := T#0S;
 END_IF
 
@@ -44,7 +46,8 @@ ton(IN := IN AND NOT PAUSE, PT := PT - tTimePaused);
 
 Q := ton.Q;
 
-ET := tTimePaused + ton.ET;]]></ST>
+ET := tTimePaused + ton.ET;
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FIFO_32" Id="{02e1aae8-7154-4067-8b33-d1818f6df1f4}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FIFO_32
+    <Declaration><![CDATA[
+FUNCTION_BLOCK FIFO_32
 VAR_INPUT
 	Din : DWORD;
 	E : BOOL := TRUE;
@@ -29,9 +30,11 @@ programmer 	hugo
 tested by		oscat
 
 32 Dword FIFO memory
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF RST THEN
+      <ST><![CDATA[
+IF RST THEN
 	pw := pr;
 	FULL := FALSE;
 	EMPTY := TRUE;
@@ -72,7 +75,6 @@ hm 24. jul. 2009	rev 2.0
 	allow read and write in one cycle
 
 *)
-
 ]]></ST>
     </Implementation>
   </POU>

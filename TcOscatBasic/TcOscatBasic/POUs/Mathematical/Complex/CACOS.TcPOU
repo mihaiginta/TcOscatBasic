@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CACOS" Id="{c3c6b4ac-777c-484a-b81c-bf10b2b170c8}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION CACOS : complex
+    <Declaration><![CDATA[
+FUNCTION CACOS : complex
 VAR_INPUT
 	X : complex;
 END_VAR
@@ -16,9 +17,11 @@ tested by	oscat
 
 this function calculates the arcus cosinus function of a complex number
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[y := CACOSH(x);
+      <ST><![CDATA[
+y := CACOSH(x);
 CACOS.re := y.im;
 CACOS.im := -y.re;
 
@@ -29,7 +32,8 @@ hm	21. feb 2008	rev 1.0
 	original version
 
 
-*)]]></ST>
+*)
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

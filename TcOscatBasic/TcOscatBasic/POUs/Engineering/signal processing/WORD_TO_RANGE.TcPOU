@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="WORD_TO_RANGE" Id="{c59ff76c-add4-409a-82f7-32086b42ebb4}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION WORD_TO_RANGE : REAL
+    <Declaration><![CDATA[
+FUNCTION WORD_TO_RANGE : REAL
 VAR_INPUT
 	X : WORD;
 	low : REAL;
@@ -16,9 +17,11 @@ tested by		tobias
 
 Word_to_Range converts a Byte into a real between low and high.
 
-*)]]></Declaration>
+*)
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[WORD_TO_RANGE := (high - low) * WORD_TO_REAL(X) * 0.00001525902189669640 + low;
+      <ST><![CDATA[
+WORD_TO_RANGE := (high - low) * WORD_TO_REAL(X) * 0.00001525902189669640 + low;
 
 
 (* revision history
