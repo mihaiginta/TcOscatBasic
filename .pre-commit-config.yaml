@@ -2,5 +2,6 @@ repos:
 -   repo: https://github.com/pcdshub/pre-commit-hooks.git
     rev: v1.7.0
     hooks:
-    # checks if the option "Write product version if files" is set to false
+    # checks if the option "Write product version if files" is set to false, see https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/3260207243.html&id=
     -   id: no-product-version
+
