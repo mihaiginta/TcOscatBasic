@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="CAPITALIZE" Id="{93abd8d0-0c2e-4be9-a43c-62aa852e2bdd}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION CAPITALIZE : STRING(STRING_LENGTH)
 VAR_INPUT
@@ -44,8 +44,5 @@ hm	20. jun. 2008	rev 1.2
 *)	
 ]]></ST>
     </Implementation>
-    <LineIds Name="CAPITALIZE">
-      <LineId Id="19" Count="21" />
-    </LineIds>
   </POU>
 </TcPlcObject>

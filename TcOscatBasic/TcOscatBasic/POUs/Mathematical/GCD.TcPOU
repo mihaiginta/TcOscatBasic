@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="GCD" Id="{1cb2e13f-979f-471e-9d43-d20b56aea082}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION GCD : INT
 VAR_INPUT
@@ -51,8 +51,5 @@ hm	19. jan. 2011	rev 1.0
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="GCD">
-      <LineId Id="18" Count="29" />
-    </LineIds>
   </POU>
 </TcPlcObject>

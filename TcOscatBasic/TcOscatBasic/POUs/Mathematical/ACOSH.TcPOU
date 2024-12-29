@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="ACOSH" Id="{5ae75240-c4ec-4df2-b2a0-1bdc3ba5ec54}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION ACOSH : REAL
 VAR_INPUT
@@ -33,8 +33,5 @@ hm	10. mar. 2009		rev 1.3
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="ACOSH">
-      <LineId Id="14" Count="15" />
-    </LineIds>
   </POU>
 </TcPlcObject>

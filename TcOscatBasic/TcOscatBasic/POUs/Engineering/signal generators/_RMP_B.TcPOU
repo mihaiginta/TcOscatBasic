@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="_RMP_B" Id="{de81fd1a-7726-4369-9d1c-5466069c7911}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK _RMP_B
 VAR_INPUT
@@ -55,8 +55,5 @@ hm	19. nov. 2011	rev 1.2
 	new code
 *)]]></ST>
     </Implementation>
-    <LineIds Name="_RMP_B">
-      <LineId Id="26" Count="25" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="ISC_UPPER" Id="{5ca37ea4-cf28-4791-86c3-f24cd3cf22ee}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION ISC_UPPER : BOOL
 VAR_INPUT
@@ -32,8 +32,5 @@ hm	19. oct. 2008	rev 1.1
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="ISC_UPPER">
-      <LineId Id="14" Count="14" />
-    </LineIds>
   </POU>
 </TcPlcObject>

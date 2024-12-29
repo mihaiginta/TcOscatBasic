@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="DEC_TO_DWORD" Id="{91cd9e74-7140-4303-80f3-99366ad52a70}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION DEC_TO_DWORD : DWORD
 VAR_INPUT
@@ -44,8 +44,5 @@ hm	30. sep. 2008	rev 1.1
 *)	
 ]]></ST>
     </Implementation>
-    <LineIds Name="DEC_TO_DWORD">
-      <LineId Id="19" Count="21" />
-    </LineIds>
   </POU>
 </TcPlcObject>

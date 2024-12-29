@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="MUL_ADD" Id="{afd6d914-7b75-48aa-969c-5c093309963d}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION MUL_ADD : REAL
 VAR_INPUT
@@ -29,8 +29,5 @@ hm	11.nov 2007		rev 1.1
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="MUL_ADD">
-      <LineId Id="16" Count="9" />
-    </LineIds>
   </POU>
 </TcPlcObject>

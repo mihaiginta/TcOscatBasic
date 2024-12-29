@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="SHR_8PLE" Id="{550a7450-9433-423d-a33c-521fe008dca8}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK SHR_8PLE
 VAR_INPUT
@@ -58,8 +58,5 @@ IF rst THEN									(* wenn reset aktiv dann ausgang rücksetzen *)
 END_IF;
 ]]></ST>
     </Implementation>
-    <LineIds Name="SHR_8PLE">
-      <LineId Id="31" Count="23" />
-    </LineIds>
   </POU>
 </TcPlcObject>

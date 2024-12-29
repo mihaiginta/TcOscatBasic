@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="ISC_LOWER" Id="{a6c8a8f7-4bb4-414d-ab97-917119f820a4}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION ISC_LOWER : BOOL
 VAR_INPUT
@@ -30,8 +30,5 @@ hm	19. oct. 2008	rev 1.1
 	changes setup constants
 *)]]></ST>
     </Implementation>
-    <LineIds Name="ISC_LOWER">
-      <LineId Id="14" Count="12" />
-    </LineIds>
   </POU>
 </TcPlcObject>

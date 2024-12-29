@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="TEMP_NI" Id="{a542b94a-3c7d-4ab2-9507-afeacb6d5424}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION TEMP_NI : REAL
 VAR_INPUT
@@ -39,8 +39,5 @@ hm	10. mar. 2009	rev 1.5
 
 ]]></ST>
     </Implementation>
-    <LineIds Name="TEMP_NI">
-      <LineId Id="13" Count="22" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="FB_InLinear" Id="{0a67a78c-47d0-450c-8447-2447a810aeda}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_InLinear
 VAR
@@ -86,36 +86,5 @@ ft_avg(IN:=fValueIn,N:=stIOConv.cAVG_N,AVG=>fValueInAVG);]]></ST>
         </Implementation>
       </Set>
     </Property>
-    <LineIds Name="FB_InLinear">
-      <LineId Id="9" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_InLinear.Error.Get">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_InLinear.Error.Set">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_InLinear.IO_Conversion.Get">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_InLinear.IO_Conversion.Set">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_InLinear.Read">
-      <LineId Id="5" Count="0" />
-      <LineId Id="8" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_InLinear.ValueIn.Get">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_InLinear.ValueIn.Set">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_InLinear.ValueInAVG.Get">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_InLinear.ValueInAVG.Set">
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

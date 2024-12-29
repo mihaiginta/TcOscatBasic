@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="MATRIX" Id="{b6528e42-0c66-4b40-9e15-a32240c2a3b5}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK MATRIX
 VAR_INPUT
@@ -111,8 +111,5 @@ hm		26. oct. 2008	rev 1.3
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="MATRIX">
-      <LineId Id="32" Count="75" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="CMUL" Id="{dc265928-fff5-4a1a-9b05-e47e70b1396a}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION CMUL : complex
 VAR_INPUT
@@ -25,8 +25,5 @@ hm	21. feb 2008	rev 1.0
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="CMUL">
-      <LineId Id="14" Count="7" />
-    </LineIds>
   </POU>
 </TcPlcObject>

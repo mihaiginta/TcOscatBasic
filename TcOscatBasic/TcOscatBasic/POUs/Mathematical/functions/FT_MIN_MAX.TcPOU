@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="FT_MIN_MAX" Id="{279bfdfd-0500-4a25-ad34-b8ec87b09b4f}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FT_MIN_MAX
 VAR_INPUT
@@ -34,8 +34,5 @@ ELSIF in < mn THEN mn := in;
 ELSIF in > mx THEN mx := in;
 END_IF;]]></ST>
     </Implementation>
-    <LineIds Name="FT_MIN_MAX">
-      <LineId Id="24" Count="6" />
-    </LineIds>
   </POU>
 </TcPlcObject>

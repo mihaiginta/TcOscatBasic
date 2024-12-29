@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="_ARRAY_SORT" Id="{35ac169c-abe2-4943-ad54-dc395d0be0dc}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION _ARRAY_SORT : BOOL
 VAR_INPUT
@@ -192,8 +192,5 @@ hm	19. jan. 2011	rev 2.0
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="_ARRAY_SORT">
-      <LineId Id="33" Count="155" />
-    </LineIds>
   </POU>
 </TcPlcObject>

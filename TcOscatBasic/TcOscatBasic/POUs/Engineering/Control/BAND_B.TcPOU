@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="BAND_B" Id="{2180208c-0819-4bda-be9c-6e085d9bcc17}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION BAND_B : BYTE
 VAR_INPUT
@@ -36,8 +36,5 @@ hm	21. nov. 2008	rev 1.0
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="BAND_B">
-      <LineId Id="17" Count="15" />
-    </LineIds>
   </POU>
 </TcPlcObject>

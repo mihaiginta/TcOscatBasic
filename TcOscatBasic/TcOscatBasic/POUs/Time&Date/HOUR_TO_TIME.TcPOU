@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="HOUR_TO_TIME" Id="{8312c8d7-a03a-4e90-8ac0-322e69135966}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION HOUR_TO_TIME : TIME
 VAR_INPUT
@@ -30,8 +30,5 @@ hm	24. feb. 2009	rev 1.2
 	changed input to IN
 *)]]></ST>
     </Implementation>
-    <LineIds Name="HOUR_TO_TIME">
-      <LineId Id="14" Count="12" />
-    </LineIds>
   </POU>
 </TcPlcObject>

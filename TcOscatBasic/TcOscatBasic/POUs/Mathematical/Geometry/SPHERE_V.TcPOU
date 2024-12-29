@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="SPHERE_V" Id="{ab3e9c07-eb58-4362-956d-9953cd53aaa1}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION SPHERE_V : REAL
 VAR_INPUT
@@ -32,8 +32,5 @@ hm	22. feb 2008		rev 1.2
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="SPHERE_V">
-      <LineId Id="16" Count="12" />
-    </LineIds>
   </POU>
 </TcPlcObject>

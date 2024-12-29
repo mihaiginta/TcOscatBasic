@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="PWM_PW" Id="{cbdfb51d-2d65-4151-8d2a-cf05976e0612}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK PWM_PW
 VAR_INPUT
@@ -47,8 +47,5 @@ hm	11. mar. 2009	rev 1.5
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="PWM_PW">
-      <LineId Id="20" Count="23" />
-    </LineIds>
   </POU>
 </TcPlcObject>

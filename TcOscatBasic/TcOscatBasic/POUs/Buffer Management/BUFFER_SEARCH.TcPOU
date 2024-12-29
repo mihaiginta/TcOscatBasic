@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="BUFFER_SEARCH" Id="{afc67097-3a39-493e-b18e-2fb1c0b333f2}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION BUFFER_SEARCH : INT
 VAR_INPUT
@@ -70,8 +70,5 @@ hm	25. jan. 2011	rev 1.4
 	return -1 if nothing found
 *)]]></ST>
     </Implementation>
-    <LineIds Name="BUFFER_SEARCH">
-      <LineId Id="31" Count="35" />
-    </LineIds>
   </POU>
 </TcPlcObject>

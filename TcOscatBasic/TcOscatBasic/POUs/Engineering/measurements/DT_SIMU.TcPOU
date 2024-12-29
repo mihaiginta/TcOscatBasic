@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="DT_SIMU" Id="{f81093f6-5208-4679-90b0-78b6007a20d9}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK DT_SIMU
 VAR_INPUT
@@ -59,8 +59,5 @@ hm	8.	mar. 2009	rev 1.2
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="DT_SIMU">
-      <LineId Id="27" Count="28" />
-    </LineIds>
   </POU>
 </TcPlcObject>

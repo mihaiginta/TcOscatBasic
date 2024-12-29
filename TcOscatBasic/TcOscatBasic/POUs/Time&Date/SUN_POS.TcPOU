@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="SUN_POS" Id="{7ea91562-99e0-4480-b7d6-1fc3cd0019f0}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK SUN_POS
 VAR_INPUT
@@ -102,8 +102,5 @@ hm	7. mar. 2009	rev 2.1
 	added output for astronomical heigth h
 *)]]></ST>
     </Implementation>
-    <LineIds Name="SUN_POS">
-      <LineId Id="38" Count="60" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="TRIM1" Id="{918c6621-c115-4439-a0c9-f417a6cbc577}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION TRIM1 : STRING(STRING_LENGTH)
 VAR_INPUT
@@ -40,8 +40,5 @@ hm	29. mar. 2008	rev 1.2
 	changed STRING to STRING(STRING_LENGTH)
 *)]]></ST>
     </Implementation>
-    <LineIds Name="TRIM1">
-      <LineId Id="17" Count="19" />
-    </LineIds>
   </POU>
 </TcPlcObject>

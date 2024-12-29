@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="COUNT_BR" Id="{550a55b6-4f0b-4eef-a0f4-3d0a4369c06a}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK COUNT_BR
 VAR_INPUT
@@ -47,8 +47,5 @@ hm	16. jan 2008	rev 1.0
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="COUNT_BR">
-      <LineId Id="27" Count="16" />
-    </LineIds>
   </POU>
 </TcPlcObject>

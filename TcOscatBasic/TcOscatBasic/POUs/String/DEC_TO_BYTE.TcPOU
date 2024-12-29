@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="DEC_TO_BYTE" Id="{6a4319a0-11c8-482e-b522-47df0f602ebc}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION DEC_TO_BYTE : BYTE
 VAR_INPUT
@@ -46,8 +46,5 @@ hm	30. sep.2008	rev 1.1
 *)	
 ]]></ST>
     </Implementation>
-    <LineIds Name="DEC_TO_BYTE">
-      <LineId Id="19" Count="23" />
-    </LineIds>
   </POU>
 </TcPlcObject>

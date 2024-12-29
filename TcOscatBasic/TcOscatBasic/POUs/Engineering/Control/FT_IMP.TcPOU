@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="FT_IMP" Id="{82fd04d9-c7f7-42bf-b3fa-49e09ae7b9d4}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FT_IMP
 VAR_INPUT
@@ -32,8 +32,5 @@ hm 3.1.2007	rev 1.1
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="FT_IMP">
-      <LineId Id="21" Count="7" />
-    </LineIds>
   </POU>
 </TcPlcObject>

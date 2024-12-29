@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="LIST_RETRIEVE_LAST" Id="{2d94758c-4ec2-428f-95dc-957e756b6e01}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION LIST_RETRIEVE_LAST : STRING(LIST_LENGTH)
 VAR_INPUT
@@ -52,8 +52,5 @@ hm	21. mar. 2011	rev 2.0
 	new module
 *)	]]></ST>
     </Implementation>
-    <LineIds Name="LIST_RETRIEVE_LAST">
-      <LineId Id="26" Count="22" />
-    </LineIds>
   </POU>
 </TcPlcObject>

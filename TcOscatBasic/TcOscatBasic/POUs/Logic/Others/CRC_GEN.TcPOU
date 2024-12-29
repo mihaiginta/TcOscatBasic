@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="CRC_GEN" Id="{a06d2b05-acf9-4fec-b839-453fb9e31f3b}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION CRC_GEN : DWORD
 
@@ -136,8 +136,5 @@ hm	16. jan. 2011	rev 2.0
 
 ]]></ST>
     </Implementation>
-    <LineIds Name="CRC_GEN">
-      <LineId Id="31" Count="101" />
-    </LineIds>
   </POU>
 </TcPlcObject>

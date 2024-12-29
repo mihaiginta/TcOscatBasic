@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="LIST_NEXT" Id="{229a5eb1-8f49-49e5-a3f6-354872323097}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK LIST_NEXT
 VAR_INPUT
@@ -74,8 +74,5 @@ hm	21. mar. 2011	rev 2.0
 *)	
 ]]></ST>
     </Implementation>
-    <LineIds Name="LIST_NEXT">
-      <LineId Id="31" Count="39" />
-    </LineIds>
   </POU>
 </TcPlcObject>

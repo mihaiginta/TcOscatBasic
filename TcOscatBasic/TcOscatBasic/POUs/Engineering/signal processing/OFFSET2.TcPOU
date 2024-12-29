@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="OFFSET2" Id="{0600e904-d3e9-4356-b385-2f5da044bf4c}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION OFFSET2 : REAL
 VAR_INPUT
@@ -33,8 +33,5 @@ ELSIF O2 THEN OFFSET2 := OFFSET2 + offset_2;
 ELSIF O1 THEN OFFSET2 := OFFSET2 + offset_1;
 END_IF;]]></ST>
     </Implementation>
-    <LineIds Name="OFFSET2">
-      <LineId Id="24" Count="5" />
-    </LineIds>
   </POU>
 </TcPlcObject>

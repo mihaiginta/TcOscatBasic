@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="YEAR_END" Id="{5c8ec53e-0e0a-4e33-bf23-f27a78d66abb}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION YEAR_END : DATE
 VAR_INPUT
@@ -30,8 +30,5 @@ hm	24. jan 2011	rev 1.1
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="YEAR_END">
-      <LineId Id="15" Count="11" />
-    </LineIds>
   </POU>
 </TcPlcObject>

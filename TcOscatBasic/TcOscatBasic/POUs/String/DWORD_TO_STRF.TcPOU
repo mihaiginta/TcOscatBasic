@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="DWORD_TO_STRF" Id="{0f76e0d3-6cf1-49a6-a6bd-f9983f3d4750}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION DWORD_TO_STRF : STRING(20)
 VAR_INPUT
@@ -38,8 +38,5 @@ hm	29. mar. 2008	rev 1.1
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="DWORD_TO_STRF">
-      <LineId Id="21" Count="13" />
-    </LineIds>
   </POU>
 </TcPlcObject>

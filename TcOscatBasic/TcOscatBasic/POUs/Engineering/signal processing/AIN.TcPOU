@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="AIN" Id="{db9d7c30-49b8-4281-b6ad-01b012c12701}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION AIN : REAL
 VAR_INPUT
@@ -62,8 +62,5 @@ hm	16. mar 2008	rev 1.5
 	added type conversions to avoid warnings under codesys 30
 *)]]></ST>
     </Implementation>
-    <LineIds Name="AIN">
-      <LineId Id="31" Count="27" />
-    </LineIds>
   </POU>
 </TcPlcObject>

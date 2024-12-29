@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="AGDF" Id="{f395061a-9290-4bc5-b707-f39c7b7608e3}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION AGDF : REAL
 VAR_INPUT
@@ -35,8 +35,5 @@ hm	10. mar. 2009	rev 1.1
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="AGDF">
-      <LineId Id="14" Count="17" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="FB_InOnOff" Id="{67e160cd-5a71-4a38-950b-a6bd10bc48ca}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_InOnOff
 VAR
@@ -51,23 +51,5 @@ END_VAR]]></Declaration>
         </Implementation>
       </Set>
     </Property>
-    <LineIds Name="FB_InOnOff">
-      <LineId Id="9" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_InOnOff.Error.Get">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_InOnOff.Error.Set">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_InOnOff.Read">
-      <LineId Id="5" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_InOnOff.ValueIn.Get">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_InOnOff.ValueIn.Set">
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

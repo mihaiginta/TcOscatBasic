@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="V3_ANG" Id="{e77d590a-0b34-4ca7-9010-854bdf2d5ea2}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION V3_ANG : REAL
 VAR_INPUT
@@ -33,8 +33,5 @@ hm	10. mar. 2009	rev 1.1
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="V3_ANG">
-      <LineId Id="17" Count="12" />
-    </LineIds>
   </POU>
 </TcPlcObject>

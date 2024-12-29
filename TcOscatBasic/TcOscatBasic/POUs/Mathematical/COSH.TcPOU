@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="COSH" Id="{5a84fe1b-5956-4e23-aa9a-a38fd7bfc1ee}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION COSH : REAL
 VAR_INPUT
@@ -36,8 +36,5 @@ hm	10. mar. 2009	rev 1.3
 	real constants updated to new systax using dot
 *)]]></ST>
     </Implementation>
-    <LineIds Name="COSH">
-      <LineId Id="17" Count="15" />
-    </LineIds>
   </POU>
 </TcPlcObject>

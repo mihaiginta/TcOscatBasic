@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="FSTRING_TO_BYTE" Id="{d83a263a-b742-4c3a-b851-2e5beb2f8e27}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION FSTRING_TO_BYTE : BYTE
 VAR_INPUT
@@ -41,8 +41,5 @@ hm	20. sep. 2008	rev 1.1
 *)	
 ]]></ST>
     </Implementation>
-    <LineIds Name="FSTRING_TO_BYTE">
-      <LineId Id="15" Count="22" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="GAUSS" Id="{753d2b83-c8d5-4e62-a544-74b9967abe43}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION GAUSS : REAL
 VAR_INPUT
@@ -40,8 +40,5 @@ hm	10. mar. 2009	rev 1.2
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="GAUSS">
-      <LineId Id="20" Count="16" />
-    </LineIds>
   </POU>
 </TcPlcObject>

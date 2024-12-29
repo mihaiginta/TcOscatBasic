@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="REAL_TO_STRF" Id="{bc22d45e-6210-4e20-ac09-0a18e8954fb7}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION REAL_TO_STRF : STRING(20)
 VAR_INPUT
@@ -68,8 +68,5 @@ hm 2. jan 2012	rev 1.8
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="REAL_TO_STRF">
-      <LineId Id="23" Count="41" />
-    </LineIds>
   </POU>
 </TcPlcObject>

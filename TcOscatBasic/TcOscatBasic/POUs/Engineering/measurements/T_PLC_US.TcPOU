@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="T_PLC_US" Id="{47ea9226-871a-406d-94ac-e6b3a829d24e}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION T_PLC_US : DWORD
 VAR CONSTANT
@@ -48,8 +48,5 @@ hm	16. nov. 2008	rev 1.2
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="T_PLC_US">
-      <LineId Id="20" Count="24" />
-    </LineIds>
   </POU>
 </TcPlcObject>

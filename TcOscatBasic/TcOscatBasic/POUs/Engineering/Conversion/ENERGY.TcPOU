@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="ENERGY" Id="{f3a169f6-1123-4e41-baf6-9f77fd71dc76}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK ENERGY
 VAR_INPUT
@@ -51,8 +51,5 @@ hm 16. jan 2010	rev 1.2
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="ENERGY">
-      <LineId Id="22" Count="25" />
-    </LineIds>
   </POU>
 </TcPlcObject>

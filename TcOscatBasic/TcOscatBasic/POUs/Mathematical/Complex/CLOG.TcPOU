@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="CLOG" Id="{e28eef0d-0653-4eeb-a074-a32d084619eb}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION CLOG : complex
 VAR_INPUT
@@ -28,8 +28,5 @@ hm	20. apr. 2008	rev 1.1
 	use ATAN2 instead of ATAN
 *)]]></ST>
     </Implementation>
-    <LineIds Name="CLOG">
-      <LineId Id="14" Count="10" />
-    </LineIds>
   </POU>
 </TcPlcObject>

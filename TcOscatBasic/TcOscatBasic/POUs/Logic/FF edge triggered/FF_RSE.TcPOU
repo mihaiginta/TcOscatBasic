@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="FF_RSE" Id="{ea22d04b-806c-4960-abda-68f05f020b09}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FF_RSE
 VAR_INPUT
@@ -51,8 +51,5 @@ hm	16. jul. 2008	rev 1.0
 
 ]]></ST>
     </Implementation>
-    <LineIds Name="FF_RSE">
-      <LineId Id="24" Count="23" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="RAD" Id="{433d8b5c-e438-405a-b02c-f8cdf05d4167}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION RAD : REAL
 VAR_INPUT
@@ -30,8 +30,5 @@ hm	18. oct 2008	rev 1.2
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="RAD">
-      <LineId Id="14" Count="12" />
-    </LineIds>
   </POU>
 </TcPlcObject>

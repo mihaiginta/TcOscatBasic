@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="AOUT" Id="{42097678-80ab-4723-84f0-2879257b319c}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION AOUT : DWORD
 VAR_INPUT
@@ -66,8 +66,5 @@ hm	23. feb 2008	rev 1.4
 	changed code for better performance
 *)]]></ST>
     </Implementation>
-    <LineIds Name="AOUT">
-      <LineId Id="31" Count="31" />
-    </LineIds>
   </POU>
 </TcPlcObject>

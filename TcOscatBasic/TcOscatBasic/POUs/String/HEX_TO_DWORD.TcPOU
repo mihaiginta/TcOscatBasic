@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="HEX_TO_DWORD" Id="{4047bbf7-776e-4ab3-b0fd-a6c23ff38624}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION HEX_TO_DWORD : DWORD
 VAR_INPUT
@@ -58,8 +58,5 @@ hm	18. jun. 2008	rev 1.4
 *)	
 ]]></ST>
     </Implementation>
-    <LineIds Name="HEX_TO_DWORD">
-      <LineId Id="19" Count="35" />
-    </LineIds>
   </POU>
 </TcPlcObject>

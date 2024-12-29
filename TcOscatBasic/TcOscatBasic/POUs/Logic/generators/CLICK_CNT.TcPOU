@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="CLICK_CNT" Id="{ab7379f0-d0d8-4e67-bfc9-76a73648a73f}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK CLICK_CNT
 VAR_INPUT
@@ -54,8 +54,5 @@ hm 	16. jul. 2008	rev 1.0
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="CLICK_CNT">
-      <LineId Id="25" Count="25" />
-    </LineIds>
   </POU>
 </TcPlcObject>

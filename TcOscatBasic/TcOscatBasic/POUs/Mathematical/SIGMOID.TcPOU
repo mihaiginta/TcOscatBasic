@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="SIGMOID" Id="{bc9e96dd-3015-4e56-bd45-bff070f83264}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION SIGMOID : REAL
 VAR_INPUT
@@ -37,8 +37,5 @@ hm 10. mar. 2009		rev 1.2
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="SIGMOID">
-      <LineId Id="14" Count="19" />
-    </LineIds>
   </POU>
 </TcPlcObject>

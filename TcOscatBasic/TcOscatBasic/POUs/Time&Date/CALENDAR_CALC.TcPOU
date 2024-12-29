@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="CALENDAR_CALC" Id="{0221f6a2-cf8d-448d-ab78-9eb5468f98c2}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK CALENDAR_CALC
 VAR_INPUT
@@ -117,8 +117,5 @@ hm	6. apr. 2011	rev 1.6
 	night was calculated wrong
 *)]]></ST>
     </Implementation>
-    <LineIds Name="CALENDAR_CALC">
-      <LineId Id="37" Count="76" />
-    </LineIds>
   </POU>
 </TcPlcObject>

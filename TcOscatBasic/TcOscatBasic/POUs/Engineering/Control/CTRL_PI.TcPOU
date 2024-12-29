@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="CTRL_PI" Id="{979aa03a-ca56-4774-98db-df1fc24909be}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK CTRL_PI
 VAR_INPUT
@@ -67,8 +67,5 @@ hm	20. jun. 2008	rev 2.0
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="CTRL_PI">
-      <LineId Id="40" Count="23" />
-    </LineIds>
   </POU>
 </TcPlcObject>

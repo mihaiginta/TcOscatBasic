@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="GEN_SQR" Id="{b6194553-484a-465b-9a06-e4087aeb9cad}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK GEN_SQR
 VAR_INPUT
@@ -106,8 +106,5 @@ hm	11. mar. 2009	rev 1.4
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="GEN_SQR">
-      <LineId Id="30" Count="72" />
-    </LineIds>
   </POU>
 </TcPlcObject>

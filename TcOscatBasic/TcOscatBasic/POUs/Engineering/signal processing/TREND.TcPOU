@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="TREND" Id="{d3b613c2-ad71-4c47-8a62-768d72aae611}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK TREND
 VAR_INPUT
@@ -44,8 +44,5 @@ hm	21. aug. 2009	rev 1.0
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="TREND">
-      <LineId Id="26" Count="14" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="SET_DATE" Id="{07257dd1-02df-438f-b796-4101e754a16a}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION SET_DATE : DATE
 VAR_INPUT
@@ -70,8 +70,5 @@ hm	29. dec. 2011	rev 2.3
 	improved performance
 *)]]></ST>
     </Implementation>
-    <LineIds Name="SET_DATE">
-      <LineId Id="18" Count="48" />
-    </LineIds>
   </POU>
 </TcPlcObject>

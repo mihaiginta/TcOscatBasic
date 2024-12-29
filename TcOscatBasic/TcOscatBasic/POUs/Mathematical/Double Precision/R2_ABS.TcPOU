@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="R2_ABS" Id="{dd2428f1-3187-4231-bc0a-e021f1c31110}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION R2_ABS : REAL2
 VAR_INPUT
@@ -34,8 +34,5 @@ hm	10. mar. 2009 rev 1.1
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="R2_ABS">
-      <LineId Id="14" Count="16" />
-    </LineIds>
   </POU>
 </TcPlcObject>

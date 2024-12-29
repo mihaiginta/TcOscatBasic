@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="BIT_COUNT" Id="{bf3167fe-98fd-4d52-b0c0-06f486d4481f}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION BIT_COUNT : INT
 VAR_INPUT
@@ -33,8 +33,5 @@ END_WHILE;
 	deleted unused variable temp
 *)]]></ST>
     </Implementation>
-    <LineIds Name="BIT_COUNT">
-      <LineId Id="15" Count="14" />
-    </LineIds>
   </POU>
 </TcPlcObject>

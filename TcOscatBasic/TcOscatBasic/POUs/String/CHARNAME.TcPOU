@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="CHARNAME" Id="{5b40aff5-d993-4448-9ab5-153d9a7dbe08}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION CHARNAME : STRING(10)
 VAR_INPUT
@@ -64,8 +64,5 @@ hm	17. dec. 2008	rev 1.4
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="CHARNAME">
-      <LineId Id="20" Count="40" />
-    </LineIds>
   </POU>
 </TcPlcObject>

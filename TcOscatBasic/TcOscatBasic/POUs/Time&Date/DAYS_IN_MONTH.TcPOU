@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="DAYS_IN_MONTH" Id="{d4a72219-51b4-4ed1-a770-b31886c2935c}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION DAYS_IN_MONTH : INT
 VAR_INPUT
@@ -49,8 +49,5 @@ hm	27. mar. 2009		rev 1.0
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="DAYS_IN_MONTH">
-      <LineId Id="16" Count="29" />
-    </LineIds>
   </POU>
 </TcPlcObject>

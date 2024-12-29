@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="V3_ADD" Id="{07f10410-869b-4bab-a527-97b5c93b4047}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION V3_ADD : vector_3
 VAR_INPUT
@@ -29,8 +29,5 @@ hm		11 dec 2007	rev 1.0
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="V3_ADD">
-      <LineId Id="15" Count="10" />
-    </LineIds>
   </POU>
 </TcPlcObject>

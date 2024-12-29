@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="BINOM" Id="{095c177a-4271-4976-84c3-42f3b53cc52d}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION BINOM : DINT
 VAR_INPUT
@@ -61,8 +61,5 @@ hm	25. oct. 2008	rev 1.0
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="BINOM">
-      <LineId Id="19" Count="38" />
-    </LineIds>
   </POU>
 </TcPlcObject>

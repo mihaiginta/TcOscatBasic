@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="DIR_TO_DEG" Id="{ffd7ac5c-5a0a-4377-9ffc-226126478cf6}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION DIR_TO_DEG : INT
 VAR_INPUT
@@ -38,8 +38,5 @@ hm	22. oct. 2008	rev 1.1
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="DIR_TO_DEG">
-      <LineId Id="19" Count="15" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="FB_CONTROL" Id="{431e90c2-3f53-42b6-bdae-8ec16d6fc076}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_CONTROL
 VAR
@@ -138,39 +138,5 @@ END_VAR
         </Implementation>
       </Get>
     </Property>
-    <LineIds Name="FB_CONTROL">
-      <LineId Id="9" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_CONTROL.Act.Get">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_CONTROL.Act.Set">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_CONTROL.Control">
-      <LineId Id="9" Count="31" />
-      <LineId Id="5" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_CONTROL.ControlMode.Get">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_CONTROL.ControlMode.Set">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_CONTROL.ControlParameter.Get">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_CONTROL.ControlParameter.Set">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_CONTROL.Set.Get">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_CONTROL.Set.Set">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_CONTROL.Y.Get">
-      <LineId Id="2" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="INC_DEC" Id="{a64ffaa6-7158-401d-bc8a-ec2c509f2b3b}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK INC_DEC
 VAR_INPUT
@@ -53,8 +53,5 @@ IF clk AND NOT dir THEN cnt := cnt -1; END_IF;
 IF rst THEN cnt := 0; END_IF;
 ]]></ST>
     </Implementation>
-    <LineIds Name="INC_DEC">
-      <LineId Id="27" Count="22" />
-    </LineIds>
   </POU>
 </TcPlcObject>

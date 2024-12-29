@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="BIT_OF_DWORD" Id="{ffcb8422-7102-48e0-ba59-670891c0c8b8}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION BIT_OF_DWORD : BOOL
 VAR_INPUT
@@ -38,8 +38,5 @@ hm	6. jun. 2008	rev 1.2
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="BIT_OF_DWORD">
-      <LineId Id="15" Count="19" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="FILTER_MAV_W" Id="{204c944e-7746-4732-b8ed-8b5e5daee4ad}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FILTER_MAV_W
 VAR_INPUT
@@ -69,8 +69,5 @@ hm	26. mar. 2011	rev 1.4
 	corrected error in calculation
 *)]]></ST>
     </Implementation>
-    <LineIds Name="FILTER_MAV_W">
-      <LineId Id="27" Count="38" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="LIST_GET" Id="{715542c1-f7a3-4a01-a736-2a06b437cd11}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION LIST_GET : STRING(LIST_LENGTH)
 VAR_INPUT
@@ -63,8 +63,5 @@ hm	21. mar. 2011	rev 2.0
 *)	
 ]]></ST>
     </Implementation>
-    <LineIds Name="LIST_GET">
-      <LineId Id="29" Count="30" />
-    </LineIds>
   </POU>
 </TcPlcObject>

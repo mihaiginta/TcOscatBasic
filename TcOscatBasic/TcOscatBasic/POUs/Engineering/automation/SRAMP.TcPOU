@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="SRAMP" Id="{2349cf4c-f859-4d7f-9ed5-4d5ded33a1ed}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK SRAMP
 VAR_INPUT
@@ -78,8 +78,5 @@ hm	11. mar. 2009	rev 1.1
 
 ]]></ST>
     </Implementation>
-    <LineIds Name="SRAMP">
-      <LineId Id="29" Count="45" />
-    </LineIds>
   </POU>
 </TcPlcObject>

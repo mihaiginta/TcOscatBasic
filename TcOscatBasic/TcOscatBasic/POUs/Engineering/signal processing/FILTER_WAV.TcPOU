@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="FILTER_WAV" Id="{952e49a1-e9a6-4447-941a-1e0d864e1ad7}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FILTER_WAV
 VAR_INPUT
@@ -60,8 +60,5 @@ hm	10. mar. 2009	rev 1.2
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="FILTER_WAV">
-      <LineId Id="24" Count="32" />
-    </LineIds>
   </POU>
 </TcPlcObject>

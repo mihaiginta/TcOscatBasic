@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="LTIME_TO_UTC" Id="{bad013aa-fd94-4731-80de-668ef533faa1}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION LTIME_TO_UTC : DT
 VAR_INPUT
@@ -49,8 +49,5 @@ ks	13. nov. 2009	rev 1.7
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="LTIME_TO_UTC">
-      <LineId Id="17" Count="28" />
-    </LineIds>
   </POU>
 </TcPlcObject>

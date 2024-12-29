@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="DCF77" Id="{c65add17-f49f-4d57-b0d8-736930886a0a}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK DCF77
 VAR_INPUT
@@ -277,8 +277,5 @@ hm	7. oct. 2008	rev 1.10
 
 ]]></ST>
     </Implementation>
-    <LineIds Name="DCF77">
-      <LineId Id="66" Count="207" />
-    </LineIds>
   </POU>
 </TcPlcObject>

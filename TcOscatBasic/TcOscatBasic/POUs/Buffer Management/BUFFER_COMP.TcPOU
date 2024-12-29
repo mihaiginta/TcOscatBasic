@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="BUFFER_COMP" Id="{2d5e5da2-4788-4bbe-ba43-d6fc7ecc177a}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION BUFFER_COMP : INT
 VAR_INPUT
@@ -55,8 +55,5 @@ hm	12. nov. 2009	rev 1.1
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="BUFFER_COMP">
-      <LineId Id="21" Count="30" />
-    </LineIds>
   </POU>
 </TcPlcObject>

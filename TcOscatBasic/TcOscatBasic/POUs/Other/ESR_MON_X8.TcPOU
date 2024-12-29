@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="ESR_MON_X8" Id="{13c1e283-dfd8-4bd3-a4ec-b24aaf7af7d6}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK ESR_MON_X8
 VAR_INPUT
@@ -112,8 +112,5 @@ hm	1. dec. 2009	rev 1.2
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="ESR_MON_X8">
-      <LineId Id="35" Count="73" />
-    </LineIds>
   </POU>
 </TcPlcObject>

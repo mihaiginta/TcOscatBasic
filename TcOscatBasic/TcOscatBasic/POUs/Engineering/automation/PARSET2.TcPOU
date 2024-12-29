@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="PARSET2" Id="{ca8b29f6-a7ca-49ed-8eda-0de4778be351}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK PARSET2
 VAR_INPUT
@@ -57,8 +57,5 @@ hm		3.11.2007		rev 1.0
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="PARSET2">
-      <LineId Id="29" Count="24" />
-    </LineIds>
   </POU>
 </TcPlcObject>

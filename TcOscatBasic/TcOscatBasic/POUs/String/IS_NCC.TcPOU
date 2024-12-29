@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="IS_NCC" Id="{84425ddc-7550-40d6-b8d6-8e08a4ff4281}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION IS_NCC : BOOL
 VAR_INPUT
@@ -36,8 +36,5 @@ hm	29. mar. 2008	rev 1.1
 	changed STRING to STRING(STRING_LENGTH)
 *)]]></ST>
     </Implementation>
-    <LineIds Name="IS_NCC">
-      <LineId Id="18" Count="14" />
-    </LineIds>
   </POU>
 </TcPlcObject>

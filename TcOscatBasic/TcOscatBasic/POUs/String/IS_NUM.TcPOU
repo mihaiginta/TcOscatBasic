@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="IS_NUM" Id="{87216ead-0dbc-42ee-8597-a21ace37a599}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION IS_NUM : BOOL
 VAR_INPUT
@@ -40,8 +40,5 @@ hm	29. mar. 2008	rev 1.1
 	changed STRING to STRING(STRING_LENGTH)
 *)]]></ST>
     </Implementation>
-    <LineIds Name="IS_NUM">
-      <LineId Id="18" Count="18" />
-    </LineIds>
   </POU>
 </TcPlcObject>

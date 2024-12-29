@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="HYST_2" Id="{1216d86e-415f-43e0-b456-4e918b340b6e}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK HYST_2
 VAR_INPUT
@@ -50,8 +50,5 @@ hm		2. jun. 2008	rev 1.2
 	improved performance
 *)]]></ST>
     </Implementation>
-    <LineIds Name="HYST_2">
-      <LineId Id="24" Count="22" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="SHL1" Id="{e1a0fb53-209f-4b51-a5fe-195bd78564ab}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION SHL1 : DWORD
 VAR_INPUT
@@ -31,8 +31,5 @@ hm	27. dec 2007	rev 1.1
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="SHL1">
-      <LineId Id="17" Count="10" />
-    </LineIds>
   </POU>
 </TcPlcObject>

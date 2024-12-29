@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="HEX_TO_BYTE" Id="{fe74da84-09e4-4146-b8cc-c2d7195e4bbd}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION HEX_TO_BYTE : BYTE
 VAR_INPUT
@@ -50,8 +50,5 @@ hm	20. sep.2008	rev 1.1
 *)	
 ]]></ST>
     </Implementation>
-    <LineIds Name="HEX_TO_BYTE">
-      <LineId Id="19" Count="27" />
-    </LineIds>
   </POU>
 </TcPlcObject>

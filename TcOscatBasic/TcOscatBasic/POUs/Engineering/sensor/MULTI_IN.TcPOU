@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="MULTI_IN" Id="{33c1cf44-6f67-4e9a-b144-83d118eb8a46}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION MULTI_IN : REAL
 VAR_INPUT
@@ -109,8 +109,5 @@ hm	18. jul. 2009	rev 1.4
 	improved performance
 *)]]></ST>
     </Implementation>
-    <LineIds Name="MULTI_IN">
-      <LineId Id="40" Count="65" />
-    </LineIds>
   </POU>
 </TcPlcObject>

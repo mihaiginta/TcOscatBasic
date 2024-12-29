@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="ERF" Id="{34a8bd4f-8c09-4812-8d13-176a3cdecd24}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION ERF : REAL
 VAR_INPUT
@@ -41,8 +41,5 @@ hm	10. mar. 2009	rev 1.3
 	real constants updated to new systax using dot
 *)]]></ST>
     </Implementation>
-    <LineIds Name="ERF">
-      <LineId Id="18" Count="19" />
-    </LineIds>
   </POU>
 </TcPlcObject>

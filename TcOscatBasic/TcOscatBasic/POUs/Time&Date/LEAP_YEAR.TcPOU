@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="LEAP_YEAR" Id="{52cbd841-80eb-4cb9-8556-5bd6233ce58a}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION LEAP_YEAR : BOOL
 VAR_INPUT
@@ -38,8 +38,5 @@ hm	1. oct 2007		rev 1.2
 	chaged code for higher performance
 *)]]></ST>
     </Implementation>
-    <LineIds Name="LEAP_YEAR">
-      <LineId Id="15" Count="19" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="_ARRAY_ABS" Id="{35f1d1eb-7122-4b1b-a7b4-c3b06db0aa52}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION _ARRAY_ABS : BOOL
 VAR_INPUT
@@ -36,8 +36,5 @@ hm	2. apr 2008		rev 1.0
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="_ARRAY_ABS">
-      <LineId Id="21" Count="11" />
-    </LineIds>
   </POU>
 </TcPlcObject>

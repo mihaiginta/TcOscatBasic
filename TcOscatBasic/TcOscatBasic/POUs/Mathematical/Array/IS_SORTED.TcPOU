@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="IS_SORTED" Id="{6244b4e0-f1e6-47da-b813-99884537f55a}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION IS_SORTED : BOOL
 VAR_INPUT
@@ -43,8 +43,5 @@ hm	4. apr. 2008	rev 1.1
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="IS_SORTED">
-      <LineId Id="21" Count="18" />
-    </LineIds>
   </POU>
 </TcPlcObject>

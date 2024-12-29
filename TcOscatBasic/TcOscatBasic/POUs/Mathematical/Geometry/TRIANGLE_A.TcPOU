@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="TRIANGLE_A" Id="{1b12560a-1f91-4238-ae44-49b7eb5a80c5}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION TRIANGLE_A : REAL
 VAR_INPUT
@@ -41,8 +41,5 @@ hm	10. mar. 2009	rev 1.2
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="TRIANGLE_A">
-      <LineId Id="21" Count="16" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="OCT_TO_BYTE" Id="{9e66a626-b4bd-4b95-8013-b2c483e5e517}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION OCT_TO_BYTE : BYTE
 VAR_INPUT
@@ -45,8 +45,5 @@ hm	20. sep. 2008	rev 1.1
 *)	
 ]]></ST>
     </Implementation>
-    <LineIds Name="OCT_TO_BYTE">
-      <LineId Id="19" Count="22" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="FIFO_16" Id="{60dedcd3-b158-448b-b775-960e00fde748}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FIFO_16
 VAR_INPUT
@@ -77,8 +77,5 @@ hm 24. jul. 2009	rev 2.0
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="FIFO_16">
-      <LineId Id="30" Count="43" />
-    </LineIds>
   </POU>
 </TcPlcObject>

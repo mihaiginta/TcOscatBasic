@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="PERIOD2" Id="{8d086d21-4315-43ca-99c8-f4e8e57a25c9}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION PERIOD2 : BOOL
 VAR_INPUT
@@ -31,8 +31,5 @@ hm		27. apr 2008	rev 1.0
 
 *) ]]></ST>
     </Implementation>
-    <LineIds Name="PERIOD2">
-      <LineId Id="15" Count="12" />
-    </LineIds>
   </POU>
 </TcPlcObject>

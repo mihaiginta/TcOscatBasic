@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="DATE_ADD" Id="{755d89f8-818c-4361-96fe-e245e5d7b137}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION DATE_ADD : DATE
 VAR_INPUT
@@ -73,8 +73,5 @@ hm	22. mar. 2011	rev 1.8
 	fixed an error in formula
 *)]]></ST>
     </Implementation>
-    <LineIds Name="DATE_ADD">
-      <LineId Id="25" Count="44" />
-    </LineIds>
   </POU>
 </TcPlcObject>

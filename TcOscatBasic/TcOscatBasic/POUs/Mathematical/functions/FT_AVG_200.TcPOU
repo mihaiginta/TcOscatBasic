@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="FT_AVG_200" Id="{d89de838-a4ef-4478-9803-d954c8b7d37c}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FT_AVG_200
 VAR_INPUT
@@ -30,9 +30,5 @@ ELSIF E THEN
 	avg := avg + (in - buff.out ) / INT_TO_REAL(N);
 END_IF;]]></ST>
     </Implementation>
-    <LineIds Name="FT_AVG_200">
-      <LineId Id="23" Count="10" />
-      <LineId Id="9" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="CACOS" Id="{c3c6b4ac-777c-484a-b81c-bf10b2b170c8}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION CACOS : complex
 VAR_INPUT
@@ -31,8 +31,5 @@ hm	21. feb 2008	rev 1.0
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="CACOS">
-      <LineId Id="16" Count="11" />
-    </LineIds>
   </POU>
 </TcPlcObject>

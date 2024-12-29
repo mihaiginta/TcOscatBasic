@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="FB_OutLinear" Id="{1129039b-235d-42f6-9031-f7cf02c75c4f}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_OutLinear
 VAR
@@ -67,29 +67,5 @@ END_VAR]]></Declaration>
         <ST><![CDATA[nValueOutRaw := REAL_TO_INT(F_LIN2(X:=fValueOut,X1:=stIOConv.cValue1,Y1:=stIOConv.cValue1Raw,X2:=stIOConv.cValue2,Y2:=stIOConv.cValue2Raw));]]></ST>
       </Implementation>
     </Method>
-    <LineIds Name="FB_OutLinear">
-      <LineId Id="9" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_OutLinear.Error.Get">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_OutLinear.Error.Set">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_OutLinear.IO_Conversion.Get">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_OutLinear.IO_Conversion.Set">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_OutLinear.ValueOut.Get">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_OutLinear.ValueOut.Set">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_OutLinear.Write">
-      <LineId Id="7" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

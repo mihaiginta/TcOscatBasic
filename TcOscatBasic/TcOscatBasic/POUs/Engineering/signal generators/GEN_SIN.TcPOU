@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="GEN_SIN" Id="{b779e2d6-a634-4fd9-bbbb-f272fe67e88c}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK GEN_SIN
 VAR_INPUT
@@ -81,8 +81,5 @@ hm	11. mar. 2009	rev 1.6
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="GEN_SIN">
-      <LineId Id="30" Count="47" />
-    </LineIds>
   </POU>
 </TcPlcObject>

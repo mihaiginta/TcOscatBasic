@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="RDMDW" Id="{3e61c145-468e-47db-937c-760fe65efb9b}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION RDMDW : DWORD
 VAR_INPUT
@@ -42,8 +42,5 @@ hm		18. oct. 2008		rev 1.2
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="RDMDW">
-      <LineId Id="20" Count="18" />
-    </LineIds>
   </POU>
 </TcPlcObject>

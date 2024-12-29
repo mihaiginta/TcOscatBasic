@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="CIRCLE_C" Id="{c5f03b02-f5f8-4df6-b315-93a8ec7b3616}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION CIRCLE_C : REAL
 VAR_INPUT
@@ -28,8 +28,5 @@ hm	22. feb 2008	rev 1.1
 	improved performance
 *)]]></ST>
     </Implementation>
-    <LineIds Name="CIRCLE_C">
-      <LineId Id="16" Count="8" />
-    </LineIds>
   </POU>
 </TcPlcObject>

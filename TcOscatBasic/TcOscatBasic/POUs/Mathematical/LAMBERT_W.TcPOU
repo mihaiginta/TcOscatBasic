@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="LAMBERT_W" Id="{5487a5dd-6c80-481b-b4ba-f4e276bd2ff8}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION LAMBERT_W : REAL
 VAR_INPUT
@@ -60,8 +60,5 @@ hm	10. mar. 2009	rev 1.1
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="LAMBERT_W">
-      <LineId Id="23" Count="33" />
-    </LineIds>
   </POU>
 </TcPlcObject>

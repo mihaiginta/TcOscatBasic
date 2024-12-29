@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="FT_RMP" Id="{ec89fabb-ee06-43bf-8f33-b02d1f51aac8}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FT_RMP
 VAR_INPUT
@@ -83,8 +83,5 @@ hm	25. jan 2008	rev 1.4
 	allow KR and KF to be 0
 *)]]></ST>
     </Implementation>
-    <LineIds Name="FT_RMP">
-      <LineId Id="30" Count="49" />
-    </LineIds>
   </POU>
 </TcPlcObject>

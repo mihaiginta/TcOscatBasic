@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="TANC" Id="{20223278-639f-4b22-808a-904003b1ba02}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION TANC : REAL
 VAR_INPUT
@@ -32,8 +32,5 @@ hm 10. mar. 2009	rev 1.1
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="TANC">
-      <LineId Id="14" Count="14" />
-    </LineIds>
   </POU>
 </TcPlcObject>

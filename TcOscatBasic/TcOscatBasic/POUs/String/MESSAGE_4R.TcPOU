@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="MESSAGE_4R" Id="{cb4e48cb-328f-4b54-b866-cb4c0cf0905c}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK MESSAGE_4R
 VAR_INPUT
@@ -70,8 +70,5 @@ hm	27. oct. 2008	rev 1.1
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="MESSAGE_4R">
-      <LineId Id="34" Count="32" />
-    </LineIds>
   </POU>
 </TcPlcObject>

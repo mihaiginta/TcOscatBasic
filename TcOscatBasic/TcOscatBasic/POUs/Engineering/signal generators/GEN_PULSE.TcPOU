@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="GEN_PULSE" Id="{a705c1ba-fbca-4578-9de9-b061f5732b5b}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK GEN_PULSE
 VAR_INPUT
@@ -61,8 +61,5 @@ hm	8. apr. 2011	rev 1.5
 	ptl and pth was exchanged
 *)]]></ST>
     </Implementation>
-    <LineIds Name="GEN_PULSE">
-      <LineId Id="26" Count="31" />
-    </LineIds>
   </POU>
 </TcPlcObject>

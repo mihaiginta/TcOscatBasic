@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="_ARRAY_MEDIAN" Id="{7221fc8e-ee1f-4e0b-b655-e2a798b3803a}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION _ARRAY_MEDIAN : REAL
 VAR_INPUT
@@ -71,8 +71,5 @@ hm		16.3. 2008		rev 1.5
 	performance improvements
 *)]]></ST>
     </Implementation>
-    <LineIds Name="_ARRAY_MEDIAN">
-      <LineId Id="24" Count="43" />
-    </LineIds>
   </POU>
 </TcPlcObject>

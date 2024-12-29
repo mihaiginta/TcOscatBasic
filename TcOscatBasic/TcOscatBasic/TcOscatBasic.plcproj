@@ -20,6 +20,7 @@
     <Company>RWTH Aachen University - E.ON Energy Research Center</Company>
     <Title>OSCAT</Title>
     <Description>This library is based on the OSCAT library (http://www.oscat.de/)</Description>
+    <WriteProductVersion>false</WriteProductVersion>
     <!--    <OutputType>Exe</OutputType>
     <RootNamespace>MyApplication</RootNamespace>
     <AssemblyName>MyApplication</AssemblyName>-->

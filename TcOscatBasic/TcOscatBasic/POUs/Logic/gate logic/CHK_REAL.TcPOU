@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="CHK_REAL" Id="{15f19ccd-3ccb-47d0-a46e-577a6d5c820d}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION CHK_REAL : BYTE
 VAR_INPUT
@@ -41,8 +41,5 @@ hm	 20. jan. 2011	rev 1.0
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="CHK_REAL">
-      <LineId Id="20" Count="17" />
-    </LineIds>
   </POU>
 </TcPlcObject>

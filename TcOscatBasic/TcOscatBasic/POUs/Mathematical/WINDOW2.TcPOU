@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="WINDOW2" Id="{f8a19065-3aed-4a51-bc32-390eae077192}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION WINDOW2 : BOOL
 VAR_INPUT
@@ -26,8 +26,5 @@ hm	31.10.2007	rev 1.0
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="WINDOW2">
-      <LineId Id="15" Count="7" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="MULTIME" Id="{52b0ec30-d6cd-424e-a3b2-d8823db87b7b}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION MULTIME : TIME
 VAR_INPUT
@@ -27,8 +27,5 @@ hm		14. mar 2008	rev 1.1
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="MULTIME">
-      <LineId Id="14" Count="9" />
-    </LineIds>
   </POU>
 </TcPlcObject>

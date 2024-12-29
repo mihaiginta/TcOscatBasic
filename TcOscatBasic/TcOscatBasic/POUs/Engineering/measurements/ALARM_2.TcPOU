@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="ALARM_2" Id="{0f2f05e7-08c8-427c-8f2b-e3568a70f45b}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK ALARM_2
 VAR_INPUT
@@ -52,8 +52,5 @@ hm	11. mar. 2009	rev 1.1
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="ALARM_2">
-      <LineId Id="28" Count="20" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="RANGE_TO_WORD" Id="{5bb7e912-2005-49b0-9511-e16e808948c4}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION RANGE_TO_WORD : WORD
 VAR_INPUT
@@ -28,8 +28,5 @@ hm	9. jan 2008		rev 1.0
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="RANGE_TO_WORD">
-      <LineId Id="16" Count="8" />
-    </LineIds>
   </POU>
 </TcPlcObject>

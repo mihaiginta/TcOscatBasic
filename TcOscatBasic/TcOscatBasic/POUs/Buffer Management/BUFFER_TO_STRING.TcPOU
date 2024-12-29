@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="BUFFER_TO_STRING" Id="{bbd62dfb-4217-4567-bf67-874f13f45acd}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION BUFFER_TO_STRING : STRING(STRING_LENGTH)
 VAR_INPUT
@@ -72,8 +72,5 @@ hm	12. nov. 2009 rev 1.5
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="BUFFER_TO_STRING">
-      <LineId Id="25" Count="43" />
-    </LineIds>
   </POU>
 </TcPlcObject>

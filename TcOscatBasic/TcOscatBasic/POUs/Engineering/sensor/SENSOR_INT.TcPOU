@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="SENSOR_INT" Id="{2324fd08-2dd2-4712-a5dd-39abd9cf0b78}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION SENSOR_INT : REAL
 VAR_INPUT
@@ -43,8 +43,5 @@ hm	11. mar. 2009	rev 1.3
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="SENSOR_INT">
-      <LineId Id="23" Count="16" />
-    </LineIds>
   </POU>
 </TcPlcObject>

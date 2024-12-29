@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="CONTROL_SET1" Id="{53e2a02c-3d12-4d44-8083-c23a9a7faf36}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK CONTROL_SET1
 VAR_INPUT
@@ -63,8 +63,5 @@ hm	11. mar. 2009	rev 1.1
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="CONTROL_SET1">
-      <LineId Id="33" Count="26" />
-    </LineIds>
   </POU>
 </TcPlcObject>

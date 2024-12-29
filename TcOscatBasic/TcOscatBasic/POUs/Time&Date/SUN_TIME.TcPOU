@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="SUN_TIME" Id="{12340567-74f8-4723-98c5-be7ea89b09cf}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK SUN_TIME
 VAR_INPUT
@@ -69,8 +69,5 @@ hm	25. jan. 2011	rev 1.7
 	added input H
 *)]]></ST>
     </Implementation>
-    <LineIds Name="SUN_TIME">
-      <LineId Id="30" Count="35" />
-    </LineIds>
   </POU>
 </TcPlcObject>

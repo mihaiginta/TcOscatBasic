@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="SGN" Id="{792c4c97-b445-4ae6-a3fd-c997c8bda93b}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION SGN : INT
 VAR_INPUT
@@ -36,8 +36,5 @@ hm	11. nov 2007	rev 1.1
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="SGN">
-      <LineId Id="15" Count="17" />
-    </LineIds>
   </POU>
 </TcPlcObject>

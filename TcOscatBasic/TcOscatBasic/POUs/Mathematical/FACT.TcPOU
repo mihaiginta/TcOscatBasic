@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="FACT" Id="{1696435c-d930-46fb-8e7a-05eb2d006a39}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION FACT : DINT
 VAR_INPUT
@@ -58,8 +58,5 @@ hm	26. mar. 2011	rev 1.5
 	using array math.facts
 *)]]></ST>
     </Implementation>
-    <LineIds Name="FACT">
-      <LineId Id="16" Count="38" />
-    </LineIds>
   </POU>
 </TcPlcObject>

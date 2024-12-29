@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="MONTH_BEGIN" Id="{57c5c249-769e-4517-ae01-e36d74e287bf}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION MONTH_BEGIN : DATE
 VAR_INPUT
@@ -24,8 +24,5 @@ hm	15. jun. 2008	rev 1.0
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="MONTH_BEGIN">
-      <LineId Id="14" Count="6" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="BIT_LOAD_DW" Id="{e6305651-752c-44ef-ba01-ef67c7d7b24f}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION BIT_LOAD_DW : DWORD
 VAR_INPUT
@@ -36,8 +36,5 @@ hm	16. mar 2008	rev 1.1
 
 ]]></ST>
     </Implementation>
-    <LineIds Name="BIT_LOAD_DW">
-      <LineId Id="17" Count="15" />
-    </LineIds>
   </POU>
 </TcPlcObject>

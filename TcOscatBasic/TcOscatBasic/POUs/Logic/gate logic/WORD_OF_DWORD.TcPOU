@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="WORD_OF_DWORD" Id="{62d7ae0a-f335-4072-aad5-5e890c331dcd}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION WORD_OF_DWORD : WORD
 VAR_INPUT
@@ -32,8 +32,5 @@ hm	30. oct. 2008	rev 1.2
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="WORD_OF_DWORD">
-      <LineId Id="16" Count="12" />
-    </LineIds>
   </POU>
 </TcPlcObject>

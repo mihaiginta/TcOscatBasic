@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="MODR" Id="{6a3530cd-a74c-42d5-9149-e1cd120e0415}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION MODR : REAL
 VAR_INPUT
@@ -46,8 +46,5 @@ hm	10. mar. 2009	rev 1.5
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="MODR">
-      <LineId Id="17" Count="25" />
-    </LineIds>
   </POU>
 </TcPlcObject>

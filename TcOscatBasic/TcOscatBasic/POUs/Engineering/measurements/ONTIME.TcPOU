@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="ONTIME" Id="{a93a01a2-7876-43a7-9951-2409895a9bd6}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK ONTIME
 VAR_INPUT
@@ -98,8 +98,5 @@ hm	18. mar. 2011	rev 2.5
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="ONTIME">
-      <LineId Id="27" Count="67" />
-    </LineIds>
   </POU>
 </TcPlcObject>

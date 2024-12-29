@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="DRIVER_4C" Id="{d70e1821-46f7-4349-8b38-455421b24df2}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK DRIVER_4C
 VAR_INPUT
@@ -65,8 +65,5 @@ hm	23. mar. 2009	rev 1.0
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="DRIVER_4C">
-      <LineId Id="34" Count="27" />
-    </LineIds>
   </POU>
 </TcPlcObject>

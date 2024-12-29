@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="SCALE_B8" Id="{c79a6d32-86c4-49b9-960f-9619bfe73102}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION SCALE_B8 : REAL
 VAR_INPUT
@@ -68,8 +68,5 @@ hm	3. nov. 2008	rev 1.4
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="SCALE_B8">
-      <LineId Id="45" Count="19" />
-    </LineIds>
   </POU>
 </TcPlcObject>

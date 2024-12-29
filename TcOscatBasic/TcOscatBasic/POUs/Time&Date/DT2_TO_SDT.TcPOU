@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="DT2_TO_SDT" Id="{05066a3c-64e9-439e-b954-a6ffe9e06553}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION DT2_TO_SDT : SDT
 VAR_INPUT
@@ -34,8 +34,5 @@ hm 18. oct. 2008	rev 1.0
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="DT2_TO_SDT">
-      <LineId Id="16" Count="14" />
-    </LineIds>
   </POU>
 </TcPlcObject>

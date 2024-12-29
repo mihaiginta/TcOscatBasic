@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="D_TRIG" Id="{bce1381e-0877-44de-a733-368175ee0286}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK D_TRIG
 VAR_INPUT
@@ -39,8 +39,5 @@ hm	19. feb. 2008	rev 1.1
 	performance improvement
 *)]]></ST>
     </Implementation>
-    <LineIds Name="D_TRIG">
-      <LineId Id="23" Count="12" />
-    </LineIds>
   </POU>
 </TcPlcObject>

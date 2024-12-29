@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="REFLECT" Id="{776b91c1-3f1d-414e-8d5e-bed5efb8f7c3}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION REFLECT : DWORD
 VAR_INPUT
@@ -34,8 +34,5 @@ hm	 16. jan 2011
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="REFLECT">
-      <LineId Id="19" Count="11" />
-    </LineIds>
   </POU>
 </TcPlcObject>

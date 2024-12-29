@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.0">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="MS_TO_BFT" Id="{da316858-f22e-419d-bfbe-b1a067e323a7}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION MS_TO_BFT : INT
 VAR_INPUT
@@ -24,8 +24,5 @@ hm	12. 6. 2008		rev 1.0
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="MS_TO_BFT">
-      <LineId Id="13" Count="7" />
-    </LineIds>
   </POU>
 </TcPlcObject>

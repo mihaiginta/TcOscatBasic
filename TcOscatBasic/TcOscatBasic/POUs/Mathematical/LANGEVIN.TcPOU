@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="LANGEVIN" Id="{92623ee4-a6e9-49ce-b75b-53a9a03129bc}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION LANGEVIN : REAL
 VAR_INPUT
@@ -34,8 +34,5 @@ hm	10. mar. 2009	rev 1.2
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="LANGEVIN">
-      <LineId Id="14" Count="16" />
-    </LineIds>
   </POU>
 </TcPlcObject>

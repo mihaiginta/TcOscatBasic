@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="OVERRIDE" Id="{1aab57b0-263d-4553-95a6-f3330fd05b03}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION OVERRIDE : REAL
 VAR_INPUT
@@ -31,8 +31,5 @@ hm	4.11.2007		rev 1.0
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="OVERRIDE">
-      <LineId Id="18" Count="9" />
-    </LineIds>
   </POU>
 </TcPlcObject>

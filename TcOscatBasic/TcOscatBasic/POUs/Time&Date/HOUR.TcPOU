@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="HOUR" Id="{d65a0da1-ee08-47d2-bd66-1af974b46a10}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION HOUR : INT
 VAR_INPUT
@@ -27,8 +27,5 @@ hm 2.10.2006 	rev 1.1
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="HOUR">
-      <LineId Id="13" Count="10" />
-    </LineIds>
   </POU>
 </TcPlcObject>

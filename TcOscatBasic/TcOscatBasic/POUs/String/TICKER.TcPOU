@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.0">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="TICKER" Id="{58f1cc29-85bd-471c-86a5-bb346575890d}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK TICKER
 
@@ -58,8 +58,5 @@ hm	29. mar. 2008	rev 1.2
 	changed STRING to STRING(STRING_LENGTH)
 *)]]></ST>
     </Implementation>
-    <LineIds Name="TICKER">
-      <LineId Id="27" Count="27" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="SDT_TO_DATE" Id="{b5f070f8-74b3-4f81-a781-0dca426c27c5}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION SDT_TO_DATE : DATE
 VAR_INPUT
@@ -28,8 +28,5 @@ hm 18. oct. 2008	rev 1.0
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="SDT_TO_DATE">
-      <LineId Id="15" Count="9" />
-    </LineIds>
   </POU>
 </TcPlcObject>

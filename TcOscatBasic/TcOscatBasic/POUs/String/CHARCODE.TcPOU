@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="CHARCODE" Id="{215d5512-92b8-4388-ad2b-87e2ae3ffc6c}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION CHARCODE : BYTE
 VAR_INPUT
@@ -52,8 +52,5 @@ hm	24. oct. 2008	rev 1.2
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="CHARCODE">
-      <LineId Id="21" Count="27" />
-    </LineIds>
   </POU>
 </TcPlcObject>

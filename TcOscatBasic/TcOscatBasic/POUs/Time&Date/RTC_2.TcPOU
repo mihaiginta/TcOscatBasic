@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="RTC_2" Id="{af5afbdb-9ab6-4066-a645-570faaaae2bc}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK RTC_2
 VAR_INPUT
@@ -60,8 +60,5 @@ hm		27. apr. 2011	rev 1.4
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="RTC_2">
-      <LineId Id="28" Count="28" />
-    </LineIds>
   </POU>
 </TcPlcObject>

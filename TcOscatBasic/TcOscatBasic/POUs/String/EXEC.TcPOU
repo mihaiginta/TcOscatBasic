@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="EXEC" Id="{aa4bd741-46ee-483c-82cd-8da57355995a}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION EXEC : STRING(STRING_LENGTH)
 VAR_INPUT
@@ -88,8 +88,5 @@ hm	29. mar. 2008	rev 1.4
 	changed STRING to STRING(STRING_LENGTH)
 *)]]></ST>
     </Implementation>
-    <LineIds Name="EXEC">
-      <LineId Id="21" Count="63" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="STAIR2" Id="{23d9d273-b75e-4da4-b340-55809d0dde50}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK STAIR2
 VAR_INPUT
@@ -47,8 +47,5 @@ hm	10. mar. 2009	rev 1.4
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="STAIR2">
-      <LineId Id="19" Count="24" />
-    </LineIds>
   </POU>
 </TcPlcObject>

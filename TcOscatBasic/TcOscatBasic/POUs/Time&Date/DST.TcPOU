@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="DST" Id="{c3cd3907-073e-4f91-b418-da7c4f9e0a06}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION DST : BOOL
 VAR_INPUT
@@ -76,8 +76,5 @@ hm	24. jan. 2011	rev 1.5
 
 ]]></ST>
     </Implementation>
-    <LineIds Name="DST">
-      <LineId Id="24" Count="48" />
-    </LineIds>
   </POU>
 </TcPlcObject>

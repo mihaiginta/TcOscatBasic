@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="TO_UML" Id="{14952575-817c-4257-9802-b0ca310ef435}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION TO_UML : STRING(2)
 VAR_INPUT
@@ -47,8 +47,5 @@ hm	17. dec. 2008	rev 1.1
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="TO_UML">
-      <LineId Id="15" Count="28" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="HOUR_TO_TOD" Id="{7f2cf2a9-14c9-4295-858e-580b9c9c7a34}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION HOUR_TO_TOD : TOD
 VAR_INPUT
@@ -30,8 +30,5 @@ hm	24. feb. 2009	rev 1.2
 	changed input to IN
 *)]]></ST>
     </Implementation>
-    <LineIds Name="HOUR_TO_TOD">
-      <LineId Id="14" Count="12" />
-    </LineIds>
   </POU>
 </TcPlcObject>

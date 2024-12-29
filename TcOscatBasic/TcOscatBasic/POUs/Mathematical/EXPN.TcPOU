@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="EXPN" Id="{5d8a79e4-a07e-4089-aade-13795b5cfbb6}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION EXPN : REAL
 VAR_INPUT
@@ -46,8 +46,5 @@ hm	10. mar. 2009	rev 1.2
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="EXPN">
-      <LineId Id="18" Count="24" />
-    </LineIds>
   </POU>
 </TcPlcObject>

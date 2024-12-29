@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="TMAX" Id="{574139da-ad50-4816-b936-3c9fc5670b36}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK TMAX
 VAR_INPUT
@@ -52,8 +52,5 @@ hm	20. jul. 2008	rev 1.0
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="TMAX">
-      <LineId Id="25" Count="23" />
-    </LineIds>
   </POU>
 </TcPlcObject>

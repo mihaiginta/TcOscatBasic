@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="ARRAY_TREND" Id="{b44112af-7090-4f5f-b2dc-1ccc00d1642a}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION ARRAY_TREND : REAL
 VAR_INPUT
@@ -50,8 +50,5 @@ hm	10. mar. 2009	rev 1.3
 	added type conversions for compatibility reasons
 *)]]></ST>
     </Implementation>
-    <LineIds Name="ARRAY_TREND">
-      <LineId Id="24" Count="22" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="ELLIPSE_A" Id="{f3b754e5-814b-411f-a857-7cd6430cfb7f}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION ELLIPSE_A : REAL
 VAR_INPUT
@@ -29,8 +29,5 @@ hm	18. oct. 2008	rev 1.1
 	using math constants
 *)]]></ST>
     </Implementation>
-    <LineIds Name="ELLIPSE_A">
-      <LineId Id="17" Count="8" />
-    </LineIds>
   </POU>
 </TcPlcObject>

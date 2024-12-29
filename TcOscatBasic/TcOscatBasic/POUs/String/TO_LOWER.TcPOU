@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="TO_LOWER" Id="{c27909ab-0757-4ba2-8846-f7908f409618}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION TO_LOWER : BYTE
 VAR_INPUT
@@ -36,8 +36,5 @@ ks	25. oct. 2008	rev 1.2
 	optimized code
 *)]]></ST>
     </Implementation>
-    <LineIds Name="TO_LOWER">
-      <LineId Id="14" Count="18" />
-    </LineIds>
   </POU>
 </TcPlcObject>

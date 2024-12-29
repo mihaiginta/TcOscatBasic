@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="DEG_TO_DIR" Id="{ae920276-4828-414e-b2d9-3b1a670fe106}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION DEG_TO_DIR : STRING(3)
 VAR_INPUT
@@ -50,8 +50,5 @@ hm	22. oct. 2008	rev 1.1
 	changed size of string variables to 30
 *)]]></ST>
     </Implementation>
-    <LineIds Name="DEG_TO_DIR">
-      <LineId Id="20" Count="26" />
-    </LineIds>
   </POU>
 </TcPlcObject>

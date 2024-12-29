@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="REFRACTION" Id="{81513163-5008-4dff-8069-80c230903805}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION REFRACTION : REAL
 VAR_INPUT
@@ -31,8 +31,5 @@ hm	7. mar. 2009	rev 1.1
 *)	
 ]]></ST>
     </Implementation>
-    <LineIds Name="REFRACTION">
-      <LineId Id="15" Count="12" />
-    </LineIds>
   </POU>
 </TcPlcObject>

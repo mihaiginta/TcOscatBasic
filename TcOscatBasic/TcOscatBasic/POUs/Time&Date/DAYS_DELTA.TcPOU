@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="DAYS_DELTA" Id="{938f71a1-1720-40a6-ac86-8fc6a3b27aa2}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION DAYS_DELTA : DINT
 VAR_INPUT
@@ -37,8 +37,5 @@ hm	25. jan. 2011	rev 1.3
 	improved performance
 *)]]></ST>
     </Implementation>
-    <LineIds Name="DAYS_DELTA">
-      <LineId Id="15" Count="18" />
-    </LineIds>
   </POU>
 </TcPlcObject>

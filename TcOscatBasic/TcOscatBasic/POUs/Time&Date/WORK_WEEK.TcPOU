@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="WORK_WEEK" Id="{c719d78b-4cde-433b-bb79-b850f806db97}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION WORK_WEEK : INT
 VAR_INPUT
@@ -84,8 +84,5 @@ hm	25. oct. 2008	rev 1.5
 	optimized code for performance
 *)]]></ST>
     </Implementation>
-    <LineIds Name="WORK_WEEK">
-      <LineId Id="22" Count="58" />
-    </LineIds>
   </POU>
 </TcPlcObject>

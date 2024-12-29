@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="DAY_OF_YEAR" Id="{4c616ccc-5b7b-40d4-8408-2087d8051f52}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION DAY_OF_YEAR : INT
 VAR_INPUT
@@ -48,8 +48,5 @@ hm	28. jan. 2011	rev 1.4
 	improved code
 *)]]></ST>
     </Implementation>
-    <LineIds Name="DAY_OF_YEAR">
-      <LineId Id="14" Count="30" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="FLOW_METER" Id="{46e9cb4c-2924-49b4-9feb-699b474b022e}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FLOW_METER
 VAR_INPUT
@@ -85,8 +85,5 @@ hm	23. jan. 2011	rev 1.0
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="FLOW_METER">
-      <LineId Id="36" Count="45" />
-    </LineIds>
   </POU>
 </TcPlcObject>

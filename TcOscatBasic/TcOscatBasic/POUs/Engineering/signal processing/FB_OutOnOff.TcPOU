@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.3">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="FB_OutOnOff" Id="{dba33beb-2add-4d73-999d-97127d9bb5ea}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_OutOnOff
 VAR
@@ -51,23 +51,5 @@ END_VAR]]></Declaration>
         <ST><![CDATA[bValueInRaw := bValueOut;]]></ST>
       </Implementation>
     </Method>
-    <LineIds Name="FB_OutOnOff">
-      <LineId Id="9" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_OutOnOff.Error.Get">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_OutOnOff.Error.Set">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_OutOnOff.ValueOut.Get">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_OutOnOff.ValueOut.Set">
-      <LineId Id="2" Count="0" />
-    </LineIds>
-    <LineIds Name="FB_OutOnOff.Write">
-      <LineId Id="5" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="ESR_COLLECT" Id="{05cb3253-60c9-41af-a89d-89cb2f552b48}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK ESR_COLLECT
 VAR_INPUT
@@ -67,8 +67,5 @@ hm	1. dec. 2009	rev 1.4
 	reduced output array size to 32 elements
 *)]]></ST>
     </Implementation>
-    <LineIds Name="ESR_COLLECT">
-      <LineId Id="31" Count="32" />
-    </LineIds>
   </POU>
 </TcPlcObject>

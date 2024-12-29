@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="CTRL_OUT" Id="{49f38692-6623-4150-9104-fe8b6a7fcfb0}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK CTRL_OUT
 VAR_INPUT
@@ -41,8 +41,5 @@ hm	5. nov. 2008	rev 1.1
 	optimized code
 *)]]></ST>
     </Implementation>
-    <LineIds Name="CTRL_OUT">
-      <LineId Id="19" Count="18" />
-    </LineIds>
   </POU>
 </TcPlcObject>

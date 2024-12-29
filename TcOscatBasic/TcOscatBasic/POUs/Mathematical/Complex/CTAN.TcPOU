@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="CTAN" Id="{231dc45b-f17e-411a-bc61-a9f3fe1a9ea8}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION CTAN : complex
 VAR_INPUT
@@ -35,8 +35,5 @@ hm	10. mar 2009	rev 1.1
 	faster code
 *)]]></ST>
     </Implementation>
-    <LineIds Name="CTAN">
-      <LineId Id="18" Count="13" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="BYTE_TO_RANGE" Id="{9c735e03-84f5-4cc0-bc0f-e05aeb44a5ae}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION BYTE_TO_RANGE : REAL
 VAR_INPUT
@@ -28,8 +28,5 @@ hm	9. jan 2008		rev 1.0
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="BYTE_TO_RANGE">
-      <LineId Id="16" Count="8" />
-    </LineIds>
   </POU>
 </TcPlcObject>

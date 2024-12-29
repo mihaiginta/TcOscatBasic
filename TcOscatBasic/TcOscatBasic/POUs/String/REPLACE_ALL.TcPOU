@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="REPLACE_ALL" Id="{cb43f9d0-ef7c-4e0d-a45e-76021b7f911e}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION REPLACE_ALL : STRING(STRING_LENGTH)
 VAR_INPUT
@@ -40,8 +40,5 @@ hm	29. mar. 2008	rev 1.1
 *)	
 ]]></ST>
     </Implementation>
-    <LineIds Name="REPLACE_ALL">
-      <LineId Id="20" Count="16" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="DAY_OF_WEEK" Id="{f50c1aa7-1059-447e-bb51-21b5683fe4e0}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION DAY_OF_WEEK : INT
 VAR_INPUT
@@ -39,8 +39,5 @@ hm	7. oct. 2008	rev 1.4
 
 ]]></ST>
     </Implementation>
-    <LineIds Name="DAY_OF_WEEK">
-      <LineId Id="15" Count="20" />
-    </LineIds>
   </POU>
 </TcPlcObject>

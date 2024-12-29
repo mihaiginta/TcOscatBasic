@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="ARRAY_SPR" Id="{6d098226-5cf1-4e0d-9a14-fcc471a88c31}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION ARRAY_SPR : REAL
 VAR_INPUT
@@ -45,8 +45,5 @@ hm	16. mar. 2008	rev 1.1
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="ARRAY_SPR">
-      <LineId Id="23" Count="18" />
-    </LineIds>
   </POU>
 </TcPlcObject>

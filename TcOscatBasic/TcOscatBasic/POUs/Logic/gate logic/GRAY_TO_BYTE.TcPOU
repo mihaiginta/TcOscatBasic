@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="GRAY_TO_BYTE" Id="{4c905afd-6394-4bc6-a6e5-298e7cce765c}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION GRAY_TO_BYTE : BYTE
 VAR_INPUT
@@ -27,8 +27,5 @@ hm	9. nov. 2009	rev 1.0
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="GRAY_TO_BYTE">
-      <LineId Id="15" Count="8" />
-    </LineIds>
   </POU>
 </TcPlcObject>

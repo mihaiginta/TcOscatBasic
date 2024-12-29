@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="OFFSET" Id="{ef8c4db9-0241-419b-8719-6f05a3e88601}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION OFFSET : REAL
 VAR_INPUT
@@ -41,8 +41,5 @@ hm	12. jan 2007
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="OFFSET">
-      <LineId Id="24" Count="13" />
-    </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="TON_P" Id="{378602ac-9984-4fb5-817c-f760de97e144}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK TON_P	// Ton pausable
 (* If IN is FALSE, Q is FALSE and ET is 0. As soon as IN becomes TRUE, 
@@ -46,9 +46,5 @@ Q := ton.Q;
 
 ET := tTimePaused + ton.ET;]]></ST>
     </Implementation>
-    <LineIds Name="TON_P">
-      <LineId Id="24" Count="19" />
-      <LineId Id="9" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>

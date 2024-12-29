@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="C_TO_K" Id="{fdcf2e1d-a130-4e12-b273-a990bd587a4d}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION C_TO_K : REAL
 VAR_INPUT
@@ -28,8 +28,5 @@ hm	19. aug 2009	rev 1.1
 *)
 ]]></ST>
     </Implementation>
-    <LineIds Name="C_TO_K">
-      <LineId Id="13" Count="11" />
-    </LineIds>
   </POU>
 </TcPlcObject>

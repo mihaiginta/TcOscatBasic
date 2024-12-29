@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.7">
+<TcPlcObject Version="1.1.0.1">
   <POU Name="TMIN" Id="{15afba2d-6c59-42d4-bcd3-f8cc94b444cc}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK TMIN
 VAR_INPUT
@@ -33,8 +33,5 @@ hm	21. jul. 2008	rev 1.0
 
 *)]]></ST>
     </Implementation>
-    <LineIds Name="TMIN">
-      <LineId Id="21" Count="8" />
-    </LineIds>
   </POU>
 </TcPlcObject>
