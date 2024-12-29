@@ -3,4 +3,3 @@ repos:
     rev: v1.7.0
     hooks:
     -   id: no-product-version
-    -   id: twincat-st-newline
