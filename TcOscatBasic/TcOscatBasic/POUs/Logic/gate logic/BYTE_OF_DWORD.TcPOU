@@ -13,7 +13,7 @@ version 1.2	30. oct. 2008
 programmer 	hugo
 tested by	oscat
 
-this function extracts a single byte from the nth position from right (right is lowest byte) 
+this function extracts a single byte from the nth position from right (right is lowest byte)
 the lower byte (starting with Bit0 from in) is selected with N=0.
 *)
 ]]></Declaration>

@@ -28,7 +28,7 @@ tx := TIME();
 
 //reset integration
 IF RST = TRUE THEN
-	init := FALSE;	
+	init := FALSE;
 	out := inStart;
 END_IF
 

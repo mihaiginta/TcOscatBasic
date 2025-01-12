@@ -13,8 +13,8 @@ programmer 	hugo
 tested by	tobias
 
 
-leap_year is true if the tested year is a leap year  
-  
+leap_year is true if the tested year is a leap year
+
 *)]]></Declaration>
     <Implementation>
       <ST><![CDATA[LEAP_YEAR := SHL(yr,14) = 0;

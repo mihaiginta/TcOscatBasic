@@ -26,7 +26,7 @@ programmer 	hugo
 tested by		oscat
 
 FILTER_MAV_W is a moving average filter with programmable length N for WORD Data.
- 
+
 *)]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* limit N to size of buffer *)

@@ -12,7 +12,7 @@ version 1.1	11. mar. 2009
 programmer 	hugo
 tested by		tobias
 
-this function converts frequency to periode time  
+this function converts frequency to periode time
 *)]]></Declaration>
     <Implementation>
       <ST><![CDATA[F_TO_PT := DWORD_TO_TIME(REAL_TO_DWORD(1.0 / F * 1000.0));

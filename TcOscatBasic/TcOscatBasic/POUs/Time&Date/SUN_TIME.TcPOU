@@ -25,8 +25,8 @@ version 1.7	25. jan. 2011
 programmer 	hugo
 tested by	tobias
 
-this FUNCTION block calculates the sun rise, sun set, sun offset at midday sun declination for a given date 
-for performance reasons the algorithm has been simplified and is accurate within a few minutes only 
+this FUNCTION block calculates the sun rise, sun set, sun offset at midday sun declination for a given date
+for performance reasons the algorithm has been simplified and is accurate within a few minutes only
 the times are calculated in utc and have to be corrected for the given time zone
 this correction is not done within sun_time because it would be a problem on days where dst is enabled or disabled
 

@@ -29,7 +29,7 @@ tested by		tobias
 
 ESR_MON_X8 is a status and error collector.
 the module checks 8 status inputs for a change and reports up to 4 input changes with time and adress stamp to the output.
-the mode can be 
+the mode can be
 1 for error only
 2 for error and status
 3 for error, status and debug

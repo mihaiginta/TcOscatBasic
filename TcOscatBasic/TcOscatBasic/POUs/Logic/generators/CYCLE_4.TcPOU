@@ -20,12 +20,12 @@ END_VAR
 
 
 (*
-version 1.0	
+version 1.0
 programmer 	hugo
 tested by	oscat
 
 
- 
+
 *)]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read system timer *)

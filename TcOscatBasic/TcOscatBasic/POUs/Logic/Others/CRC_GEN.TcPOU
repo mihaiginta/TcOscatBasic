@@ -110,8 +110,8 @@ CRC-64-ECMA-182 	x64 + x62 + x57 + x55 + x54 + x53 + x52 + x47 + x46 + x45 + x40
 
 (* revision history
 
-hm	9.6.2007		rev 1.0		
-	original version 
+hm	9.6.2007		rev 1.0
+	original version
 
 hm	11.9.2007		rev 1.1
 	deleted unused variable i

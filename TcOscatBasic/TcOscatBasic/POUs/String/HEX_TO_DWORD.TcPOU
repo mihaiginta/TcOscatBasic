@@ -55,7 +55,7 @@ hm	29. mar. 2008	rev 1.3
 hm	18. jun. 2008	rev 1.4
 	changed input hex to STRING(20)
 	function now ignores wrong characters
-*)	
+*)
 ]]></ST>
     </Implementation>
   </POU>

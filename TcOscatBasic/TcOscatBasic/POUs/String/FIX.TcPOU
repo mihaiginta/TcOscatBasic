@@ -18,7 +18,7 @@ version 1.0	29. mar. 2008
 programmer 	hugo
 tested by	tobias
 
-the function fix truncates a string at length L 
+the function fix truncates a string at length L
 or if the string is shorter then L it will be filled with ending Spaces till its length = N.
 
 *)]]></Declaration>

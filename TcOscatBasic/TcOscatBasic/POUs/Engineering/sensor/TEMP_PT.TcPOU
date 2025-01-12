@@ -49,7 +49,7 @@ END_IF;
 
 (* revision history
 
-rev 1.1 hm 24.1.2007	
+rev 1.1 hm 24.1.2007
 	deleted unused variable C
 
 rev 1.2 hm 10.9.2007

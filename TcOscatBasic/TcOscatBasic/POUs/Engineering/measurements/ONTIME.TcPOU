@@ -62,7 +62,7 @@ hm 22.2.2007		rev 1.1
 	wago lon contollers do not support persisitent
 
 hm 2.8.2007		rev 1.2
-	adding time up in a real number will automatically lead to the point where 
+	adding time up in a real number will automatically lead to the point where
 	small time scales like the cycle time will be below the resolution of real and therefore
 	ontime would not increase in small steps as necessary
 	the time is now measured internally in two  dwords and be converted to real only for
@@ -91,7 +91,7 @@ hm	17. dec. 2008	rev 2.3
 	fixed an error when in would be true for more then 49 days
 
 hm	17. jan 2011	rev 2.4
-	init will not clear seconds and cycles, only rst clears these values	
+	init will not clear seconds and cycles, only rst clears these values
 
 hm	18. mar. 2011	rev 2.5
 	reset was not working

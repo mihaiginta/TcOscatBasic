@@ -31,7 +31,7 @@ CTANH.im := temp * SIN(xi2);
 hm	21. feb 2008	rev 1.0
 	original version
 
-hm	10. mar. 2009	rev 1.1	
+hm	10. mar. 2009	rev 1.1
 	new faster code
 
 *)]]></ST>

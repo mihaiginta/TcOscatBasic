@@ -16,7 +16,7 @@ version 2.3	29. dec. 2011
 programmer 	hugo
 tested by	tobias
 
-creates a date output from year, month and day of month   
+creates a date output from year, month and day of month
 
 *)]]></Declaration>
     <Implementation>

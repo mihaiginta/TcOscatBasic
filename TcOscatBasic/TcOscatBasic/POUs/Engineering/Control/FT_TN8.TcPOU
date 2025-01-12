@@ -26,7 +26,7 @@ tested by		tobias
 
 FT_TN8 is delay function, it will delay a signal by a specified time : T and will store 8 values of in before they are put thru to out.
 if higher resolution is needed, pls use FT_TN16 or FT_TN64 instead.
- 
+
 *)]]></Declaration>
     <Implementation>
       <ST><![CDATA[tx := DWORD_TO_TIME(T_PLC_MS());

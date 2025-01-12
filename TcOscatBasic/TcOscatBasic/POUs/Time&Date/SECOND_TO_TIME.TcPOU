@@ -13,7 +13,7 @@ programmer 	hugo
 tested by		tobias
 
 converts an amount of seconds in real to time
-execution TIME on wago 750-841 =  17us 
+execution TIME on wago 750-841 =  17us
 
 *)]]></Declaration>
     <Implementation>

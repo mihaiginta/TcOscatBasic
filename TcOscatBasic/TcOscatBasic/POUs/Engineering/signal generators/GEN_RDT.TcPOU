@@ -36,8 +36,8 @@ FUNCTION_BLOCK RDMTimer
 		 Ersteller / author :		 		 		 		 		 J.Schohaus
 		 Datum / date:		 		 		 		 		 		 13.07.2007
 ###############################################################################
-		 Änderungen / Datum / Ersteller :		 		 		 		 		 		 		 		 		 		 		 		 		 		 		 
-		 moditication / date / author :		 		 
+		 Änderungen / Datum / Ersteller :
+		 moditication / date / author :
 ###############################################################################
 		 Verwendete Bibliotheken		 ( * werden im Baustein nicht benötigt )
 		 		 		 		 Oscat.lib

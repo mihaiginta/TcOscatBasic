@@ -6,11 +6,11 @@ VAR
 	//Properties
 	eControlMode		: CONTROL_MODE;
 	stControlParameter	: CONTROL_PARAMETERS;
-	
+
 	fAct		:	REAL; 	// act value
 	fSet		:	REAL; 	// set value
 	fY			:	REAL; 	// control difference
-	
+
 	fbPID	:	FB_PID;
 END_VAR
 ]]></Declaration>

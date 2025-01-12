@@ -22,7 +22,7 @@ programmer 	hugo
 tested by		oscat
 
 FT_PT1 is an low pass filter with a programmable time T and faktor K.
- 
+
 *)]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read system time *)

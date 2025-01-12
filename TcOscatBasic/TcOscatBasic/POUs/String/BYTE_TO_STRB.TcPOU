@@ -44,8 +44,8 @@ BYTE_TO_STRB := temp;
 
 (* revision history
 
-hm		9.6.2007	rev 1.0		
-	original version 
+hm		9.6.2007	rev 1.0
+	original version
 
 hm	15. dec 2007	rev 1.1
 	inprooved code for higher performance

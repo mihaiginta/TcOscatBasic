@@ -104,7 +104,7 @@ hm	16. mar. 2008	rev 1.1
 	added type conversions to avoid warnings under codesys 3.0
 
 hm	11. mar. 2009	rev 1.2
-	real constants updated to new systax using dot																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											
+	real constants updated to new systax using dot
 
 *)]]></ST>
     </Implementation>

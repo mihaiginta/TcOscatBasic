@@ -14,7 +14,7 @@ version 1.5	16. mar 2008
 programmer 	hugo
 tested by	tobias
 
-creates tod from hour minute and second 
+creates tod from hour minute and second
 
 *)]]></Declaration>
     <Implementation>

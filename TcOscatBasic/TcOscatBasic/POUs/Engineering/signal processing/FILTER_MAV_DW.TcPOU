@@ -25,7 +25,7 @@ programmer 	hugo
 tested by		oscat
 
 FILTER_MAV_DW is a moving average filter with programmable length N for DWORD Data.
- 
+
 *)]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* limit N to size of buffer *)

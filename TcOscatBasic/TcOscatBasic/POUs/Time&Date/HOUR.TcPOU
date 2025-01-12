@@ -12,7 +12,7 @@ version 1.1	2 okt 2006
 programmer 	hugo
 tested by	tobias
 
-extracts the hour of a Time_of_day 
+extracts the hour of a Time_of_day
 *)]]></Declaration>
     <Implementation>
       <ST><![CDATA[HOUR := DWORD_TO_INT(TOD_TO_DWORD(itod) / 3600000);

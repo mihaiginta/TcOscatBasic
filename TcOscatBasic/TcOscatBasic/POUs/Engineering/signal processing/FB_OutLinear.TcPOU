@@ -6,10 +6,10 @@ VAR
 	//Properties
 	bError 				: BOOL 				:= FALSE;
 	stIOConv			: IO_TERMINAL_PARAMETERS;
-	
+
 	//value
 	fValueOut			: REAL;
-	
+
 	//Raw value
 	nValueOutRaw		AT %Q* : INT;
 END_VAR]]></Declaration>

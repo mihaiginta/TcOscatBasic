@@ -25,7 +25,7 @@ version 1.2	29. mar. 2008
 programmer 	hugo
 tested by		tobias
 
-Ticker sends a substring of text with length N every TD Milliseconds to generate a ticker. 
+Ticker sends a substring of text with length N every TD Milliseconds to generate a ticker.
 
 *)]]></Declaration>
     <Implementation>

@@ -22,7 +22,7 @@ returns the date for the last day of the current month in the current year.
 
 (* revision history
 hm	15. jun. 2008	rev 1.0
-	original version	
+	original version
 
 hm	7. oct. 2008	rev 1.1
 	changed function year to year_of_date

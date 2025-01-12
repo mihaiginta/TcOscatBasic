@@ -34,7 +34,7 @@ a output tp is true for one cycle if the output has changed.
 a setup variable MODE selects between 3 different modes:
 MODE = 0, any input active will disable all other inputs
 MODE = 1, the input with the highest number will be acepted
-mode = 2, the input last pressed will disable all others 
+mode = 2, the input last pressed will disable all others
 
 *)]]></Declaration>
     <Implementation>

@@ -20,7 +20,7 @@ programmer 	hugo
 tested by	oscat
 
 FT_IMP is 	an impulse filter (high pass filter) with the time T and factor K.
- 
+
 *)]]></Declaration>
     <Implementation>
       <ST><![CDATA[T1(in:= in, T:=T);

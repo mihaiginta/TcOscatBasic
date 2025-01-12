@@ -12,8 +12,8 @@ version 1.4	7. oct. 2008
 programmer 	hugo
 tested by		oscat
 
-returs the year of a date  
-the function works for dates from 1970 - 2099 
+returs the year of a date
+the function works for dates from 1970 - 2099
 
 *)
 ]]></Declaration>

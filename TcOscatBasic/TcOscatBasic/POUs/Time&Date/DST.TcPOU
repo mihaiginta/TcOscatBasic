@@ -17,11 +17,11 @@ version 1.5	24. jan. 2011
 programmer 	hugo
 tested by	oscat
 
-this functions returns TRUE IF dst TIME is active 
-the FUNCTION calculates automatically for any year betweek 1970 AND 2099 
-wheather daylight savings is on OR off 
+this functions returns TRUE IF dst TIME is active
+the FUNCTION calculates automatically for any year betweek 1970 AND 2099
+wheather daylight savings is on OR off
 the summertime calculation is done according to european standards.
-dst will become TRUE AT 01:00 utc in the morning FOR the respective days 
+dst will become TRUE AT 01:00 utc in the morning FOR the respective days
 AND it will become FALSE after daylight savings TIME is switched back end OF october at 01:00 utc
 
 *)]]></Declaration>

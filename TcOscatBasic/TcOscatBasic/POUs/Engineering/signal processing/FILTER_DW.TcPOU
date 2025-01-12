@@ -22,7 +22,7 @@ programmer 	hugo
 tested by		oscat
 
 FILTER_DW is an low pass filter with a programmable time T used for DWORD format.
- 
+
 *)]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read system time *)

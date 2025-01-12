@@ -22,9 +22,9 @@ END_VAR
 	programmer 	oscat
 	tested BY		oscat
 
-this signal generator generates a random output. The signal is defined by period time (PT), 
+this signal generator generates a random output. The signal is defined by period time (PT),
 amplitude (AM), offset (OS).
-The Output waveform will have its max peak at AM/2 + OS and its minimum peak at -AM/2 + OS. 
+The Output waveform will have its max peak at AM/2 + OS and its minimum peak at -AM/2 + OS.
 The period time PT defines how often the output signal will jump to a new randow value.
 The Output Q will be true for one cycle anytime the output OUT has changed
 

@@ -22,7 +22,7 @@ programmer 	hugo
 tested by	oscat
 
 FILTER_W is an low pass filter with a programmable time T used for WORD format.
- 
+
 *)]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read system time *)

@@ -25,10 +25,10 @@ END_VAR
 	programmer 	oscat
 	tested BY		oscat
 
-this signal generator generates a ramp wave output. The ramp wave signal is defined by period time (PT), 
+this signal generator generates a ramp wave output. The ramp wave signal is defined by period time (PT),
 amplitude (AM), offset (OS) and a specific delay for the output signal (DL).
-The Output waveform will have its minimum peak at OS and its maximum peak at AM + OS. 
-The delay input can delay a signal up to PT, this can be useful to synchronize different generators 
+The Output waveform will have its minimum peak at OS and its maximum peak at AM + OS.
+The delay input can delay a signal up to PT, this can be useful to synchronize different generators
 and generate interleaving signals.
 in addition to the analog output Out there is a second boolean output Q with is true for one cycle when the ramp starts.
 *)]]></Declaration>

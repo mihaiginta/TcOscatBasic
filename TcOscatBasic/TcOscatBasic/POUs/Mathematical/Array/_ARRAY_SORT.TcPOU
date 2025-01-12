@@ -130,7 +130,7 @@ FOR heapsize := UINT_TO_INT(size) TO 1 BY -1 DO
    	i := 1;
 	hs2 := SHR(heapsize,1);
 	WHILE i <= hs2 DO
-       	stop := i * 2 + 1;  
+       	stop := i * 2 + 1;
         	IF stop > heapsize THEN stop := stop - 1;
         	ELSIF pt^[stop-1] > pt^[stop] THEN stop := stop - 1;
 	 	END_IF;

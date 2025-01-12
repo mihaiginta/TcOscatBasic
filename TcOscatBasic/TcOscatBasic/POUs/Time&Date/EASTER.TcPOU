@@ -37,15 +37,15 @@ END_IF;
 execution time roughly 200us
 Der sog. Passah-Vollmond wird berechnet, in dem das Jahr durch 19 ge-
 teilt wird und der Rest mit der folgenden Tabelle verglichen wird:
- 
+
     0: Apr 14       5: Apr 18      10: Mrz 25      15: Mrz 30
     1: Apr 03       6: Apr 08      11: Apr 13      16: Apr 17
     2: Mrz 23       7: Mrz 28      12: Apr 02      17: Apr 07
     3: Apr 11       8: Apr 16      13: Mrz 22      18: Mrz 27
     4: Mrz 31       9: Apr 05      14: Apr 10
- 
+
 Faellt dieses Datum auf einen Sonntag, ist Ostern der naechste Sonntag!
- 
+
 Beispiel: 1992 MOD 19 = 16, daraus folgt 17.04., der naechste Sonntag
           ist dann der 19. April (Ostersonntag)
 *)

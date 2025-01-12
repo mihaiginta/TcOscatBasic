@@ -6,13 +6,13 @@ VAR
 	//Properties
 	bError 				: BOOL 				:= FALSE;
 	stIOConv			: IO_TERMINAL_PARAMETERS;
-	
+
 	ft_avg				: FT_AVG_200;
-	
+
 	//value
 	fValueIn			: REAL;
 	fValueInAVG			: REAL;
-	
+
 	//Raw value
 	nValueInRaw			AT %I* : INT;
 END_VAR]]></Declaration>

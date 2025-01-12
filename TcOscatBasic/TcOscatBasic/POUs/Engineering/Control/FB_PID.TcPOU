@@ -2,25 +2,25 @@
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PID" Id="{9148ddd9-4f6e-4c4f-98a6-9a43459fe84e}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_PID
-(* This PID controller implements an integrator anti-windup method (back-calculation). 
-For this the difference between the unlimited control output the limited control output is added to the integrator input. 
+(* This PID controller implements an integrator anti-windup method (back-calculation).
+For this the difference between the unlimited control output the limited control output is added to the integrator input.
 This is done continously, allowing to track and correct the gain of the integrator.
 *)
 VAR_INPUT
 	xSet:	REAL; 	// Set value
-	xAct:	REAL;	// measured Value	
+	xAct:	REAL;	// measured Value
 
 	Kp  :  	REAL;  	// proportional factor
 	Ti  :  	REAL;  	// integral time
 	Td  :	REAL; 	// derivative time
 	Ni  :	REAL := 0.9; 	// time for anti-wiundup compensation
-		
+
 	LimLow	:	REAL; 	// lower limit of output
 	LimHigh	: 	REAL; 	// upper limit of output
 	StartY	:	REAL;	// Y to use as offset
-	
+
 	bReverseActing 	:	BOOL;	// True for reverse acting
-	
+
 	RST		:	BOOL; 	// True, if integrator should be resetted
 	inStart	:	REAL := 0; 	// Value to which Integrator is resetted if RST is True
 END_VAR
@@ -30,10 +30,10 @@ VAR_OUTPUT
 END_VAR
 VAR
 	e			 :  REAL;		// control difference
-	yOffset		 :  REAL	:= 0;		// constant offset used on Y	
+	yOffset		 :  REAL	:= 0;		// constant offset used on Y
 	fbDerivative :  FT_DERIV; 	// function block for derivation
 	fbIntegrate  :	FB_Integrate;	// function block for integration
-	
+
 	e_gaintrack	:  REAL;		// control difference for integrator
 	Y_gaintrack	:  REAL := 0;	// tracking gain of y for Anti-windup
 END_VAR
@@ -51,7 +51,7 @@ END_IF
 IF bReverseActing THEN
 	e := xAct - xSet;
 ELSE
-	e := xSet - xAct;	
+	e := xSet - xAct;
 END_IF;
 
 // correct control for integrator error based on previous integrations
@@ -70,12 +70,12 @@ END_IF
 
 // check limits and track gain for adjusting next control error of integrator
 IF Y < LimLow THEN
-	Y_gaintrack := LimLow - Y;	
+	Y_gaintrack := LimLow - Y;
 	Y := LimLow;
 ELSIF Y > LimHigh THEN
 	Y_gaintrack := LimHigh - Y;
 	Y := LimHigh;
-ELSE		
+ELSE
 	Y_gaintrack := 0;
 END_IF
 
@@ -88,7 +88,7 @@ pos 23.10.2020:
 - no anti-wind up on reset
 - possibility to provide an offset value for Y
 
-aku 24.09.2019: 
+aku 24.09.2019:
 - first implementation
 *)]]></ST>
     </Implementation>

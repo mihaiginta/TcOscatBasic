@@ -16,7 +16,7 @@ version 1.2	16. nov 2008
 programmer 	hugo
 tested by	oscat
 
-T_PLC_MS reads the internal PLC timer and return the time, it has the advantage to be able to set a debug mode 
+T_PLC_MS reads the internal PLC timer and return the time, it has the advantage to be able to set a debug mode
 and speed up the counter to test the plc timer overrun which occurs every 50 days respectively 25 days at siemens S7
 this routine also allows to correct the behavior of s7 where the internal plc counter will not count all 32 bits.
 
@@ -26,7 +26,7 @@ this routine also allows to correct the behavior of s7 where the internal plc co
 T_PLC_MS := TIME_TO_DWORD(Tx);
 (* hier muss die korrektur für step7 stattfinden
 plctime muss den vollen wertebereich von time ausnutzen:
-wenn bei step7 time -24tage bis plus 24 tage ist dann muss der timer auch beim überlauf auf -24tage springen 
+wenn bei step7 time -24tage bis plus 24 tage ist dann muss der timer auch beim überlauf auf -24tage springen
 und auf keinen fall auf 0 !!!!
 für siemens muss ein weiterer fb im main eingebunden werden der sicherstellt das alle 32 bits durchgezählt werden.
 es kann nur ein fb sein den er muss sich das oberste (32te) bit merken.

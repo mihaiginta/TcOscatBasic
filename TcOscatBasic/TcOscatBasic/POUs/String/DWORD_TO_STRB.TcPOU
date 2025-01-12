@@ -33,7 +33,7 @@ END_FOR;
 pt^ := 0;
 
 (* revision history
-hm		9.6.2007	rev 1.0		
+hm		9.6.2007	rev 1.0
 	original version
 
 hm		15.dec 2007	rev 1.1

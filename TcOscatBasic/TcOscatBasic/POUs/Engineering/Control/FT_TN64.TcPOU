@@ -26,7 +26,7 @@ tested by		tobias
 
 FT_TN7 is delay function, it will delay a signal by a specified time : T and will store 64 values of in before they are put thru to out.
 if lower resolution is needed, pls use FT_TN8 or FT_TN16 instead.
- 
+
 *)]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read system time *)

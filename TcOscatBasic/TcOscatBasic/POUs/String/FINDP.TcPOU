@@ -44,7 +44,7 @@ hm	29. feb 2008	rev 1.1
 
 hm	29. mar. 2008	rev 1.2
 	changed STRING to STRING(STRING_LENGTH)
-*)	
+*)
 ]]></ST>
     </Implementation>
   </POU>

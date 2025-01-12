@@ -95,11 +95,11 @@ Y4 := temp.3;
 
 
 (* revision history
-hm		10.6.2007	rev 1.0		
-	original version 
+hm		10.6.2007	rev 1.0
+	original version
 
 
-hm		11.9.2007	rev 1.1		
+hm		11.9.2007	rev 1.1
 	deleted unused variables k and old_code
 
 hm		23.12.2007	rev 1.2

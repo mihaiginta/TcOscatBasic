@@ -28,7 +28,7 @@ END_VAR
 METER measures usage of power or similar values the output MX is the sum of the inputs over time.
 MX := sum over time of (I1 * P1 + I2 * P2)/D.
 a simple example is the consumption counter for a 2 stage oil burner where stage 1 is 10KW and stage 2 is 20KW.
-I1 and I2 decide which value is accounted for, I1 = True only counts P1, I2 is True counts P2 
+I1 and I2 decide which value is accounted for, I1 = True only counts P1, I2 is True counts P2
 and I1 and I2 is true counts P1 and P2.
 the meter can be used for all kind of consumption meters. P1 and P2 can change on the fly.
 

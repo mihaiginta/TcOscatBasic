@@ -24,10 +24,10 @@ version 1.6	11. mar. 2009
 programmer 	oscat
 tested BY	oscat
 
-this signal generator generates a sine wave output. The sine wave signal is defined by period time (PT), 
+this signal generator generates a sine wave output. The sine wave signal is defined by period time (PT),
 amplitude (AM), offset (OS) and a specific delay for the output signal (DL).
-The Output waveform will have its max peak at AM/2 + OS and its minimum peak at -AM/2 + OS. 
-The delay input can delay a signal up to PT, this can be useful to synchronize different generators 
+The Output waveform will have its max peak at AM/2 + OS and its minimum peak at -AM/2 + OS.
+The delay input can delay a signal up to PT, this can be useful to synchronize different generators
 and generate interleaving signals. A Cos wave can be generated accordingly.
 in addition to a analog output Out there is a second boolean output Q with the corresponding binary signal.
 *)]]></Declaration>

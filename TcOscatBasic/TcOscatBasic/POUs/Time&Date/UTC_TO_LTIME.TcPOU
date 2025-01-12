@@ -25,7 +25,7 @@ at 02:00 and 03:00 for the last sunday of march and last sunday of october.
 the code is high performance and the rtc counts every second.
 if more then one time zone is needed by the systen the clock can be started many times by placing more then one function block.
 
- 
+
 *)
 ]]></Declaration>
     <Implementation>

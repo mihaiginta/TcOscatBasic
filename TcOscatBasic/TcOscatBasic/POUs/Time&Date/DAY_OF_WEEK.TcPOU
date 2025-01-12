@@ -12,8 +12,8 @@ version 1.4	7. oct. 2008
 programmer 	hugo
 tested by	tobias
 
-calculates the weekday of a week according to ISO8601   
-monday = 1 ..... sunday = 7  
+calculates the weekday of a week according to ISO8601
+monday = 1 ..... sunday = 7
 
 *)]]></Declaration>
     <Implementation>

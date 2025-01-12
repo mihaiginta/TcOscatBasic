@@ -15,8 +15,8 @@ programmer 	hugo
 tested by	oscat
 
 
-leap_day is true if the tested day is a leap day (29. of february).  
-  
+leap_day is true if the tested day is a leap day (29. of february).
+
 *)
 ]]></Declaration>
     <Implementation>

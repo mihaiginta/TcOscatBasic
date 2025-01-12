@@ -26,7 +26,7 @@ END_VAR
 	tested BY		tobias
 
 ALARM_2 will check two pairs of limits and signal when the input is above or below a set limit.
-with the input HYS a hysteresis can be defined for all limits. 
+with the input HYS a hysteresis can be defined for all limits.
 
 *)]]></Declaration>
     <Implementation>

@@ -26,7 +26,7 @@ tested by		tobias
 
 FT_TN16 is delay function, it will delay a signal by a specified time : T and will store 16 values of in before they are put thru to out.
 for higher or lower resolution please use FT_TN8 or FT_TN64 instead.
- 
+
 *)]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read system time *)

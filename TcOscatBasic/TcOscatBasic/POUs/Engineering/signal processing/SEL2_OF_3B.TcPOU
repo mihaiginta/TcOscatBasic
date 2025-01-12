@@ -23,7 +23,7 @@ END_VAR
 
 SEL2_OF_3B is used to connect 3 binary sensors to one signal. the output Q reflects the state of at least two inputs.
 if two or more of the 3 inputs ate TRUE then Q will be TRUE and if two or more of the three inputs are FALSE then Q will be false.
-the main putrpose is the connection of 3 redundant binary sensors.  
+the main putrpose is the connection of 3 redundant binary sensors.
 The output W will be active when one of the 3 inputs is of different state.
 to avoid flickering while the sensors are switching the output W will become active after a programmed delay of TD.
 

@@ -14,7 +14,7 @@ version 1.7	13. nov. 2009
 programmer 	hugo
 tested by		oscat
 
-LTIME_TO_UTC calculates UTC (World Time) from a local time LTIME. utc is calculated 
+LTIME_TO_UTC calculates UTC (World Time) from a local time LTIME. utc is calculated
 by subtracting Time_Zone_Offset from ltime and if dst it true subtracting an additional hour from ltime.
 
 *)]]></Declaration>
@@ -23,7 +23,7 @@ by subtracting Time_Zone_Offset from ltime and if dst it true subtracting an add
 IF DST THEN LTIME_TO_UTC := LTIME_TO_UTC - T#1h; END_IF;
 
 (* revision history
-hm 5.7.2007		rev 1.0		
+hm 5.7.2007		rev 1.0
 	original version
 
 hm 5.11.2007		rev 1.1

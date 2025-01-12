@@ -56,7 +56,7 @@ hm		17. sep 2007	rev 1.1
 	replaced time() with T_PLC_S() for compatblity reasons
 
 hm		16. feb. 2011	rev 1.2
-	fixed an error when timer overflows 
+	fixed an error when timer overflows
 *)]]></ST>
     </Implementation>
   </POU>

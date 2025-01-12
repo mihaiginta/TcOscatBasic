@@ -42,7 +42,7 @@ hm	6. mar. 2008	rev 1.2
 hm	29. mar. 2008	rev 1.3
 	changed STRING to STRING(STRING_LENGTH)
 
-*)	
+*)
 ]]></ST>
     </Implementation>
   </POU>

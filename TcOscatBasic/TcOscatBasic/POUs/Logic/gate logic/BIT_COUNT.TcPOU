@@ -13,7 +13,7 @@ programmer 	hugo
 tested by		tobias
 
 BIT_COUNT counts the amount True of bits in a dword.
-for exabple: bit_count(3) returns 2 because two bits (bits 0 and 1) are true and all others are false. 
+for exabple: bit_count(3) returns 2 because two bits (bits 0 and 1) are true and all others are false.
 
 *)]]></Declaration>
     <Implementation>

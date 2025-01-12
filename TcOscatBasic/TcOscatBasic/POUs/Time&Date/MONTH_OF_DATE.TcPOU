@@ -64,7 +64,7 @@ END_IF;
 
 (* revision history
 hm	1. aug 2006	rev 1.0
-	original version	
+	original version
 
 hm	1. okt 2007	rev 1.1
 	replaced old code (string conversion) with mathematics

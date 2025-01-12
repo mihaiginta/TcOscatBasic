@@ -38,7 +38,7 @@ this sample and hold also does avg and other calculations with the input data.
 an average is calculated over N samples while for this calculation disc samples are discarded,
 disc = 0 all samples are averaged,
 if disc = 1 the lowest value is ignored,
-if disc = 2 the lowest and highest values are ignored, 
+if disc = 2 the lowest and highest values are ignored,
 and so on.....
 
 *)]]></Declaration>

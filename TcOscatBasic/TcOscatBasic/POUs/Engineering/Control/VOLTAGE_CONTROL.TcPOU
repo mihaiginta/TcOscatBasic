@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="VOLTAGE_CONTROL" Id="{46b85e44-dde3-42b1-aa18-ffc577baf9f6}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK VOLTAGE_CONTROL EXTENDS FB_CONTROL 
+    <Declaration><![CDATA[FUNCTION_BLOCK VOLTAGE_CONTROL EXTENDS FB_CONTROL
 VAR
 	fbOutput		: FB_OutLinear;
 END_VAR

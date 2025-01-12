@@ -28,10 +28,10 @@ FT_int is an integrator with input IN and factor K.
 integration is only done while run = true, if run is false integration is stopped and the out remains at the last value.
 if run is left unconnected, run is considered true by the function block.
 the output ET will display the total integration time from last reset.
-the out_min and out_max values can be set to ,imit the output value range. 
+the out_min and out_max values can be set to ,imit the output value range.
 the default for K is 1.
 
- 
+
 *)]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF rst THEN

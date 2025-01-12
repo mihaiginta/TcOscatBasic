@@ -12,7 +12,7 @@ version 1.1	24. feb. 2009
 programmer 	hugo
 tested by		tobias
 
-converts an amount of days in real to time 
+converts an amount of days in real to time
 *)]]></Declaration>
     <Implementation>
       <ST><![CDATA[DAY_TO_TIME := DWORD_TO_TIME(REAL_TO_DWORD(IN * 86400000.0));

@@ -66,12 +66,12 @@ hm	25. jun. 2008	rev 1.0
 	original release
 
 hm	19. jan. 2011	rev 1.1
-	changed string(255) to string(LIST_LENGTH)	
+	changed string(255) to string(LIST_LENGTH)
 
 hm	21. mar. 2011	rev 2.0
 	all elements start with SEP
 
-*)	
+*)
 ]]></ST>
     </Implementation>
   </POU>

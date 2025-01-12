@@ -20,7 +20,7 @@ programmer 	hugo
 tested by	oscat
 
 
- 
+
 *)]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* search for first character match *)

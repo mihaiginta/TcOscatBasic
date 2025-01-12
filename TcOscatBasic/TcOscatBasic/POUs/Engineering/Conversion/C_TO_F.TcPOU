@@ -12,7 +12,7 @@ version 1.1	11. mar. 2009
 programmer 	hugo
 tested by		tobias
 
-this function converts celsius  to fahrenheit 
+this function converts celsius  to fahrenheit
 
 *)]]></Declaration>
     <Implementation>

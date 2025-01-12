@@ -12,8 +12,8 @@ version 1.2	7. Apr. 2008
 programmer 	hugo
 tested by	tobias
 
-returs the date of january 1st for the given year  
-the function works for dates from 1970 - 2099 
+returs the date of january 1st for the given year
+the function works for dates from 1970 - 2099
 
 *)]]></Declaration>
     <Implementation>

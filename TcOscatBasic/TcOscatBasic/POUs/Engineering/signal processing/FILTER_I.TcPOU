@@ -22,7 +22,7 @@ programmer 	hugo
 tested by	oscat
 
 FILTER_I is a low pass filter with a programmable time T used for INT format.
- 
+
 *)]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read system time *)

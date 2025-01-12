@@ -45,7 +45,7 @@ hm	20. jun. 2008	rev 1.0
 hm	30. sep. 2008	rev 1.1
 	changed length of input string from 20 to 10
 	corrected an error where decoding of characters 8 and 9 would fail
-*)	
+*)
 ]]></ST>
     </Implementation>
   </POU>
