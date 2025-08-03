@@ -27,12 +27,12 @@ END_VAR
 
 
 (*
-version 1.6	6. apr. 2011
+version 1.7	3. Feb. 2021
 programmer 	hugo
 tested by		oscat
 
 calendar_calc liest die weltzeit .UTC aus einer CALENDAR Struktur und berechnet die restlichen Werte der Struktur.
-calendar_calc stellt sicher das die Werte fortlaufend aktualisiert werden und dabei funktionen nur dann aufgerufen werden wenn dies nötig ist.
+calendar_calc stellt sicher das die Werte fortlaufend aktualisiert werden und dabei funktionen nur dann aufgerufen werden wenn dies n�tig ist.
 calendar_calc will calculate sun position data when SPE = TRUE;
 
 *)
@@ -115,6 +115,10 @@ hm	2. feb. 2011	rev 1.5
 
 hm	6. apr. 2011	rev 1.6
 	night was calculated wrong
+
+HM 3. Feb 2021    rev 1.7
+   chaged LDT >> LOCAL_DT, LDATE >> LOCAL_DT, LTOD >> LOCAL_TOD
+
 *)]]></ST>
     </Implementation>
   </POU>
