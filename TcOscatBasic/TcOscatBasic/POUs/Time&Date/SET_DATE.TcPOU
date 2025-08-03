@@ -9,27 +9,24 @@ VAR_INPUT
 END_VAR
 VAR
 	count : INT;
+	ofs: ARRAY[1..12] OF INT := [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
 END_VAR
 
 (*
-version 2.3	29. dec. 2011
+version 2.4	3. feb. 2021
 programmer 	hugo
 tested by	tobias
 
-creates a date output from year, month and day of month
+creates a date output from year, month and day of month   
 
 *)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF month > 2 THEN
-	count := (month - 1) * 30;
-	IF month > 7 THEN count := count + SHR(month - 3,1); ELSE count := count + SHR(month - 4,1); END_IF;
-	(* chech for leap year and add one day if true *)
-	IF SHL(year,14) = 0 THEN count := count + 1; END_IF;
+      <ST><![CDATA[IF (MONTH > 2) AND (SHL(YEAR,14) = 0)
+THEN (* we add one day for leap year *)
+	SET_DATE := DWORD_TO_DATE((INT_TO_DWORD(ofs[MONTH] + day ) + SHR(INT_TO_DWORD(year) * 1461 - 2878169, 2))*86400);
 ELSE
-	count := (month - 1) * 31;
+	SET_DATE := DWORD_TO_DATE((INT_TO_DWORD(ofs[MONTH] + day - 1 ) + SHR(INT_TO_DWORD(year) * 1461 - 2878169, 2))*86400);
 END_IF;
-
-SET_DATE := DWORD_TO_DATE((INT_TO_DWORD(count + day - 1) + SHR(INT_TO_DWORD(year) * 1461 - 2878169, 2)) * 86400);
 
 
 (* revision history
@@ -68,6 +65,9 @@ hm	22. jan. 2011	rev 2.2
 
 hm	29. dec. 2011	rev 2.3
 	improved performance
+
+hm 3. feb 2021 rev 2.4
+	new code to be more readable
 *)]]></ST>
     </Implementation>
   </POU>
