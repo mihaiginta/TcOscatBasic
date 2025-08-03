@@ -1,6 +1,4 @@
-License Agreement for the Usage of the supplied Software Libraries
-
-General Terms of License for the supplied Software Package (Software User Agreement)
+# General Terms of License for the supplied Software Package (Software User Agreement)
 
 1. Legal Basis
 
@@ -12,11 +10,12 @@ The library user has to take care, through suitable tests, releases and quality 
 
 1.2. License Terms
 
-The use of the OSCAT library is free of charge and it can be utilized for private or business purposes. Distribution of the library is expressly encouraged; however, this has to be free of charge and contain a reference to our webpage www.oscat.de. If the library is offered in electronic form for download or distributed on data carriers, it has to be ensured that a clearly visible reference to OSCAT and a link to www.oscat.de are included accordingly.
+The use of the OSCAT library is free of charge and it can be utilized for private or business purposes. Distribution of the library is expressly encouraged; however, this has to be free of charge and contain a reference to our webpage [www.oscat.de](https://www.oscat.de). If the library is offered in electronic form for download or distributed on data carriers, it has to be ensured that a clearly visible reference to OSCAT and a link to [www.oscat.de](https://www.oscat.de) are included accordingly.
 
 To clearify the permissions it is allowed that
+
 - the source code of the library can be modified and this modified ("modified library") version can be used for private or commercial purposes under the conditions of this agreement.
-- the library or modified library can be used in own responsibility in or with other proprietary software for private or commercial purposes, whereas the proprietary software inclusive the library or modified library can have own licences without free sourcecode an can be sold commercial. If the library or modified library is integrated into hardware, a clear hint to OSCAT and the webpage www.oscat.de has to be included at a propper position, (i.e. marketing documents for the hardware product or other product documents for download.)
+- the library or modified library can be used in own responsibility in or with other proprietary software for private or commercial purposes, whereas the proprietary software inclusive the library or modified library can have own licences without free sourcecode an can be sold commercial. If the library or modified library is integrated into hardware, a clear hint to OSCAT and the webpage [www.oscat.de](https://www.oscat.de) has to be included at a propper position, (i.e. marketing documents for the hardware product or other product documents for download.)
 
 1.3. Registered Trademarks
 
