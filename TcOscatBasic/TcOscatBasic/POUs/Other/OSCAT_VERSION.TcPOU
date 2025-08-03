@@ -19,9 +19,9 @@ if IN = true, the release date will be returned
 *)]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF in THEN
-	OSCAT_VERSION := DATE_TO_DWORD(D#2012-01-02);
+	OSCAT_VERSION := DATE_TO_DWORD(D#2024-07-16);
 ELSE
-	OSCAT_VERSION := 333;
+	OSCAT_VERSION := 335;
 END_IF;
 
 (* revision history
