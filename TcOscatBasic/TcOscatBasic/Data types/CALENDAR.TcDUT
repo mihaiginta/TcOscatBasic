@@ -4,9 +4,9 @@
     <Declaration><![CDATA[TYPE CALENDAR :
 STRUCT
 	UTC : DT;					(* world time UTC *)
-	LDT : DT;					(* local time *)
-	LDATE : DATE;				(* local date *)
-	LTOD : TOD;					(* local time of day *)
+	LOCAL_DT : DT;				(* local time *)
+	LOCAL_DATE : DATE;			(* local date *)
+	LOCAL_TOD : TOD;			(* local time of day *)
 	YEAR : INT;					(* year of LDATE *)
 	MONTH : INT;				(* month of LDATE *)
 	DAY : INT;					(* day of LDATE *)

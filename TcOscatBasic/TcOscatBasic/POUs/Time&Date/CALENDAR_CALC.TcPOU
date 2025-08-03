@@ -46,14 +46,14 @@ calendar_calc will calculate sun position data when SPE = TRUE;
 	utod := DT_TO_TOD(xcal.UTC);
 
 	(* calculate ltc from utc *)
-	XCAL.LDT := UTC_TO_LTIME(XCAL.UTC, XCAL.DST_EN, XCAL.OFFSET);
-	XCAL.LDATE := DT_TO_DATE(XCAL.LDT);
-	XCAL.LTOD := DT_TO_TOD(XCAL.LDT);
-	dtemp := DAY_OF_DATE(XCAL.LDATE);
-	xcal.night := XCAL.LTOD < XCAL.SUN_RISE OR XCAL.LTOD > XCAL.SUN_SET;
+	XCAL.LOCAL_DT := UTC_TO_LTIME(XCAL.UTC, XCAL.DST_EN, XCAL.OFFSET);
+	XCAL.LOCAL_DATE := DT_TO_DATE(XCAL.LOCAL_DT);
+	XCAL.LOCAL_TOD := DT_TO_TOD(XCAL.LOCAL_DT);
+	dtemp := DAY_OF_DATE(XCAL.LOCAL_DATE);
+	xcal.night := XCAL.LOCAL_TOD < XCAL.SUN_RISE OR XCAL.LOCAL_TOD > XCAL.SUN_SET;
 
 	(* run once per hour *)
-	tmp := HOUR(xcal.LTOD);
+	tmp := HOUR(xcal.LOCAL_TOD);
 	IF  tmp <> last_hour THEN
 		XCAL.DST_ON := DST(XCAL.UTC) AND xcal.DST_EN;
 		last_hour := tmp;
@@ -63,11 +63,11 @@ calendar_calc will calculate sun position data when SPE = TRUE;
 	IF dtemp <> last_day THEN
 		last_day := dtemp;
 		(* a new day has started, recalculate daily events *)
-		XCAL.YEAR := YEAR_OF_DATE(XCAL.LDATE);
-		XCAL.MONTH := MONTH_OF_DATE(XCAL.LDATE);
-		XCAL.DAY := DAY_OF_MONTH(XCAL.LDATE);
-		XCAL.WEEKDAY := DAY_OF_WEEK(XCAL.LDATE);
-		HOLY(date_in := XCAL.LDATE, LANGU := xcal.LANGUAGE, HOLIDAYS := HOLIDAYS);
+		XCAL.YEAR := YEAR_OF_DATE(XCAL.LOCAL_DATE);
+		XCAL.MONTH := MONTH_OF_DATE(XCAL.LOCAL_DATE);
+		XCAL.DAY := DAY_OF_MONTH(XCAL.LOCAL_DATE);
+		XCAL.WEEKDAY := DAY_OF_WEEK(XCAL.LOCAL_DATE);
+		HOLY(date_in := XCAL.LOCAL_DATE, LANGU := xcal.LANGUAGE, HOLIDAYS := HOLIDAYS);
 		XCAL.HOLIDAY := HOLY.Y;
 		XCAL.HOLY_NAME := HOLY.NAME;
 		sun(latitude := XCAL.LATITUDE, longitude := xcal.LONGITUDE, utc := DT_TO_DATE(xcal.UTC), H := H);
@@ -75,7 +75,7 @@ calendar_calc will calculate sun position data when SPE = TRUE;
 		XCAL.SUN_SET := DINT_TO_TOD(TOD_TO_DINT(sun.sun_set) + XCAL.OFFSET * 60000 + SEL(XCAL.DST_ON,DINT#0,3600000));
 		XCAL.SUN_MIDDAY := DINT_TO_TOD(TOD_TO_DINT(sun.MIDDAY) + XCAL.OFFSET * 60000 + SEL(XCAL.DST_ON,DINT#0,3600000));
 		XCAL.SUN_HEIGTH := sun.sun_declination;
-		XCAL.WORK_WEEK := WORK_WEEK(XCAL.LDATE);
+		XCAL.WORK_WEEK := WORK_WEEK(XCAL.LOCAL_DATE);
 	END_IF;
 
 	(* calculate the suns position every 10 seconds when SPE = TRUE *)

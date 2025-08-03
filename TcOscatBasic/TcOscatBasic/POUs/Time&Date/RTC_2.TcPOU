@@ -11,7 +11,7 @@ VAR_INPUT
 END_VAR
 VAR_OUTPUT
 	UDT : DT;
-	LDT : DT;
+	LOCAL_DT : DT;
 	DSO : BOOL;
 	XMS : INT;
 END_VAR
@@ -38,8 +38,8 @@ XMS := rt.XMS;
 (* check for daylight savings time and set dso output *)
 DSO := DST(udt) AND DEN;
 
-(* calculate time offset and set ldt output *)
-LDT := DWORD_TO_DT(DT_TO_DWORD(UDT) + INT_TO_DWORD(ofs + BOOL_TO_INT(DSO)*60) * 60);
+(* calculate time offset and set local_dt output *)
+LOCAL_DT := DWORD_TO_DT(DT_TO_DWORD(UDT) + INT_TO_DWORD(ofs + BOOL_TO_INT(DSO)*60) * 60);
 
 
 (* revision history
