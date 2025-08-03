@@ -12,7 +12,7 @@ VAR
 END_VAR
 
 (*
-version 1.1	19. oct. 2008
+version 1.2	16. jul. 2024
 programmer 	hugo
 tested by	oscat
 
@@ -21,7 +21,7 @@ the decoding is according to the language setup in global vars
 
 *)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[IF LANG = 0 THEN Ly := LANGUAGE.DEFAULT; ELSE ly := MIN(LANG, language.LMAX); END_IF;
+      <ST><![CDATA[IF LANG <= 0 THEN Ly := LANGUAGE.DEFAULT; ELSE ly := MIN(LANG, language.LMAX); END_IF;
 IF MTH < 1 OR MTH > 12 THEN
 	RETURN;
 ELSIF LX = 0 THEN
@@ -38,6 +38,9 @@ hm	21. sep. 2008	rev 1.0
 
 hm	19. oct. 2008	rev 1.1
 	changed language setup constants
+
+hm 16.  jul 2024   rev 1.2
+	added boundary check to respect array limits
 *)]]></ST>
     </Implementation>
   </POU>
