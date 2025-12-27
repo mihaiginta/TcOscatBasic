@@ -23,6 +23,7 @@
     <WriteProductVersion>false</WriteProductVersion>
     <Author>
     </Author>
+    <VirtualLibrary>true</VirtualLibrary>
     <!--    <OutputType>Exe</OutputType>
     <RootNamespace>MyApplication</RootNamespace>
     <AssemblyName>MyApplication</AssemblyName>-->
