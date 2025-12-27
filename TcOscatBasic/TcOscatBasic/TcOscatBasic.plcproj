@@ -28,8 +28,8 @@
     <AssemblyName>MyApplication</AssemblyName>-->
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Data types" />
-    <Folder Include="Global Variables" />
+    <Folder Include="DUTs" />
+    <Folder Include="GVLs" />
     <Folder Include="POUs" />
     <Folder Include="POUs\Buffer Management" />
     <Folder Include="POUs\Engineering" />
@@ -60,61 +60,61 @@
     <Folder Include="POUs\Time&amp;Date" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data types\CALENDAR.TcDUT">
+    <Compile Include="DUTs\CALENDAR.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data types\COMPLEX.TcDUT">
+    <Compile Include="DUTs\COMPLEX.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data types\CONSTANTS_LANGUAGE.TcDUT">
+    <Compile Include="DUTs\CONSTANTS_LANGUAGE.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data types\CONSTANTS_LOCATION.TcDUT">
+    <Compile Include="DUTs\CONSTANTS_LOCATION.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data types\CONSTANTS_MATH.TcDUT">
+    <Compile Include="DUTs\CONSTANTS_MATH.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data types\CONSTANTS_PHYS.TcDUT">
+    <Compile Include="DUTs\CONSTANTS_PHYS.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data types\CONSTANTS_SETUP.TcDUT">
+    <Compile Include="DUTs\CONSTANTS_SETUP.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data types\CONTROL_MODE.TcDUT">
+    <Compile Include="DUTs\CONTROL_MODE.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data types\CONTROL_PARAMETERS.TcDUT">
+    <Compile Include="DUTs\CONTROL_PARAMETERS.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data types\ESR_DATA.TcDUT">
+    <Compile Include="DUTs\ESR_DATA.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data types\FRACTION.TcDUT">
+    <Compile Include="DUTs\FRACTION.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data types\HOLIDAY_DATA.TcDUT">
+    <Compile Include="DUTs\HOLIDAY_DATA.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data types\IO_TERMINAL_PARAMETERS.TcDUT">
+    <Compile Include="DUTs\IO_TERMINAL_PARAMETERS.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data types\REAL2.TcDUT">
+    <Compile Include="DUTs\REAL2.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data types\SDT.TcDUT">
+    <Compile Include="DUTs\SDT.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data types\TIMER_EVENT.TcDUT">
+    <Compile Include="DUTs\TIMER_EVENT.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Data types\VECTOR_3.TcDUT">
+    <Compile Include="DUTs\VECTOR_3.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Global Variables\Constants_2.TcGVL">
+    <Compile Include="GVLs\Constants_2.TcGVL">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Global Variables\Globale_Variablen_2.TcGVL">
+    <Compile Include="GVLs\Globale_Variablen_2.TcGVL">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\Buffer Management\BUFFER_COMP.TcPOU">
