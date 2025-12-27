@@ -111,10 +111,7 @@
     <Compile Include="DUTs\VECTOR_3.TcDUT">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="GVLs\Constants.TcGVL">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="GVLs\Globale_Variablen_2.TcGVL">
+    <Compile Include="GVLs\GVL.TcGVL">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\Buffer Management\BUFFER_COMP.TcPOU">

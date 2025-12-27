@@ -1,13 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
-  <GVL Name="Constants" Id="{06663279-ac8e-4bfb-be96-4dd8e9791db0}">
-    <Declaration><![CDATA[{attribute 'Tc2GvlVarNames'}
-VAR_GLOBAL CONSTANT
+  <GVL Name="GVL" Id="{203ff6f3-87b7-4f7d-968a-47c6c41f8d66}">
+    <Declaration><![CDATA[VAR_GLOBAL CONSTANT
+	MATH : CONSTANTS_MATH;
+	PHYS : CONSTANTS_PHYS;
+	LANGUAGE : CONSTANTS_LANGUAGE;
+	SETUP : CONSTANTS_SETUP;
+	LOCATION : CONSTANTS_LOCATION;
 	STRING_LENGTH : INT := 250;
 	LIST_LENGTH : INT := 250;
 END_VAR
-
-
 
 
 (* revisionhistory
