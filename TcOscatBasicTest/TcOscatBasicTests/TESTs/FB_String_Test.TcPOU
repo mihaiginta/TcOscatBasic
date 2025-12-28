@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_String_Test" Id="{7fbd58cc-a844-42ef-9dfc-37fe675b9be6}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_String_Test EXTENDS TcUnit.FB_TestSuite
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[WhenSubtringExistsExpectPosition();]]></ST>
+    </Implementation>
+    <Method Name="WhenSubtringExistsExpectPosition" Id="{f43cd479-0c2b-4ed5-ab04-cc6edd49aa4c}">
+      <Declaration><![CDATA[METHOD PRIVATE WhenSubtringExistsExpectPosition
+VAR
+	pos: INT;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[TEST('WhenSubtringExistsExpectPosition');
+
+// @TEST-RUN
+pos := FINDP(str:='Premature optimization is the root of all evil', src:='optimization', pos:=1);
+
+// @TEST-ASSERT
+AssertTrue(pos=11, 'Substring not found in target string');
+
+TEST_FINISHED();]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>
