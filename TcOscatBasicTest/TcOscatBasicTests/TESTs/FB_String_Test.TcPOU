@@ -4,8 +4,31 @@
     <Declaration><![CDATA[FUNCTION_BLOCK FB_String_Test EXTENDS TcUnit.FB_TestSuite
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[WhenSubtringExistsExpectPosition();]]></ST>
+      <ST><![CDATA[WhenSubtringExistsExpectPosition();
+WhenMonthToStringReturnsCorrectMonthName();]]></ST>
     </Implementation>
+    <Method Name="WhenMonthToStringReturnsCorrectMonthName" Id="{4be9c321-14b4-4109-98ef-f805349c3ea1}">
+      <Declaration><![CDATA[METHOD PRIVATE WhenMonthToStringReturnsCorrectMonthName
+VAR
+    ActualMonth : STRING(10);
+    ExpectedMonth : STRING(10) := 'January';
+    MTH : INT := 1;
+    LANG : INT := 1; // Adjust as needed for your language table
+    LX : INT := 0;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[TEST(__POUNAME());
+
+// @TEST-RUN
+ActualMonth := MONTH_TO_STRING(MTH:=MTH, LANG:=LANG, LX:=LX);
+
+// @TEST-ASSERT
+AssertEquals_STRING(ExpectedMonth, ActualMonth, 'MONTH_TO_STRING did not return expected month name');
+
+TEST_FINISHED();]]></ST>
+      </Implementation>
+    </Method>
     <Method Name="WhenSubtringExistsExpectPosition" Id="{f43cd479-0c2b-4ed5-ab04-cc6edd49aa4c}">
       <Declaration><![CDATA[METHOD PRIVATE WhenSubtringExistsExpectPosition
 VAR
