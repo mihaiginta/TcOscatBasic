@@ -58,9 +58,13 @@
       <DefaultResolution>TcUnit, * (www.tcunit.org)</DefaultResolution>
       <Namespace>TcUnit</Namespace>
       <Parameters>
-        <Parameter ListName="GVL_PARAM_TCUNIT" xmlns="">
+        <Parameter ListName="GVL_PARAM_TCUNIT">
           <Key>XUNITENABLEPUBLISH</Key>
           <Value>TRUE</Value>
+        </Parameter>
+        <Parameter ListName="GVL_PARAM_TCUNIT">
+          <Key>XUNITFILEPATH</Key>
+          <Value>'%SOLUTIONPATH%tcunit_xunit_testresults.xml'</Value>
         </Parameter>
       </Parameters>
     </PlaceholderReference>
