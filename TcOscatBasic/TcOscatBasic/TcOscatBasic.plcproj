@@ -24,6 +24,16 @@
     <Author>
     </Author>
     <VirtualLibrary>true</VirtualLibrary>
+    <LibraryCategories>
+      <LibraryCategory xmlns="">
+        <Id>{929d845f-e9d6-4133-90f0-f1e5bff1f77f}</Id>
+        <Version>1.0.0.0</Version>
+        <DefaultName>TcOscat</DefaultName>
+      </LibraryCategory>
+    </LibraryCategories>
+    <SelectedLibraryCategories>
+      <Id xmlns="">{929d845f-e9d6-4133-90f0-f1e5bff1f77f}</Id>
+    </SelectedLibraryCategories>
     <!--    <OutputType>Exe</OutputType>
     <RootNamespace>MyApplication</RootNamespace>
     <AssemblyName>MyApplication</AssemblyName>-->
