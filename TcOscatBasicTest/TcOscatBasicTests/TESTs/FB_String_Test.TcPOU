@@ -14,7 +14,7 @@ VAR
 END_VAR
 ]]></Declaration>
       <Implementation>
-        <ST><![CDATA[TEST('WhenSubtringExistsExpectPosition');
+        <ST><![CDATA[TEST(__POUNAME());
 
 // @TEST-RUN
 ActualPosition := FINDP(str:='Premature optimization is the root of all evil', src:='optimization', pos:=1);
