@@ -4,9 +4,143 @@
     <Declaration><![CDATA[FUNCTION_BLOCK FB_String_Test EXTENDS TcUnit.FB_TestSuite
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[WhenSubtringExistsExpectPosition();
-WhenMonthToStringReturnsCorrectMonthName();]]></ST>
+      <ST><![CDATA[
+WhenSubtringExistsExpectPosition();
+WhenMonthToStringReturnsCorrectMonthName();
+WhenCapitalizeReturnsExpectedResult();
+WhenLowercaseReturnsExpectedResult();
+WhenUppercaseReturnsExpectedResult();
+WhenTrimReturnsExpectedResult();
+WhenMirrorReturnsExpectedResult();
+WhenCountCharReturnsExpectedResult();
+WhenCountSubstringReturnsExpectedResult();
+WhenReplaceAllReturnsExpectedResult();
+WhenDelCharsReturnsExpectedResult();
+]]></ST>
     </Implementation>
+    <Method Name="WhenCapitalizeReturnsExpectedResult" Id="{4ecc6878-d05e-4509-b226-6ee77bd819d6}">
+      <Declaration><![CDATA[METHOD PRIVATE WhenCapitalizeReturnsExpectedResult
+VAR
+    ActualStr : STRING(20);
+    ExpectedStr : STRING(20) := 'Hello World';
+    TestStr : STRING(20) := 'hello world';
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[TEST(__POUNAME());
+
+// @TEST-RUN
+ActualStr := CAPITALIZE(TestStr);
+
+// @TEST-ASSERT
+AssertEquals_STRING(ExpectedStr, ActualStr, 'CAPITALIZE did not return expected result');
+
+TEST_FINISHED();]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="WhenCountCharReturnsExpectedResult" Id="{9886ba9b-94c1-45af-afd8-7233098d230d}">
+      <Declaration><![CDATA[METHOD PRIVATE WhenCountCharReturnsExpectedResult
+VAR
+    ActualCount : INT;
+    ExpectedCount : INT := 3;
+    TestStr : STRING(20) := 'banana';
+    TestChar : BYTE := 97; // 'a'
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[TEST(__POUNAME());
+
+// @TEST-RUN
+ActualCount := COUNT_CHAR(TestStr, TestChar);
+
+// @TEST-ASSERT
+AssertEquals_INT(ExpectedCount, ActualCount, 'COUNT_CHAR did not return expected result');
+
+TEST_FINISHED();]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="WhenCountSubstringReturnsExpectedResult" Id="{ae554c08-ebb6-4b44-a598-184dd508532a}">
+      <Declaration><![CDATA[METHOD PRIVATE WhenCountSubstringReturnsExpectedResult
+VAR
+    ActualCount : INT;
+    ExpectedCount : INT := 2;
+    TestStr : STRING(30) := 'the cat sat on the cat';
+    SubStr : STRING(10) := 'cat';
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[TEST(__POUNAME());
+
+// @TEST-RUN
+ActualCount := COUNT_SUBSTRING(SubStr, TestStr);
+
+// @TEST-RUN
+AssertEquals_INT(ExpectedCount, ActualCount, 'COUNT_SUBSTRING did not return expected result');
+
+TEST_FINISHED();]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="WhenDelCharsReturnsExpectedResult" Id="{08d7dd47-ddc4-4d2e-8400-11de6b9d9cd3}">
+      <Declaration><![CDATA[METHOD PRIVATE WhenDelCharsReturnsExpectedResult
+VAR
+    ActualStr : STRING(30);
+    ExpectedStr : STRING(30) := 'hll wrld';
+    TestStr : STRING(30) := 'hello world';
+    CharsToDel : STRING(10) := 'eo';
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[TEST(__POUNAME());
+
+// @TEST-RUN
+ActualStr := DEL_CHARS(TestStr, CharsToDel);
+
+// @TEST-ASSERT
+AssertEquals_STRING(ExpectedStr, ActualStr, 'DEL_CHARS did not return expected result');
+
+TEST_FINISHED();]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="WhenLowercaseReturnsExpectedResult" Id="{b9b5cdf6-a594-4f72-9faa-1afdeb9cbd0a}">
+      <Declaration><![CDATA[METHOD PRIVATE WhenLowercaseReturnsExpectedResult
+VAR
+    ActualStr : STRING(20);
+    ExpectedStr : STRING(20) := 'hello world';
+    TestStr : STRING(20) := 'HELLO WORLD';
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[TEST(__POUNAME());
+
+// @TEST-RUN
+ActualStr := LOWERCASE(TestStr);
+
+// @TEST-ASSERT
+AssertEquals_STRING(ExpectedStr, ActualStr, 'LOWERCASE did not return expected result');
+
+TEST_FINISHED();]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="WhenMirrorReturnsExpectedResult" Id="{d2fb6efb-4fdb-4a98-8a86-e34b5c62856b}">
+      <Declaration><![CDATA[METHOD PRIVATE WhenMirrorReturnsExpectedResult
+VAR
+    ActualStr : STRING(20);
+    ExpectedStr : STRING(20) := 'dlrow olleh';
+    TestStr : STRING(20) := 'hello world';
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[TEST(__POUNAME());
+
+// @TEST-RUN
+ActualStr := MIRROR(TestStr);
+
+// @TEST-ASSERT
+AssertEquals_STRING(ExpectedStr, ActualStr, 'MIRROR did not return expected result');
+
+TEST_FINISHED();]]></ST>
+      </Implementation>
+    </Method>
     <Method Name="WhenMonthToStringReturnsCorrectMonthName" Id="{4be9c321-14b4-4109-98ef-f805349c3ea1}">
       <Declaration><![CDATA[METHOD PRIVATE WhenMonthToStringReturnsCorrectMonthName
 VAR
@@ -29,6 +163,28 @@ AssertEquals_STRING(ExpectedMonth, ActualMonth, 'MONTH_TO_STRING did not return 
 TEST_FINISHED();]]></ST>
       </Implementation>
     </Method>
+    <Method Name="WhenReplaceAllReturnsExpectedResult" Id="{9e8c7cae-3db6-4777-ad08-535bc2749d0c}">
+      <Declaration><![CDATA[METHOD PRIVATE WhenReplaceAllReturnsExpectedResult
+VAR
+    ActualStr : STRING(30);
+    ExpectedStr : STRING(30) := 'foo bar foo bar';
+    TestStr : STRING(30) := 'foo baz foo baz';
+    Src : STRING(10) := 'baz';
+    Rep : STRING(10) := 'bar';
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[TEST(__POUNAME());
+
+// @TEST-RUN
+ActualStr := REPLACE_ALL(TestStr, Src, Rep);
+
+// @TEST-ASSERT
+AssertEquals_STRING(ExpectedStr, ActualStr, 'REPLACE_ALL did not return expected result');
+
+TEST_FINISHED();]]></ST>
+      </Implementation>
+    </Method>
     <Method Name="WhenSubtringExistsExpectPosition" Id="{f43cd479-0c2b-4ed5-ab04-cc6edd49aa4c}">
       <Declaration><![CDATA[METHOD PRIVATE WhenSubtringExistsExpectPosition
 VAR
@@ -44,6 +200,46 @@ ActualPosition := FINDP(str:='Premature optimization is the root of all evil', s
 
 // @TEST-ASSERT
 AssertTrue(ActualPosition=ExpectedPosition, 'Substring not found in target string');
+
+TEST_FINISHED();]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="WhenTrimReturnsExpectedResult" Id="{1e80195d-2feb-49d5-bed2-66ff92e1000e}">
+      <Declaration><![CDATA[METHOD PRIVATE WhenTrimReturnsExpectedResult
+VAR
+    ActualStr : STRING(20);
+    ExpectedStr : STRING(20) := 'helloworld';
+    TestStr : STRING(20) := 'hello world';
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[TEST(__POUNAME());
+
+// @TEST-RUN
+ActualStr := TRIM(TestStr);
+
+// @TEST-ASSERT
+AssertEquals_STRING(ExpectedStr, ActualStr, 'TRIM did not return expected result');
+
+TEST_FINISHED();]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="WhenUppercaseReturnsExpectedResult" Id="{9ca412ec-7151-40af-b618-eed6fb0ed18e}">
+      <Declaration><![CDATA[METHOD PRIVATE WhenUppercaseReturnsExpectedResult
+VAR
+    ActualStr : STRING(20);
+    ExpectedStr : STRING(20) := 'HELLO WORLD';
+    TestStr : STRING(20) := 'hello world';
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[TEST(__POUNAME());
+
+// @TEST-RUN
+ActualStr := UPPERCASE(TestStr);
+
+// @TEST-ASSERT
+AssertEquals_STRING(ExpectedStr, ActualStr, 'UPPERCASE did not return expected result');
 
 TEST_FINISHED();]]></ST>
       </Implementation>

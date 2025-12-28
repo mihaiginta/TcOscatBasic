@@ -62,10 +62,6 @@
           <Key>XUNITENABLEPUBLISH</Key>
           <Value>TRUE</Value>
         </Parameter>
-        <Parameter ListName="GVL_PARAM_TCUNIT">
-          <Key>XUNITFILEPATH</Key>
-          <Value>'%SOLUTIONPATH%tcunit_xunit_testresults.xml'</Value>
-        </Parameter>
       </Parameters>
     </PlaceholderReference>
   </ItemGroup>
