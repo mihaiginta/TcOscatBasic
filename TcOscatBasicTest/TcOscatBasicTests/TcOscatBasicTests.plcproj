@@ -45,6 +45,10 @@
       <Namespace>Tc3_Module</Namespace>
       <SystemLibrary>true</SystemLibrary>
     </PlaceholderReference>
+    <PlaceholderReference Include="TcOscatBasic">
+      <DefaultResolution>[TcOscatBasic], * (github.com/mihaiginta)</DefaultResolution>
+      <Namespace>TcOscatBasic</Namespace>
+    </PlaceholderReference>
     <PlaceholderReference Include="TcUnit">
       <DefaultResolution>TcUnit, * (www.tcunit.org)</DefaultResolution>
       <Namespace>TcUnit</Namespace>
