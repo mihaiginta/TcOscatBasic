@@ -4,6 +4,7 @@
     <Declaration><![CDATA[PROGRAM PRG_TEST
 VAR
 	String_Test : FB_String_Test;
+	B_Trig_Test: FB_B_Trig_Test;
 END_VAR
 ]]></Declaration>
     <Implementation>

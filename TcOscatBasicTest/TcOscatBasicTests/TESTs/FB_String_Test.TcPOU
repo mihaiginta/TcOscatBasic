@@ -4,8 +4,7 @@
     <Declaration><![CDATA[FUNCTION_BLOCK FB_String_Test EXTENDS TcUnit.FB_TestSuite
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
-WhenSubtringExistsExpectPosition();
+      <ST><![CDATA[WhenSubtringExistsExpectPosition();
 WhenMonthToStringReturnsCorrectMonthName();
 WhenCapitalizeReturnsExpectedResult();
 WhenLowercaseReturnsExpectedResult();
