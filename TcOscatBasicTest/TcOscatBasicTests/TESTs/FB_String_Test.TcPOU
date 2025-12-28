@@ -9,17 +9,18 @@
     <Method Name="WhenSubtringExistsExpectPosition" Id="{f43cd479-0c2b-4ed5-ab04-cc6edd49aa4c}">
       <Declaration><![CDATA[METHOD PRIVATE WhenSubtringExistsExpectPosition
 VAR
-	pos: INT;
+	ActualPosition : INT;
+	ExpectedPosition : INT := 11;
 END_VAR
 ]]></Declaration>
       <Implementation>
         <ST><![CDATA[TEST('WhenSubtringExistsExpectPosition');
 
 // @TEST-RUN
-pos := FINDP(str:='Premature optimization is the root of all evil', src:='optimization', pos:=1);
+ActualPosition := FINDP(str:='Premature optimization is the root of all evil', src:='optimization', pos:=1);
 
 // @TEST-ASSERT
-AssertTrue(pos=11, 'Substring not found in target string');
+AssertTrue(ActualPosition=ExpectedPosition, 'Substring not found in target string');
 
 TEST_FINISHED();]]></ST>
       </Implementation>

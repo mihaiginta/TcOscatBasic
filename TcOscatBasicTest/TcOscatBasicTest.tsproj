@@ -11,7 +11,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{A3DF61A8-E66C-4208-84CD-2B30EF9FC71C}" Name="TcOscatBasicTests" PrjFilePath="TcOscatBasicTests\TcOscatBasicTests.plcproj" TmcFilePath="TcOscatBasicTests\TcOscatBasicTests.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{D609B330-EB47-153E-B468-3AE45D962E13}" TmcPath="TcOscatBasicTests\TcOscatBasicTests.tmc">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{FD3AF63D-5FDE-6072-AD07-682E8C1CF827}" TmcPath="TcOscatBasicTests\TcOscatBasicTests.tmc">
 					<Name>TcOscatBasicTests Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Contexts>
