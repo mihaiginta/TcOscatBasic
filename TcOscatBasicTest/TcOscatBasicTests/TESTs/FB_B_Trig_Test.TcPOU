@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_B_Trig_Test" Id="{85e2b073-b353-428f-bbc2-2b30f6183b0b}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_B_Trig_Test EXTENDS TcUnit.FB_TestSuite
+VAR
+	Trig: B_TRIG;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[WhenFallingEdgeExpectCount();
+WhenRisingEdgeExpectCount();]]></ST>
+    </Implementation>
+    <Method Name="WhenFallingEdgeExpectCount" Id="{38655f6e-103f-4db4-b1d8-2f26b6cc86c4}">
+      <Declaration><![CDATA[METHOD WhenFallingEdgeExpectCount : REFERENCE TO FB_Test
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[TEST(__POUNAME());
+
+// @TEST-RUN
+Trig(CLK:=TRUE);
+Trig(CLK:=FALSE);
+
+// @TEST-ASSERT
+AssertTrue(Trig.Q, 'B_Trig did not count falling edge');
+
+TEST_FINISHED();
+
+
+
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="WhenRisingEdgeExpectCount" Id="{4f225bed-e931-4c21-8d4b-2f4c019fbed7}">
+      <Declaration><![CDATA[METHOD WhenRisingEdgeExpectCount
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[TEST(__POUNAME());
+
+// @TEST-RUN
+Trig(CLK:=FALSE);
+Trig(CLK:=TRUE);
+
+// @TEST-ASSERT
+AssertTrue(Trig.Q, 'B_Trig did not count rising edge');
+
+TEST_FINISHED();]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>
