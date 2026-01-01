@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TON_P" Id="{378602ac-9984-4fb5-817c-f760de97e144}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK TON_P	// Ton pausable
-(* If IN is FALSE, Q is FALSE and ET is 0. As soon as IN becomes TRUE,
+    <Declaration><![CDATA[(* If IN is FALSE, Q is FALSE and ET is 0. As soon as IN becomes TRUE,
 the time will begin to be counted in milliseconds in ET until its value is equal to PT.
 It will then remain constant. Q is TRUE when IN is TRUE and ET is equal to PT.
 Otherwise it is FALSE. Thus, Q has a rising edge when the time indicated in PT in milliseconds has run out.
 PAUSE allows for pausing the timer while retaining the elapsed time.
 The timer will thus continue with the same amount of time left before pausing. *)
+FUNCTION_BLOCK TON_P	// Ton pausable
+
 VAR_INPUT
     IN : BOOL;		(* starts timer with rising edge, resets timer with falling edge *)
     PT : TIME;		(* time to pass, before Q is set *)

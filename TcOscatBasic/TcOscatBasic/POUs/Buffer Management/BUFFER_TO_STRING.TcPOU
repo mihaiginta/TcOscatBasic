@@ -1,7 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BUFFER_TO_STRING" Id="{bbd62dfb-4217-4567-bf67-874f13f45acd}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION BUFFER_TO_STRING : STRING(STRING_LENGTH)
+    <Declaration><![CDATA[(*
+version 1.5	12. nov. 2009
+programmer 	hugo
+tested by		oscat
+
+this function will retrieve a string from an array of byte starting at position start and stop at position stop.
+the function needs to be called:	buffer_TO_String(adr("array"),sizeof("array"), start, stop);
+because this function works with pointers its very time efficient and it needs no extra memory.
+
+*)
+FUNCTION BUFFER_TO_STRING : STRING(STRING_LENGTH)
 VAR_INPUT
 	PT : POINTER TO ARRAY[0..32767] OF BYTE;
 	SIZE : UINT;
@@ -16,16 +26,7 @@ VAR
 END_VAR
 
 
-(*
-version 1.5	12. nov. 2009
-programmer 	hugo
-tested by		oscat
-
-this function will retrieve a string from an array of byte starting at position start and stop at position stop.
-the function needs to be called:	buffer_TO_String(adr("array"),sizeof("array"), start, stop);
-because this function works with pointers its very time efficient and it needs no extra memory.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[ps := ADR(BUFFER_TO_STRING);
 IF size = 0 THEN RETURN; END_IF;

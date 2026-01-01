@@ -1,7 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TEMPERATURE" Id="{a8fcf544-c78d-43ec-9a01-e9bf8ee7fd09}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK TEMPERATURE
+    <Declaration><![CDATA[(*
+version 1.0	21 feb 2008
+programmer 	hugo
+tested by	oscat
+
+this function converts different temperature units
+any unused input can simply be left open.
+different inputs connected at the same time will be added up.
+
+*)
+FUNCTION_BLOCK TEMPERATURE
 VAR_INPUT
 	K : REAL;
 	C : REAL := -273.15;
@@ -18,16 +28,7 @@ VAR_OUTPUT
 END_VAR
 
 
-(*
-version 1.0	21 feb 2008
-programmer 	hugo
-tested by	oscat
-
-this function converts different temperature units
-any unused input can simply be left open.
-different inputs connected at the same time will be added up.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[YK := K + (C + 273.15) + (F + 459.67) * 0.555555555555 + (Re * 1.25 + 273.15) + (Ra * 0.555555555555);
 YC := YK -273.15;

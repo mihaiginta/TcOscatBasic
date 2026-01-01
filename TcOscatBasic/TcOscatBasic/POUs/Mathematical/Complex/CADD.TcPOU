@@ -1,20 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CADD" Id="{b012cf33-51cb-4efd-a354-0f7e80788406}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION CADD : complex
-VAR_INPUT
-	X, Y : complex;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.0	21 feb 2008
 programmer 	hugo
 tested by	oscat
 
 this function add two complex numbers
 
-*)]]></Declaration>
+*)
+FUNCTION CADD : complex
+VAR_INPUT
+	X, Y : complex;
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[CADD.re := x.re + y.re;
 CADD.im := x.im + y.im;

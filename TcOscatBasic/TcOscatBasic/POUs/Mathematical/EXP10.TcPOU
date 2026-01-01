@@ -1,13 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="EXP10" Id="{9a335cf3-a589-45b8-b8ff-4881f1499bc7}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION EXP10 : REAL
-VAR_INPUT
-	X : REAL;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.0	 2 dec 2007
 programmer 	hugo
 tested by		tobias
@@ -15,7 +9,14 @@ tested by		tobias
 this function calculates the exponent to the basis 10
 exp10(3) = 1000
 
-*)]]></Declaration>
+*)
+FUNCTION EXP10 : REAL
+VAR_INPUT
+	X : REAL;
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[EXP10 := EXP(X * 2.30258509299405);
 

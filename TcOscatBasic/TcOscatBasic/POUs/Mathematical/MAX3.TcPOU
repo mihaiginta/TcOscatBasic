@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MAX3" Id="{e56e8498-860a-4ec7-be2f-fed18bf916a0}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION MAX3 : REAL
+    <Declaration><![CDATA[(*
+version 1.1	18. mar. 2011
+programmer 	hugo
+tested by		tobias
+
+this function returns the highest of 3 real values
+
+*)
+FUNCTION MAX3 : REAL
 VAR_INPUT
 	in1 : REAL;
 	in2 : REAL;
@@ -9,14 +17,7 @@ VAR_INPUT
 END_VAR
 
 
-(*
-version 1.1	18. mar. 2011
-programmer 	hugo
-tested by		tobias
-
-this function returns the highest of 3 real values
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[MAX3 := MAX(MAX(IN1,IN2),IN3);
 

@@ -1,20 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ERFC" Id="{d16983be-2e46-4790-9707-f8f05f7233f3}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION ERFC : REAL
-VAR_INPUT
-	X : REAL;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.1	10. mar. 2009
 programmer 	hugo
 tested by		tobias
 
 this function calculates the inverse erf (error) function.
 
-*)]]></Declaration>
+*)
+FUNCTION ERFC : REAL
+VAR_INPUT
+	X : REAL;
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[ERFC := 1.0 - ERF(X);
 

@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TOGGLE" Id="{c57f7df0-4cf6-4910-a4df-38c1a3f94491}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK TOGGLE
+    <Declaration><![CDATA[(*
+version 1.1	30. oct. 2008
+programmer 	hugo
+tested by	oscat
+
+toggle flip flop the output changes state with every rising edge of clk.
+
+*)
+FUNCTION_BLOCK TOGGLE
 VAR_INPUT
 	CLK : BOOL;
 	rst : BOOL;
@@ -13,14 +21,7 @@ VAR
 	edge : BOOL;
 END_VAR
 
-(*
-version 1.1	30. oct. 2008
-programmer 	hugo
-tested by	oscat
 
-toggle flip flop the output changes state with every rising edge of clk.
-
-*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF rst THEN

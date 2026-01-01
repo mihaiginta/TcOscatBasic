@@ -1,7 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="RES_PT" Id="{fc7e1225-9d3c-436d-a320-998661549f68}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION RES_PT : REAL
+    <Declaration><![CDATA[(*
+version 1.3	11. mar. 2009
+programmer 	hugo
+tested by		oscat
+
+
+this function returs the resistance for a platinum sensor for a temperature range from -200..+850 °C *)
+FUNCTION RES_PT : REAL
 VAR_INPUT
 	T : REAL;
 	R0 : REAL;
@@ -15,13 +22,7 @@ VAR
 	T2: REAL;
 END_VAR
 
-(*
-version 1.3	11. mar. 2009
-programmer 	hugo
-tested by		oscat
-
-
-this function returs the resistance for a platinum sensor for a temperature range from -200..+850 °C *)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[T2 := T * T;
 

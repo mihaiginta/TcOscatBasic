@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="_ARRAY_SORT" Id="{35ac169c-abe2-4943-ad54-dc395d0be0dc}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION _ARRAY_SORT : BOOL
+    <Declaration><![CDATA[(* Laufvariable Stack*)
+FUNCTION _ARRAY_SORT : BOOL
 VAR_INPUT
 	PT : POINTER TO ARRAY[1..32000] OF REAL;
 	SIZE : UINT;
 END_VAR
 VAR
-	stack_count: UINT;				(* Laufvariable Stack*)
+	stack_count: UINT;				
 	stack: ARRAY[1..32] OF UINT;	(* Stackgröße~ 1,6*Log(n)/log(2) *)
 										(* Stackgröße 32 => ~1 Mio Elemente *)
 	links: UINT;						(* Anfangselement des Arrays *)

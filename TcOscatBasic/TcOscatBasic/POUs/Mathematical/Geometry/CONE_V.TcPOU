@@ -1,14 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CONE_V" Id="{4560c810-32f0-4cbe-b3e0-64751573d7d2}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION CONE_V : REAL
-VAR_INPUT
-	rx : REAL;
-	hx : REAL;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.1	4 dec 2007
 programmer 	hugo
 tested by		tobias
@@ -16,6 +9,14 @@ tested by		tobias
 cone_V calculates the Volume of a cone
 
 *)
+FUNCTION CONE_V : REAL
+VAR_INPUT
+	rx : REAL;
+	hx : REAL;
+END_VAR
+
+
+
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[cone_V := 1.047197551 * RX * RX * hx;

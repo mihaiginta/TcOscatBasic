@@ -1,13 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FSTRING_TO_DWORD" Id="{32eebc95-6864-48ff-8ede-773bb9a8254f}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION FSTRING_TO_DWORD : DWORD
-VAR_INPUT
-	IN : STRING(40);
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.1	20. sep. 2008
 programmer 	hugo
 tested by		oscat
@@ -15,7 +9,14 @@ tested by		oscat
 FSTRING_TO_BYTE converts a formatted string into a byte.
 the string can be of the form 2#01010, 8#7234, 16#2AD3 and 1234
 
-*)]]></Declaration>
+*)
+FUNCTION FSTRING_TO_DWORD : DWORD
+VAR_INPUT
+	IN : STRING(40);
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF LEFT(IN, 2) = '2#' THEN
 	(* we need to convert binary *)

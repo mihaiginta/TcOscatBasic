@@ -1,20 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ATANH" Id="{ee144a7e-7521-482c-a792-4a78e6c883fb}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION ATANH : REAL
-VAR_INPUT
-	X : REAL;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.2	10. mar. 2009
 programmer 	hugo
 tested by		tobias
 
 this function calculates the arcus tangens hyperbolicus
 
-*)]]></Declaration>
+*)
+FUNCTION ATANH : REAL
+VAR_INPUT
+	X : REAL;
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[ATANH := LN((1.0 + x)/(1.0 - x)) * 0.5;
 

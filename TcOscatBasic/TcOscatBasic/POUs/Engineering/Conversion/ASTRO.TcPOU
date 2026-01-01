@@ -1,7 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ASTRO" Id="{d968f53a-df44-4e46-b0e8-d288ad08575d}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK ASTRO
+    <Declaration><![CDATA[(*
+version 1.1	11. mar. 2009
+programmer 	hugo
+tested by		oscat
+
+this function converts different length units
+any unused input can simply be left open.
+different inputs connected at the same time will be added up.
+
+*)
+FUNCTION_BLOCK ASTRO
 VAR_INPUT
 	m : REAL;
 	AE : REAL;
@@ -16,16 +26,7 @@ VAR_OUTPUT
 END_VAR
 
 
-(*
-version 1.1	11. mar. 2009
-programmer 	hugo
-tested by		oscat
-
-this function converts different length units
-any unused input can simply be left open.
-different inputs connected at the same time will be added up.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[YAE :=	AE
 		+ m * 6.6845871535E-012

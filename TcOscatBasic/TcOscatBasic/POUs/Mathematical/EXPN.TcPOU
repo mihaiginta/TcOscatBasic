@@ -1,7 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="EXPN" Id="{5d8a79e4-a07e-4089-aade-13795b5cfbb6}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION EXPN : REAL
+    <Declaration><![CDATA[(*
+version 1.2	10. mar. 2009
+programmer 	hugo
+tested by		oscat
+
+this function calculates X to the power of N (Y = X^N) whilke N is an integer
+especially on CPU's without a floating point unit this algorythm is about 30 times faster then the IEC standard EXPT() Function
+
+*)
+FUNCTION EXPN : REAL
 VAR_INPUT
 	X : REAL;
 	N : INT;
@@ -10,15 +19,7 @@ VAR
 	sign: BOOL;
 END_VAR
 
-(*
-version 1.2	10. mar. 2009
-programmer 	hugo
-tested by		oscat
-
-this function calculates X to the power of N (Y = X^N) whilke N is an integer
-especially on CPU's without a floating point unit this algorythm is about 30 times faster then the IEC standard EXPT() Function
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[sign := n.15;
 N := ABS(N);

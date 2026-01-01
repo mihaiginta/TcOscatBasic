@@ -1,13 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SGN" Id="{792c4c97-b445-4ae6-a3fd-c997c8bda93b}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION SGN : INT
-VAR_INPUT
-	X : REAL;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.1	11. nov. 2008
 programmer 	hugo
 tested by	tobias
@@ -15,6 +9,13 @@ tested by	tobias
 sgn returns 0 when X = 0 , -1 when X < 1 and +1 when X > 1
 
 *)
+FUNCTION SGN : INT
+VAR_INPUT
+	X : REAL;
+END_VAR
+
+
+
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF X > 0 THEN

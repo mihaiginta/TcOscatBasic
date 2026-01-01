@@ -1,7 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DELAY_200" Id="{dccbaad1-090b-4f47-939e-05951b94d60f}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK DELAY_200
+    <Declaration><![CDATA[(*
+version 1.0	10. nov. 2020
+programmer 	PhOstmann
+
+this function block delays input values by each programm cycle
+after N+1 cycles the in value has shifted to the out.
+N can be any alue from 0 .. 200
+if n = 0 the input will be present on the output without a delay.
+f N > 200 then the output will be delayed by 200 cycles.
+any high on rst will load the buffer with in.
+
+*)
+FUNCTION_BLOCK DELAY_200
 VAR_INPUT
 	IN : REAL;
 	N : INT;
@@ -17,18 +29,7 @@ VAR
 	stop: INT;
 END_VAR
 
-(*
-version 1.0	10. nov. 2020
-programmer 	PhOstmann
-
-this function block delays input values by each programm cycle
-after N+1 cycles the in value has shifted to the out.
-N can be any alue from 0 .. 200
-if n = 0 the input will be present on the output without a delay.
-f N > 200 then the output will be delayed by 200 cycles.
-any high on rst will load the buffer with in.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[stop := LIMIT(0,N,200) - 1;
 IF rst OR NOT init THEN

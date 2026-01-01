@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="RANGE_TO_BYTE" Id="{e5736efc-70e1-4436-a8eb-0439183653c8}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION RANGE_TO_BYTE : BYTE
+    <Declaration><![CDATA[(*
+version 1.0	9. jan 2008
+programmer 	hugo
+tested by		tobias
+
+Range_to_byte converts a real value between low and high into a byte
+
+*)
+FUNCTION RANGE_TO_BYTE : BYTE
 VAR_INPUT
 	X : REAL;
 	low : REAL;
@@ -9,14 +17,7 @@ VAR_INPUT
 END_VAR
 
 
-(*
-version 1.0	9. jan 2008
-programmer 	hugo
-tested by		tobias
-
-Range_to_byte converts a real value between low and high into a byte
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[RANGE_TO_BYTE := INT_TO_BYTE(TRUNC_INT((LIMIT(low, X, high) - low) * 255.0 / (high - low)));
 

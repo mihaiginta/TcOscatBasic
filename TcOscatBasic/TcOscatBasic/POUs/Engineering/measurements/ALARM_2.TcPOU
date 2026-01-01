@@ -1,7 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ALARM_2" Id="{0f2f05e7-08c8-427c-8f2b-e3568a70f45b}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK ALARM_2
+    <Declaration><![CDATA[(*
+	version 1.1	11. mar. 2009
+	programmer 	hugo
+	tested BY		tobias
+
+ALARM_2 will check two pairs of limits and signal when the input is above or below a set limit.
+with the input HYS a hysteresis can be defined for all limits.
+
+*)
+FUNCTION_BLOCK ALARM_2
 VAR_INPUT
 	X : REAL;
 	LO_1 : REAL;
@@ -20,15 +29,7 @@ VAR
 	tmp: REAL;
 END_VAR
 
-(*
-	version 1.1	11. mar. 2009
-	programmer 	hugo
-	tested BY		tobias
-
-ALARM_2 will check two pairs of limits and signal when the input is above or below a set limit.
-with the input HYS a hysteresis can be defined for all limits.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[tmp := X - Hys * 0.5;
 IF tmp > LO_1 THEN Q1_LO := FALSE; END_IF;

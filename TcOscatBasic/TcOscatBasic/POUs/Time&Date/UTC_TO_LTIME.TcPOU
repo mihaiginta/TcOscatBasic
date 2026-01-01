@@ -1,17 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="UTC_TO_LTIME" Id="{937a8c33-f239-43f3-8a08-55f9ddc82315}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION UTC_TO_LTIME : DT
-VAR_INPUT
-	UTC : DT;
-	DST_ENABLE : BOOL;
-	TIME_ZONE_OFFSET : INT;
-END_VAR
-VAR
-	tmp: INT;
-END_VAR
-
-(*
+    <Declaration><![CDATA[(*
 
 version 1.9	27. feb. 2009
 programmer 	oscat
@@ -27,6 +17,17 @@ if more then one time zone is needed by the systen the clock can be started many
 
 
 *)
+FUNCTION UTC_TO_LTIME : DT
+VAR_INPUT
+	UTC : DT;
+	DST_ENABLE : BOOL;
+	TIME_ZONE_OFFSET : INT;
+END_VAR
+VAR
+	tmp: INT;
+END_VAR
+
+
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[tmp := TIME_ZONE_OFFSET * 60 + BOOL_TO_INT(DST_ENABLE AND DST(UTC)) * 3600;

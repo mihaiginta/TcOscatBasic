@@ -1,20 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="C_TO_F" Id="{f120bff4-4239-4a2a-bc89-8802355ce506}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION C_TO_F : REAL
-VAR_INPUT
-	celsius : REAL;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.1	11. mar. 2009
 programmer 	hugo
 tested by		tobias
 
 this function converts celsius  to fahrenheit
 
-*)]]></Declaration>
+*)
+FUNCTION C_TO_F : REAL
+VAR_INPUT
+	celsius : REAL;
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[C_TO_F := celsius * 1.8 + 32.0;
 

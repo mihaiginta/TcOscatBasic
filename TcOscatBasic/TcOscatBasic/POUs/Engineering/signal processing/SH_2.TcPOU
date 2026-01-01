@@ -1,7 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SH_2" Id="{43264e6f-ced7-4c4f-8e5c-3ade81b08303}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK SH_2
+    <Declaration><![CDATA[(*
+version 1.6	10. mar. 2009
+programmer 	hugo
+tested by		tobias
+
+this sample and hold module samples an input every PT seconds.
+this sample and hold also does avg and other calculations with the input data.
+an average is calculated over N samples while for this calculation disc samples are discarded,
+disc = 0 all samples are averaged,
+if disc = 1 the lowest value is ignored,
+if disc = 2 the lowest and highest values are ignored,
+and so on.....
+
+*)
+FUNCTION_BLOCK SH_2
 VAR_INPUT
 	in : REAL;
 	PT : TIME;
@@ -28,20 +42,7 @@ VAR
 	d2: INT;
 END_VAR
 
-(*
-version 1.6	10. mar. 2009
-programmer 	hugo
-tested by		tobias
-
-this sample and hold module samples an input every PT seconds.
-this sample and hold also does avg and other calculations with the input data.
-an average is calculated over N samples while for this calculation disc samples are discarded,
-disc = 0 all samples are averaged,
-if disc = 1 the lowest value is ignored,
-if disc = 2 the lowest and highest values are ignored,
-and so on.....
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read system time *)
 tx := DWORD_TO_TIME(T_PLC_MS());

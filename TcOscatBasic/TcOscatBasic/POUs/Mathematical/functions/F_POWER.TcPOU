@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="F_POWER" Id="{8f72a1ce-ab59-4091-9c0f-7fefa76001f5}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION F_POWER : REAL
+    <Declaration><![CDATA[(*
+version 1.0	1 sep 2006
+programmer 	hugo
+tested by		tobias
+
+this function calculates the power equation f_power = a*x^n
+
+*)
+FUNCTION F_POWER : REAL
 VAR_INPUT
 	a : REAL;
 	x : REAL;
@@ -9,14 +17,7 @@ VAR_INPUT
 END_VAR
 
 
-(*
-version 1.0	1 sep 2006
-programmer 	hugo
-tested by		tobias
-
-this function calculates the power equation f_power = a*x^n
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[F_POWER := a * EXPT(X, N);
 ]]></ST>

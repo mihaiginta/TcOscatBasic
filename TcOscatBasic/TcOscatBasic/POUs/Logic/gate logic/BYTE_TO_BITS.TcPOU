@@ -1,7 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BYTE_TO_BITS" Id="{e6a936d5-d333-42b5-ad34-131419276e1e}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK BYTE_TO_BITS
+    <Declaration><![CDATA[(*
+version 1.1	16. mar. 2008
+programmer 	hugo
+tested by		tobias
+
+this Function Block extracts the 8 Bits from a byte
+
+
+*)
+FUNCTION_BLOCK BYTE_TO_BITS
 VAR_INPUT
 	IN: BYTE;
 END_VAR
@@ -17,15 +26,7 @@ VAR_OUTPUT
 END_VAR
 
 
-(*
-version 1.1	16. mar. 2008
-programmer 	hugo
-tested by		tobias
-
-this Function Block extracts the 8 Bits from a byte
-
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[B0 := IN.0;
 B1 := IN.1;

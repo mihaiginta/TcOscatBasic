@@ -1,13 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="INV" Id="{7c46da79-f50c-4d1e-b57c-86f0cd96840b}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION INV : REAL
-VAR_INPUT
-	X : REAL;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.1	10. mar. 2009
 programmer 	hugo
 tested by		tobias
@@ -15,6 +9,13 @@ tested by		tobias
 This function calculates the result of 1 / X
 
 *)
+FUNCTION INV : REAL
+VAR_INPUT
+	X : REAL;
+END_VAR
+
+
+
 
 ]]></Declaration>
     <Implementation>

@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="AOUT1" Id="{7dab9d2d-ab5a-4d56-832f-d29a37a5cdc4}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION AOUT1 : DWORD
+    <Declaration><![CDATA[(*
+version 1.0	23 feb 2008
+programmer 	oscat
+tested by		tobias
+
+this module conditions an internal real value for a D/A converter.
+
+*)
+FUNCTION AOUT1 : DWORD
 VAR_INPUT
 	in : REAL;
 END_VAR
@@ -20,14 +28,7 @@ VAR
 	in2 : REAL;
 END_VAR
 
-(*
-version 1.0	23 feb 2008
-programmer 	oscat
-tested by		tobias
-
-this module conditions an internal real value for a D/A converter.
-
-*) ]]></Declaration>
+ ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* if sign bit is defined *)
 IF sign < 32 THEN

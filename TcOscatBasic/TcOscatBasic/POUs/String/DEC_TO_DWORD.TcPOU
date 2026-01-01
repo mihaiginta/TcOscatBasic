@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DEC_TO_DWORD" Id="{91cd9e74-7140-4303-80f3-99366ad52a70}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION DEC_TO_DWORD : DWORD
+    <Declaration><![CDATA[(*
+version 1.1	30. sep. 2008
+programmer 	hugo
+tested by		oscat
+
+DEC_TO_DWORD converts a decimal string into a DWORD.
+
+*)
+FUNCTION DEC_TO_DWORD : DWORD
 VAR_INPUT
 	DEC : STRING(20);
 END_VAR
@@ -12,14 +20,7 @@ VAR
 	stop: INT;
 END_VAR
 
-(*
-version 1.1	30. sep. 2008
-programmer 	hugo
-tested by		oscat
-
-DEC_TO_DWORD converts a decimal string into a DWORD.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[pt := ADR(dec);
 stop := LEN(dec);

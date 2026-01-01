@@ -1,14 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DT2_TO_SDT" Id="{05066a3c-64e9-439e-b954-a6ffe9e06553}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION DT2_TO_SDT : SDT
-VAR_INPUT
-	DI : DATE;
-	TI : TOD;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.0	18. oct 2008
 programmer 	hugo
 tested by	oscat
@@ -16,6 +9,14 @@ tested by	oscat
 converts date and time of day to Structured date time (SDT)
 
 *)
+FUNCTION DT2_TO_SDT : SDT
+VAR_INPUT
+	DI : DATE;
+	TI : TOD;
+END_VAR
+
+
+
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[DT2_TO_SDT.YEAR := YEAR_OF_DATE(di);

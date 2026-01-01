@@ -1,7 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="LIST_LEN" Id="{b354574a-ce52-4002-a4af-318caeb151cb}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION LIST_LEN : INT
+    <Declaration><![CDATA[(*
+version 2.0	21. mar. 2011
+programmer 	hugo
+tested by		oscat
+
+LIST_LEN liefert die anzahl der elemente einer liste.
+die liste liegt als string von elementen vor die mit den zeichen SEP am anfang markiert sind.
+
+*)
+FUNCTION LIST_LEN : INT
 VAR_INPUT
 	SEP : BYTE;
 END_VAR
@@ -13,15 +22,7 @@ VAR
 END_VAR
 
 
-(*
-version 2.0	21. mar. 2011
-programmer 	hugo
-tested by		oscat
 
-LIST_LEN liefert die anzahl der elemente einer liste.
-die liste liegt als string von elementen vor die mit den zeichen SEP am anfang markiert sind.
-
-*)
 (*All VAR_IN_OUT variables have been moved to the end of the declaration due to compatibility reasons*)
 VAR_IN_OUT
 	LIST : STRING(LIST_LENGTH);

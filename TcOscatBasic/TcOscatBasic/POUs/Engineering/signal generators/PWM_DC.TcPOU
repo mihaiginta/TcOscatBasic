@@ -1,7 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="PWM_DC" Id="{a5fb2786-cb95-4ebb-968c-9448e0a2cbe4}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK PWM_DC
+    <Declaration><![CDATA[(*
+version 1.4	11. mar. 2009
+programmer 	oscat
+tested BY		oscat
+
+this signal generator generates a square wave signal which is specified by the frequency and the duty cycle
+*)
+FUNCTION_BLOCK PWM_DC
 VAR_INPUT
 	F : REAL;
 	DC : REAL;
@@ -15,13 +22,7 @@ VAR
 	tmp: REAL;
 END_VAR
 
-(*
-version 1.4	11. mar. 2009
-programmer 	oscat
-tested BY		oscat
-
-this signal generator generates a square wave signal which is specified by the frequency and the duty cycle
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF F > 0.0 THEN
 	tmp := 1000.0 / F;

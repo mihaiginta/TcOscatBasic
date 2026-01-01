@@ -1,13 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BCDC_TO_INT" Id="{32572d95-4adb-425d-8895-bacf96920d83}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION BCDC_TO_INT : INT
-VAR_INPUT
-	IN : BYTE;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.1 30. jun. 2008
 programmer 	hugo
 tested by	oscat
@@ -15,6 +9,13 @@ tested by	oscat
 this function converts a two digit bcd number into an integer.
 
 *)
+FUNCTION BCDC_TO_INT : INT
+VAR_INPUT
+	IN : BYTE;
+END_VAR
+
+
+
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[BCDC_TO_INT := (in AND 16#0F) + (SHR(in,4) * 10);

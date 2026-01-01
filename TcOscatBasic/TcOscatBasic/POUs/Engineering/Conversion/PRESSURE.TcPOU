@@ -1,7 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="PRESSURE" Id="{637483bc-de39-4637-bbfa-41b08894c71c}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK PRESSURE
+    <Declaration><![CDATA[(*
+version 1.1	11. mar. 2009
+programmer 	hugo
+tested by		oscat
+
+this function converts different pressure units
+any unused input can simply be left open.
+different inputs connected at the same time will be added up.
+*)
+FUNCTION_BLOCK PRESSURE
 VAR_INPUT
 	mws : REAL;
 	torr : REAL;
@@ -20,15 +29,7 @@ VAR_OUTPUT
 END_VAR
 
 
-(*
-version 1.1	11. mar. 2009
-programmer 	hugo
-tested by		oscat
-
-this function converts different pressure units
-any unused input can simply be left open.
-different inputs connected at the same time will be added up.
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[Ybar := bar +
 		pa * 1.0E-5 +

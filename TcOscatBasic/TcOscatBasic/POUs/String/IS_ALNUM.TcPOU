@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="IS_ALNUM" Id="{c57ae50c-5b9c-40ad-bf8e-83b4679f400b}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION IS_ALNUM : BOOL
+    <Declaration><![CDATA[(*
+version 1.1	29. mar. 2008
+programmer 		kurt
+tested by		hugo
+
+ISC_ALNUM testet ob in einem string nur Zahlen 0..9 vorkommen.
+
+*)
+FUNCTION IS_ALNUM : BOOL
 VAR_INPUT
 	str : STRING(STRING_LENGTH);
 END_VAR
@@ -11,14 +19,7 @@ VAR
 	pos: INT;
 END_VAR
 
-(*
-version 1.1	29. mar. 2008
-programmer 		kurt
-tested by		hugo
-
-ISC_ALNUM testet ob in einem string nur Zahlen 0..9 vorkommen.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[PT := ADR(str);
 L := LEN(str);

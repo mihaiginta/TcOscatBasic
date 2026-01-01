@@ -1,15 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TEMP_NTC" Id="{0f8e3b15-af7a-4531-9c34-3972d33869ff}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION TEMP_NTC : REAL
-VAR_INPUT
-	RES : REAL;
-	RN : REAL;
-	B : REAL;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.1	11. mar. 2009
 programmer 	hugo
 tested by		tobias
@@ -17,7 +9,16 @@ tested by		tobias
 this function returs the temperature for a NTC sensor for a range from 0..85 °C.
 RN is the resistance at 25 °C and B is a constant for the given sensor.
 
-*)]]></Declaration>
+*)
+FUNCTION TEMP_NTC : REAL
+VAR_INPUT
+	RES : REAL;
+	RN : REAL;
+	B : REAL;
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF res > 0.0 THEN
 	TEMP_NTC := B * 298.15 / (B + LN(RES / RN) * 298.15) -273.15;

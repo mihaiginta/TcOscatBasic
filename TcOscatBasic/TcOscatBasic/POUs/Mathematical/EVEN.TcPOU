@@ -1,13 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="EVEN" Id="{89ad2f90-75e4-442e-b002-e902f35de502}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION EVEN : BOOL
-VAR_INPUT
-	in : DINT;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.1	1 dec 2007
 programmer 	hugo
 tested by		tobias
@@ -15,7 +9,14 @@ tested by		tobias
 this function chacks an input for even  value
 the output is true if the input is even.
 execution time on wago 750 - 841 =  10  us
-*)]]></Declaration>
+*)
+FUNCTION EVEN : BOOL
+VAR_INPUT
+	in : DINT;
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[EVEN := NOT in.0;
 

@@ -1,7 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DEC_8" Id="{078b4e50-63b7-4226-9c51-86e3d1bd3093}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK DEC_8
+    <Declaration><![CDATA[(*
+version 1.3	28. mar. 2009
+programmer 	hugo
+tested by		oscat
+
+a bit input will be decoded to one of the 8 outputs
+dependent on the Adress on A0, A1 and A2
+
+
+*)
+FUNCTION_BLOCK DEC_8
 VAR_INPUT
 	D: BOOL;
 	A0: BOOL;
@@ -22,16 +32,7 @@ VAR
 	X : INT;
 END_VAR
 
-(*
-version 1.3	28. mar. 2009
-programmer 	hugo
-tested by		oscat
-
-a bit input will be decoded to one of the 8 outputs
-dependent on the Adress on A0, A1 and A2
-
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[X.0 := A0; X.1 := A1; X.2 := A2;
 

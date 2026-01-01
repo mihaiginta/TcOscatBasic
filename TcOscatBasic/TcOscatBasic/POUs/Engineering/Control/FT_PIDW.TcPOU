@@ -1,7 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FT_PIDW" Id="{8849db7f-8036-4993-b2ac-aa548a3e2e35}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FT_PIDW
+    <Declaration><![CDATA[(*
+version 1.2	11. mar. 2009
+programmer 	hugo
+tested by		oscat
+
+FT_PIDW is a PID controller with dynamic wind_up reset.
+The PID controller works according to the fomula Y = KP *(IN + KI * INTEG(e) + DERIV(e) ).
+a rst will reset the integrator to 0
+lim_h and Lim_l set the possible output range of the internal integrator.
+the output flags lim will signal that the output limits are active.
+
+default values for KP = 1, KI = 1, ILIM_L = -1E37, iLIM_H = +1E38.
+*)
+FUNCTION_BLOCK FT_PIDW
 VAR_INPUT
 	IN : REAL;
 	KP : REAL := 1.0;
@@ -21,19 +34,7 @@ VAR
 	YI: REAL;
 END_VAR
 
-(*
-version 1.2	11. mar. 2009
-programmer 	hugo
-tested by		oscat
 
-FT_PIDW is a PID controller with dynamic wind_up reset.
-The PID controller works according to the fomula Y = KP *(IN + KI * INTEG(e) + DERIV(e) ).
-a rst will reset the integrator to 0
-lim_h and Lim_l set the possible output range of the internal integrator.
-the output flags lim will signal that the output limits are active.
-
-default values for KP = 1, KI = 1, ILIM_L = -1E37, iLIM_H = +1E38.
-*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* run the integrator *)

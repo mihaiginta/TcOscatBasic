@@ -1,7 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="M_TX" Id="{979d6fdd-7da6-47b2-b6ba-1dcf8c58984e}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK M_TX
+    <Declaration><![CDATA[(*
+	version 1.4	11. mar. 2009
+	programmer 	oscat
+	tested BY		oscat
+
+this measures the timing of a signal
+TH is the high pulse width
+TL is the low pulse width
+DC is the duty cycle
+F is the frequency
+ET will start at 0 with a rising edge and count up till the next rising edge starts from 0 again.
+the acuracy depends on the cycle time of the sps and is limited to 1ms resolution.
+an asynchronous reset can reset all outputs to 0 at any time.
+the input tmax can configure a timeout for ET where the function block will outomatically reset itself.
+tmx is predefined to 10 days.
+*)
+FUNCTION_BLOCK M_TX
 VAR_INPUT
 	in: BOOL;
 	tmax : TIME := t#10d;
@@ -24,22 +40,7 @@ VAR
 	startup: BOOL;
 END_VAR
 
-(*
-	version 1.4	11. mar. 2009
-	programmer 	oscat
-	tested BY		oscat
-
-this measures the timing of a signal
-TH is the high pulse width
-TL is the low pulse width
-DC is the duty cycle
-F is the frequency
-ET will start at 0 with a rising edge and count up till the next rising edge starts from 0 again.
-the acuracy depends on the cycle time of the sps and is limited to 1ms resolution.
-an asynchronous reset can reset all outputs to 0 at any time.
-the input tmax can configure a timeout for ET where the function block will outomatically reset itself.
-tmx is predefined to 10 days.
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* check FOR rst input *)
 IF rst OR (et >= tmax) THEN

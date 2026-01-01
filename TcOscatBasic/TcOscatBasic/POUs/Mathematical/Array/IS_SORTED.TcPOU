@@ -1,7 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="IS_SORTED" Id="{6244b4e0-f1e6-47da-b813-99884537f55a}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION IS_SORTED : BOOL
+    <Declaration><![CDATA[(*
+version 1.1	4. apr. 2008
+programmer 	hugo
+tested by	tobias
+
+this function will return true if the given array is sorted in an ascending order.
+the function needs to be called:	array_sorted(adr("array"),sizeof("array"));
+because this function works with pointers its very time efficient and it needs no extra memory.
+
+*)
+FUNCTION IS_SORTED : BOOL
 VAR_INPUT
 	pt : POINTER TO ARRAY[0..32000] OF REAL;
 	size : UINT;
@@ -12,16 +22,7 @@ VAR
 	i: INT;
 END_VAR
 
-(*
-version 1.1	4. apr. 2008
-programmer 	hugo
-tested by	tobias
-
-this function will return true if the given array is sorted in an ascending order.
-the function needs to be called:	array_sorted(adr("array"),sizeof("array"));
-because this function works with pointers its very time efficient and it needs no extra memory.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[stop := UINT_TO_INT(SHR(size,2)-2);
 FOR i := 0 TO stop DO

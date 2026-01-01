@@ -1,7 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FT_RMP" Id="{ec89fabb-ee06-43bf-8f33-b02d1f51aac8}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FT_RMP
+    <Declaration><![CDATA[(*
+	version 1.4	25 jan 2008
+	programmer 	oscat
+	tested BY		oscat
+
+this ramp function follows an input signal with a linear ramp up or down, the up or down speed can be set with KF and KR.
+a K factor of 1 means 1 unit per second on the output. K factors can only be positive and not negative.
+a busy output signals the ramp is running or busy false means the in value is present on the output.
+a rmp input false means the output follows the input dierctly while a rmp = true means the output follows the input with a ramp.
+a updn output signal the directon of the ramp (up or down).
+
+*)
+FUNCTION_BLOCK FT_RMP
 VAR_INPUT
 	Rmp : BOOL := TRUE;
 	in : REAL;
@@ -19,18 +31,7 @@ VAR
 	init: BOOL;
 END_VAR
 
-(*
-	version 1.4	25 jan 2008
-	programmer 	oscat
-	tested BY		oscat
-
-this ramp function follows an input signal with a linear ramp up or down, the up or down speed can be set with KF and KR.
-a K factor of 1 means 1 unit per second on the output. K factors can only be positive and not negative.
-a busy output signals the ramp is running or busy false means the in value is present on the output.
-a rmp input false means the output follows the input dierctly while a rmp = true means the output follows the input with a ramp.
-a updn output signal the directon of the ramp (up or down).
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read system time *)
 tx := DWORD_TO_TIME(T_PLC_MS()) - last;

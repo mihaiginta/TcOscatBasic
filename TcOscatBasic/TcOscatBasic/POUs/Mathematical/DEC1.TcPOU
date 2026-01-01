@@ -1,14 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DEC1" Id="{9e7fec9f-5a45-4f23-82e0-40454f67ee1e}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION DEC1 : INT
-VAR_INPUT
-	X : INT;
-	N : INT;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.1	27. oct. 2008
 programmer 	hugo
 tested by	oscat
@@ -16,7 +9,15 @@ tested by	oscat
 This is a decrement function which decrements the variable X by 1 and if 0 is reached, it begins with N-1 again.
 _dec1(X,3) will generate 2,1,0,2,...
 
-*)]]></Declaration>
+*)
+FUNCTION DEC1 : INT
+VAR_INPUT
+	X : INT;
+	N : INT;
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF X = 0 THEN
 	DEC1 := N - 1;

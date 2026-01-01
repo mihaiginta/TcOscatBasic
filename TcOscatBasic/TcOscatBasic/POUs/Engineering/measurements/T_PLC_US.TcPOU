@@ -1,7 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="T_PLC_US" Id="{47ea9226-871a-406d-94ac-e6b3a829d24e}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION T_PLC_US : DWORD
+    <Declaration><![CDATA[(*
+version 1.2	16 nov 2008
+programmer 	hugo
+tested by	tobias
+
+T_PLC_US reads the internal PLC timer and return the time, it has the advantage to be able to set a debug mode
+and speed up the counter to test the plc timer overrun which occurs every 50 days respectively 25 days at siemens S7
+this routine also allows to correct the behavior of s7 where the internal plc counter will not count all 32 bits.
+
+*)
+FUNCTION T_PLC_US : DWORD
 VAR CONSTANT
 	debug : BOOL := 0;
 	N : INT := 0;
@@ -11,16 +21,7 @@ VAR
 	tx : TIME;
 END_VAR
 
-(*
-version 1.2	16 nov 2008
-programmer 	hugo
-tested by	tobias
-
-T_PLC_US reads the internal PLC timer and return the time, it has the advantage to be able to set a debug mode
-and speed up the counter to test the plc timer overrun which occurs every 50 days respectively 25 days at siemens S7
-this routine also allows to correct the behavior of s7 where the internal plc counter will not count all 32 bits.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[tx := TIME();
 T_PLC_US := TIME_TO_DWORD(Tx)*1000;

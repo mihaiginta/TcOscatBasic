@@ -1,7 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ARRAY_AVG" Id="{fe8256fe-7155-4621-81ee-63b5933aeab0}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION ARRAY_AVG : REAL
+    <Declaration><![CDATA[(*
+version 1.3	10. mar. 2009
+programmer 	hugo
+tested by		tobias
+
+this function will calculate the average of a given array.
+the function needs to be called:	array_avg(adr("array"),sizeof("array"));
+because this function works with pointers its very time efficient and it needs no extra memory.
+
+*)
+FUNCTION ARRAY_AVG : REAL
 VAR_INPUT
 	pt : POINTER TO ARRAY[0..32000] OF REAL;
 	size : UINT;
@@ -11,16 +21,7 @@ VAR
 	stop: UINT;
 END_VAR
 
-(*
-version 1.3	10. mar. 2009
-programmer 	hugo
-tested by		tobias
-
-this function will calculate the average of a given array.
-the function needs to be called:	array_avg(adr("array"),sizeof("array"));
-because this function works with pointers its very time efficient and it needs no extra memory.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[stop := SHR(size,2)-1;
 ARRAY_AVG := pt^[0];

@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="REFLECT" Id="{776b91c1-3f1d-414e-8d5e-bed5efb8f7c3}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION REFLECT : DWORD
+    <Declaration><![CDATA[(*
+	version 1.0	16. jan 2011
+	programmer 	hugo
+	tested BY		tobias
+
+This function reverses the specified amount of bits from bit 0 to bit n within a dword  while L specifies the amount of Bits to be reflected.
+
+*)
+FUNCTION REFLECT : DWORD
 VAR_INPUT
 	D : DWORD;
 	L : INT;
@@ -11,14 +19,7 @@ VAR
 END_VAR
 
 
-(*
-	version 1.0	16. jan 2011
-	programmer 	hugo
-	tested BY		tobias
 
-This function reverses the specified amount of bits from bit 0 to bit n within a dword  while L specifies the amount of Bits to be reflected.
-
-*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[REFLECT := 0;

@@ -1,7 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SEQUENCE_4" Id="{40004f87-c396-4b1f-a1b7-59bd56f79551}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK SEQUENCE_4
+    <Declaration><![CDATA[(*
+version 1.5	13. mar. 2009
+programmer 	oscat
+tested by		hans
+
+sequence_4 enables run when a low to high transition is present on start.
+a low to high transition on start will restart the sequencer at any time while a rst will hold the sequencer in reset while true.
+after run is enabled with a rising edge on start the sequencer waits for wait0 on in0 to enable q0 which stays on for delay0.
+the next cycle starts with wait1, continues with delay 1 and so on...
+if an edge is not detected during the wait period, the sequencer will then display the error number on the status output.
+the status numbers 1..4 are errors in step 0..3.
+after the last step that sets q3, the sequencer leaves q3 on for delay3 and then resets to the initial state.
+a step output will indicate the current step of the sequencer and will also be present with a fault condition.
+after the first output is turened on the sequencer switches from q0 to q1 and so on, at any time there is only one output enabled.
+if an input signal is not detected during a wait period, the sequencer will display the error number ( 1 for in0, 2 for in1 .... ).
+when an error is present and the config variable stop_on_error is set then the sequencer will stop. otherwise it will continue.
+The status output will also display 110 for waiting and 111 for sequence running.
+*)
+FUNCTION_BLOCK SEQUENCE_4
 VAR_INPUT
 	in0 : BOOL := TRUE;
 	in1 : BOOL := TRUE;
@@ -38,24 +56,7 @@ VAR
 	init: BOOL;
 END_VAR
 
-(*
-version 1.5	13. mar. 2009
-programmer 	oscat
-tested by		hans
-
-sequence_4 enables run when a low to high transition is present on start.
-a low to high transition on start will restart the sequencer at any time while a rst will hold the sequencer in reset while true.
-after run is enabled with a rising edge on start the sequencer waits for wait0 on in0 to enable q0 which stays on for delay0.
-the next cycle starts with wait1, continues with delay 1 and so on...
-if an edge is not detected during the wait period, the sequencer will then display the error number on the status output.
-the status numbers 1..4 are errors in step 0..3.
-after the last step that sets q3, the sequencer leaves q3 on for delay3 and then resets to the initial state.
-a step output will indicate the current step of the sequencer and will also be present with a fault condition.
-after the first output is turened on the sequencer switches from q0 to q1 and so on, at any time there is only one output enabled.
-if an input signal is not detected during a wait period, the sequencer will display the error number ( 1 for in0, 2 for in1 .... ).
-when an error is present and the config variable stop_on_error is set then the sequencer will stop. otherwise it will continue.
-The status output will also display 110 for waiting and 111 for sequence running.
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read sps timer *)
 tx := DWORD_TO_TIME(T_PLC_MS());

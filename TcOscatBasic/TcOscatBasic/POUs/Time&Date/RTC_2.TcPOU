@@ -1,7 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="RTC_2" Id="{af5afbdb-9ab6-4066-a645-570faaaae2bc}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK RTC_2
+    <Declaration><![CDATA[(*
+version 1.5	3. Feb. 2021
+programmer 	hugo
+tested by		tobias
+
+RTC_2 is a real time clock module which runs utc and generates local time from utc.
+daylight savings time can be enabled with den and an additional local time is generated with a delay of ofs im minutes.
+
+*)
+FUNCTION_BLOCK RTC_2
 VAR_INPUT
 	SET : BOOL;
 	SDT : DT;
@@ -19,15 +28,7 @@ VAR
 	RT : RTC_MS;
 END_VAR
 
-(*
-version 1.5	3. Feb. 2021
-programmer 	hugo
-tested by		tobias
-
-RTC_2 is a real time clock module which runs utc and generates local time from utc.
-daylight savings time can be enabled with den and an additional local time is generated with a delay of ofs im minutes.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* call rtc *)
 RT(SET := SET, SDT := SDT, SMS := SMS);

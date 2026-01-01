@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SET_TOD" Id="{c92650c3-cafb-4da5-b24d-0239958b9b7c}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION SET_TOD : TOD
+    <Declaration><![CDATA[(*
+version 1.5	16. mar 2008
+programmer 	hugo
+tested by	tobias
+
+creates tod from hour minute and second
+
+*)
+FUNCTION SET_TOD : TOD
 VAR_INPUT
 	hour : INT;
 	minute : INT;
@@ -9,14 +17,7 @@ VAR_INPUT
 END_VAR
 
 
-(*
-version 1.5	16. mar 2008
-programmer 	hugo
-tested by	tobias
-
-creates tod from hour minute and second
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[SET_TOD := DWORD_TO_TOD(REAL_TO_DWORD(SECOND * 1000.0) + INT_TO_DWORD(MINUTE) * 60000 + INT_TO_DWORD(HOUR) * 3600000);
 

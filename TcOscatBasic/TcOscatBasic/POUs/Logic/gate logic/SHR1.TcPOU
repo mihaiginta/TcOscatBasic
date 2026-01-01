@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SHR1" Id="{75657c1a-e171-48df-9beb-a26b1feecfd5}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION SHR1 : DWORD
+    <Declaration><![CDATA[(*
+version 1.1	27 dec 2007
+programmer 	hugo
+tested by		tobias
+
+SHR1 shifts N bits to the right filling the new bits with 1
+
+*)
+FUNCTION SHR1 : DWORD
 VAR_INPUT
 	IN : DWORD;
 	N : INT;
@@ -10,14 +18,7 @@ VAR CONSTANT
 	temp : DWORD := 16#FFFF_FFFF;
 END_VAR
 
-(*
-version 1.1	27 dec 2007
-programmer 	hugo
-tested by		tobias
-
-SHR1 shifts N bits to the right filling the new bits with 1
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[SHR1 := SHL(temp,32-N) OR SHR(IN,N);
 

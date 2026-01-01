@@ -1,21 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ATAN2" Id="{c54f0d5b-66f5-49b7-b184-1eca7a031f23}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION ATAN2 : REAL
-VAR_INPUT
-	Y : REAL;
-	X : REAL;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.2	10. mar. 2009
 programmer 	hugo
 tested by		oscat
 
 this function calculates the angle in a coordinate system in rad.
 
-*)]]></Declaration>
+*)
+FUNCTION ATAN2 : REAL
+VAR_INPUT
+	Y : REAL;
+	X : REAL;
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF X > 0.0 THEN
 	ATAN2 := ATAN(Y/X);

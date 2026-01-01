@@ -1,7 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FT_MIN_MAX" Id="{279bfdfd-0500-4a25-ad34-b8ec87b09b4f}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FT_MIN_MAX
+    <Declaration><![CDATA[(*
+version 1.0	1 sep 2006
+programmer 	hugo
+tested by		tobias
+
+this function block stores the min and max value of an input signal.
+when rst is true the mn and mx outputs are set to the in value.
+when a rst is never active the function autoresets to the in value at startup.
+since the input might not be present at first cycle the mn and mx are set during second cycle.
+
+*)
+FUNCTION_BLOCK FT_MIN_MAX
 VAR_INPUT
 	in : REAL;
 	rst : BOOL;
@@ -14,17 +25,7 @@ VAR
 	init: BOOL;
 END_VAR
 
-(*
-version 1.0	1 sep 2006
-programmer 	hugo
-tested by		tobias
-
-this function block stores the min and max value of an input signal.
-when rst is true the mn and mx outputs are set to the in value.
-when a rst is never active the function autoresets to the in value at startup.
-since the input might not be present at first cycle the mn and mx are set during second cycle.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF rst OR NOT init THEN
 	mn := in;

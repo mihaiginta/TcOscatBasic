@@ -1,7 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FT_AVG" Id="{1d9e93ca-106f-4a16-95a1-37bb40673bae}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FT_AVG
+    <Declaration><![CDATA[(*
+version 1.5	10. mar. 2009
+programmer 	hugo
+tested by		oscat
+
+this function calculates the moving average over n samples from a sequential input
+the input values are shifted into an N deep buffer and the avg of this buffer is diplayed at anytime on the output.
+a rst will load the buffer with the current in value..
+
+*)
+FUNCTION_BLOCK FT_AVG
 VAR_INPUT
 	IN : REAL;
 	E : BOOL := TRUE;
@@ -17,16 +27,7 @@ VAR
 	init : BOOL;
 END_VAR
 
-(*
-version 1.5	10. mar. 2009
-programmer 	hugo
-tested by		oscat
-
-this function calculates the moving average over n samples from a sequential input
-the input values are shifted into an N deep buffer and the avg of this buffer is diplayed at anytime on the output.
-a rst will load the buffer with the current in value..
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* limit n to a max of 32 because delay can do max 32 cycles *)
 buff.N := LIMIT(0, N, 32);

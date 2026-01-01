@@ -1,7 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CMP" Id="{2f83ab50-56f0-489d-bc96-79394f84bb42}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION CMP : BOOL
+    <Declaration><![CDATA[(*
+	version 1.1	10. mar. 2009
+	programmer 	hugo
+	tested by		tobias
+
+this function checks two inputs x and y if they are identical with the first N digits
+example : cmp(3.141516,3.141517,6 is true.
+
+*)
+FUNCTION CMP : BOOL
 VAR_INPUT
 	X,Y : REAL;
 	N : INT;
@@ -11,15 +20,7 @@ VAR
 END_VAR
 
 
-(*
-	version 1.1	10. mar. 2009
-	programmer 	hugo
-	tested by		tobias
-
-this function checks two inputs x and y if they are identical with the first N digits
-example : cmp(3.141516,3.141517,6 is true.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[tmp := ABS(x);
 IF tmp > 0.0 THEN

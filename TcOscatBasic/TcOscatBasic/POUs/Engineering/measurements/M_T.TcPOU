@@ -1,7 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="M_T" Id="{0c0b96d4-aaba-4688-9c65-674293ef23f1}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK M_T
+    <Declaration><![CDATA[(*
+version 1.4	10. mar. 2009
+programmer 	hugo
+tested BY		oscat
+
+m_t measures the with of a high pulse and returs the last measured pulse width on output PT.
+a second output ET is starting from 0 at the rising edge and counting up until the falling edge occurs and resetts et to 0.
+the asynchrtonous input rst can reset the outputs at any time.
+tmax defines a maximum measurable time, if this value is exceeded the outputs will be reset to 0.
+
+*)
+FUNCTION_BLOCK M_T
 VAR_INPUT
 	IN : BOOL;
 	TMAX : TIME := t#10d;
@@ -17,17 +28,7 @@ VAR
 	tx: TIME;
 END_VAR
 
-(*
-version 1.4	10. mar. 2009
-programmer 	hugo
-tested BY		oscat
-
-m_t measures the with of a high pulse and returs the last measured pulse width on output PT.
-a second output ET is starting from 0 at the rising edge and counting up until the falling edge occurs and resetts et to 0.
-the asynchrtonous input rst can reset the outputs at any time.
-tmax defines a maximum measurable time, if this value is exceeded the outputs will be reset to 0.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read system time *)
 tx := DWORD_TO_TIME(T_PLC_MS());

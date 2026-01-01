@@ -1,7 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FT_INT2" Id="{031d3f91-fdee-438f-ace5-938eb3e6e80d}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FT_INT2
+    <Declaration><![CDATA[(*
+version 1.2	11. mar. 2009
+programmer 	hugo
+tested by		oscat
+
+FT_int2 is an integrator with input IN and factor K.
+integration is only done while run = true, if run is false integration is stopped and the out remains at the last value.
+if run is left unconnected, run is considered true by the function block.
+the out_min and out_max values can be set to ,imit the output value range.
+the default for K is 1.
+FT_INT2 has double presision accuracy (14 digits).
+
+
+*)
+FUNCTION_BLOCK FT_INT2
 VAR_INPUT
 	IN : REAL;
 	K : REAL := 1.0;
@@ -21,20 +35,7 @@ VAR
 END_VAR
 
 
-(*
-version 1.2	11. mar. 2009
-programmer 	hugo
-tested by		oscat
-
-FT_int2 is an integrator with input IN and factor K.
-integration is only done while run = true, if run is false integration is stopped and the out remains at the last value.
-if run is left unconnected, run is considered true by the function block.
-the out_min and out_max values can be set to ,imit the output value range.
-the default for K is 1.
-FT_INT2 has double presision accuracy (14 digits).
-
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF RST THEN
 	val := R2_SET(0.0);

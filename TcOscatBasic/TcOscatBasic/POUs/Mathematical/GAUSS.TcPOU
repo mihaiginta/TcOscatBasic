@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="GAUSS" Id="{753d2b83-c8d5-4e62-a544-74b9967abe43}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION GAUSS : REAL
+    <Declaration><![CDATA[(*
+version 1.2	10. mar. 2009
+programmer 	hugo
+tested by		tobias
+
+this function calculates the gaussian density function
+
+*)
+FUNCTION GAUSS : REAL
 VAR_INPUT
 	X : REAL;
 	U : REAL;
@@ -13,14 +21,7 @@ VAR
 END_VAR
 
 
-(*
-version 1.2	10. mar. 2009
-programmer 	hugo
-tested by		tobias
-
-this function calculates the gaussian density function
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[temp := X - U;
 si_inv := 1.0  / si;

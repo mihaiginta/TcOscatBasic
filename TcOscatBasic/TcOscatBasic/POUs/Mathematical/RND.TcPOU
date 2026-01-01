@@ -1,7 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="RND" Id="{7e9931ab-bf46-45de-99df-c3e9a72435b5}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION RND : REAL
+    <Declaration><![CDATA[(*
+version 1.2	10. mar. 2009
+programmer 	hugo
+tested by		tobias
+
+this function rounds a real down to n digits total.
+round(3.1415,2) = 3.1
+
+*)
+FUNCTION RND : REAL
 VAR_INPUT
 	X : REAL;
 	N : INT;
@@ -10,15 +19,7 @@ VAR
 	M : REAL;
 END_VAR
 
-(*
-version 1.2	10. mar. 2009
-programmer 	hugo
-tested by		tobias
-
-this function rounds a real down to n digits total.
-round(3.1415,2) = 3.1
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF X = 0.0 THEN
 	RND := 0.0;

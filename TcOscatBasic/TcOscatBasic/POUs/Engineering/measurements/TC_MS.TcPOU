@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TC_MS" Id="{783a9b32-e05c-4679-b1f8-1f3a925627c0}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK TC_MS
+    <Declaration><![CDATA[(*
+	version 1.0	13 mar 2008
+	programmer 	hugo
+	tested by		tobias
+
+TC_MS delivers the time it was last called on the output TC in Milliseconds.
+
+*)
+FUNCTION_BLOCK TC_MS
 
 VAR_OUTPUT
 	TC : DWORD;
@@ -12,14 +20,7 @@ VAR
 	last: DWORD;
 END_VAR
 
-(*
-	version 1.0	13 mar 2008
-	programmer 	hugo
-	tested by		tobias
-
-TC_MS delivers the time it was last called on the output TC in Milliseconds.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read system timer *)
 tx := T_PLC_MS();

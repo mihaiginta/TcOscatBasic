@@ -1,20 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ISC_UPPER" Id="{5ca37ea4-cf28-4791-86c3-f24cd3cf22ee}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION ISC_UPPER : BOOL
-VAR_INPUT
-	IN : BYTE;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.1	19. oct. 2008
 programmer 	hugo
 tested by	oscat
 
 ISC_upper checks if a character is uppercase
 
-*)]]></Declaration>
+*)
+FUNCTION ISC_UPPER : BOOL
+VAR_INPUT
+	IN : BYTE;
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF setup.EXTENDED_ASCII THEN
 	ISC_UPPER :=  ((in > 64) AND (in < 91)) OR (((in > 191) AND (in < 223)) AND (in <> 215));

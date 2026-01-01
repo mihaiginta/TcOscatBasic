@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="AIN1" Id="{1a43d680-3ce5-4592-a3a9-b584aaaa3bbf}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK AIN1
+    <Declaration><![CDATA[(*
+version 1.3	10. mar. 2009
+programmer 	oscat
+tested by		tobias
+
+Ain1 converts signals from A/D converters or other digital sources to an internal real value.
+
+*)
+FUNCTION_BLOCK AIN1
 VAR_INPUT
 	in : DWORD;
 END_VAR
@@ -32,14 +40,7 @@ VAR
 	tB: DWORD;
 END_VAR
 
-(*
-version 1.3	10. mar. 2009
-programmer 	oscat
-tested by		tobias
-
-Ain1 converts signals from A/D converters or other digital sources to an internal real value.
-
-*) ]]></Declaration>
+ ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* extract error bit *)
 error := ((SHR(in,error_bit) AND 16#0000_0001) = 1) OR (error_code_en AND error_code = in);

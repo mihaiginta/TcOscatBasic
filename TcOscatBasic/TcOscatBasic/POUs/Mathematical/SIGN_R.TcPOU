@@ -1,20 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SIGN_R" Id="{b0e16301-eeeb-4a67-9ebb-085681f398a6}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION SIGN_R : BOOL
-VAR_INPUT
-	in : REAL;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.4	10. mar. 2009
 programmer 	hugo
 tested by		tobias
 
 this function return true if the real input is negative
 
-*)]]></Declaration>
+*)
+FUNCTION SIGN_R : BOOL
+VAR_INPUT
+	in : REAL;
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[SIGN_R := in < 0.0;
 

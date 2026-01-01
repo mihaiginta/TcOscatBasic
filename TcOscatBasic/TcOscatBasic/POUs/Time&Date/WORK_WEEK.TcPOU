@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="WORK_WEEK" Id="{c719d78b-4cde-433b-bb79-b850f806db97}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION WORK_WEEK : INT
+    <Declaration><![CDATA[(*
+version 1.5	25. oct. 2008
+programmer 	hugo
+tested by	oscat
+
+calculates the work week for a given date according to iso8601
+
+*)
+FUNCTION WORK_WEEK : INT
 VAR_INPUT
 	idate : DATE;
 END_VAR
@@ -15,14 +23,7 @@ VAR
 	wm: INT;
 END_VAR
 
-(*
-version 1.5	25. oct. 2008
-programmer 	hugo
-tested by	oscat
-
-calculates the work week for a given date according to iso8601
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* berechne den 1.1 des jahres von idate. *)
 yr := YEAR_OF_DATE(idate);

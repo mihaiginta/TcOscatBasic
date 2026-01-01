@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CONTROL_SET1" Id="{53e2a02c-3d12-4d44-8083-c23a9a7faf36}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK CONTROL_SET1
+    <Declaration><![CDATA[(*
+version 1.1	11. mar. 2009
+programmer 	hugo
+tested by		tobias
+
+takahashi calculates controller parameters for P, PI and PID controllers based on the ziegler nichols method.
+
+*)
+FUNCTION_BLOCK CONTROL_SET1
 VAR_INPUT
 	Kt : REAL;
 	Tt : REAL;
@@ -25,14 +33,7 @@ VAR_OUTPUT
 END_VAR
 
 
-(*
-version 1.1	11. mar. 2009
-programmer 	hugo
-tested by		tobias
 
-takahashi calculates controller parameters for P, PI and PID controllers based on the ziegler nichols method.
-
-*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF pi AND PID THEN

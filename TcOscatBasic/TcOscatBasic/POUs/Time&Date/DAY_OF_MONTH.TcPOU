@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DAY_OF_MONTH" Id="{0d345c12-020f-471a-b941-2947c1fffba6}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION DAY_OF_MONTH : INT
+    <Declaration><![CDATA[(*
+version 2.1	10. mar. 2009
+programmer 	hugo
+tested by		tobias
+
+returns the day OF month for any DATE
+
+*)
+FUNCTION DAY_OF_MONTH : INT
 VAR_INPUT
 	IDATE : DATE;
 END_VAR
@@ -9,14 +17,7 @@ VAR
 	leap: INT;
 END_VAR
 
-(*
-version 2.1	10. mar. 2009
-programmer 	hugo
-tested by		tobias
-
-returns the day OF month for any DATE
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* calculate the day in the year *)
 DAY_OF_MONTH := DAY_OF_YEAR(idate);

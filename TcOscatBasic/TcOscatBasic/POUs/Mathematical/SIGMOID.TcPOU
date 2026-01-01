@@ -1,20 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SIGMOID" Id="{bc9e96dd-3015-4e56-bd45-bff070f83264}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION SIGMOID : REAL
-VAR_INPUT
-	X : REAL;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.2	10. mar. 2009
 programmer 	hugo
 tested by		tobias
 
 this function calculates the sigmoid function
 
-*)]]></Declaration>
+*)
+FUNCTION SIGMOID : REAL
+VAR_INPUT
+	X : REAL;
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF X > 20.0 THEN
 	SIGMOID := 1.0;

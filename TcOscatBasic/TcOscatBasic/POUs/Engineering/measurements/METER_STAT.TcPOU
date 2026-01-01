@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="METER_STAT" Id="{2cc8c400-f2fe-4dac-a515-25374571c864}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK METER_STAT
+    <Declaration><![CDATA[(*
+	version 1.3	18. jul. 2009
+	programmer 	oscat
+	tested BY		oscat
+
+METER_STAT runs statistics of a metered value, it calculates the current week, day, month and year consumption and stores the corresponding last day, week, month and year value.
+
+*)
+FUNCTION_BLOCK METER_STAT
 VAR_INPUT
 	IN : REAL;
 	DI : DATE;
@@ -25,14 +33,7 @@ VAR RETAIN
 	last_run: DATE;
 END_VAR
 
-(*
-	version 1.3	18. jul. 2009
-	programmer 	oscat
-	tested BY		oscat
-
-METER_STAT runs statistics of a metered value, it calculates the current week, day, month and year consumption and stores the corresponding last day, week, month and year value.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF rst THEN
 	Last_Day := 0.0;

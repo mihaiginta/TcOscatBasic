@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FIFO_32" Id="{02e1aae8-7154-4067-8b33-d1818f6df1f4}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FIFO_32
+    <Declaration><![CDATA[(* changing this value will chage the number of stored elements in the fifo *)
+FUNCTION_BLOCK FIFO_32
 VAR_INPUT
 	Din : DWORD;
 	E : BOOL := TRUE;
@@ -20,7 +21,7 @@ VAR
 	pw : INT;
 END_VAR
 VAR CONSTANT
-	n : INT := 32;	(* changing this value will chage the number of stored elements in the fifo *)
+	n : INT := 32;	
 END_VAR
 
 (*

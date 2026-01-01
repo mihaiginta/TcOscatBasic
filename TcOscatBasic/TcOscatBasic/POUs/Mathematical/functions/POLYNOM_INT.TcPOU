@@ -1,7 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="POLYNOM_INT" Id="{9802a783-412e-41b0-86d1-cc23940373e3}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION POLYNOM_INT : REAL
+    <Declaration><![CDATA[(*
+	version 1.3	10. mar. 2009
+	programmer 	oscat
+	tested BY		oscat
+
+POLYNOM_INT calculates an output based on a Polynom interpolation of up to 5 coordinates given in an array
+the indut coordinates have to start at the lowest array position and must be sorted ba ascending X values.
+
+*)
+FUNCTION POLYNOM_INT : REAL
 VAR_INPUT
 	X : REAL;
 	XY : ARRAY[1..5,0..1] OF REAL;
@@ -12,15 +21,7 @@ VAR
 	stop: INT;
 END_VAR
 
-(*
-	version 1.3	10. mar. 2009
-	programmer 	oscat
-	tested BY		oscat
-
-POLYNOM_INT calculates an output based on a Polynom interpolation of up to 5 coordinates given in an array
-the indut coordinates have to start at the lowest array position and must be sorted ba ascending X values.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(*make sure n is bound within the array size *)
 pts := MIN(pts, 5);

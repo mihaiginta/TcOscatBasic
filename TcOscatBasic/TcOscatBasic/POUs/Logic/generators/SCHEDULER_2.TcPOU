@@ -1,7 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SCHEDULER_2" Id="{1d5a21e0-71cb-41d6-81a0-bd7f13818d83}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK SCHEDULER_2
+    <Declaration><![CDATA[(*
+version 1.0	29. sep 2008
+programmer 	hugo
+tested by		tobias
+
+SCHEDULER_2 is used to call programs or function blocks at specific cycles.
+C0..C3 defines after how many cycles the output becomes active.
+O0..O3 defines a cycle offset at startup.
+
+*)
+FUNCTION_BLOCK SCHEDULER_2
 VAR_INPUT
 	E0 : BOOL;
 	E1 : BOOL;
@@ -20,16 +30,7 @@ VAR
 END_VAR
 
 
-(*
-version 1.0	29. sep 2008
-programmer 	hugo
-tested by		tobias
 
-SCHEDULER_2 is used to call programs or function blocks at specific cycles.
-C0..C3 defines after how many cycles the output becomes active.
-O0..O3 defines a cycle offset at startup.
-
-*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[Q0 := E0 AND (sx MOD C0 - O0 = 0);

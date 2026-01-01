@@ -1,7 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DRIVER_4C" Id="{d70e1821-46f7-4349-8b38-455421b24df2}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK DRIVER_4C
+    <Declaration><![CDATA[(*
+version 1.0	23. mar. 2009
+programmer 	hugo
+tested by	tobias
+
+driver_4C is a multi purpose driver.
+a rising edge on in switches from S0 state S1 and the next edge to state S2 and so on.
+in state S0 all outputs Q are FALSE.
+The stet of the Outputs in any state S? is configurable with setup variables.
+The variables S1..S5 define the states, while the sequence is terminated when a state Variable S? = 0.
+The lower bits 0..3 of the state vars S? are corresponding to the Outputs Q0..Q3
+
+*)
+FUNCTION_BLOCK DRIVER_4C
 VAR_INPUT
 	IN : BOOL;
 	RST : BOOL;
@@ -22,19 +35,7 @@ VAR
 	edge: BOOL;
 END_VAR
 
-(*
-version 1.0	23. mar. 2009
-programmer 	hugo
-tested by	tobias
-
-driver_4C is a multi purpose driver.
-a rising edge on in switches from S0 state S1 and the next edge to state S2 and so on.
-in state S0 all outputs Q are FALSE.
-The stet of the Outputs in any state S? is configurable with setup variables.
-The variables S1..S5 define the states, while the sequence is terminated when a state Variable S? = 0.
-The lower bits 0..3 of the state vars S? are corresponding to the Outputs Q0..Q3
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF RST OR off.Q THEN
 	SN := 0;

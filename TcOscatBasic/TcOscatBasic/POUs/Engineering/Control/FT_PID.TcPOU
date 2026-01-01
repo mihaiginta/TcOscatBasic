@@ -1,7 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FT_PID" Id="{12330e34-1f84-45a1-a1c1-134ba0db6102}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FT_PID
+    <Declaration><![CDATA[(*
+version 2.1	11. mar. 2009
+programmer 	hugo
+tested by		tobias
+
+FT_PI is a PI controller.
+The PID controller works according to the fomula Y = IN *(KP+ KI * INTEG(e) ).
+a rst will reset the integrator to 0
+ilim_h and iLim_l set the possible output range of the internal integrator.
+the output flags lim will signal that the output limits are active.
+
+default values for KP = 1, KI = 1, ILIM_L = -1E37, iLIM_H = +1E38.
+*)
+FUNCTION_BLOCK FT_PID
 VAR_INPUT
 	IN : REAL;
 	KP : REAL := 1.0;
@@ -21,19 +34,7 @@ VAR
 	diff : FT_DERIV;
 END_VAR
 
-(*
-version 2.1	11. mar. 2009
-programmer 	hugo
-tested by		tobias
 
-FT_PI is a PI controller.
-The PID controller works according to the fomula Y = IN *(KP+ KI * INTEG(e) ).
-a rst will reset the integrator to 0
-ilim_h and iLim_l set the possible output range of the internal integrator.
-the output flags lim will signal that the output limits are active.
-
-default values for KP = 1, KI = 1, ILIM_L = -1E37, iLIM_H = +1E38.
-*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* run integrator only if TN > 0 *)

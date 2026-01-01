@@ -1,7 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ONTIME" Id="{a93a01a2-7876-43a7-9951-2409895a9bd6}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK ONTIME
+    <Declaration><![CDATA[(*
+version 2.5	18. mar. 2011
+programmer 	oscat
+tested by		tobias
+
+ONTIME measures the ontime of a signal in seconds.
+the output SECONDS is of type DWORD which results in a total measurement range of 1 second up to 136 years.
+internally ontime works with a resolution of milliseconds
+
+*)
+FUNCTION_BLOCK ONTIME
 VAR_INPUT
 	IN : BOOL;
 	RST : BOOL;
@@ -18,16 +28,7 @@ VAR
 	ms: DWORD;
 END_VAR
 
-(*
-version 2.5	18. mar. 2011
-programmer 	oscat
-tested by		tobias
-
-ONTIME measures the ontime of a signal in seconds.
-the output SECONDS is of type DWORD which results in a total measurement range of 1 second up to 136 years.
-internally ontime works with a resolution of milliseconds
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read system time *)
 tx := T_PLC_MS();

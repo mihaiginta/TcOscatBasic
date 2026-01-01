@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="PARSET2" Id="{ca8b29f6-a7ca-49ed-8eda-0de4778be351}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK PARSET2
+    <Declaration><![CDATA[(*
+version 1.0	3 nov 2007
+programmer 	hugo
+tested by	tobias
+
+parset2 selects on of 4 parameter sets depending on the value of X. if TC is specified, the change of the outputs
+is ramped by the time TC
+*)
+FUNCTION_BLOCK PARSET2
 VAR_INPUT
 	X : REAL;
 END_VAR
@@ -21,14 +29,7 @@ VAR
 	init: BOOL;
 END_VAR
 
-(*
-version 1.0	3 nov 2007
-programmer 	hugo
-tested by	tobias
 
-parset2 selects on of 4 parameter sets depending on the value of X. if TC is specified, the change of the outputs
-is ramped by the time TC
-*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* init sequence *)

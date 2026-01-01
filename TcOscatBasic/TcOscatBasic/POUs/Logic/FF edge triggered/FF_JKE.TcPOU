@@ -1,7 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FF_JKE" Id="{bcee94f9-a3e7-4883-b5fa-1740faa9cad0}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FF_JKE
+    <Declaration><![CDATA[(*
+version 1.2	30. oct. 2008
+programmer 	hugo
+tested by	oscat
+
+JK-type flip flop with set, reset and rising clock trigger
+set and reset are asynchron while the FF is rising edge triggered
+J=0 and K=0 and CLK >>> no action
+J=1 and K=0 and CLK >>> output = 1
+J=0 and K=1 and CLK >>> output = 0
+J=1 and K=1 and CLK >>> toggle output
+
+
+*)
+FUNCTION_BLOCK FF_JKE
 VAR_INPUT
 	SET : BOOL;
 	J : BOOL;
@@ -17,20 +31,7 @@ VAR
 END_VAR
 
 
-(*
-version 1.2	30. oct. 2008
-programmer 	hugo
-tested by	oscat
 
-JK-type flip flop with set, reset and rising clock trigger
-set and reset are asynchron while the FF is rising edge triggered
-J=0 and K=0 and CLK >>> no action
-J=1 and K=0 and CLK >>> output = 1
-J=0 and K=1 and CLK >>> output = 0
-J=1 and K=1 and CLK >>> toggle output
-
-
-*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF rst OR set THEN

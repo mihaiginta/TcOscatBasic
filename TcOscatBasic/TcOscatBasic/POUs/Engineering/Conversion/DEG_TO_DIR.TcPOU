@@ -1,7 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DEG_TO_DIR" Id="{ae920276-4828-414e-b2d9-3b1a670fe106}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION DEG_TO_DIR : STRING(3)
+    <Declaration><![CDATA[(*
+version 1.1	22. oct. 2008
+programmer 	hugo
+tested by		oscat
+
+this function converts degrees in compass direction.
+the function supports output in english (L=0) and german (L=1).
+
+*)
+FUNCTION DEG_TO_DIR : STRING(3)
 VAR_INPUT
 	DEG : INT;
 	N : INT;
@@ -12,15 +21,7 @@ VAR
 END_VAR
 
 
-(*
-version 1.1	22. oct. 2008
-programmer 	hugo
-tested by		oscat
-
-this function converts degrees in compass direction.
-the function supports output in english (L=0) and german (L=1).
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF L = 0 THEN ly := LANGUAGE.DEFAULT; ELSE ly := MIN(L, LANGUAGE.LMAX); END_IF;
 DEG_TO_DIR := LANGUAGE.DIRS[ly, ((SHL(DEG,N-1) + 45) / 90) MOD SHL(INT#2,N)*SHR(INT#8,N)];

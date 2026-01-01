@@ -1,13 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SDT_TO_DATE" Id="{b5f070f8-74b3-4f81-a781-0dca426c27c5}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION SDT_TO_DATE : DATE
-VAR_INPUT
-	DTI : SDT;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.0	18. oct 2008
 programmer 	hugo
 tested by	oscat
@@ -15,6 +9,13 @@ tested by	oscat
 converts Structured date time (SDT) to Date Time
 
 *)
+FUNCTION SDT_TO_DATE : DATE
+VAR_INPUT
+	DTI : SDT;
+END_VAR
+
+
+
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[SDT_TO_DATE := SET_DATE(DTI.YEAR, DTI.MONTH, DTI.DAY);

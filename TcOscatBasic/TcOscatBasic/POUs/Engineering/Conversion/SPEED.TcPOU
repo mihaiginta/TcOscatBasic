@@ -1,7 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SPEED" Id="{2f436a6a-1c84-4b95-bc84-d55e71e669ae}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK SPEED
+    <Declaration><![CDATA[(*
+version 1.1	11. mar. 2009
+programmer 	hugo
+tested by		oscat
+
+this function converts different speed units
+any unused input can simply be left open.
+different inputs connected at the same time will be added up.
+
+*)
+FUNCTION_BLOCK SPEED
 VAR_INPUT
 	ms : REAL;
 	kmh : REAL;
@@ -16,16 +26,7 @@ VAR_OUTPUT
 END_VAR
 
 
-(*
-version 1.1	11. mar. 2009
-programmer 	hugo
-tested by		oscat
-
-this function converts different speed units
-any unused input can simply be left open.
-different inputs connected at the same time will be added up.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[Yms := ms +
 		kmh * 0.27777777777778 +

@@ -1,7 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="_STRING_TO_BUFFER" Id="{717cf9b7-e379-466e-b241-1cff8b134584}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION _STRING_TO_BUFFER : INT
+    <Declaration><![CDATA[(*
+version 1.4	2. jan. 2012
+programmer 	hugo
+tested by		oscat
+
+this function will copy a string into an array of byte starting at position pos.
+the function needs to be called:	_String_To_buffer(str, pos, adr("array"),sizeof("array"));
+this function will manipulate the array directly in memory and returns the position after the input string when finished.
+because this function works with pointers its very time efficient and it needs no extra memory.
+
+*)
+FUNCTION _STRING_TO_BUFFER : INT
 VAR_INPUT
 	STR : STRING(STRING_LENGTH);
 	POS : INT;
@@ -15,17 +26,7 @@ VAR
 END_VAR
 
 
-(*
-version 1.4	2. jan. 2012
-programmer 	hugo
-tested by		oscat
-
-this function will copy a string into an array of byte starting at position pos.
-the function needs to be called:	_String_To_buffer(str, pos, adr("array"),sizeof("array"));
-this function will manipulate the array directly in memory and returns the position after the input string when finished.
-because this function works with pointers its very time efficient and it needs no extra memory.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[ps := ADR(str);
 end := MIN(pos + LEN(str), UINT_TO_INT(size));

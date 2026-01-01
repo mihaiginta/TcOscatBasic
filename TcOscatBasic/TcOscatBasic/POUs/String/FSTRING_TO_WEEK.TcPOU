@@ -1,7 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FSTRING_TO_WEEK" Id="{01bb196b-a467-439d-b627-f152b38b955a}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION FSTRING_TO_WEEK : BYTE
+    <Declaration><![CDATA[(*
+version 1.1	25. oct. 2008
+programmer 	hugo
+tested by	oscat
+
+FSTRING_TO_WEEK converts a list of weekdays into a byte where each bit represents a day of the week.
+bit 6 = mo, 0 = su;
+
+*)
+FUNCTION FSTRING_TO_WEEK : BYTE
 VAR_INPUT
 	WEEK : STRING(60);
 	LANG : INT;
@@ -11,15 +20,7 @@ VAR
 END_VAR
 
 
-(*
-version 1.1	25. oct. 2008
-programmer 	hugo
-tested by	oscat
-
-FSTRING_TO_WEEK converts a list of weekdays into a byte where each bit represents a day of the week.
-bit 6 = mo, 0 = su;
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[pos := FIND(WEEK, ',');
 WHILE pos > 0 DO

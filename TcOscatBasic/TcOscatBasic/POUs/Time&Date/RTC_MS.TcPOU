@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="RTC_MS" Id="{de9b04e9-4f25-4b4b-9b0a-88e0f2209fe0}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK RTC_MS
+    <Declaration><![CDATA[(*
+version 1.1	20. feb. 2008
+programmer 	hugo
+tested by	tobias
+
+RTC_MS is a real time clock module which can be set to SDT when set is TRUE and the outputs XDT and XT present the DateTime and TOD with a resolution of milliseconds.
+
+*)
+FUNCTION_BLOCK RTC_MS
 VAR_INPUT
 	SET : BOOL;
 	SDT : DT;
@@ -17,14 +25,7 @@ VAR
 	Tx: DWORD;
 END_VAR
 
-(*
-version 1.1	20. feb. 2008
-programmer 	hugo
-tested by	tobias
 
-RTC_MS is a real time clock module which can be set to SDT when set is TRUE and the outputs XDT and XT present the DateTime and TOD with a resolution of milliseconds.
-
-*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[tx := T_PLC_MS();

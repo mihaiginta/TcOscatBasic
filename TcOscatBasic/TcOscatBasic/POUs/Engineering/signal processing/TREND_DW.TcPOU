@@ -1,7 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TREND_DW" Id="{4a8fa0d9-099e-44bc-9bbc-181697fba3b4}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK TREND_DW
+    <Declaration><![CDATA[(*
+version 1.2	14. mar. 2009
+programmer 	hugo
+tested by		oscat
+
+trend_DW analyses the trend of a input signal.
+The Output Q is True if the input X is >= last_X and is false if the input X is <= last_X
+in addition to the trend the output TU will be high for one cycle to signal a rising of the input value X
+and  TD will signal a decreasing value on the input X.
+in case of a change the output D will show the delta of the input to the last input value.
+
+
+*)
+FUNCTION_BLOCK TREND_DW
 VAR_INPUT
 	X : DWORD;
 END_VAR
@@ -15,19 +28,7 @@ VAR
 	last_X: DWORD;
 END_VAR
 
-(*
-version 1.2	14. mar. 2009
-programmer 	hugo
-tested by		oscat
-
-trend_DW analyses the trend of a input signal.
-The Output Q is True if the input X is >= last_X and is false if the input X is <= last_X
-in addition to the trend the output TU will be high for one cycle to signal a rising of the input value X
-and  TD will signal a decreasing value on the input X.
-in case of a change the output D will show the delta of the input to the last input value.
-
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF X > last_X THEN
 	TU := TRUE;

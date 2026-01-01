@@ -1,7 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FILTER_WAV" Id="{952e49a1-e9a6-4447-941a-1e0d864e1ad7}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FILTER_WAV
+    <Declaration><![CDATA[(*
+version 1.2	10. mar. 2009
+programmer 	hugo
+tested by		oscat
+
+FILTER_WAV is a moving average filter with programmable length N for DWORD Data.
+
+*)
+FUNCTION_BLOCK FILTER_WAV
 VAR_INPUT
 	X : REAL;
 	W : ARRAY[0..15] OF REAL;
@@ -17,14 +25,7 @@ VAR
 	n: INT;
 END_VAR
 
-(*
-version 1.2	10. mar. 2009
-programmer 	hugo
-tested by		oscat
-
-FILTER_WAV is a moving average filter with programmable length N for DWORD Data.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* startup initialisation *)
 IF NOT init OR rst THEN

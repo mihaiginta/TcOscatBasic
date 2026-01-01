@@ -1,20 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="REVERSE" Id="{bffd8a9a-3ea0-4be3-acee-022aa8f946a2}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION REVERSE : BYTE
-VAR_INPUT
-	IN : BYTE;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 	version 1.2	3. feb 2021
 	programmer 	hugo
 	tested BY		tobias
 
 This function reverses the bits of a byte so that after execution bit 7 is at bit 0 location and so forth.
 
-*)]]></Declaration>
+*)
+FUNCTION REVERSE : BYTE
+VAR_INPUT
+	IN : BYTE;
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* new code donated by rebler wolfgang *)
 REVERSE := ROR(in,1) AND 2#10001000 OR ROL(in,1) AND 2#00010001 OR ROR(in,3) AND 2#01000100 OR ROL(in,3) AND 2#00100010;

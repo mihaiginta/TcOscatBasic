@@ -1,7 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MANUAL_2" Id="{dccae171-3b57-471b-a363-deb4541d2154}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK MANUAL_2
+    <Declaration><![CDATA[(*
+version 1.0	22. sep. 2008
+programmer 	hugo
+tested by	oscat
+
+MANUAL_2 is a manual override for boolean signals.
+it has static force high and low as well as a manual input.
+
+*)
+FUNCTION_BLOCK MANUAL_2
 VAR_INPUT
 	IN : BOOL;
 	ENA : BOOL;
@@ -15,15 +24,7 @@ VAR_OUTPUT
 END_VAR
 
 
-(*
-version 1.0	22. sep. 2008
-programmer 	hugo
-tested by	oscat
-
-MANUAL_2 is a manual override for boolean signals.
-it has static force high and low as well as a manual input.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF ena THEN
 	IF NOT ON AND NOT OFF THEN

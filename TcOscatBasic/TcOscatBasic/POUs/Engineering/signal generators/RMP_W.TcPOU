@@ -1,7 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="RMP_W" Id="{37f45f24-34ce-4611-8703-ee30c12cbaf9}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK RMP_W
+    <Declaration><![CDATA[(*
+version 2.0	23. oct. 2008
+programmer 	oscat
+tested BY	oscat
+
+this ramp generator generates a Word wide ramp with 65535 steps
+the generator has an asynchronous set and reset
+the ramp is controlled by PT which is the total ramp time for a full sweep from 0..65535
+an UD input controlls the direction Up or Down and the E input enables the ramp generation
+a busy output indicates that the ramp is running, busy false means output is stable.
+the outputs low and high will be true when the output has reached its max or min value.
+*)
+FUNCTION_BLOCK RMP_W
 VAR_INPUT
 	SET : BOOL;
 	PT : TIME;
@@ -19,18 +31,7 @@ VAR
 	rmp : _RMP_W;
 END_VAR
 
-(*
-version 2.0	23. oct. 2008
-programmer 	oscat
-tested BY	oscat
-
-this ramp generator generates a Word wide ramp with 65535 steps
-the generator has an asynchronous set and reset
-the ramp is controlled by PT which is the total ramp time for a full sweep from 0..65535
-an UD input controlls the direction Up or Down and the E input enables the ramp generation
-a busy output indicates that the ramp is running, busy false means output is stable.
-the outputs low and high will be true when the output has reached its max or min value.
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* generate ramp *)
 rmp(dir := UP, E := E, TR := PT, rmp := out);
