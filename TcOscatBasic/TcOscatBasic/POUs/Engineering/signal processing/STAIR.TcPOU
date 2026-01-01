@@ -1,7 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="STAIR" Id="{c11c23b2-1b9f-4700-81e0-09ef63d2b401}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
+    <Declaration><![CDATA[FUNCTION STAIR : REAL
+VAR_INPUT
+	X : REAL;
+	D : REAL;
+END_VAR
+
+
+(*
 version 1.4	10. mar. 2009
 programmer 	oscat
 tested by		tobias
@@ -9,15 +16,7 @@ tested by		tobias
 the function stair converts an anlog input signal to a staircase like output.
 D is the step width for the output signal.
 if D = 0 then the output follows the input without a chage.
-*)
-FUNCTION STAIR : REAL
-VAR_INPUT
-	X : REAL;
-	D : REAL;
-END_VAR
-
-
- ]]></Declaration>
+*) ]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF D > 0.0 THEN
 	STAIR := DINT_TO_REAL(REAL_TO_DINT(X / D)) * D;

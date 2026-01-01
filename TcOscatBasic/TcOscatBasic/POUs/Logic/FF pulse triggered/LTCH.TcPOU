@@ -1,16 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="LTCH" Id="{11010c2e-3597-4fbf-ac3f-c6734b41ab27}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.2	30. oct. 2008
-programmer 	hugo
-tested by	oscat
-
-Transparent Latch with asynchronous reset
-
-
-*)
-FUNCTION_BLOCK LTCH
+    <Declaration><![CDATA[FUNCTION_BLOCK LTCH
 VAR_INPUT
 	D : BOOL;
 	L : BOOL;
@@ -21,7 +12,15 @@ VAR_OUTPUT
 END_VAR
 
 
+(*
+version 1.2	30. oct. 2008
+programmer 	hugo
+tested by	oscat
 
+Transparent Latch with asynchronous reset
+
+
+*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* as long as L is true, the latch is transparent and and change of D is transferred to Q *)

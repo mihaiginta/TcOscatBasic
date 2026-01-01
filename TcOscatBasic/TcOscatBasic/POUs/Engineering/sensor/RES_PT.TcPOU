@@ -1,14 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+ï»¿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="RES_PT" Id="{fc7e1225-9d3c-436d-a320-998661549f68}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.3	11. mar. 2009
-programmer 	hugo
-tested by		oscat
-
-
-this function returs the resistance for a platinum sensor for a temperature range from -200..+850 °C *)
-FUNCTION RES_PT : REAL
+    <Declaration><![CDATA[FUNCTION RES_PT : REAL
 VAR_INPUT
 	T : REAL;
 	R0 : REAL;
@@ -22,7 +15,13 @@ VAR
 	T2: REAL;
 END_VAR
 
-]]></Declaration>
+(*
+version 1.3	11. mar. 2009
+programmer 	hugo
+tested by		oscat
+
+
+this function returs the resistance for a platinum sensor for a temperature range from -200..+850 Â°C *)]]></Declaration>
     <Implementation>
       <ST><![CDATA[T2 := T * T;
 
@@ -48,9 +47,9 @@ hm	11. mar. 2009	rev 1.3
 
 
 (*
- Auszug aus DIN 43760 für Pt100
+ Auszug aus DIN 43760 fÃ¼r Pt100
 
-°C		R		°C		R		°C	R			°C		R			°C		R			°C		R
+Â°C		R		Â°C		R		Â°C	R			Â°C		R			Â°C		R			Â°C		R
 
 -200 	18,49 	-100 	60,25 	0 	100,00 	100 	138,50 	200 	175,84 	300 	212,02
 -195 	20,65 	-95 	62,28 	5 	101,95 	105 	140,39 	205 	177,68 	305 	213,80

@@ -1,22 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CHECK_PARITY" Id="{a8758e99-9ef9-44b1-9a45-f6d5627a8a03}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.3	18 feb 2008
-programmer 	hugo
-tested by	tobias
-
-this function checks for an even partity for a dword and partity bit.
-
-*)
-FUNCTION CHECK_PARITY : BOOL
+    <Declaration><![CDATA[FUNCTION CHECK_PARITY : BOOL
 VAR_INPUT
 	in : DWORD;
 	p : BOOL;
 END_VAR
 
 
-]]></Declaration>
+(*
+version 1.3	18 feb 2008
+programmer 	hugo
+tested by	tobias
+
+this function checks for an even partity for a dword and partity bit.
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[CHECK_PARITY := NOT p;
 WHILE in > 0 DO

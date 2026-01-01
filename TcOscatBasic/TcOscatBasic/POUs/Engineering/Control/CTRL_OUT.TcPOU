@@ -1,14 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CTRL_OUT" Id="{49f38692-6623-4150-9104-fe8b6a7fcfb0}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.1	5. nov 2008
-programmer 	hugo
-tested by	oscat
-
-
-*)
-FUNCTION_BLOCK CTRL_OUT
+    <Declaration><![CDATA[FUNCTION_BLOCK CTRL_OUT
 VAR_INPUT
 	CI, OFFSET, MAN_IN, LIM_L, LIM_H : REAL;
 	MANUAL : BOOL;
@@ -19,7 +12,13 @@ VAR_OUTPUT
 END_VAR
 
 
+(*
+version 1.1	5. nov 2008
+programmer 	hugo
+tested by	oscat
 
+
+*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[Y := SEL(MANUAL, CI, MAN_IN) + OFFSET;

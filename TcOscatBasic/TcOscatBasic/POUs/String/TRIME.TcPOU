@@ -1,21 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TRIME" Id="{ee79c9d8-a02a-4b5f-ac48-57550579d16b}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
+    <Declaration><![CDATA[FUNCTION TRIME : STRING(string_length)
+VAR_INPUT
+	str : STRING(STRING_LENGTH);
+END_VAR
+
+
+(*
 version 1.0	28. mar. 2008
 programmer 	hugo
 tested by	tobias
 
 this function deletes all leading and ending blanks of a string.
 
-*)
-FUNCTION TRIME : STRING(string_length)
-VAR_INPUT
-	str : STRING(STRING_LENGTH);
-END_VAR
-
-
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[TRIME := str;
 (* beginning blanks need to be stripped off *)

@@ -1,7 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MANUAL" Id="{ba4174db-05b5-48a1-b4c7-20e5a4eb6a8d}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
+    <Declaration><![CDATA[FUNCTION MANUAL : BOOL
+VAR_INPUT
+	IN : BOOL;
+	ON : BOOL;
+	OFF : BOOL;
+END_VAR
+
+
+(*
 version 1.0	21. nov. 2008
 programmer 	hugo
 tested by	oscat
@@ -11,16 +19,7 @@ when on and off = FALSE, the output follows IN.
 ON = TRUE forces the output high, and OFF = TRUE forces the output low.
 
 
-*)
-FUNCTION MANUAL : BOOL
-VAR_INPUT
-	IN : BOOL;
-	ON : BOOL;
-	OFF : BOOL;
-END_VAR
-
-
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[MANUAL := NOT OFF AND (IN OR ON);
 

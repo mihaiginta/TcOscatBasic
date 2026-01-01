@@ -1,7 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MODR" Id="{6a3530cd-a74c-42d5-9149-e1cd120e0415}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
+    <Declaration><![CDATA[FUNCTION MODR : REAL
+VAR_INPUT
+	IN : REAL;
+	DIVI : REAL;
+END_VAR
+
+
+(*
 version 1.5	10. mar. 2009
 programmer 	hugo
 tested by		tobias
@@ -10,14 +17,6 @@ this is a modulo funtion for real numbers
 modr(5.5,2.5) = 0.5
 
 *)
-FUNCTION MODR : REAL
-VAR_INPUT
-	IN : REAL;
-	DIVI : REAL;
-END_VAR
-
-
-
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF divi = 0.0 THEN

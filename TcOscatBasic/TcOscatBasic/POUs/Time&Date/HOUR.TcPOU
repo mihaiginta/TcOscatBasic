@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="HOUR" Id="{d65a0da1-ee08-47d2-bd66-1af974b46a10}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.1	2 okt 2006
-programmer 	hugo
-tested by	tobias
-
-extracts the hour of a Time_of_day
-*)
-FUNCTION HOUR : INT
+    <Declaration><![CDATA[FUNCTION HOUR : INT
 VAR_INPUT
 	itod : TOD;
 END_VAR
 
 
-]]></Declaration>
+(*
+version 1.1	2 okt 2006
+programmer 	hugo
+tested by	tobias
+
+extracts the hour of a Time_of_day
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[HOUR := DWORD_TO_INT(TOD_TO_DWORD(itod) / 3600000);
 

@@ -1,21 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ACOSH" Id="{5ae75240-c4ec-4df2-b2a0-1bdc3ba5ec54}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
+    <Declaration><![CDATA[FUNCTION ACOSH : REAL
+VAR_INPUT
+	X : REAL;
+END_VAR
+
+
+(*
 version 1.3	10. mar. 2009
 programmer 	hugo
 tested by		tobias
 
 this function calculates the arcus cos hyperbolicus
 
-*)
-FUNCTION ACOSH : REAL
-VAR_INPUT
-	X : REAL;
-END_VAR
-
-
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[ACOSH := LN(SQRT(X * X - 1.0) + X);
 

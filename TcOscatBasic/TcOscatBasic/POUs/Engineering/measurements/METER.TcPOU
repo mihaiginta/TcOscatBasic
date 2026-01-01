@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="METER" Id="{ac5c727a-806b-47b2-aada-bf26031ea758}" SpecialFunc="None">
-    <Declaration><![CDATA[(* current consumption value on M1 and M2 *)
-FUNCTION_BLOCK METER
+    <Declaration><![CDATA[FUNCTION_BLOCK METER
 VAR_INPUT
 	M1, M2 : REAL;
 	I1, I2 : BOOL;
@@ -14,7 +13,7 @@ VAR_IN_OUT
 END_VAR
 VAR
 	MR : REAL2;
-	MX1, MX2 : REAL; 
+	MX1, MX2 : REAL; (* current consumption value on M1 and M2 *)
 	tx: DWORD;
 	last: DWORD;
 	tc: REAL;

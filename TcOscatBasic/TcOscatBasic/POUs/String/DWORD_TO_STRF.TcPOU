@@ -1,7 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DWORD_TO_STRF" Id="{0f76e0d3-6cf1-49a6-a6bd-f9983f3d4750}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
+    <Declaration><![CDATA[FUNCTION DWORD_TO_STRF : STRING(20)
+VAR_INPUT
+	IN : DWORD;
+	N : INT;
+END_VAR
+
+
+(*
 version 1.0	26 jan 2007
 programmer 	hugo
 tested by		tobias
@@ -13,14 +20,6 @@ the maximum allowed length is 20 mdigits.
 for example:	dword_to_strf(123,4) = '0123'
 				dword_to_strf(123,2) = '23'
 *)
-FUNCTION DWORD_TO_STRF : STRING(20)
-VAR_INPUT
-	IN : DWORD;
-	N : INT;
-END_VAR
-
-
-
 
 ]]></Declaration>
     <Implementation>

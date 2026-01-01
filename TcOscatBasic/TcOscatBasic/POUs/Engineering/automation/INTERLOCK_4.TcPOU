@@ -1,20 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="INTERLOCK_4" Id="{eb01af35-c955-493e-b610-7cc67bbb3e68}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.1	14. mar. 2009
-programmer 	hugo
-tested by		oscat
-
-INTERLOCK_4 detects one of 4 switches and delivers the number of the switch pressed on the output out
-a output tp is true for one cycle if the output has changed.
-a setup variable MODE selects between 3 different modes:
-MODE = 0, any input active will disable all other inputs
-MODE = 1, the input with the highest number will be acepted
-mode = 2, the input last pressed will disable all others
-
-*)
-FUNCTION_BLOCK INTERLOCK_4
+    <Declaration><![CDATA[FUNCTION_BLOCK INTERLOCK_4
 VAR_INPUT CONSTANT
 END_VAR
 VAR_INPUT
@@ -37,7 +24,19 @@ VAR
 	lmode: INT;
 END_VAR
 
-]]></Declaration>
+(*
+version 1.1	14. mar. 2009
+programmer 	hugo
+tested by		oscat
+
+INTERLOCK_4 detects one of 4 switches and delivers the number of the switch pressed on the output out
+a output tp is true for one cycle if the output has changed.
+a setup variable MODE selects between 3 different modes:
+MODE = 0, any input active will disable all other inputs
+MODE = 1, the input with the highest number will be acepted
+mode = 2, the input last pressed will disable all others
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* check if enable is active *)
 IF E THEN

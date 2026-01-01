@@ -1,15 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FILTER_W" Id="{d4c7eee0-aa52-466b-b532-c4a98363e455}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.2	25. jan. 2011
-programmer 	hugo
-tested by	oscat
-
-FILTER_W is an low pass filter with a programmable time T used for WORD format.
-
-*)
-FUNCTION_BLOCK FILTER_W
+    <Declaration><![CDATA[FUNCTION_BLOCK FILTER_W
 VAR_INPUT
 	X : WORD;
 	T : TIME;
@@ -24,7 +16,14 @@ VAR
 	tmp: DWORD;
 END_VAR
 
-]]></Declaration>
+(*
+version 1.2	25. jan. 2011
+programmer 	hugo
+tested by	oscat
+
+FILTER_W is an low pass filter with a programmable time T used for WORD format.
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read system time *)
 tx := T_PLC_MS();

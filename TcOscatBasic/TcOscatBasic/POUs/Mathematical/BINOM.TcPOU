@@ -1,15 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+ï»¿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BINOM" Id="{095c177a-4271-4976-84c3-42f3b53cc52d}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.0	25. oct. 2008
-programmer 	hugo
-tested by		tobias
-
-this function calculates the binomialkoefficient (N over k)
-
-*)
-FUNCTION BINOM : DINT
+    <Declaration><![CDATA[FUNCTION BINOM : DINT
 VAR_INPUT
 	N : INT;
 	K : INT;
@@ -20,7 +12,14 @@ VAR
 END_VAR
 
 
-]]></Declaration>
+(*
+version 1.0	25. oct. 2008
+programmer 	hugo
+tested by		tobias
+
+this function calculates the binomialkoefficient (N over k)
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF 2 * K > n THEN
 	k := n - k;
@@ -45,10 +44,10 @@ END_IF;
 binomialkoeffizient(n, k)
 1  wenn k = 0 return 1
 2  wenn 2k > n
-3      dann führe aus ergebnis \leftarrow binomialkoeffizient(n, n-k)
-4  sonst führe aus ergebnis \leftarrow n
+3      dann fÃ¼hre aus ergebnis \leftarrow binomialkoeffizient(n, n-k)
+4  sonst fÃ¼hre aus ergebnis \leftarrow n
 5          von i \leftarrow 2 bis k
-6              führe aus ergebnis \leftarrow ergebnis \cdot (n + 1 - i)
+6              fÃ¼hre aus ergebnis \leftarrow ergebnis \cdot (n + 1 - i)
 7                        ergebnis \leftarrow ergebnis : i
 8  return ergebnis
 *)

@@ -1,21 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="RAD" Id="{433d8b5c-e438-405a-b02c-f8cdf05d4167}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
+    <Declaration><![CDATA[FUNCTION RAD : REAL
+VAR_INPUT
+	DEG : REAL;
+END_VAR
+
+
+(*
 version 1.2	18. oct. 2008
 programmer 	hugo
 tested by	tobias
 
 this function converts Radiant to degrees
 
-*)
-FUNCTION RAD : REAL
-VAR_INPUT
-	DEG : REAL;
-END_VAR
-
-
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[RAD := MODR(0.0174532925199433 * DEG, math.PI2);
 

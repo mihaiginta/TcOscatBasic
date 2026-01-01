@@ -1,16 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FT_TN64" Id="{02c44f02-eb8b-4df4-9cc7-c098ee190f8e}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.1	15 sep 2007
-programmer 	hugo
-tested by		tobias
-
-FT_TN7 is delay function, it will delay a signal by a specified time : T and will store 64 values of in before they are put thru to out.
-if lower resolution is needed, pls use FT_TN8 or FT_TN16 instead.
-
-*)
-FUNCTION_BLOCK FT_TN64
+    <Declaration><![CDATA[FUNCTION_BLOCK FT_TN64
 VAR_INPUT
 	in : REAL;
 	T : TIME;
@@ -28,7 +19,15 @@ VAR
 	init: BOOL;
 END_VAR
 
-]]></Declaration>
+(*
+version 1.1	15 sep 2007
+programmer 	hugo
+tested by		tobias
+
+FT_TN7 is delay function, it will delay a signal by a specified time : T and will store 64 values of in before they are put thru to out.
+if lower resolution is needed, pls use FT_TN8 or FT_TN16 instead.
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read system time *)
 tx := DWORD_TO_TIME(T_PLC_MS());

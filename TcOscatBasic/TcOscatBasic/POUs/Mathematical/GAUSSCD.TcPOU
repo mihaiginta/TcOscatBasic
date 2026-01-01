@@ -1,15 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="GAUSSCD" Id="{6aa9491a-6907-4834-a9ac-b28dda15962d}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.1	10. mar. 2009
-programmer 	hugo
-tested by		tobias
-
-this function calculates the gaussian cumulative distribution function
-
-*)
-FUNCTION GAUSSCD : REAL
+    <Declaration><![CDATA[FUNCTION GAUSSCD : REAL
 VAR_INPUT
 	X : REAL;
 	U : REAL;
@@ -17,7 +9,14 @@ VAR_INPUT
 END_VAR
 
 
-]]></Declaration>
+(*
+version 1.1	10. mar. 2009
+programmer 	hugo
+tested by		tobias
+
+this function calculates the gaussian cumulative distribution function
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[GAUSSCD := (ERF((X - U) / (SI * 1.414213562)) + 1.0) * 0.5;
 

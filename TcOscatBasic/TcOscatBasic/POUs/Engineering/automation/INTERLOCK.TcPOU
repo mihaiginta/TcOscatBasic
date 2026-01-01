@@ -1,18 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="INTERLOCK" Id="{d0794a8a-e29c-49b6-a841-e6e5781420ef}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.0	28 sep 2007
-programmer 	hugo
-tested by		tobias
-
-INTERLOCK has two inputs I1 and I2 which drive the corresponding outputs Q1 and Q2.
-the inputs signals lock each other out and therfore I1 can only drive Q1 when I2 is Low and vice versa.
-The input TL specifies a dead time between two outputs can become active.
-an output can only become active when the other output was not active for the time TL.
-
-*)
-FUNCTION_BLOCK INTERLOCK
+    <Declaration><![CDATA[FUNCTION_BLOCK INTERLOCK
 VAR_INPUT
 	I1, I2 : BOOL;
 	TL : TIME;
@@ -24,7 +13,17 @@ VAR
 	T1, T2 : TOF;
 END_VAR
 
-]]></Declaration>
+(*
+version 1.0	28 sep 2007
+programmer 	hugo
+tested by		tobias
+
+INTERLOCK has two inputs I1 and I2 which drive the corresponding outputs Q1 and Q2.
+the inputs signals lock each other out and therfore I1 can only drive Q1 when I2 is Low and vice versa.
+The input TL specifies a dead time between two outputs can become active.
+an output can only become active when the other output was not active for the time TL.
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* the input signal have a run delay to lockout the other input *)
 T1(IN := I1, PT := TL);

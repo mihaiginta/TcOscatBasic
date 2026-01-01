@@ -1,16 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FLOW_CONTROL" Id="{8b24ac9a-dc5b-4920-89a2-6b34b019f517}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.0	28. jun. 2008
-programmer 	hugo
-tested by	oscat
-
-FLOW_CONTROL switches a valves depending on the input in.
-flow control also limits the maximum ontime of the valve and controls pressure on the output side.
-
-*)
- FUNCTION_BLOCK FLOW_CONTROL
+    <Declaration><![CDATA[ FUNCTION_BLOCK FLOW_CONTROL
 VAR_INPUT
 	IN : BOOL;
 	REQ : BOOL;
@@ -30,7 +21,15 @@ VAR
 END_VAR
 
 
+(*
+version 1.0	28. jun. 2008
+programmer 	hugo
+tested by	oscat
 
+FLOW_CONTROL switches a valves depending on the input in.
+flow control also limits the maximum ontime of the valve and controls pressure on the output side.
+
+*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[STATUS := 100;

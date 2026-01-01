@@ -1,21 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="HOUR_TO_TIME" Id="{8312c8d7-a03a-4e90-8ac0-322e69135966}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
+    <Declaration><![CDATA[FUNCTION HOUR_TO_TIME : TIME
+VAR_INPUT
+	IN : REAL;
+END_VAR
+
+
+(*
 version 1.2	24. feb. 2009
 programmer 	hugo
 tested by		tobias
 
 converts an amount of hours in real to time
 
-*)
-FUNCTION HOUR_TO_TIME : TIME
-VAR_INPUT
-	IN : REAL;
-END_VAR
-
-
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[HOUR_TO_TIME := DWORD_TO_TIME(REAL_TO_DWORD(IN * 3600000));
 

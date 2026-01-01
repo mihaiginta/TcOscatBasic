@@ -1,17 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FT_Profile" Id="{49f5897f-3b7f-41ed-b736-e2b888c4d2c4}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.1	15 sep 2007
-programmer 	tobias
-tested by		hugo
-
-FT_Profile generates an output signal which is defined by values over a time scale.
-the different values are connected by ramps between the individual values.
-a rising edge on E starts the output signal generation and E = True can delay time_3 / value_3 as long as it stays true.
-an additional multiplier K can be used to multiply the output and an offset O can be added to the output dynamically.
-*)
-FUNCTION_BLOCK FT_Profile
+    <Declaration><![CDATA[FUNCTION_BLOCK FT_Profile
 VAR_INPUT
 	K : REAL := 1.0;
 	O : REAL;
@@ -52,7 +42,16 @@ VAR
 	vb: REAL;
 END_VAR
 
-]]></Declaration>
+(*
+version 1.1	15 sep 2007
+programmer 	tobias
+tested by		hugo
+
+FT_Profile generates an output signal which is defined by values over a time scale.
+the different values are connected by ramps between the individual values.
+a rising edge on E starts the output signal generation and E = True can delay time_3 / value_3 as long as it stays true.
+an additional multiplier K can be used to multiply the output and an offset O can be added to the output dynamically.
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read system time *)
 tx := DWORD_TO_TIME(T_PLC_MS());

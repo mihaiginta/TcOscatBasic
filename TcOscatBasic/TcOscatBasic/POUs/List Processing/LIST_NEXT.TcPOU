@@ -1,17 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="LIST_NEXT" Id="{229a5eb1-8f49-49e5-a3f6-354872323097}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 2.0	21. mar. 2011
-programmer 	hugo
-tested by		oscat
-
-LIST_NEXT retrieves the next element of a list, starting from element 1 after reset or first init.
-when the end of the lisat is reached a '' empty string is returned and NUL is set to true.
-die liste liegt als string von elementen vor die mit den zeichen SEP am anfang markiert sind.
-
-*)
-FUNCTION_BLOCK LIST_NEXT
+    <Declaration><![CDATA[FUNCTION_BLOCK LIST_NEXT
 VAR_INPUT
 	SEP : BYTE;
 	RST : BOOL;
@@ -32,7 +22,16 @@ VAR
 END_VAR
 
 
-]]></Declaration>
+(*
+version 2.0	21. mar. 2011
+programmer 	hugo
+tested by		oscat
+
+LIST_NEXT retrieves the next element of a list, starting from element 1 after reset or first init.
+when the end of the lisat is reached a '' empty string is returned and NUL is set to true.
+die liste liegt als string von elementen vor die mit den zeichen SEP am anfang markiert sind.
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[pt := ADR(LIST);
 po := ADR(LEL);

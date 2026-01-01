@@ -1,15 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DEL_CHARS" Id="{8819ac46-5f2d-4c3a-8659-0f1bbef0f8b1}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.0	18. jun. 2008
-programmer 	hugo
-tested by	oscat
-
-del_chars deletes all characters from a string which are specified in CX.
-
-*)
-FUNCTION DEL_CHARS : STRING(STRING_LENGTH)
+    <Declaration><![CDATA[FUNCTION DEL_CHARS : STRING(STRING_LENGTH)
 VAR_INPUT
 	IN : STRING(STRING_LENGTH);
 	CX : STRING(80);
@@ -20,7 +12,14 @@ VAR
 END_VAR
 
 
+(*
+version 1.0	18. jun. 2008
+programmer 	hugo
+tested by	oscat
 
+del_chars deletes all characters from a string which are specified in CX.
+
+*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* copy input string *)

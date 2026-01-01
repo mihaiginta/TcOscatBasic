@@ -1,14 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FSTRING_TO_DT" Id="{20e7bd14-b98e-4695-a268-72c3f0ab5572}" SpecialFunc="None">
-    <Declaration><![CDATA[(* ignore character is * *)
-FUNCTION FSTRING_TO_DT : DT
+    <Declaration><![CDATA[FUNCTION FSTRING_TO_DT : DT
 VAR_INPUT
 	SDT : STRING(60);
 	FMT : STRING(60);
 END_VAR
 VAR CONSTANT
-	ignore: STRING(1) := '*';  
+	ignore: STRING(1) := '*';  (* ignore character is * *)
 	fchar : STRING(1) := '#';  (* format character is # *)
 END_VAR
 VAR

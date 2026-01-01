@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="INT_TO_BCDC" Id="{689863d0-7295-4b2d-85f8-2f2324610465}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
+    <Declaration><![CDATA[FUNCTION INT_TO_BCDC : BYTE
+VAR_INPUT
+	IN : INT;
+END_VAR
+
+
+(*
 version 1.1	30. jun. 2008
 programmer 	hugo
 tested by		tobias
 
 this function converts an integer into a two digit bcd number.
 *)
-FUNCTION INT_TO_BCDC : BYTE
-VAR_INPUT
-	IN : INT;
-END_VAR
-
-
-
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[INT_TO_BCDC := SHL(INT_TO_BYTE(IN / INT#10),4) OR INT_TO_BYTE(in MOD INT#10);

@@ -1,15 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SRAMP" Id="{2349cf4c-f859-4d7f-9ed5-4d5ded33a1ed}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-	version 1.1	11. mar. 2009
-	programmer 	hugo
-	tested by		tobias
-
-RAMPS generates output signal which are slew rate and acceleration controlled.
-
-*)
-FUNCTION_BLOCK SRAMP
+    <Declaration><![CDATA[FUNCTION_BLOCK SRAMP
 VAR_INPUT
 	X : REAL;
 	A_UP : REAL;
@@ -30,7 +22,14 @@ VAR
 END_VAR
 
 
-]]></Declaration>
+(*
+	version 1.1	11. mar. 2009
+	programmer 	hugo
+	tested by		tobias
+
+RAMPS generates output signal which are slew rate and acceleration controlled.
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read the system_time in microseconds *)
 cycle_time();

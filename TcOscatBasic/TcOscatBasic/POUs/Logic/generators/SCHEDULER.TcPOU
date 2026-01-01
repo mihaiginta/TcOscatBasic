@@ -1,16 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SCHEDULER" Id="{62da507e-ff45-44f3-aa6d-833b7e5e009a}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.1	14. mar. 2009
-programmer 	hugo
-tested by		tobias
-
-SCHEDULER is used to call programs or function blocks at specific intervals.
-T0..T3 defines the interval times.
-
-*)
-FUNCTION_BLOCK SCHEDULER
+    <Declaration><![CDATA[FUNCTION_BLOCK SCHEDULER
 VAR_INPUT
 	E0 : BOOL;
 	E1 : BOOL;
@@ -31,7 +22,15 @@ VAR
 END_VAR
 
 
+(*
+version 1.1	14. mar. 2009
+programmer 	hugo
+tested by		tobias
 
+SCHEDULER is used to call programs or function blocks at specific intervals.
+T0..T3 defines the interval times.
+
+*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read system_time *)

@@ -1,17 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MANUAL_4" Id="{69f42b59-6ee4-4c16-a947-2f0423b0907d}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.0	17. jun 2008
-programmer 	hugo
-tested by	oscat
-
-MANUAL_4 is a manual override for digital signals.
-When MAN = FALSE, the output follows IN and when MAN = TRUE the Output follows M_I.
-
-
-*)
-FUNCTION_BLOCK MANUAL_4
+    <Declaration><![CDATA[FUNCTION_BLOCK MANUAL_4
 VAR_INPUT
 	I0, I1, I2, I3 : BOOL;
 	MAN : BOOL;
@@ -29,7 +19,16 @@ VAR
 END_VAR
 
 
-]]></Declaration>
+(*
+version 1.0	17. jun 2008
+programmer 	hugo
+tested by	oscat
+
+MANUAL_4 is a manual override for digital signals.
+When MAN = FALSE, the output follows IN and when MAN = TRUE the Output follows M_I.
+
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF man THEN
 	IF NOT TOG THEN

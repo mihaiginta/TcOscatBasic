@@ -1,7 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DAYS_IN_MONTH" Id="{d4a72219-51b4-4ed1-a770-b31886c2935c}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
+    <Declaration><![CDATA[FUNCTION DAYS_IN_MONTH : INT
+VAR_INPUT
+	IDATE : DATE;
+END_VAR
+
+
+(*
 version 1.0	27. mar. 2009
 programmer 	hugo
 tested by		oscat
@@ -10,13 +16,6 @@ returs the total days of the current month. e.g. 31 for january.
 the function works for dates from 1970 - 2099
 
 *)
-FUNCTION DAYS_IN_MONTH : INT
-VAR_INPUT
-	IDATE : DATE;
-END_VAR
-
-
-
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[DAYS_IN_MONTH := DAY_OF_YEAR(IDATE);

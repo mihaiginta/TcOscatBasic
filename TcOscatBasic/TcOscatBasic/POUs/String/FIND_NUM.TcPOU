@@ -1,16 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FIND_NUM" Id="{e96ba534-71a7-4cff-9765-4c4a9d4ba065}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.2	29. mar. 2008
-programmer 	hugo
-tested by		tobias
-
-find_Num searches str and returns the starting position of a number
-a number is characterized by a letter "0..9" or "."
-
-*)
-FUNCTION FIND_NUM : INT
+    <Declaration><![CDATA[FUNCTION FIND_NUM : INT
 VAR_INPUT
 	str : STRING(STRING_LENGTH);
 	pos : INT;
@@ -22,7 +13,15 @@ VAR
 	X: BYTE;
 END_VAR
 
-]]></Declaration>
+(*
+version 1.2	29. mar. 2008
+programmer 	hugo
+tested by		tobias
+
+find_Num searches str and returns the starting position of a number
+a number is characterized by a letter "0..9" or "."
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[pt := ADR(str);
 stop := LEN(str);

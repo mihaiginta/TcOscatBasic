@@ -1,22 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CSET" Id="{36d15612-fa35-4d39-b983-41f7bfdee568}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.0	21 feb 2008
-programmer 	hugo
-tested by	oscat
-
-this function creates a complex number from two real inputs
-
-*)
-FUNCTION CSET : complex
+    <Declaration><![CDATA[FUNCTION CSET : complex
 VAR_INPUT
 	RE : REAL;
 	IM : REAL;
 END_VAR
 
 
-]]></Declaration>
+(*
+version 1.0	21 feb 2008
+programmer 	hugo
+tested by	oscat
+
+this function creates a complex number from two real inputs
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[CSET.re := RE;
 CSET.im := IM;

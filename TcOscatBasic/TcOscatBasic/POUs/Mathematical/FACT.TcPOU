@@ -1,7 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FACT" Id="{1696435c-d930-46fb-8e7a-05eb2d006a39}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
+    <Declaration><![CDATA[FUNCTION FACT : DINT
+VAR_INPUT
+	X : INT;
+END_VAR
+
+
+(*
 version 1.5	26. mar. 2011
 programmer 	hugo
 tested by		tobias
@@ -10,14 +16,7 @@ this function calculates the factorial of x
 
 if the input is negative or higher then 12 the output will be -1.
 
-*)
-FUNCTION FACT : DINT
-VAR_INPUT
-	X : INT;
-END_VAR
-
-
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF X >= 0 AND X <= 12 THEN
 	FACT := math.FACTS[X];

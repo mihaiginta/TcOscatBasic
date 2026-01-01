@@ -1,16 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BAND_B" Id="{2180208c-0819-4bda-be9c-6e085d9bcc17}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.0	21. Nov. 2008
-programmer 	hugo
-tested by	oscat
-
-BAND_B will limit X to B <= X <= 255-B. while X < B the resulkt will be 0 and while X > 255-B the output will be 255
-otherwise the result = X.
-
-*)
-FUNCTION BAND_B : BYTE
+    <Declaration><![CDATA[FUNCTION BAND_B : BYTE
 VAR_INPUT
 	X : BYTE;
 	B : BYTE;
@@ -18,7 +9,15 @@ END_VAR
 
 
 
-]]></Declaration>
+(*
+version 1.0	21. Nov. 2008
+programmer 	hugo
+tested by	oscat
+
+BAND_B will limit X to B <= X <= 255-B. while X < B the resulkt will be 0 and while X > 255-B the output will be 255
+otherwise the result = X.
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF X < B THEN
 	BAND_B := 0;

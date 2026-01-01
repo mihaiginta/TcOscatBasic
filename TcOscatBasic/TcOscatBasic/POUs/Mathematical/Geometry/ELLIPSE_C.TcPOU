@@ -1,7 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ELLIPSE_C" Id="{fefac4c3-e7db-4805-aacb-adc95a761926}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
+    <Declaration><![CDATA[FUNCTION ELLIPSE_C : REAL
+VAR_INPUT
+	R1 : REAL;
+	R2 : REAL;
+END_VAR
+
+
+(*
 version 1.2	10. mar. 2009
 programmer 	hugo
 tested by		oscat
@@ -9,14 +16,6 @@ tested by		oscat
 ellipse_C calculates the circumference of an ellipe based on the two radians R1 and R2
 
 *)
-FUNCTION ELLIPSE_C : REAL
-VAR_INPUT
-	R1 : REAL;
-	R2 : REAL;
-END_VAR
-
-
-
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[ELLIPSE_C := math.PI * (3.0 * (R1+R2) - SQRT((3.0 * r1 + R2) * (3.0 * r2 + r1)));

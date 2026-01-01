@@ -1,7 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SDT_TO_TOD" Id="{0f1ecabb-9051-4f52-898b-59c4086ae76b}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
+    <Declaration><![CDATA[FUNCTION SDT_TO_TOD : TOD
+VAR_INPUT
+	DTI : SDT;
+END_VAR
+
+
+(*
 version 1.1	16. nov. 2008
 programmer 	hugo
 tested by	oscat
@@ -9,13 +15,6 @@ tested by	oscat
 converts Structured date time (SDT) to Date Time
 
 *)
-FUNCTION SDT_TO_TOD : TOD
-VAR_INPUT
-	DTI : SDT;
-END_VAR
-
-
-
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[SDT_TO_TOD := DWORD_TO_TOD(INT_TO_DWORD(DTI.HOUR) * 3600000 + INT_TO_DWORD(DTI.MINUTE) * 60000 + INT_TO_DWORD(DTI.SECOND) * 1000 + INT_TO_DWORD(DTI.MS));

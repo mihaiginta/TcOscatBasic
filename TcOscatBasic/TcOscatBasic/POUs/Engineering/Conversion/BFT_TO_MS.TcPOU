@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BFT_TO_MS" Id="{10811f22-67d5-46e7-8f92-2cf79e120d0e}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.0	12. jun 2008
-programmer 	hugo
-tested by		oscdat
-
-this function converts wind speed from beaufort to m/s
-*)
-FUNCTION BFT_TO_MS : REAL
+    <Declaration><![CDATA[FUNCTION BFT_TO_MS : REAL
 VAR_INPUT
 	BFT : INT;
 END_VAR
 
 
-]]></Declaration>
+(*
+version 1.0	12. jun 2008
+programmer 	hugo
+tested by		oscdat
+
+this function converts wind speed from beaufort to m/s
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[BFT_TO_MS := LREAL_TO_REAL(EXPT(BFT, 1.5) * 0.836);
 

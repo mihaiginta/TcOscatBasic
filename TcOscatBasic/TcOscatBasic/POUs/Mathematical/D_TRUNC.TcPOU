@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="D_TRUNC" Id="{4de760eb-c7ff-4117-9f8e-3b93b72a3cdc}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
+    <Declaration><![CDATA[FUNCTION D_TRUNC : DINT
+VAR_INPUT
+	X : REAL;
+END_VAR
+
+(*
 version 1.2	10. mar. 2009
 programmer 	hugo
 tested by		oscat
@@ -11,12 +16,6 @@ d_trunc is necessary because many systems do not offer a trunc to a dint
 also real_to_dint will not deliver the same result on different systems
 
 *)
-FUNCTION D_TRUNC : DINT
-VAR_INPUT
-	X : REAL;
-END_VAR
-
-
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[D_TRUNC := REAL_TO_DINT(X);

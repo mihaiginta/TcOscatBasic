@@ -1,20 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BUFFER_SEARCH" Id="{afc67097-3a39-493e-b18e-2fb1c0b333f2}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.4	25. jan 2011
-programmer 	hugo
-tested by	oscat
-
-this function will search for a string STR in an array of byte starting at position pos.
-the function needs to be called: buffer_search(adr("array"),sizeof("array"), STR, POS, IGN);
-because this function works with pointers its very time efficient and it needs no extra memory.
-The function returns the position of the first character of the string in the array if found.
-a -1 is returned if the string is not found in the array.
-when IGN = TRUE, STR must be in capital letters and the search is case insensitv.
-
-*)
-FUNCTION BUFFER_SEARCH : INT
+    <Declaration><![CDATA[FUNCTION BUFFER_SEARCH : INT
 VAR_INPUT
 	PT : POINTER TO ARRAY[0..32767] OF BYTE;
 	SIZE : INT;
@@ -32,7 +19,19 @@ VAR
 END_VAR
 
 
-]]></Declaration>
+(*
+version 1.4	25. jan 2011
+programmer 	hugo
+tested by	oscat
+
+this function will search for a string STR in an array of byte starting at position pos.
+the function needs to be called: buffer_search(adr("array"),sizeof("array"), STR, POS, IGN);
+because this function works with pointers its very time efficient and it needs no extra memory.
+The function returns the position of the first character of the string in the array if found.
+a -1 is returned if the string is not found in the array.
+when IGN = TRUE, STR must be in capital letters and the search is case insensitv.
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[ps := ADR(STR);
 lx := LEN(STR);

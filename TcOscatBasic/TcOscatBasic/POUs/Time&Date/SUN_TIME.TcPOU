@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SUN_TIME" Id="{12340567-74f8-4723-98c5-be7ea89b09cf}" SpecialFunc="None">
-    <Declaration><![CDATA[(* latitude of geographical position  *)
-FUNCTION_BLOCK SUN_TIME
+    <Declaration><![CDATA[FUNCTION_BLOCK SUN_TIME
 VAR_INPUT
-	LATITUDE : REAL;				
+	LATITUDE : REAL;				(* latitude of geographical position  *)
 	LONGITUDE : REAL;				(* longitude of geographical position  *)
 	UTC : DATE;						(*	world time	*)
 	H : REAL := -0.83333333333;	(* heighth above horizon for sunrise *)

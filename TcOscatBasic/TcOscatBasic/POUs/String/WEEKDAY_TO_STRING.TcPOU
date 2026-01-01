@@ -1,16 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="WEEKDAY_TO_STRING" Id="{d6cd0c8c-afbe-4b13-823d-1f19745bb6c6}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.1	19. oct. 2008
-programmer 	hugo
-tested by	oscat
-
-WEEKDAY_TO_STRING converts an Integer 1..7 into a String with the Names of the corresponding weekday.
-the decoding is according to the language setup in global vars
-
-*)
-FUNCTION WEEKDAY_TO_STRING : STRING(10)
+    <Declaration><![CDATA[FUNCTION WEEKDAY_TO_STRING : STRING(10)
 VAR_INPUT
 	WDAY : INT;
 	LANG : INT;
@@ -20,7 +11,15 @@ VAR
 	ly : INT;
 END_VAR
 
-]]></Declaration>
+(*
+version 1.1	19. oct. 2008
+programmer 	hugo
+tested by	oscat
+
+WEEKDAY_TO_STRING converts an Integer 1..7 into a String with the Names of the corresponding weekday.
+the decoding is according to the language setup in global vars
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF LANG = 0 THEN ly := LANGUAGE.DEFAULT; ELSE ly := MIN(LANG, LANGUAGE.LMAX); END_IF;
 IF wday < 1 OR wday > 7 THEN

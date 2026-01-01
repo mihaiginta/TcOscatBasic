@@ -1,16 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SH_T" Id="{3990310b-65a0-440d-87c6-969c1adda125}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.1	18. oct. 2008
-programmer 	hugo
-tested by	oscat
-
-this sample and hold module samples an input while en is high.
-during the high time of en the output follows in.
-the out stays stable until the en goes high again.
-*)
-FUNCTION_BLOCK SH_T
+    <Declaration><![CDATA[FUNCTION_BLOCK SH_T
 VAR_INPUT
 	IN : REAL;
 	E : BOOL;
@@ -20,7 +11,15 @@ VAR_OUTPUT
 END_VAR
 
 
-]]></Declaration>
+(*
+version 1.1	18. oct. 2008
+programmer 	hugo
+tested by	oscat
+
+this sample and hold module samples an input while en is high.
+during the high time of en the output follows in.
+the out stays stable until the en goes high again.
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF E THEN out := in; END_IF;
 

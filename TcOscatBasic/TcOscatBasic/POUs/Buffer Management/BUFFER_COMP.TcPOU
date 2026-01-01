@@ -1,15 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BUFFER_COMP" Id="{2d5e5da2-4788-4bbe-ba43-d6fc7ecc177a}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.1	12. nov. 2009
-programmer 	hugo
-tested by	oscat
-
-
-
-*)
-FUNCTION BUFFER_COMP : INT
+    <Declaration><![CDATA[FUNCTION BUFFER_COMP : INT
 VAR_INPUT
 	PT1 : POINTER TO ARRAY[0..32767] OF BYTE;
 	SIZE1 : INT;
@@ -22,7 +14,14 @@ VAR
 	firstbyte: BYTE;
 END_VAR
 
-]]></Declaration>
+(*
+version 1.1	12. nov. 2009
+programmer 	hugo
+tested by	oscat
+
+
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* search for first character match *)
 IF size2 <= size1 THEN

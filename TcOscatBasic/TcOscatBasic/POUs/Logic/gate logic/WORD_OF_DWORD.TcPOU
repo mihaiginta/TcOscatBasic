@@ -1,7 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="WORD_OF_DWORD" Id="{62d7ae0a-f335-4072-aad5-5e890c331dcd}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
+    <Declaration><![CDATA[FUNCTION WORD_OF_DWORD : WORD
+VAR_INPUT
+	in : DWORD;
+	N : BYTE;
+END_VAR
+
+
+(*
 version 1.2	30. oct. 2008
 programmer 	hugo
 tested by	oscat
@@ -9,14 +16,6 @@ tested by	oscat
 this function extracts a single word from the nth position from right (right is lowest byte)
 the lower word (starting with Bit0 from in) is selected with N=0.
 *)
-FUNCTION WORD_OF_DWORD : WORD
-VAR_INPUT
-	in : DWORD;
-	N : BYTE;
-END_VAR
-
-
-
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[WORD_OF_DWORD := DWORD_TO_WORD(SHR(in,SHL(n,4)));

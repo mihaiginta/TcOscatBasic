@@ -1,16 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TUNE" Id="{4be8449f-0124-441f-9fee-22ec8c615b86}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.2	11. mar. 2009
-programmer 	hugo
-tested by		tobias
-
-tune generates an output signal which is set by input switches.
-up to 4 switsches can be used to tune the signal up or down.
-
-*)
-FUNCTION_BLOCK TUNE
+    <Declaration><![CDATA[FUNCTION_BLOCK TUNE
 VAR_INPUT
 	SET : BOOL;
 	SU, SD : BOOL;
@@ -41,7 +32,15 @@ VAR
 	Y_start2: REAL;
 END_VAR
 
+(*
+version 1.2	11. mar. 2009
+programmer 	hugo
+tested by		tobias
 
+tune generates an output signal which is set by input switches.
+up to 4 switsches can be used to tune the signal up or down.
+
+*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read system time *)

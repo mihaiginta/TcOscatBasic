@@ -1,14 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CTRL_PWM" Id="{56b55de9-9928-4048-ab5a-7f9def92b635}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.1	21. oct. 2008
-programmer 	hugo
-tested by	oscat
-
-
-*)
-FUNCTION_BLOCK CTRL_PWM
+    <Declaration><![CDATA[FUNCTION_BLOCK CTRL_PWM
 VAR_INPUT
 	CI, MAN_IN : REAL;
 	MANUAL : BOOL;
@@ -21,7 +14,13 @@ VAR
 	PW : PWM_DC;
 END_VAR
 
+(*
+version 1.1	21. oct. 2008
+programmer 	hugo
+tested by	oscat
 
+
+*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[PW(F := F, DC := SEL(MANUAL,CI,MAN_IN));

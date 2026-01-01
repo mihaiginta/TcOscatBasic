@@ -1,15 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SCALE_B" Id="{78ba9079-ce1e-4945-b455-e2bc26cb6654}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.1	18. jan. 2011
-programmer 	hugo
-tested by		tobias
-
-Scale_B is used to translate and scale a byte input x to a real output.
-
-*)
-FUNCTION SCALE_B : REAL
+    <Declaration><![CDATA[FUNCTION SCALE_B : REAL
 VAR_INPUT
 	X : BYTE;
 	I_LO : BYTE;
@@ -19,7 +11,14 @@ VAR_INPUT
 END_VAR
 
 
+(*
+version 1.1	18. jan. 2011
+programmer 	hugo
+tested by		tobias
 
+Scale_B is used to translate and scale a byte input x to a real output.
+
+*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF I_HI = I_LO THEN

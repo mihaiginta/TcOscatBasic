@@ -1,17 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FT_DERIV" Id="{54e4cd72-533d-4c27-84ab-0678e9508a0a}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.5	11. mar. 2009
-programmer 	hugo
-tested by		oscat
-
-FT_deriv calculates the derivate over the signal "in" with Faktor "K".
-a run input enables or stops the calculation, if left unconnected its true and therfore the calculation is executed.
-if K is not specified the default is 1.
-
-*)
-FUNCTION_BLOCK FT_DERIV
+    <Declaration><![CDATA[FUNCTION_BLOCK FT_DERIV
 VAR_INPUT
 	in : REAL;
 	K : REAL := 1.0;
@@ -29,7 +19,16 @@ VAR
 END_VAR
 
 
+(*
+version 1.5	11. mar. 2009
+programmer 	hugo
+tested by		oscat
 
+FT_deriv calculates the derivate over the signal "in" with Faktor "K".
+a run input enables or stops the calculation, if left unconnected its true and therfore the calculation is executed.
+if K is not specified the default is 1.
+
+*)
 
 
 ]]></Declaration>

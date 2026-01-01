@@ -1,14 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="PWM_PW" Id="{cbdfb51d-2d65-4151-8d2a-cf05976e0612}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.5	11. mar. 2009
-programmer 	oscat
-tested BY		oscat
-
-this signal generator generates a square wave signal which is specified by the frequency and the pulse width.
-*)
-FUNCTION_BLOCK PWM_PW
+    <Declaration><![CDATA[FUNCTION_BLOCK PWM_PW
 VAR_INPUT
 	F : REAL;
 	PW : TIME;
@@ -21,7 +14,13 @@ VAR
 	pulse: TP_X;
 END_VAR
 
-]]></Declaration>
+(*
+version 1.5	11. mar. 2009
+programmer 	oscat
+tested BY		oscat
+
+this signal generator generates a square wave signal which is specified by the frequency and the pulse width.
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF F > 0.0 THEN
 	CLK(PT := REAL_TO_TIME(1000.0 / F));

@@ -1,15 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SHR_4E" Id="{ce8913ef-f4ad-4d22-ac4c-d17cd272662b}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.1	25. oct. 2008
-programmer 	hugo
-tested by		tobias
-
-4 bit shift register with reset
-
-*)
-FUNCTION_BLOCK SHR_4E
+    <Declaration><![CDATA[FUNCTION_BLOCK SHR_4E
 VAR_INPUT
 	SET : BOOL;
 	D0: BOOL;
@@ -26,7 +18,14 @@ VAR
 	trig : R_TRIG;
 END_VAR
 
-]]></Declaration>
+(*
+version 1.1	25. oct. 2008
+programmer 	hugo
+tested by		tobias
+
+4 bit shift register with reset
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* trig.Q signals a rising edge on clk *)
 trig(clk := clk);

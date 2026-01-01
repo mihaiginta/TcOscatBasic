@@ -1,15 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="COSH" Id="{5a84fe1b-5956-4e23-aa9a-a38fd7bfc1ee}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.3	10. mar. 2009
-programmer 	hugo
-tested by		tobias
-
-this function calculates the cos hyperbolicus
-
-*)
-FUNCTION COSH : REAL
+    <Declaration><![CDATA[FUNCTION COSH : REAL
 VAR_INPUT
 	X : REAL;
 END_VAR
@@ -18,7 +10,14 @@ VAR
 END_VAR
 
 
-]]></Declaration>
+(*
+version 1.3	10. mar. 2009
+programmer 	hugo
+tested by		tobias
+
+this function calculates the cos hyperbolicus
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[T := EXP(X);
 COSH := (1.0 / T + T) * 0.5;

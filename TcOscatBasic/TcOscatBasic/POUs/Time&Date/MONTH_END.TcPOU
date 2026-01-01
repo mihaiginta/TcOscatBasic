@@ -1,21 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MONTH_END" Id="{e9367cc8-1842-413e-bc24-d742049669eb}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
+    <Declaration><![CDATA[FUNCTION MONTH_END : DATE
+VAR_INPUT
+	IDATE : DATE;
+END_VAR
+
+
+(*
 version 1.1	7. oct. 2008
 programmer 	hugo
 tested by	oscat
 
 returns the date for the last day of the current month in the current year.
 
-*)
-FUNCTION MONTH_END : DATE
-VAR_INPUT
-	IDATE : DATE;
-END_VAR
-
-
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[MONTH_END := DWORD_TO_DATE(DATE_TO_DWORD(SET_DATE(YEAR_OF_DATE(idate),MONTH_OF_DATE(idate)+1,1)) - 86400);
 

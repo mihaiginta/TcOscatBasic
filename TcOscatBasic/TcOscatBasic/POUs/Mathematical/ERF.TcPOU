@@ -1,15 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ERF" Id="{34a8bd4f-8c09-4812-8d13-176a3cdecd24}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.3	10. mar. 2009
-programmer 	hugo
-tested by		tobias
-
-this function calculates the erf (error) function.
-
-*)
-FUNCTION ERF : REAL
+    <Declaration><![CDATA[FUNCTION ERF : REAL
 VAR_INPUT
 	X : REAL;
 END_VAR
@@ -19,7 +11,14 @@ VAR
 END_VAR
 
 
-]]></Declaration>
+(*
+version 1.3	10. mar. 2009
+programmer 	hugo
+tested by		tobias
+
+this function calculates the erf (error) function.
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[x2 := X*X;
 ax2 := 0.147 * x2 + 1.0;

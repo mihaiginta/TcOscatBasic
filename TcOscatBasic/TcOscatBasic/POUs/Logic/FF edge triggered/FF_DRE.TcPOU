@@ -1,15 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FF_DRE" Id="{4ad78505-0dbc-4a07-834b-2bbac1d5b5c6}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.2	30. oct. 2008
-programmer 	hugo
-tested by	oscat
-
-D-type flip flop with set, reset and rising clock trigger
-
-*)
-FUNCTION_BLOCK FF_DRE
+    <Declaration><![CDATA[FUNCTION_BLOCK FF_DRE
 VAR_INPUT
 	SET : BOOL;
 	D : BOOL;
@@ -24,7 +16,14 @@ VAR
 END_VAR
 
 
+(*
+version 1.2	30. oct. 2008
+programmer 	hugo
+tested by	oscat
 
+D-type flip flop with set, reset and rising clock trigger
+
+*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF rst OR set THEN

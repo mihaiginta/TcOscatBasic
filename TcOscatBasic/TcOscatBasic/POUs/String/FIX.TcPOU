@@ -1,16 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FIX" Id="{154d26c9-27a6-4ad8-8607-143df119f4e0}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.0	29. mar. 2008
-programmer 	hugo
-tested by	tobias
-
-the function fix truncates a string at length L
-or if the string is shorter then L it will be filled with ending Spaces till its length = N.
-
-*)
-FUNCTION FIX : STRING(STRING_LENGTH)
+    <Declaration><![CDATA[FUNCTION FIX : STRING(STRING_LENGTH)
 VAR_INPUT
 	str : STRING(STRING_LENGTH);
 	L : INT;
@@ -22,7 +13,15 @@ VAR
 	SX: STRING(STRING_LENGTH);
 END_VAR
 
-]]></Declaration>
+(*
+version 1.0	29. mar. 2008
+programmer 	hugo
+tested by	tobias
+
+the function fix truncates a string at length L
+or if the string is shorter then L it will be filled with ending Spaces till its length = N.
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* make sure L does not exceed the limits of a string *)
 N := LIMIT(0,L,STRING_LENGTH) - LEN(str);

@@ -1,16 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BYTE_TO_STRB" Id="{c32fb219-7e97-4f09-8e0c-e13aa48b7382}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.3	20. jun. 2008
-programmer 	hugo
-tested by	oscat
-
-BYTE_TO_STRINGB converts a Byte to a String of Bits represented by '0' and '1' s.
-The lowest order bit will be on the right and the high order bit on the left.
-
-*)
-FUNCTION BYTE_TO_STRB : STRING(8)
+    <Declaration><![CDATA[FUNCTION BYTE_TO_STRB : STRING(8)
 VAR_INPUT
 	IN : BYTE;
 END_VAR
@@ -19,10 +10,18 @@ VAR
 	pt : POINTER TO BYTE;
 END_VAR
 
+(*
+version 1.3	20. jun. 2008
+programmer 	hugo
+tested by	oscat
 
+BYTE_TO_STRINGB converts a Byte to a String of Bits represented by '0' and '1' s.
+The lowest order bit will be on the right and the high order bit on the left.
+
+*)
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* pointer f�r die ausgabe ermitteln *)
+      <ST><![CDATA[(* pointer für die ausgabe ermitteln *)
 pt := ADR(BYTE_TO_STRB);
 (* die 8 ausgabecharacter ermitteln und schreiben *)
 FOR i := 1 TO 8 DO

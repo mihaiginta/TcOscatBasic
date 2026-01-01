@@ -1,26 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CTRL_PI" Id="{979aa03a-ca56-4774-98db-df1fc24909be}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 2.0	30. jun 2008
-programmer 	hugo
-tested by	oscat
-
-FT_PI is a PI controller with manual functionality.
-The PID controller works according to the fomula Y = e *(KP+ KI * INTEG(e) ) + offset, while e = set_point - actual.
-a rst will reset all internal data, while a switch to manual will cause the controller to follow the function Y = manual_in + offset.
-limit_h and Limit_l set the possible output range of Y.
-the output flags lim will signal that the output limits are active and overflow will signal that the integrator has reached its limits.
-
-since rev 1.1 the "trapezregel is used for more accuracy.
-rev 1.2 added selective integratin which means the integrative component is only active within a small range of the target value
-this avoids the integrator to go to limits while an input setpoint change happened and is only causing overshoots.
-the int_band is by default 100 which means the int is active all the time and if set to for example to 0.1 the integrator is only active
-while the input is between 0.9 and 1.1 of the set_point value.
-
-default values for KP = 1, TN = 1, TV = 1, LIMIT_L = -1000, LIMIT_H = +1000.
-*)
-FUNCTION_BLOCK CTRL_PI
+    <Declaration><![CDATA[FUNCTION_BLOCK CTRL_PI
 VAR_INPUT
 	ACT, SET, SUP, OFS, M_I : REAL;
 	MAN : BOOL;
@@ -40,7 +21,25 @@ VAR
 	co : CTRL_OUT;
 END_VAR
 
+(*
+version 2.0	30. jun 2008
+programmer 	hugo
+tested by	oscat
 
+FT_PI is a PI controller with manual functionality.
+The PID controller works according to the fomula Y = e *(KP+ KI * INTEG(e) ) + offset, while e = set_point - actual.
+a rst will reset all internal data, while a switch to manual will cause the controller to follow the function Y = manual_in + offset.
+limit_h and Limit_l set the possible output range of Y.
+the output flags lim will signal that the output limits are active and overflow will signal that the integrator has reached its limits.
+
+since rev 1.1 the "trapezregel is used for more accuracy.
+rev 1.2 added selective integratin which means the integrative component is only active within a small range of the target value
+this avoids the integrator to go to limits while an input setpoint change happened and is only causing overshoots.
+the int_band is by default 100 which means the int is active all the time and if set to for example to 0.1 the integrator is only active
+while the input is between 0.9 and 1.1 of the set_point value.
+
+default values for KP = 1, TN = 1, TV = 1, LIMIT_L = -1000, LIMIT_H = +1000.
+*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[DIFF := CTRL_IN(SET, ACT, SUP);

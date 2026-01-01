@@ -1,18 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DEAD_BAND_A" Id="{db4da26a-aa57-4830-acb7-617d5c7f0f8a}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.1	11. mar. 2009
-programmer 	hugo
-tested by		oscat
-
-DEAD_BAND ist eine lineare �bertragungsfunktion mit Totzone. Die Funktion verschiebt den positiven Teil der Kurve um -L und den negativen Teil der Kurve um +L.
-DEAD_BAND = X wenn Abs(X) > L wenn Abs(X) > L
-DEAD_BAND = 0 wenn Abs(X) <= L
-Die Breite der Totzone wird automatisch aus dem Signalrauschen errechnet.
-
-*)
-FUNCTION_BLOCK DEAD_BAND_A
+    <Declaration><![CDATA[FUNCTION_BLOCK DEAD_BAND_A
 VAR_INPUT
 	X : REAL;
 	T : TIME;
@@ -29,7 +18,17 @@ VAR
 END_VAR
 
 
-]]></Declaration>
+(*
+version 1.1	11. mar. 2009
+programmer 	hugo
+tested by		oscat
+
+DEAD_BAND ist eine lineare Übertragungsfunktion mit Totzone. Die Funktion verschiebt den positiven Teil der Kurve um -L und den negativen Teil der Kurve um +L.
+DEAD_BAND = X wenn Abs(X) > L wenn Abs(X) > L
+DEAD_BAND = 0 wenn Abs(X) <= L
+Die Breite der Totzone wird automatisch aus dem Signalrauschen errechnet.
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* filter the input signal *)
 tp1(in := X, T:= T);

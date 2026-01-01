@@ -1,18 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+ï»¿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CHARNAME" Id="{5b40aff5-d993-4448-9ab5-153d9a7dbe08}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.4		17. dec. 2008
-programmer 		hugo
-tested by		oscat
-
-CHARNAME converts a Character code into its HTML character name
-ä is convterted to 'äuml'
-€ is converted to 'euro'
-the character itself is returned if no name is available for the character
-
-*)
-FUNCTION CHARNAME : STRING(10)
+    <Declaration><![CDATA[FUNCTION CHARNAME : STRING(10)
 VAR_INPUT
 	C : BYTE;
 END_VAR
@@ -21,7 +10,17 @@ VAR
 	i : INT;
 END_VAR
 
-]]></Declaration>
+(*
+version 1.4		17. dec. 2008
+programmer 		hugo
+tested by		oscat
+
+CHARNAME converts a Character code into its HTML character name
+Ã¤ is convterted to 'Ã¤uml'
+â‚¬ is converted to 'euro'
+the character itself is returned if no name is available for the character
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF C <> 0 THEN
 	(* construct search string from code followed by $ sign, also clear charname string*)

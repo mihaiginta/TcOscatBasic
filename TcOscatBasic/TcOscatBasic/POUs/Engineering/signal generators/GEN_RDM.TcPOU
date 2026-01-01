@@ -1,19 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="GEN_RDM" Id="{4cec9540-f727-4f03-a16a-0282459607c9}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-	version 1.1	16 sep 2007
-	programmer 	oscat
-	tested BY		oscat
-
-this signal generator generates a random output. The signal is defined by period time (PT),
-amplitude (AM), offset (OS).
-The Output waveform will have its max peak at AM/2 + OS and its minimum peak at -AM/2 + OS.
-The period time PT defines how often the output signal will jump to a new randow value.
-The Output Q will be true for one cycle anytime the output OUT has changed
-
-*)
-FUNCTION_BLOCK GEN_RDM
+    <Declaration><![CDATA[FUNCTION_BLOCK GEN_RDM
 VAR_INPUT
 	PT : TIME;
 	AM : REAL := 1;
@@ -29,7 +17,18 @@ VAR
 	init : BOOL;
 END_VAR
 
-]]></Declaration>
+(*
+	version 1.1	16 sep 2007
+	programmer 	oscat
+	tested BY		oscat
+
+this signal generator generates a random output. The signal is defined by period time (PT),
+amplitude (AM), offset (OS).
+The Output waveform will have its max peak at AM/2 + OS and its minimum peak at -AM/2 + OS.
+The period time PT defines how often the output signal will jump to a new randow value.
+The Output Q will be true for one cycle anytime the output OUT has changed
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read system time and prepare input data *)
 tx := DWORD_TO_TIME(T_PLC_MS()) - last;

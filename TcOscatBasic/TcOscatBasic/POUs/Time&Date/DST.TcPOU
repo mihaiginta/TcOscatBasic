@@ -1,7 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DST" Id="{c3cd3907-073e-4f91-b418-da7c4f9e0a06}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
+    <Declaration><![CDATA[FUNCTION DST : BOOL
+VAR_INPUT
+	UTC : DT;
+END_VAR
+VAR
+	yr : INT;
+	yr4 : DWORD;
+	ltc: DWORD;
+	idate : DWORD;
+END_VAR
+
+(*
 version 1.5	24. jan. 2011
 programmer 	hugo
 tested by	oscat
@@ -13,19 +24,7 @@ the summertime calculation is done according to european standards.
 dst will become TRUE AT 01:00 utc in the morning FOR the respective days
 AND it will become FALSE after daylight savings TIME is switched back end OF october at 01:00 utc
 
-*)
-FUNCTION DST : BOOL
-VAR_INPUT
-	UTC : DT;
-END_VAR
-VAR
-	yr : INT;
-	yr4 : DWORD;
-	ltc: DWORD;
-	idate : DWORD;
-END_VAR
-
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[yr := YEAR_OF_DATE(DT_TO_DATE(UTC));
 ltc := DT_TO_DWORD(UTC);

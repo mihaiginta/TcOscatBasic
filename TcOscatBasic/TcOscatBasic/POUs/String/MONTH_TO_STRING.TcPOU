@@ -1,16 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MONTH_TO_STRING" Id="{d71cb83e-5a7d-411e-b5db-b4e94e26e1f2}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.2	16. jul. 2024
-programmer 	hugo
-tested by	oscat
-
-MONTH_TO_STRING converts an Integer 1..12 into a String with the Names of the corresponding Month.
-the decoding is according to the language setup in global vars
-
-*)
-FUNCTION MONTH_TO_STRING : STRING(10)
+    <Declaration><![CDATA[FUNCTION MONTH_TO_STRING : STRING(10)
 VAR_INPUT
 	MTH : INT;
 	LANG : INT;
@@ -20,7 +11,15 @@ VAR
 	ly : INT;
 END_VAR
 
-]]></Declaration>
+(*
+version 1.2	16. jul. 2024
+programmer 	hugo
+tested by	oscat
+
+MONTH_TO_STRING converts an Integer 1..12 into a String with the Names of the corresponding Month.
+the decoding is according to the language setup in global vars
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF LANG <= 0 THEN Ly := LANGUAGE.DEFAULT; ELSE ly := MIN(LANG, language.LMAX); END_IF;
 IF MTH < 1 OR MTH > 12 THEN

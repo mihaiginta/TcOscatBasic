@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ESR_COLLECT" Id="{05cb3253-60c9-41af-a89d-89cb2f552b48}" SpecialFunc="None">
-    <Declaration><![CDATA[(* max limit of input array *)
-FUNCTION_BLOCK ESR_COLLECT
+    <Declaration><![CDATA[FUNCTION_BLOCK ESR_COLLECT
 VAR_INPUT
 	ESR_0, ESR_1, ESR_2, ESR_3, ESR_4, ESR_5, ESR_6, ESR_7 : ARRAY [0..3] OF esr_data;
 	rst : BOOL;
@@ -14,7 +13,7 @@ VAR_OUTPUT
 	ESR_OUT : ARRAY[0..31] OF esr_data;
 END_VAR
 VAR CONSTANT
-	max_in : INT := 3; 
+	max_in : INT := 3; (* max limit of input array *)
 	max_out : INT := 32; (* number of elements in array *)
 END_VAR
 VAR

@@ -1,19 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="_BUFFER_INSERT" Id="{125d3592-a908-4550-b6ec-b75c1e0fe3fd}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.5	2. jan. 2012
-programmer 	hugo
-tested by	oscat
-
-this function will insert a string at a given position in a buffer.
-the function needs to be called:	_buffer_init(adr("array"),sizeof("array"),init);
-this function will manipulate a given array.
-the function manipulates the original array, it returnes the next position after the input string when finished.
-because this function works with pointers its very time efficient and it needs no extra memory.
-
-*)
-FUNCTION _BUFFER_INSERT : INT
+    <Declaration><![CDATA[FUNCTION _BUFFER_INSERT : INT
 VAR_INPUT
 	STR : STRING(STRING_LENGTH);
 	POS : INT;
@@ -27,7 +15,18 @@ VAR
 END_VAR
 
 
-]]></Declaration>
+(*
+version 1.5	2. jan. 2012
+programmer 	hugo
+tested by	oscat
+
+this function will insert a string at a given position in a buffer.
+the function needs to be called:	_buffer_init(adr("array"),sizeof("array"),init);
+this function will manipulate a given array.
+the function manipulates the original array, it returnes the next position after the input string when finished.
+because this function works with pointers its very time efficient and it needs no extra memory.
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[lx := LEN(str);
 end := pos + lx;

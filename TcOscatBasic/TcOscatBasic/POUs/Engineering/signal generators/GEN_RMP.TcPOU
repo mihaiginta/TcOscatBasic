@@ -1,19 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="GEN_RMP" Id="{4df6a564-e9b4-439e-bdb7-79858842221a}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-	version 1.4	10. mar. 2009
-	programmer 	oscat
-	tested BY		oscat
-
-this signal generator generates a ramp wave output. The ramp wave signal is defined by period time (PT),
-amplitude (AM), offset (OS) and a specific delay for the output signal (DL).
-The Output waveform will have its minimum peak at OS and its maximum peak at AM + OS.
-The delay input can delay a signal up to PT, this can be useful to synchronize different generators
-and generate interleaving signals.
-in addition to the analog output Out there is a second boolean output Q with is true for one cycle when the ramp starts.
-*)
-FUNCTION_BLOCK GEN_RMP
+    <Declaration><![CDATA[FUNCTION_BLOCK GEN_RMP
 VAR_INPUT
 	PT : TIME := t#1s;
 	AM : REAL := 1.0;
@@ -32,7 +20,18 @@ VAR
 	ltemp: REAL;
 END_VAR
 
-]]></Declaration>
+(*
+	version 1.4	10. mar. 2009
+	programmer 	oscat
+	tested BY		oscat
+
+this signal generator generates a ramp wave output. The ramp wave signal is defined by period time (PT),
+amplitude (AM), offset (OS) and a specific delay for the output signal (DL).
+The Output waveform will have its minimum peak at OS and its maximum peak at AM + OS.
+The delay input can delay a signal up to PT, this can be useful to synchronize different generators
+and generate interleaving signals.
+in addition to the analog output Out there is a second boolean output Q with is true for one cycle when the ramp starts.
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read system time and prepare input data *)
 tx := DWORD_TO_TIME(T_PLC_MS()) - last;

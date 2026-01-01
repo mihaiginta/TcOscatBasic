@@ -1,16 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FINDB_NUM" Id="{a189e0c9-6a54-48bb-9a1e-0851ff96a3ed}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.2	29. mar. 2008
-programmer 	hugo
-tested by	tobias
-
-findB_Num searches str backward and returns the last position of a number
-a number is characterized by a letter "0..9" or "."
-
-*)
-FUNCTION FINDB_NUM : INT
+    <Declaration><![CDATA[FUNCTION FINDB_NUM : INT
 VAR_INPUT
 	str : STRING(STRING_LENGTH);
 END_VAR
@@ -19,7 +10,15 @@ VAR
 	pt : POINTER TO BYTE;
 END_VAR
 
-]]></Declaration>
+(*
+version 1.2	29. mar. 2008
+programmer 	hugo
+tested by	tobias
+
+findB_Num searches str backward and returns the last position of a number
+a number is characterized by a letter "0..9" or "."
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[pt := ADR(str) + LEN(str) - 1;
 FOR pos := LEN(str) TO 1 BY -1 DO;

@@ -1,21 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SIGN_I" Id="{1e77253c-2ec7-405e-8930-b2804c1d4e0e}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
+    <Declaration><![CDATA[FUNCTION SIGN_I : BOOL
+VAR_INPUT
+	IN : DINT;
+END_VAR
+
+
+(*
 version 1.3	27. oct. 2008
 programmer 	hugo
 tested by	tobias
 
 this function return true if the integer input is negative
 
-*)
-FUNCTION SIGN_I : BOOL
-VAR_INPUT
-	IN : DINT;
-END_VAR
-
-
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[SIGN_I := in.31;
 

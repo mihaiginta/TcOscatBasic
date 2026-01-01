@@ -1,21 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SECOND" Id="{70cc28df-bf29-4806-90ac-954dab83ab2f}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
+    <Declaration><![CDATA[FUNCTION SECOND : REAL
+VAR_INPUT
+	itod : TOD;
+END_VAR
+
+
+(*
 version 1.1	2 oct 2006
 programmer 	hugo
 tested by	oscat
 
 returns the seconds and milliseconds as real of TOD
 
-*)
-FUNCTION SECOND : REAL
-VAR_INPUT
-	itod : TOD;
-END_VAR
-
-
-]]></Declaration>
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[SECOND := DWORD_TO_REAL(TOD_TO_DWORD(itod) - TOD_TO_DWORD(itod)/60000 * 60000) / 1000.0;
 

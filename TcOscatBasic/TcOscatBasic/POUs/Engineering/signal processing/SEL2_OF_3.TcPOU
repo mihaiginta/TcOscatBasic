@@ -1,18 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SEL2_OF_3" Id="{2b85b740-1ea6-4b33-b07d-beca26a00ef0}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-	version 1.1	10. mar. 2009
-	programmer 	oscat
-	tested BY		oscat
-
-SEL2_OF_3 checks if 3 input Signals are within a distance D from each other and calculates the average of the 3 inputs do not offset more than D from each other.
-If 1 input is more than D greater or smaller than any other input it will be ignored and the average will be calcualted from the remaining 2 Inputs.
-In the case the Output is only calculated from 2 Inputs a Warning Output W will display the Number of the discarded Input. if none of the 3 Inputs are within the allowed Delata D from each other,
-an Error Output E is set True and the last valid Output will remain active until at least 2 Inputs are within a valid Range from each other.
-
-*)
-FUNCTION_BLOCK SEL2_OF_3
+    <Declaration><![CDATA[FUNCTION_BLOCK SEL2_OF_3
 VAR_INPUT
 	IN1 : REAL;
 	IN2 : REAL;
@@ -30,7 +19,17 @@ VAR
 	D31: BOOL;
 END_VAR
 
+(*
+	version 1.1	10. mar. 2009
+	programmer 	oscat
+	tested BY		oscat
 
+SEL2_OF_3 checks if 3 input Signals are within a distance D from each other and calculates the average of the 3 inputs do not offset more than D from each other.
+If 1 input is more than D greater or smaller than any other input it will be ignored and the average will be calcualted from the remaining 2 Inputs.
+In the case the Output is only calculated from 2 Inputs a Warning Output W will display the Number of the discarded Input. if none of the 3 Inputs are within the allowed Delata D from each other,
+an Error Output E is set True and the last valid Output will remain active until at least 2 Inputs are within a valid Range from each other.
+
+*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[D12 := ABS(IN1-IN2) <= D;

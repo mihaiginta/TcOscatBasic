@@ -1,15 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="HEX_TO_BYTE" Id="{fe74da84-09e4-4146-b8cc-c2d7195e4bbd}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.1	20. sep. 2008
-programmer 	hugo
-tested by		oscat
-
-HEX_TO_BYTE converts a Hexadecimal string into a byte.
-
-*)
-FUNCTION HEX_TO_BYTE : BYTE
+    <Declaration><![CDATA[FUNCTION HEX_TO_BYTE : BYTE
 VAR_INPUT
 	HEX : STRING(5);
 END_VAR
@@ -20,7 +12,14 @@ VAR
 	stop: INT;
 END_VAR
 
-]]></Declaration>
+(*
+version 1.1	20. sep. 2008
+programmer 	hugo
+tested by		oscat
+
+HEX_TO_BYTE converts a Hexadecimal string into a byte.
+
+*)]]></Declaration>
     <Implementation>
       <ST><![CDATA[pt := ADR(hex);
 stop := LEN(hex);

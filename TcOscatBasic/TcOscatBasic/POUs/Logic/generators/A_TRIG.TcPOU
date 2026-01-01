@@ -1,17 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="A_TRIG" Id="{26ded8b1-cafe-4757-bbf9-795484534a0a}" SpecialFunc="None">
-    <Declaration><![CDATA[(*
-version 1.1	25. oct. 2008
-programmer 	hugo
-tested by	oscat
-
-this block is similar to the IEC Standard R_trig and F_trig but it monitors a REAL for change.
-if the valiue on IN changes more then D from the last value it will generate trigger and display the difference in output D.
-the trigger will only be active for one cycle.
-
-*)
-FUNCTION_BLOCK A_TRIG
+    <Declaration><![CDATA[FUNCTION_BLOCK A_TRIG
 VAR_INPUT
 	IN : REAL;
 	RES : REAL;
@@ -24,7 +14,16 @@ VAR
 	last_in : REAL;
 END_VAR
 
+(*
+version 1.1	25. oct. 2008
+programmer 	hugo
+tested by	oscat
 
+this block is similar to the IEC Standard R_trig and F_trig but it monitors a REAL for change.
+if the valiue on IN changes more then D from the last value it will generate trigger and display the difference in output D.
+the trigger will only be active for one cycle.
+
+*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[D := IN - LAST_IN;
