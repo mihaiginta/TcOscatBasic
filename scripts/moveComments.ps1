@@ -22,6 +22,10 @@ foreach ($file in $files) {
     # Backup original file
     Copy-Item $file.FullName "$($file.FullName).bak"
 
+    # Convert to UTF-8 (read with original encoding, write as UTF-8)
+    $tempFile = "$($file.FullName).tmp"
+    Get-Content $file.FullName -Raw -Encoding Default | Set-Content $tempFile -Encoding UTF8
+    Move-Item -Force $tempFile $file.FullName
     # Write modified content
     Set-Content $file.FullName $contentNoComment
 
