@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CSQRT" Id="{ad227068-dff3-4f47-9949-b75ac5fca78e}" SpecialFunc="None">
     <Declaration><![CDATA[(*

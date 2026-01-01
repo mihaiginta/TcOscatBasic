@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="LIST_RETRIEVE_LAST" Id="{2d94758c-4ec2-428f-95dc-957e756b6e01}" SpecialFunc="None">
     <Declaration><![CDATA[(*
@@ -6,7 +6,7 @@ version 2.0		21. mar. 2011
 programmer 	hugo
 tested by		oscat
 
-LIST_RETRIEVE_LAST liefert das letzte element einer liste und l�scht das element aus der liste.
+LIST_RETRIEVE_LAST liefert das letzte element einer liste und löscht das element aus der liste.
 die liste liegt als string von elementen vor die mit den zeichen SEP beginnen.
 
 *)

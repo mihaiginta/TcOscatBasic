@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="WINDOW" Id="{24b424c6-fd0c-4c43-a987-2de1674349c4}" SpecialFunc="None">
     <Declaration><![CDATA[(*

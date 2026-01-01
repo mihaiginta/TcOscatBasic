@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FILTER_WAV" Id="{952e49a1-e9a6-4447-941a-1e0d864e1ad7}" SpecialFunc="None">
     <Declaration><![CDATA[(*

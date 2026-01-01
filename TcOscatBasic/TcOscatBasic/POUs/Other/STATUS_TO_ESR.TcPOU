@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="STATUS_TO_ESR" Id="{c3d5b5f5-e914-465f-9c51-5b0a6ba93a93}" SpecialFunc="None">
     <Declaration><![CDATA[(*

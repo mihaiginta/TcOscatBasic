@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+ï»¿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="_ARRAY_SORT" Id="{35ac169c-abe2-4943-ad54-dc395d0be0dc}" SpecialFunc="None">
     <Declaration><![CDATA[(* Laufvariable Stack*)
@@ -9,15 +9,15 @@ VAR_INPUT
 END_VAR
 VAR
 	stack_count: UINT;				
-	stack: ARRAY[1..32] OF UINT;	(* Stackgröße~ 1,6*Log(n)/log(2) *)
-										(* Stackgröße 32 => ~1 Mio Elemente *)
+	stack: ARRAY[1..32] OF UINT;	(* StackgrÃ¶ÃŸe~ 1,6*Log(n)/log(2) *)
+										(* StackgrÃ¶ÃŸe 32 => ~1 Mio Elemente *)
 	links: UINT;						(* Anfangselement des Arrays *)
 	rechts: UINT;						(* Endelement des Arrays *)
-	pivot: REAL;						(* temporärer Schwellwert für Tauschbedingung *)
+	pivot: REAL;						(* temporÃ¤rer Schwellwert fÃ¼r Tauschbedingung *)
 	i: UINT;							(* Laufvariable1 *)
 	j: UINT;							(* Laufvariable2 *)
 	ende_innen: BOOL;				(* Ende innere Schleife *)
-	ende_aussen: BOOL;				(* Ende äußere Schleife *)
+	ende_aussen: BOOL;				(* Ende Ã¤uÃŸere Schleife *)
 	tmp: REAL;						(* Hilfsvariable zum Tauschen von Werten *)
 END_VAR
 
@@ -36,12 +36,12 @@ because this function works with pointers its very time efficient and it needs n
 
 *)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* Startwerte zur Arraygröße *)
+      <ST><![CDATA[(* Startwerte zur ArraygrÃ¶ÃŸe *)
 links := 1;					(* Anfangselement des Arrays *)
 rechts := SHR(size,2);		(* Endelement des Arrays *)
 stack_count := 1;			(* Laufvariable Stack *)
 
-WHILE NOT ende_aussen DO						(* äußere Schleife *)
+WHILE NOT ende_aussen DO						(* Ã¤uÃŸere Schleife *)
 	IF links < rechts THEN
 		pivot := PT^[SHR(rechts+links,1)];			(* Wert des mittleren Elements als Pivot-Wert *)
 		i := links -1;
@@ -71,7 +71,7 @@ WHILE NOT ende_aussen DO						(* äußere Schleife *)
 		UNTIL ende_innen END_REPEAT;
 
 		(* Push stack *)
-		stack[stack_count] := rechts;		(* rechten Teil später sortieren *)
+		stack[stack_count] := rechts;		(* rechten Teil spÃ¤ter sortieren *)
 		IF Stack_count < 32 THEN
 			stack_count := stack_count +1;
 		ELSE

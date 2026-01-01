@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SDT_TO_TOD" Id="{0f1ecabb-9051-4f52-898b-59c4086ae76b}" SpecialFunc="None">
     <Declaration><![CDATA[(*

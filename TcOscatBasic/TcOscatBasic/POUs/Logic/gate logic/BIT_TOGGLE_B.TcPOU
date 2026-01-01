@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BIT_TOGGLE_B" Id="{8ee2d676-c423-4fef-bb56-6651aad7ea56}" SpecialFunc="None">
     <Declaration><![CDATA[(*

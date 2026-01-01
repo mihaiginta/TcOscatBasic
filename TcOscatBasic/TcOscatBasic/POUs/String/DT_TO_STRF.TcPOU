@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DT_TO_STRF" Id="{c941af92-433f-48a7-99bf-0215f3f14369}" SpecialFunc="None">
     <Declaration><![CDATA[(*

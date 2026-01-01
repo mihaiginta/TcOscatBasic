@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="GEN_RDM" Id="{4cec9540-f727-4f03-a16a-0282459607c9}" SpecialFunc="None">
     <Declaration><![CDATA[(*

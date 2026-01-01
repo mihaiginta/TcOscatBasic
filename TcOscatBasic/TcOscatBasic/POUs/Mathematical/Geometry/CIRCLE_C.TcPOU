@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CIRCLE_C" Id="{c5f03b02-f5f8-4df6-b315-93a8ec7b3616}" SpecialFunc="None">
     <Declaration><![CDATA[(*

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DELAY_4" Id="{d039c1b4-760a-4dc3-a775-fd2b442b1f96}" SpecialFunc="None">
     <Declaration><![CDATA[(*

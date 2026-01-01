@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CALIBRATE" Id="{e84c7d10-d5dd-4f8d-af57-9bd2a718d477}" SpecialFunc="None">
     <Declaration><![CDATA[(*

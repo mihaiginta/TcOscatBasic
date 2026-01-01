@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CLK_DIV" Id="{7bea032c-d3c4-49dc-a77e-b92637308a07}" SpecialFunc="None">
     <Declaration><![CDATA[(*

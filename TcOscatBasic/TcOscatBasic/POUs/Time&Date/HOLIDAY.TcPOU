@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+ï»¿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="HOLIDAY" Id="{ffd40a37-77f4-4fe8-935b-faf9891a903a}" SpecialFunc="None">
     <Declaration><![CDATA[(*
@@ -56,7 +56,7 @@ ELSE
 	lx := MIN(language.LMAX, LANGU);
 END_IF;
 
-(* berechnung von ostern für das aktuelle jahr *)
+(* berechnung von ostern fÃ¼r das aktuelle jahr *)
 jahr := YEAR_OF_DATE(date_in);
 ostern := EASTER(jahr);
 wdx := DAY_OF_WEEK(DATE_IN);
@@ -99,24 +99,24 @@ END_IF;
 
 
 (*
-Neujahrstag 	1. Januar 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	•
-Heilige Drei Könige 	6. Januar 	• 	• 												•
-Karfreitag 	Ostersonntag - 2d 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	•
-Ostersonntag 	siehe Osterdatum 				(•)
-Ostermontag 	Ostersonntag + 1d 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	•
-Tag der Arbeit 	1. Mai 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	•
-Christi Himmelfahrt 	Ostersonntag + 39d 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	•
-Pfingstsonntag 	Ostersonntag + 49d 				(•)
-Pfingstmontag 	Ostersonntag + 50d 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	•
-Fronleichnam 	Ostersonntag + 60d 	• 	• 					• 			• 	• 	• 	1) 			2)
+Neujahrstag 	1. Januar 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢
+Heilige Drei KÃ¶nige 	6. Januar 	â€¢ 	â€¢ 												â€¢
+Karfreitag 	Ostersonntag - 2d 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢
+Ostersonntag 	siehe Osterdatum 				(â€¢)
+Ostermontag 	Ostersonntag + 1d 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢
+Tag der Arbeit 	1. Mai 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢
+Christi Himmelfahrt 	Ostersonntag + 39d 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢
+Pfingstsonntag 	Ostersonntag + 49d 				(â€¢)
+Pfingstmontag 	Ostersonntag + 50d 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢
+Fronleichnam 	Ostersonntag + 60d 	â€¢ 	â€¢ 					â€¢ 			â€¢ 	â€¢ 	â€¢ 	1) 			2)
 Augsburger Friedensfest 	8. August 		(3)
-Mariä Himmelfahrt 	15. August 		(5) 										•
-Tag der Deutschen Einheit 	3. Oktober 6) 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	•
-Reformationstag 	31. Oktober 				• 				• 					• 	• 		•
-Allerheiligen 	1. November 	• 	• 								• 	• 	•
-Buß- und Bettag 4) 	Mittwoch vor dem 23.11. 			7 										•
-1. Weihnachtstag 	25. Dezember 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	•
-2. Weihnachtstag 	26. Dezember 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	•
+MariÃ¤ Himmelfahrt 	15. August 		(5) 										â€¢
+Tag der Deutschen Einheit 	3. Oktober 6) 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢
+Reformationstag 	31. Oktober 				â€¢ 				â€¢ 					â€¢ 	â€¢ 		â€¢
+Allerheiligen 	1. November 	â€¢ 	â€¢ 								â€¢ 	â€¢ 	â€¢
+BuÃŸ- und Bettag 4) 	Mittwoch vor dem 23.11. 			7 										â€¢
+1. Weihnachtstag 	25. Dezember 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢
+2. Weihnachtstag 	26. Dezember 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢ 	â€¢
 *)
 
 
@@ -129,7 +129,7 @@ hm	31. oct. 2007	rev 1.2
 	changed holiday definition from constant to input constant to allow easier changes by user without recompilation of the lib
 
 hm 	24. nov. 2007	rev 1.3
-	changes F_use of  Buß_und_Bettag to 0 because this is no official holiday
+	changes F_use of  BuÃŸ_und_Bettag to 0 because this is no official holiday
 
 hm	7. apr. 2008	rev 1.4
 	improved performance

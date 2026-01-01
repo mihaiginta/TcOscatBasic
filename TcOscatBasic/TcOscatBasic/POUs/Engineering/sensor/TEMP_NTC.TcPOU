@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+ï»¿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TEMP_NTC" Id="{0f8e3b15-af7a-4531-9c34-3972d33869ff}" SpecialFunc="None">
     <Declaration><![CDATA[(*
@@ -6,8 +6,8 @@ version 1.1	11. mar. 2009
 programmer 	hugo
 tested by		tobias
 
-this function returs the temperature for a NTC sensor for a range from 0..85 °C.
-RN is the resistance at 25 °C and B is a constant for the given sensor.
+this function returs the temperature for a NTC sensor for a range from 0..85 Â°C.
+RN is the resistance at 25 Â°C and B is a constant for the given sensor.
 
 *)
 FUNCTION TEMP_NTC : REAL

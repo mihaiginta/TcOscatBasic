@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="LIST_NEXT" Id="{229a5eb1-8f49-49e5-a3f6-354872323097}" SpecialFunc="None">
     <Declaration><![CDATA[(*

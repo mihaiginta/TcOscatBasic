@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DAYS_DELTA" Id="{938f71a1-1720-40a6-ac86-8fc6a3b27aa2}" SpecialFunc="None">
     <Declaration><![CDATA[(*

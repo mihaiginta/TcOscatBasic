@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="PARSET2" Id="{ca8b29f6-a7ca-49ed-8eda-0de4778be351}" SpecialFunc="None">
     <Declaration><![CDATA[(*

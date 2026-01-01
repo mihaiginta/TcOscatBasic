@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="_BUFFER_UPPERCASE" Id="{13cab464-52dc-4fa5-b5c4-187ffffe994f}" SpecialFunc="None">
     <Declaration><![CDATA[(*

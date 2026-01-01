@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="INTERLOCK_4" Id="{eb01af35-c955-493e-b610-7cc67bbb3e68}" SpecialFunc="None">
     <Declaration><![CDATA[(*

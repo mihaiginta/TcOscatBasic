@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TON_P" Id="{378602ac-9984-4fb5-817c-f760de97e144}" SpecialFunc="None">
     <Declaration><![CDATA[(* If IN is FALSE, Q is FALSE and ET is 0. As soon as IN becomes TRUE,

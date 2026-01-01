@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CAPITALIZE" Id="{93abd8d0-0c2e-4be9-a43c-62aa852e2bdd}" SpecialFunc="None">
     <Declaration><![CDATA[(*

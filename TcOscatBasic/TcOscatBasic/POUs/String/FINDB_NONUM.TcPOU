@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FINDB_NONUM" Id="{cfec6602-1297-413d-81db-49a37e8e8c7d}" SpecialFunc="None">
     <Declaration><![CDATA[(*

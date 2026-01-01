@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FILTER_I" Id="{06fce03c-6e14-4f68-bfa7-e6e591fe4773}" SpecialFunc="None">
     <Declaration><![CDATA[(*

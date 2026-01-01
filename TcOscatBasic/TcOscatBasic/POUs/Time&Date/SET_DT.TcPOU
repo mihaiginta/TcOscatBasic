@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SET_DT" Id="{07380bb5-bb67-481e-b097-ee832194b332}" SpecialFunc="None">
     <Declaration><![CDATA[(*
@@ -41,7 +41,7 @@ hm		8. oct 2007		rev 1.3
 	deleted unused variables count and leap
 
 hm		1. 11 2007		rev 1.4
-	converted hour type integer to dword in calculation to avoid overrun on m�ller ecp4
+	converted hour type integer to dword in calculation to avoid overrun on möller ecp4
 
 hm		16. mar 2008	rev 1.5
 	added type conversions to avoid warnings under codesys 3.0

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="V3_SMUL" Id="{2d6578dd-4363-457d-810e-3d4fe8e3125e}" SpecialFunc="None">
     <Declaration><![CDATA[(*

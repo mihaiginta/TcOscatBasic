@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FRACT" Id="{1898b21d-9c6b-4827-9f9a-d071803cb353}" SpecialFunc="None">
     <Declaration><![CDATA[(*

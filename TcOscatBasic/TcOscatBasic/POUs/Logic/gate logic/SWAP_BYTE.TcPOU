@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SWAP_BYTE" Id="{db614182-1cb6-41a8-96f5-c3176e8e3088}" SpecialFunc="None">
     <Declaration><![CDATA[(*

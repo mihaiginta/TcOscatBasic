@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SCALE_X4" Id="{14e5fe2e-7891-40b5-ad85-55aacde0c4d8}" SpecialFunc="None">
     <Declaration><![CDATA[(*

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ARRAY_SDV" Id="{eb538ff5-5459-4d2a-9eb4-938dbba94b5c}" SpecialFunc="None">
     <Declaration><![CDATA[(*

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FLOW_METER" Id="{46e9cb4c-2924-49b4-9feb-699b474b022e}" SpecialFunc="None">
     <Declaration><![CDATA[(*

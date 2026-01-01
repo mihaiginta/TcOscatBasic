@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CHR_TO_STRING" Id="{15410595-7aea-4dda-a8a7-cb4522ed167d}" SpecialFunc="None">
     <Declaration><![CDATA[(*

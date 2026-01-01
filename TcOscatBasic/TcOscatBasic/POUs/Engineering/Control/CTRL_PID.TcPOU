@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CTRL_PID" Id="{13a4f0c7-5f2d-4812-9818-ab2721f8b920}" SpecialFunc="None">
     <Declaration><![CDATA[(*

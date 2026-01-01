@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BAR_GRAPH" Id="{b6dc2d72-642d-4688-8a85-e278c1e842e7}" SpecialFunc="None">
     <Declaration><![CDATA[(*

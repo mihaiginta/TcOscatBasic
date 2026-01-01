@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="REAL_TO_DW" Id="{088548cd-45e5-4177-b519-d99e5ec28b15}" SpecialFunc="None">
     <Declaration><![CDATA[(*

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ERF" Id="{34a8bd4f-8c09-4812-8d13-176a3cdecd24}" SpecialFunc="None">
     <Declaration><![CDATA[(*

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="HOUR_TO_TIME" Id="{8312c8d7-a03a-4e90-8ac0-322e69135966}" SpecialFunc="None">
     <Declaration><![CDATA[(*

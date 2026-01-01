@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TREND_DW" Id="{4a8fa0d9-099e-44bc-9bbc-181697fba3b4}" SpecialFunc="None">
     <Declaration><![CDATA[(*

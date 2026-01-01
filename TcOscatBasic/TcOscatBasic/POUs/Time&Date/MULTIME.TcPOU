@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MULTIME" Id="{52b0ec30-d6cd-424e-a3b2-d8823db87b7b}" SpecialFunc="None">
     <Declaration><![CDATA[(*

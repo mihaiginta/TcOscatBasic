@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DEAD_BAND" Id="{9385058b-99ea-45d0-bea8-35c85bbfaa75}" SpecialFunc="None">
     <Declaration><![CDATA[(*
@@ -6,7 +6,7 @@ version 1.2	18. jan. 2011
 programmer 	hugo
 tested by		oscat
 
-DEAD_BAND ist eine lineare �bertragungsfunktion mit Totzone. Die Funktion verschiebt den positiven Teil der Kurve um +L und den negativen Teil der Kurve um -L.
+DEAD_BAND ist eine lineare Übertragungsfunktion mit Totzone. Die Funktion verschiebt den positiven Teil der Kurve um +L und den negativen Teil der Kurve um -L.
 DEAD_BAND = X - L wenn X > L)
 DEAD_BAND = X + L wenn X < -L
 DEAD_BAND = 0 wenn Abs(X) <= L

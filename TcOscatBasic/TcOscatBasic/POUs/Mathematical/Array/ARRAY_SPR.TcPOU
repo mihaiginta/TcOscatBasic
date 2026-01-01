@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ARRAY_SPR" Id="{6d098226-5cf1-4e0d-9a14-fcc471a88c31}" SpecialFunc="None">
     <Declaration><![CDATA[(*

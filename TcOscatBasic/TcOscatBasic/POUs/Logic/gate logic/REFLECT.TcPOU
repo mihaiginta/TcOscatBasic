@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="REFLECT" Id="{776b91c1-3f1d-414e-8d5e-bed5efb8f7c3}" SpecialFunc="None">
     <Declaration><![CDATA[(*

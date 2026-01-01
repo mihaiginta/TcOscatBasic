@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DIFFER" Id="{51d7eeb7-22cf-41dc-8346-75a2ab32aece}" SpecialFunc="None">
     <Declaration><![CDATA[(*

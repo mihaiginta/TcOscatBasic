@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BIT_LOAD_W" Id="{f5b77e37-a0cb-4d32-b0ba-76aa4481dfab}" SpecialFunc="None">
     <Declaration><![CDATA[(*

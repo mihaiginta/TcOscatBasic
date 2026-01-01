@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FSTRING_TO_WEEK" Id="{01bb196b-a467-439d-b627-f152b38b955a}" SpecialFunc="None">
     <Declaration><![CDATA[(*

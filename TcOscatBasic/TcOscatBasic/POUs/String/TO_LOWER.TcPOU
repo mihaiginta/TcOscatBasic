@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TO_LOWER" Id="{c27909ab-0757-4ba2-8846-f7908f409618}" SpecialFunc="None">
     <Declaration><![CDATA[(*

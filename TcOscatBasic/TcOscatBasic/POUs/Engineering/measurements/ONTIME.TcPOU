@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ONTIME" Id="{a93a01a2-7876-43a7-9951-2409895a9bd6}" SpecialFunc="None">
     <Declaration><![CDATA[(*

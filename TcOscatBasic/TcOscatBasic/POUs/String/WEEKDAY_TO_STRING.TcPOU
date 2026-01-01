@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="WEEKDAY_TO_STRING" Id="{d6cd0c8c-afbe-4b13-823d-1f19745bb6c6}" SpecialFunc="None">
     <Declaration><![CDATA[(*

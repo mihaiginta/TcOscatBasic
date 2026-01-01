@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+ï»¿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ENERGY" Id="{f3a169f6-1123-4e41-baf6-9f77fd71dc76}" SpecialFunc="None">
     <Declaration><![CDATA[(*
@@ -30,12 +30,12 @@ YC := YJ * 0.238845896627496;
 YWh := YJ * 2.7777777778E-004;
 
 (*
-Arbeit, Energie, Joule* J 1 J = 1 N · m = 1 W · s = (1/3,6) E–6 kW · h = 1 kg · m2/s2
-Wärmemenge Kilowattstunde kW · h 1 kW · h = 3,6 MJ = 860 kcal
-Elektronvolt eV 1 eV = 160,218 92 E–21 J
-Erg erg 1 erg = 1E–7 J
-Kalorie calorie 1 calalorie = 4,1868 J = 1,163 E–3 W · h
-Therm therm 1 therm = 105,50 · 106 J
+Arbeit, Energie, Joule* J 1 J = 1 N Â· m = 1 W Â· s = (1/3,6) Eâ€“6 kW Â· h = 1 kg Â· m2/s2
+WÃ¤rmemenge Kilowattstunde kW Â· h 1 kW Â· h = 3,6 MJ = 860 kcal
+Elektronvolt eV 1 eV = 160,218 92 Eâ€“21 J
+Erg erg 1 erg = 1Eâ€“7 J
+Kalorie calorie 1 calalorie = 4,1868 J = 1,163 Eâ€“3 W Â· h
+Therm therm 1 therm = 105,50 Â· 106 J
 *)
 
 (* revision history

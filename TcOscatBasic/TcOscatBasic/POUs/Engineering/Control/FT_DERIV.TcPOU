@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FT_DERIV" Id="{54e4cd72-533d-4c27-84ab-0678e9508a0a}" SpecialFunc="None">
     <Declaration><![CDATA[(*

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="GEO_TO_DEG" Id="{a114c159-5b57-48b5-9f93-d09e8959c28f}" SpecialFunc="None">
     <Declaration><![CDATA[(*

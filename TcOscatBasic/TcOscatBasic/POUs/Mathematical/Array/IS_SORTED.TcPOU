@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="IS_SORTED" Id="{6244b4e0-f1e6-47da-b813-99884537f55a}" SpecialFunc="None">
     <Declaration><![CDATA[(*

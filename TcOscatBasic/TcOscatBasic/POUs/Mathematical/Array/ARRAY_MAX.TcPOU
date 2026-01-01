@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ARRAY_MAX" Id="{221d0a4f-32f9-4113-a9ba-22b497a199fe}" SpecialFunc="None">
     <Declaration><![CDATA[(*

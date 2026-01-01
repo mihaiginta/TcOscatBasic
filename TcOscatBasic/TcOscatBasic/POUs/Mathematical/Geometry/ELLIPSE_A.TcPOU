@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ELLIPSE_A" Id="{f3b754e5-814b-411f-a857-7cd6430cfb7f}" SpecialFunc="None">
     <Declaration><![CDATA[(*

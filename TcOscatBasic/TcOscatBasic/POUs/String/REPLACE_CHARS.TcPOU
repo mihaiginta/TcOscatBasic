@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="REPLACE_CHARS" Id="{3e06dded-49df-409f-b31e-753a68270434}" SpecialFunc="None">
     <Declaration><![CDATA[(*
@@ -6,7 +6,7 @@ version 1.0		14. may. 2008
 programmer 		hugo
 tested by			hugo
 
-REPLACE_CHARS erstezt alle character die im string src aufgef�hrt sind mit dem an der selben stelle im string rep gelisteten character.
+REPLACE_CHARS erstezt alle character die im string src aufgeführt sind mit dem an der selben stelle im string rep gelisteten character.
 
 *)
 FUNCTION REPLACE_CHARS : STRING(STRING_LENGTH)

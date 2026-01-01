@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="IS_NCC" Id="{84425ddc-7550-40d6-b8d6-8e08a4ff4281}" SpecialFunc="None">
     <Declaration><![CDATA[(*

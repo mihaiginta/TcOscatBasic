@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+ï»¿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BINOM" Id="{095c177a-4271-4976-84c3-42f3b53cc52d}" SpecialFunc="None">
     <Declaration><![CDATA[(*
@@ -45,10 +45,10 @@ END_IF;
 binomialkoeffizient(n, k)
 1  wenn k = 0 return 1
 2  wenn 2k > n
-3      dann führe aus ergebnis \leftarrow binomialkoeffizient(n, n-k)
-4  sonst führe aus ergebnis \leftarrow n
+3      dann fÃ¼hre aus ergebnis \leftarrow binomialkoeffizient(n, n-k)
+4  sonst fÃ¼hre aus ergebnis \leftarrow n
 5          von i \leftarrow 2 bis k
-6              führe aus ergebnis \leftarrow ergebnis \cdot (n + 1 - i)
+6              fÃ¼hre aus ergebnis \leftarrow ergebnis \cdot (n + 1 - i)
 7                        ergebnis \leftarrow ergebnis : i
 8  return ergebnis
 *)

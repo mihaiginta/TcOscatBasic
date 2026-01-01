@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FILTER_MAV_DW" Id="{7616c563-cc61-4347-aa9a-9511e74edb79}" SpecialFunc="None">
     <Declaration><![CDATA[(*

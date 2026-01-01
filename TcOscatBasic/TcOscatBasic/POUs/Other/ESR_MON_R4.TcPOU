@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ESR_MON_R4" Id="{6d909245-e640-4433-8b93-8933b05a61c5}" SpecialFunc="None">
     <Declaration><![CDATA[(*

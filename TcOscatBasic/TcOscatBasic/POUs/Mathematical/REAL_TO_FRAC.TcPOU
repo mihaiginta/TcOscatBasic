@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+ï»¿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="REAL_TO_FRAC" Id="{f7eaaace-fb42-42c1-a3af-3f65a7d4e137}" SpecialFunc="None">
     <Declaration><![CDATA[(* in einen Bruch umzuwandelnder Wert *)
 FUNCTION REAL_TO_FRAC : FRACTION
 VAR_INPUT
 	X : REAL;					
-	N : INT;					(* maximale Größe des Nenners *)
+	N : INT;					(* maximale GrÃ¶ÃŸe des Nenners *)
 END_VAR
 VAR
-	temp : DINT;				(* Merker für Berechnungen *)
+	temp : DINT;				(* Merker fÃ¼r Berechnungen *)
 
 	sign: BOOL;					(* Vorzeichen vom Eingangswert *)
 	X_gerundet: DINT;			(* Wert von Bruch, auf ganze Zahl gerundet *)
@@ -52,8 +52,8 @@ REPEAT
 	X_ohne_Nachkomma := DINT_TO_REAL(X_gerundet);
 	IF X = X_ohne_Nachkomma THEN						(* Bruch geht ohne Rest auf *)
 		IF ABS(denominator) <= N THEN						(* kein Rundungsfehler *)
-			numerator_old := numerator;					(* Numerator_old wird von Funktion zurückgegeben *)
-			denominator_old := denominator;			(* Denominator_old wird von Funktion zurückgegeben *)
+			numerator_old := numerator;					(* Numerator_old wird von Funktion zurÃ¼ckgegeben *)
+			denominator_old := denominator;			(* Denominator_old wird von Funktion zurÃ¼ckgegeben *)
 		END_IF
 		EXIT;											(* keine weitere Berechnung notwendig *)
 	ELSE

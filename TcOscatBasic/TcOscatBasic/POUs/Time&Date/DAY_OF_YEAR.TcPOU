@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DAY_OF_YEAR" Id="{4c616ccc-5b7b-40d4-8408-2087d8051f52}" SpecialFunc="None">
     <Declaration><![CDATA[(*

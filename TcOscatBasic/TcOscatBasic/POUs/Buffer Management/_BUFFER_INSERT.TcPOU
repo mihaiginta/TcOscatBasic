@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="_BUFFER_INSERT" Id="{125d3592-a908-4550-b6ec-b75c1e0fe3fd}" SpecialFunc="None">
     <Declaration><![CDATA[(*

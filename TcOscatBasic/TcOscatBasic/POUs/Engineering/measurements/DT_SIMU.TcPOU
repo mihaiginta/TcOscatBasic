@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DT_SIMU" Id="{f81093f6-5208-4679-90b0-78b6007a20d9}" SpecialFunc="None">
     <Declaration><![CDATA[(*

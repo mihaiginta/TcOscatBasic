@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="LIST_ADD" Id="{e3024b6d-f12d-4f76-98c2-ccb4e38816af}" SpecialFunc="None">
     <Declaration><![CDATA[(*
@@ -6,7 +6,7 @@ version 2.0		21. mar. 2011
 programmer 	hugo
 tested by		kurt
 
-LIST_ADD h�ngt ein weiteres element ans ende einer liste.
+LIST_ADD hängt ein weiteres element ans ende einer liste.
 die liste liegt als string von elementen vor die mit den zeichen SEP am anfang makiert sind.
 
 *)

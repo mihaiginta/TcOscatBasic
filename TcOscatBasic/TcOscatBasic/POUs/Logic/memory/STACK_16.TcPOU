@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="STACK_16" Id="{706c5bdc-7400-4fea-b2da-604aae78d34e}" SpecialFunc="None">
     <Declaration><![CDATA[(* changing this value will chage the number of stored elements in the fifo *)

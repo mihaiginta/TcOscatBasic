@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="_ARRAY_MEDIAN" Id="{7221fc8e-ee1f-4e0b-b655-e2a798b3803a}" SpecialFunc="None">
     <Declaration><![CDATA[(*

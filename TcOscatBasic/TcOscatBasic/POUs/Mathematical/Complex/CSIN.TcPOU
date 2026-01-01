@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CSIN" Id="{7eb81dac-8cfb-42ca-bd4f-9baf27570e2d}" SpecialFunc="None">
     <Declaration><![CDATA[(*

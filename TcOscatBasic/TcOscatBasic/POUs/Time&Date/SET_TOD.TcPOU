@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SET_TOD" Id="{c92650c3-cafb-4da5-b24d-0239958b9b7c}" SpecialFunc="None">
     <Declaration><![CDATA[(*
@@ -30,7 +30,7 @@ hm		11. sep 2007	rev 1.1
 	changed coding to avoid a compiler warning under twincat.
 
 hm		1. nov 2007	rev 1.2
-	changed coding to avoid possible overrun situation on m�ller ecp4
+	changed coding to avoid possible overrun situation on möller ecp4
 
 hm		2. Nov	2007	rev 1.3
 	changed dword to DINT in calcualtion to avoid warnings with some compilers

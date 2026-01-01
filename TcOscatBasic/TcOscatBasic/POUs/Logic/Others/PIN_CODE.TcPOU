@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="PIN_CODE" Id="{07943bb2-bfc5-448e-890a-0d3975824bdf}" SpecialFunc="None">
     <Declaration><![CDATA[(*

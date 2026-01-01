@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="PWM_PW" Id="{cbdfb51d-2d65-4151-8d2a-cf05976e0612}" SpecialFunc="None">
     <Declaration><![CDATA[(*

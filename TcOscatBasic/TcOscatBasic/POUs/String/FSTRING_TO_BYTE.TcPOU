@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FSTRING_TO_BYTE" Id="{d83a263a-b742-4c3a-b851-2e5beb2f8e27}" SpecialFunc="None">
     <Declaration><![CDATA[(*

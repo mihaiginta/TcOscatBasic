@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="LEAP_OF_DATE" Id="{6e6fbd3e-113b-44cd-8b0b-cdeacaca7d16}" SpecialFunc="None">
     <Declaration><![CDATA[(*

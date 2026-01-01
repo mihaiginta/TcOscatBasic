@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BAND_B" Id="{2180208c-0819-4bda-be9c-6e085d9bcc17}" SpecialFunc="None">
     <Declaration><![CDATA[(*

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SPHERE_V" Id="{ab3e9c07-eb58-4362-956d-9953cd53aaa1}" SpecialFunc="None">
     <Declaration><![CDATA[(*

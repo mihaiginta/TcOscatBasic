@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="RDM2" Id="{4a0016d9-63ca-485f-bb3e-726baa4cca80}" SpecialFunc="None">
     <Declaration><![CDATA[(*

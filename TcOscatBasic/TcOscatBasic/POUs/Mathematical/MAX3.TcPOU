@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MAX3" Id="{e56e8498-860a-4ec7-be2f-fed18bf916a0}" SpecialFunc="None">
     <Declaration><![CDATA[(*

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MUX_4" Id="{be4d0bf5-36ed-419f-bfa2-a839e9f877c3}" SpecialFunc="None">
     <Declaration><![CDATA[(*

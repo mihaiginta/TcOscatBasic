@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="RANGE_TO_WORD" Id="{5bb7e912-2005-49b0-9511-e16e808948c4}" SpecialFunc="None">
     <Declaration><![CDATA[(*

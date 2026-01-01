@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="JD2000" Id="{c988a1ab-ad32-4dc2-b9da-5c5e7a0a779f}" SpecialFunc="None">
     <Declaration><![CDATA[(*

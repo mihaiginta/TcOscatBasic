@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CMP" Id="{2f83ab50-56f0-489d-bc96-79394f84bb42}" SpecialFunc="None">
     <Declaration><![CDATA[(*

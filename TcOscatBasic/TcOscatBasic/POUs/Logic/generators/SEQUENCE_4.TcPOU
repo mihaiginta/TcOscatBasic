@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SEQUENCE_4" Id="{40004f87-c396-4b1f-a1b7-59bd56f79551}" SpecialFunc="None">
     <Declaration><![CDATA[(*

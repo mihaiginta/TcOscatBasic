@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+ï»¿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TEMP_SI" Id="{ea21654b-047d-4207-a859-e47a5502638d}" SpecialFunc="None">
     <Declaration><![CDATA[(*
@@ -6,8 +6,8 @@ version 1.5	10. mar. 2009
 programmer 	hugo
 tested by		tobias
 
-this function returs the temperature for a silicon sensor for a range from -60..+180 °C
-for example KTY10 RS at TS normally 25 °C
+this function returs the temperature for a silicon sensor for a range from -60..+180 Â°C
+for example KTY10 RS at TS normally 25 Â°C
 *)
 FUNCTION TEMP_SI : REAL
 VAR_INPUT

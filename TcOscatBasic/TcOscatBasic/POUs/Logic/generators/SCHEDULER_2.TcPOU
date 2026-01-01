@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SCHEDULER_2" Id="{1d5a21e0-71cb-41d6-81a0-bd7f13818d83}" SpecialFunc="None">
     <Declaration><![CDATA[(*

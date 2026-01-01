@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SHR_4E" Id="{ce8913ef-f4ad-4d22-ac4c-d17cd272662b}" SpecialFunc="None">
     <Declaration><![CDATA[(*

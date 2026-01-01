@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FT_PDT1" Id="{6e161e8c-b750-4992-8aad-d5d99a572d75}" SpecialFunc="None">
     <Declaration><![CDATA[(*

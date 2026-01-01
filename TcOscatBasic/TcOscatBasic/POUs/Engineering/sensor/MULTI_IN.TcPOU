@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MULTI_IN" Id="{33c1cf44-6f67-4e9a-b144-83d118eb8a46}" SpecialFunc="None">
     <Declaration><![CDATA[(*

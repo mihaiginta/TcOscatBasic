@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MONTH_OF_DATE" Id="{d23145a2-1bc0-4dab-a26c-8dfa35ae0dbe}" SpecialFunc="None">
     <Declaration><![CDATA[(*

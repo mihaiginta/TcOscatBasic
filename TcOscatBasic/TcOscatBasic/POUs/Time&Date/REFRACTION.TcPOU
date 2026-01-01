@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="REFRACTION" Id="{81513163-5008-4dff-8069-80c230903805}" SpecialFunc="None">
     <Declaration><![CDATA[(*

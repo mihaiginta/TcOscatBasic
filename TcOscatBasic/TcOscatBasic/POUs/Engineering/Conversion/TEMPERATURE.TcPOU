@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TEMPERATURE" Id="{a8fcf544-c78d-43ec-9a01-e9bf8ee7fd09}" SpecialFunc="None">
     <Declaration><![CDATA[(*

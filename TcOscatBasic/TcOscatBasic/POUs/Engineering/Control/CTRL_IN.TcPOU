@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CTRL_IN" Id="{3362e7f3-25eb-41b7-b268-399bbcf411be}" SpecialFunc="None">
     <Declaration><![CDATA[(*

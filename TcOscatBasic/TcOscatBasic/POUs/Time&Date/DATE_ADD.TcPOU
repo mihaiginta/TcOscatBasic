@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DATE_ADD" Id="{755d89f8-818c-4361-96fe-e245e5d7b137}" SpecialFunc="None">
     <Declaration><![CDATA[(*
@@ -52,7 +52,7 @@ hm 12.4.2007		rev 1.1
 	corrected an error while date would be incorrect when year  = 0
 
 hm	1.11.2007		rev 1.2
-	added int_to_dword stetements to avoid possible overrun with m�ller ecp4
+	added int_to_dword stetements to avoid possible overrun with möller ecp4
 
 hm	22. mar. 2008	rev 1.3
 	fixed some bugs when month was negative

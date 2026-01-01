@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="GAMMA" Id="{120d79d6-d587-4b06-a377-a60015fe34a5}" SpecialFunc="None">
     <Declaration><![CDATA[(*

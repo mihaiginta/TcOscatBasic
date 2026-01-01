@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="_STRING_TO_BUFFER" Id="{717cf9b7-e379-466e-b241-1cff8b134584}" SpecialFunc="None">
     <Declaration><![CDATA[(*

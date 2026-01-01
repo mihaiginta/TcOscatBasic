@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+ï»¿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SHR_8PLE" Id="{550a7450-9433-423d-a33c-521fe008dca8}" SpecialFunc="None">
     <Declaration><![CDATA[(*
@@ -37,7 +37,7 @@ END_VAR
       <ST><![CDATA[(* flankenerkennung clk wird high und edge war high reset ist nicht aktiv und set ist nicht aktiv *)
 IF CLK AND edge AND NOT rst THEN
 	edge := FALSE;	(* flanke wurde erkannt und weitere flankenerkennung wird verhindert bis edge wieder true ist *)
-	(* hier ist der code für das flankenevent *)
+	(* hier ist der code fÃ¼r das flankenevent *)
 	IF UP THEN						(*shift up *)
 		register := SHL(register,1);
 		register.0 := Din;
@@ -52,8 +52,8 @@ IF CLK AND edge AND NOT rst THEN
 		IF up THEN Dout := register.7; ELSE Dout := register.0; END_IF;
 	END_IF;
 END_IF;
-IF NOT clk THEN edge := TRUE; END_IF;	(* sobald clk wieder low wird warten auf nächste flanke *)
-IF rst THEN									(* wenn reset aktiv dann ausgang rücksetzen *)
+IF NOT clk THEN edge := TRUE; END_IF;	(* sobald clk wieder low wird warten auf nÃ¤chste flanke *)
+IF rst THEN									(* wenn reset aktiv dann ausgang rÃ¼cksetzen *)
 	register := 0;
 	Dout := FALSE;
 END_IF;

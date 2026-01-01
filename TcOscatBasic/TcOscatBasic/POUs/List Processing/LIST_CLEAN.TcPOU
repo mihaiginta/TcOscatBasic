@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="LIST_CLEAN" Id="{b73a940e-7b43-4f39-944b-ebf62a1482ad}" SpecialFunc="None">
     <Declaration><![CDATA[(*

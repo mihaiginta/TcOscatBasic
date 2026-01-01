@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BUFFER_SEARCH" Id="{afc67097-3a39-493e-b18e-2fb1c0b333f2}" SpecialFunc="None">
     <Declaration><![CDATA[(*

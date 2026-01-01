@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+ï»¿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="RES_NTC" Id="{c97947ce-2462-4101-bc04-b5ddb1d8769d}" SpecialFunc="None">
     <Declaration><![CDATA[(*
@@ -6,8 +6,8 @@ version 1.1	11. mar. 2009
 programmer 	hugo
 tested by		tobias
 
-this function returs the resistance for a NTC sensor for a given temperature in °C.
-RN is the resistance at 25 °C and B is a constant for the given sensor.
+this function returs the resistance for a NTC sensor for a given temperature in Â°C.
+RN is the resistance at 25 Â°C and B is a constant for the given sensor.
 
 *)
 FUNCTION RES_NTC : REAL

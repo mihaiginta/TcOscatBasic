@@ -9,25 +9,33 @@ foreach ($file in $files) {
     $fbCommentMatch = [regex]::Match($content, '(?s)\(\*.*?\*\)')
     if (-not $fbCommentMatch.Success) {
         Write-Host "No FB comment found in $($file.FullName)"
-        continue
+        # Backup original file
+        Copy-Item $file.FullName "$($file.FullName).bak"
+
+        # Convert to UTF-8 (read with original encoding, write as UTF-8)
+        $tempFile = "$($file.FullName).tmp"
+        Get-Content $file.FullName -Raw -Encoding Default | Set-Content $tempFile -Encoding UTF8
+        Move-Item -Force $tempFile $file.FullName
+    } else 
+    {
+        $fbComment = $fbCommentMatch.Value.Trim()
+
+        # Remove all instances of this comment from the file
+        $contentNoComment = $content -replace [regex]::Escape($fbComment), ''
+
+        # Move to top of Declaration
+        $contentNoComment = $contentNoComment -replace '(<Declaration><!\[CDATA\[)', "`$1$fbComment`r`n"
+
+        # Backup original file
+        Copy-Item $file.FullName "$($file.FullName).bak"
+
+        # Convert to UTF-8 (read with original encoding, write as UTF-8)
+        $tempFile = "$($file.FullName).tmp"
+        Get-Content $file.FullName -Raw -Encoding Default | Set-Content $tempFile -Encoding UTF8
+        Move-Item -Force $tempFile $file.FullName
+        # Write modified content
+        [System.IO.File]::WriteAllText($file.FullName, $contentNoComment, [System.Text.Encoding]::UTF8)
+
+        Write-Host "Processed $($file.FullName)"
     }
-    $fbComment = $fbCommentMatch.Value.Trim()
-
-    # Remove all instances of this comment from the file
-    $contentNoComment = $content -replace [regex]::Escape($fbComment), ''
-
-    # Move to top of Declaration
-    $contentNoComment = $contentNoComment -replace '(<Declaration><!\[CDATA\[)', "`$1$fbComment`r`n"
-
-    # Backup original file
-    Copy-Item $file.FullName "$($file.FullName).bak"
-
-    # Convert to UTF-8 (read with original encoding, write as UTF-8)
-    $tempFile = "$($file.FullName).tmp"
-    Get-Content $file.FullName -Raw -Encoding Default | Set-Content $tempFile -Encoding UTF8
-    Move-Item -Force $tempFile $file.FullName
-    # Write modified content
-    Set-Content $file.FullName $contentNoComment
-
-    Write-Host "Processed $($file.FullName)"
 }

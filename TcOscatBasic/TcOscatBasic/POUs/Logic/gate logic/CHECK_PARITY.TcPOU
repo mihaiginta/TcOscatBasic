@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CHECK_PARITY" Id="{a8758e99-9ef9-44b1-9a45-f6d5627a8a03}" SpecialFunc="None">
     <Declaration><![CDATA[(*

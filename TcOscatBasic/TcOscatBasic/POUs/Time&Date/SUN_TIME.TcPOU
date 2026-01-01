@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SUN_TIME" Id="{12340567-74f8-4723-98c5-be7ea89b09cf}" SpecialFunc="None">
     <Declaration><![CDATA[(* latitude of geographical position  *)

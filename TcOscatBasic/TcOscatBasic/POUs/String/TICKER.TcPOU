@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TICKER" Id="{58f1cc29-85bd-471c-86a5-bb346575890d}" SpecialFunc="None">
     <Declaration><![CDATA[(*

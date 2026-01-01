@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="POLYNOM_INT" Id="{9802a783-412e-41b0-86d1-cc23940373e3}" SpecialFunc="None">
     <Declaration><![CDATA[(*

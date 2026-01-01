@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ARRAY_VAR" Id="{e34ba509-c711-4875-9b6b-618099e85b30}" SpecialFunc="None">
     <Declaration><![CDATA[(*

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FLOAT_TO_REAL" Id="{4cddfea1-dff8-451b-bd96-4e6ef3d26da8}" SpecialFunc="None">
     <Declaration><![CDATA[(*

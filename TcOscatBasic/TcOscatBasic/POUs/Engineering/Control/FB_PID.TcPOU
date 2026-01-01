@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FB_PID" Id="{9148ddd9-4f6e-4c4f-98a6-9a43459fe84e}" SpecialFunc="None">
     <Declaration><![CDATA[(* This PID controller implements an integrator anti-windup method (back-calculation).

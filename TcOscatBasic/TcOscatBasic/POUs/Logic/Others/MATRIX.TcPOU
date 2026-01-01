@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MATRIX" Id="{b6528e42-0c66-4b40-9e15-a32240c2a3b5}" SpecialFunc="None">
     <Declaration><![CDATA[(* scan line inputs *)

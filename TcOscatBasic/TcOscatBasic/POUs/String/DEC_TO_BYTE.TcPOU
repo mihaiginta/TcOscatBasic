@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DEC_TO_BYTE" Id="{6a4319a0-11c8-482e-b522-47df0f602ebc}" SpecialFunc="None">
     <Declaration><![CDATA[(*

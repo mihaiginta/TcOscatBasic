@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FIND_CHAR" Id="{4414ee9f-f75a-4f62-b396-9b9952c84e5a}" SpecialFunc="None">
     <Declaration><![CDATA[(*

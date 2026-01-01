@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DEC_TO_DWORD" Id="{91cd9e74-7140-4303-80f3-99366ad52a70}" SpecialFunc="None">
     <Declaration><![CDATA[(*

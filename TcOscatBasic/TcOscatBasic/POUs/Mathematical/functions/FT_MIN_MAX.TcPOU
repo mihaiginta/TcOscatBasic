@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FT_MIN_MAX" Id="{279bfdfd-0500-4a25-ad34-b8ec87b09b4f}" SpecialFunc="None">
     <Declaration><![CDATA[(*

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="STAIR" Id="{c11c23b2-1b9f-4700-81e0-09ef63d2b401}" SpecialFunc="None">
     <Declaration><![CDATA[(*

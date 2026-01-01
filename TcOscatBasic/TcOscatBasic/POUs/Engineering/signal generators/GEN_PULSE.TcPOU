@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="GEN_PULSE" Id="{a705c1ba-fbca-4578-9de9-b061f5732b5b}" SpecialFunc="None">
     <Declaration><![CDATA[(*
