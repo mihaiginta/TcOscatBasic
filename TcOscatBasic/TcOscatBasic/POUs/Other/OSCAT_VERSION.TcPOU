@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="OSCAT_VERSION" Id="{14dfd48b-8d44-4c26-9a4b-85bb960483a6}" SpecialFunc="None">
     <Declaration><![CDATA[(*
@@ -22,7 +22,7 @@ END_VAR
       <ST><![CDATA[IF in THEN
 	OSCAT_VERSION := DATE_TO_DWORD(D#2024-07-16);
 ELSE
-	OSCAT_VERSION := 335;
+	OSCAT_VERSION := Global_Version.stLibVersion_TcOscatBasic.iMajor*100 + Global_Version.stLibVersion_TcOscatBasic.iMinor;
 END_IF;
 
 (* revision history

@@ -5,6 +5,7 @@
 VAR
 	String_Test : FB_String_Test;
 	B_Trig_Test: FB_B_Trig_Test;
+	Version_Test: FB_Version_Test;
 END_VAR
 ]]></Declaration>
     <Implementation>

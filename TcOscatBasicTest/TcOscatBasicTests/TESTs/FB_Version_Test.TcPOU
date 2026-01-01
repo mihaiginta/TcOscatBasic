@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1">
+  <POU Name="FB_Version_Test" Id="{cf504fe8-af55-4f29-a3c6-024fc6e7955e}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK FB_Version_Test EXTENDS TcUnit.FB_TestSuite
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[WhenOscatVersionSameAsMajorMinor();]]></ST>
+    </Implementation>
+    <Method Name="WhenOscatVersionSameAsMajorMinor" Id="{9cadc575-185d-4dde-84bb-5462e9cd148e}">
+      <Declaration><![CDATA[METHOD WhenOscatVersionSameAsMajorMinor : REFERENCE TO FB_Test
+VAR
+	OscatVersion: DWORD;
+	OscatVersionGLobal:DWORD;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[TEST(__POUNAME());
+
+// @TEST-RUN
+OscatVersion := OSCAT_VERSION(in:=FALSE);
+OscatVersionGLobal := TcOscatBasic.Global_Version.stLibVersion_TcOscatBasic.iMajor*100 + TcOscatBasic.Global_Version.stLibVersion_TcOscatBasic.iMinor;
+
+// @TEST-ASSERT
+AssertEquals_DWORD(OscatVersion, OscatVersionGLobal, 'Versions do not match');
+
+TEST_FINISHED();]]></ST>
+      </Implementation>
+    </Method>
+  </POU>
+</TcPlcObject>
