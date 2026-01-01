@@ -16,7 +16,7 @@
     <LibraryReferences>{fd789346-d196-4941-98dd-ac5ca986e047}</LibraryReferences>
     <CombineIds>false</CombineIds>
     <Released>false</Released>
-    <ProjectVersion>0.0.1.0</ProjectVersion>
+    <ProjectVersion>3.35.0.0</ProjectVersion>
     <Company>github.com/mihaiginta</Company>
     <Title>TcOscatBasic</Title>
     <Description>This is a Twincat fork of the OSCAT basic library (http://www.oscat.de/)</Description>
@@ -34,6 +34,7 @@
     <SelectedLibraryCategories>
       <Id xmlns="">{929d845f-e9d6-4133-90f0-f1e5bff1f77f}</Id>
     </SelectedLibraryCategories>
+    <GlobalVersionStructureIncluded>true</GlobalVersionStructureIncluded>
     <!--    <OutputType>Exe</OutputType>
     <RootNamespace>MyApplication</RootNamespace>
     <AssemblyName>MyApplication</AssemblyName>-->
@@ -69,6 +70,7 @@
     <Folder Include="POUs\Other" />
     <Folder Include="POUs\String" />
     <Folder Include="POUs\Time&amp;Date" />
+    <Folder Include="Version" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DUTs\CALENDAR.TcDUT">
@@ -1787,6 +1789,9 @@
     <Compile Include="POUs\Time&amp;Date\YEAR_OF_DATE.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Version\Global_Version.TcGVL">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="TcOscatBasic.tmc">
@@ -1802,8 +1807,8 @@
   <ProjectExtensions>
     <PlcProjectOptions>
       <XmlArchive>
-  <Data>
-    <o xml:space="preserve" t="OptionKey">
+        <Data>
+          <o xml:space="preserve" t="OptionKey">
       <v n="Name">"&lt;ProjectRoot&gt;"</v>
       <d n="SubKeys" t="Hashtable" ckt="String" cvt="OptionKey">
         <v>{192FAD59-8248-4824-A8DE-9177C94C195A}</v>
@@ -1955,15 +1960,15 @@
       </d>
       <d n="Values" t="Hashtable" />
     </o>
-  </Data>
-  <TypeList>
-    <Type n="Boolean">System.Boolean</Type>
-    <Type n="Hashtable">System.Collections.Hashtable</Type>
-    <Type n="Int32">System.Int32</Type>
-    <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
-    <Type n="String">System.String</Type>
-  </TypeList>
-</XmlArchive>
+        </Data>
+        <TypeList>
+          <Type n="Boolean">System.Boolean</Type>
+          <Type n="Hashtable">System.Collections.Hashtable</Type>
+          <Type n="Int32">System.Int32</Type>
+          <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
+          <Type n="String">System.String</Type>
+        </TypeList>
+      </XmlArchive>
     </PlcProjectOptions>
   </ProjectExtensions>
   <!-- 
