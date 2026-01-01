@@ -1,7 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="M_D" Id="{434d84bd-1938-45f9-9116-13000e6c6f88}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK M_D
+    <Declaration><![CDATA[(*
+	version 1.2	27. feb. 2009
+	programmer 	hugo
+	tested BY	oscat
+
+m_d measures the time between a rising edge on start to a rising edge on stop and returs the last measured value on the output PT.
+a second output ET is starting from 0 at the rising edge of start and is counting up until the rising edge of stop occurs.
+the asynchronous input rst can reset the outputs at any time.
+tmax defines a timeout wich is the maximum measurable time between start and stop, if this time is exceeded the outputs will stay at 0.
+*)
+FUNCTION_BLOCK M_D
 VAR_INPUT
 	start : BOOL;
 	stop : BOOL;
@@ -20,16 +30,7 @@ VAR
 	startup: BOOL;
 END_VAR
 
-(*
-	version 1.2	27. feb. 2009
-	programmer 	hugo
-	tested BY	oscat
-
-m_d measures the time between a rising edge on start to a rising edge on stop and returs the last measured value on the output PT.
-a second output ET is starting from 0 at the rising edge of start and is counting up until the rising edge of stop occurs.
-the asynchronous input rst can reset the outputs at any time.
-tmax defines a timeout wich is the maximum measurable time between start and stop, if this time is exceeded the outputs will stay at 0.
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* check for rst input *)
 IF rst OR et >= tmax THEN

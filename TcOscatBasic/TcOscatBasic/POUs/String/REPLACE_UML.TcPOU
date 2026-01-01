@@ -1,7 +1,15 @@
-ï»¿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="REPLACE_UML" Id="{83224c0f-0b18-4aa8-9958-3abbeac38c53}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION REPLACE_UML : STRING(STRING_LENGTH)
+    <Declaration><![CDATA[(*
+version 1.1	29. mar. 2008
+programmer 		kurt
+tested by		hugo
+
+REPLACE_UML replaces all occurences of Ä,Ö,Ü and ä,ö,ü,ß with Ae, ae, Oe, oe, Ue, ue and ss.
+
+*)
+FUNCTION REPLACE_UML : STRING(STRING_LENGTH)
 VAR_INPUT
 	str : STRING(STRING_LENGTH);
 END_VAR
@@ -15,14 +23,7 @@ VAR
 	pos : INT;
 END_VAR
 
-(*
-version 1.1	29. mar. 2008
-programmer 		kurt
-tested by		hugo
-
-REPLACE_UML replaces all occurences of Ã„,Ã–,Ãœ and Ã¤,Ã¶,Ã¼,ÃŸ with Ae, ae, Oe, oe, Ue, ue and ss.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[PT := ADR(str);
 pto := ADR(REPLACE_UML);

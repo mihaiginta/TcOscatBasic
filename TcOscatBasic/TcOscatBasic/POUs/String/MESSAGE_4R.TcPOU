@@ -1,7 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MESSAGE_4R" Id="{cb4e48cb-328f-4b54-b866-cb4c0cf0905c}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK MESSAGE_4R
+    <Declaration><![CDATA[(*
+version 1.1	27. oct. 2008
+programmer 	hugo
+tested by	tobias
+
+this function generates a rotation meassage with up to 4 strings.
+on each rising edge of EN the next message in line will be displayed.
+when EN stays high longer then one cycle, the next message will be displayed automatically after the time T1 is elapsed.
+the output MX is the generated message and CX is a counter 0..3 signaling the current message displayed.
+the displayed messages are 0 .. MM.
+
+*)
+FUNCTION_BLOCK MESSAGE_4R
 VAR_INPUT
 	M0 : STRING(STRING_LENGTH);
 	M1 : STRING(STRING_LENGTH);
@@ -22,18 +34,7 @@ VAR
 	edge: BOOL;
 END_VAR
 
-(*
-version 1.1	27. oct. 2008
-programmer 	hugo
-tested by	tobias
 
-this function generates a rotation meassage with up to 4 strings.
-on each rising edge of EN the next message in line will be displayed.
-when EN stays high longer then one cycle, the next message will be displayed automatically after the time T1 is elapsed.
-the output MX is the generated message and CX is a counter 0..3 signaling the current message displayed.
-the displayed messages are 0 .. MM.
-
-*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* check for rising edge on EN *)

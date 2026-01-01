@@ -1,7 +1,15 @@
-ï»¿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="WORK_WEEK" Id="{c719d78b-4cde-433b-bb79-b850f806db97}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION WORK_WEEK : INT
+    <Declaration><![CDATA[(*
+version 1.5	25. oct. 2008
+programmer 	hugo
+tested by	oscat
+
+calculates the work week for a given date according to iso8601
+
+*)
+FUNCTION WORK_WEEK : INT
 VAR_INPUT
 	idate : DATE;
 END_VAR
@@ -15,14 +23,7 @@ VAR
 	wm: INT;
 END_VAR
 
-(*
-version 1.5	25. oct. 2008
-programmer 	hugo
-tested by	oscat
-
-calculates the work week for a given date according to iso8601
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* berechne den 1.1 des jahres von idate. *)
 yr := YEAR_OF_DATE(idate);
@@ -30,7 +31,7 @@ d1 := YEAR_BEGIN(yr);
 (* wochentag von d1 *)
 w1 := DAY_OF_WEEK(d1);
 (* offset des montags der eletzten KW des vorjahres *)
-(* wenn der erste tag des jahres grÃ¶ÃŸer als donnerstag ist dann beginnt die letzte kw am montag davor *)
+(* wenn der erste tag des jahres größer als donnerstag ist dann beginnt die letzte kw am montag davor *)
 (* wenn der erste tag des jahres ein donnerstag oder kleiner ist beginnt die erste kw 2 montage davor *)
 IF w1 < 5 THEN
 	ds := DATE_TO_DWORD(d1) - INT_TO_DWORD(w1+6) * 86400;

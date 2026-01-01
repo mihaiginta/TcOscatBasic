@@ -1,7 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="INC2" Id="{be2df538-caf1-45ed-828c-5ee301587b05}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION INC2 : INT
+    <Declaration><![CDATA[(*
+version 1.0	29. jun. 2008
+programmer 	hugo
+tested by	oscat
+
+This function increments the input X by the value D and compares the result with U.
+if the output exceeds U it will continue to count from L again.
+
+*)
+FUNCTION INC2 : INT
 VAR_INPUT
 	X : INT;
 	D : INT;
@@ -13,15 +22,7 @@ VAR
 END_VAR
 
 
-(*
-version 1.0	29. jun. 2008
-programmer 	hugo
-tested by	oscat
-
-This function increments the input X by the value D and compares the result with U.
-if the output exceeds U it will continue to count from L again.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[tmp := U - L + 1;
 INC2 := (X + D - L + tmp) MOD tmp + L;

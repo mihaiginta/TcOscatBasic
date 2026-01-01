@@ -1,20 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DEG" Id="{14320fe7-5b4f-46a2-af27-80df3a8448eb}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION DEG : REAL
-VAR_INPUT
-	rad : REAL;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.2	10. mar. 2009
 programmer 	hugo
 tested by		tobias
 
 this function converts degrees into Radiant
 execution time on wago 750 - 841 =  10  us
-*)]]></Declaration>
+*)
+FUNCTION DEG : REAL
+VAR_INPUT
+	rad : REAL;
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[DEG := MODR(57.29577951308232 * RAD, 360.0);
 

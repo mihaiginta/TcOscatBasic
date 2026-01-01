@@ -1,7 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="LINEAR_INT" Id="{4d941fd4-2a93-4d4d-88e3-ffe5b9852a9f}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION LINEAR_INT : REAL
+    <Declaration><![CDATA[(*
+	version 1.1	27 dec 2007
+	programmer 	oscat
+	tested BY		oscat
+
+LINEAR_INT calculates an output based on a linear interpolation of up to 20 coordinates given in an array
+the input coordinates have to start at the lowest array position and must be sorted ba ascending X values.
+
+*)
+FUNCTION LINEAR_INT : REAL
 VAR_INPUT
 	X : REAL;
 	XY : ARRAY[1..20,0..1] OF REAL;
@@ -11,15 +20,7 @@ VAR
 	i : INT;
 END_VAR
 
-(*
-	version 1.1	27 dec 2007
-	programmer 	oscat
-	tested BY		oscat
-
-LINEAR_INT calculates an output based on a linear interpolation of up to 20 coordinates given in an array
-the input coordinates have to start at the lowest array position and must be sorted ba ascending X values.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(*make sure n is bound within the array size *)
 pts := MIN(pts,20);

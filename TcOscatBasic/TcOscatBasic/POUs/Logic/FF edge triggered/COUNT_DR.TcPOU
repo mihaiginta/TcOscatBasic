@@ -1,7 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="COUNT_DR" Id="{86aac39d-d9ac-4703-ba2f-b18b515d9e74}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK COUNT_DR
+    <Declaration><![CDATA[(*
+	version 1.1	20. jan. 2011
+	programmer 	hugo
+	tested BY		tobias
+
+Count_DR is a DWORD counter with independen up and dn inputs. the counter counts from 0 to mx and continues at 0 after is has reached mx
+a step input sets the counters stepping width.
+
+*)
+FUNCTION_BLOCK COUNT_DR
 VAR_INPUT
 	SET : BOOL;
 	IN : DWORD;
@@ -19,15 +28,7 @@ VAR
 	last_dn: BOOL;
 END_VAR
 
-(*
-	version 1.1	20. jan. 2011
-	programmer 	hugo
-	tested BY		tobias
-
-Count_DR is a DWORD counter with independen up and dn inputs. the counter counts from 0 to mx and continues at 0 after is has reached mx
-a step input sets the counters stepping width.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF rst THEN
 	cnt := 0;

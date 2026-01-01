@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CASINH" Id="{1bac6c02-5577-48b1-9800-9433fbd0bb3b}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION CASINH : complex
+    <Declaration><![CDATA[(*
+version 1.0	21 feb 2008
+programmer 	hugo
+tested by	oscat
+
+this function calculates the hyperbolic arcus sinus function of a complex number
+
+*)
+FUNCTION CASINH : complex
 VAR_INPUT
 	X : complex;
 END_VAR
@@ -9,14 +17,7 @@ VAR
 	Y : complex;
 END_VAR
 
-(*
-version 1.0	21 feb 2008
-programmer 	hugo
-tested by	oscat
-
-this function calculates the hyperbolic arcus sinus function of a complex number
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[y.re := (X.re - X.im)*(X.re + X.im) + 1.0;
 y.im := 2.0 * X.re * X.im;

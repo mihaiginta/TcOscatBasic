@@ -1,7 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="EXEC" Id="{aa4bd741-46ee-483c-82cd-8da57355995a}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION EXEC : STRING(STRING_LENGTH)
+    <Declaration><![CDATA[(*
+version 1.4	29. mar. 2008
+programmer 	hugo
+tested by		tobias
+
+exec executes a mathematical term and returns the result as a string
+the term can only be a simple term without brackets and only one operator
+allowed operastors are: (+, -, *, /, ^, sqrt, sin, cos, tan).
+
+*)
+FUNCTION EXEC : STRING(STRING_LENGTH)
 VAR_INPUT
 	str : STRING(STRING_LENGTH);
 END_VAR
@@ -12,16 +22,7 @@ VAR
 	operator: STRING(10);
 END_VAR
 
-(*
-version 1.4	29. mar. 2008
-programmer 	hugo
-tested by		tobias
-
-exec executes a mathematical term and returns the result as a string
-the term can only be a simple term without brackets and only one operator
-allowed operastors are: (+, -, *, /, ^, sqrt, sin, cos, tan).
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* extract both numbers and operator *)
 EXEC := UPPERCASE(TRIM(str));

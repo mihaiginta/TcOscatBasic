@@ -1,7 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TEMP_PT" Id="{f66b80b1-2316-4619-8a13-3cd65d8c7e78}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION TEMP_PT : REAL
+    <Declaration><![CDATA[(*
+version 1.7	11. mar. 2009
+programmer 	hugo
+tested by		oscat
+
+this function returs the temperature for a platinum sensor for a range from -200..+850 �C *)
+FUNCTION TEMP_PT : REAL
 VAR_INPUT
 	Res : REAL;
 	R0 : REAL;
@@ -19,12 +25,7 @@ VAR
 	pt : POINTER TO DWORD;
 END_VAR
 
-(*
-version 1.7	11. mar. 2009
-programmer 	hugo
-tested by		oscat
-
-this function returs the temperature for a platinum sensor for a range from -200..+850 °C *)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[X := A * R0;
 Y := B * R0;

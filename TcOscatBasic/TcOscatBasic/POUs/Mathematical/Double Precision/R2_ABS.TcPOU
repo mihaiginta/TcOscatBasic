@@ -1,20 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="R2_ABS" Id="{dd2428f1-3187-4231-bc0a-e021f1c31110}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION R2_ABS : REAL2
-VAR_INPUT
-	X : REAL2;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.1	10. mar. 2009
 programmer 	hugo
 tested by		tobias
 
 R2_abs returns the absulute value of a double precision real.
 
-*)]]></Declaration>
+*)
+FUNCTION R2_ABS : REAL2
+VAR_INPUT
+	X : REAL2;
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF X.RX >= 0.0 THEN
 	R2_ABS.RX := X.RX;

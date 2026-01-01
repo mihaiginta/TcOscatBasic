@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CONTROL_SET2" Id="{2660c973-371c-4b2a-96c8-dee448f81ed3}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK CONTROL_SET2
+    <Declaration><![CDATA[(*
+version 1.1	11. mar. 2009
+programmer 	hugo
+tested by		tobias
+
+takahashi calculates controller parameters for P, PI and PID controllers based on the ziegler nichols method.
+
+*)
+FUNCTION_BLOCK CONTROL_SET2
 VAR_INPUT
 	KS : REAL;
 	TU : REAL;
@@ -28,14 +36,7 @@ VAR
 	TX : REAL;
 END_VAR
 
-(*
-version 1.1	11. mar. 2009
-programmer 	hugo
-tested by		tobias
 
-takahashi calculates controller parameters for P, PI and PID controllers based on the ziegler nichols method.
-
-*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF TU > 0.0 AND KS > 0.0 THEN TX := TG / TU / KS; END_IF;

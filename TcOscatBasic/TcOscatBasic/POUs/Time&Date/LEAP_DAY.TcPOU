@@ -1,15 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="LEAP_DAY" Id="{9ac04835-8527-495d-9f8d-72a8f7d0fad1}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION LEAP_DAY : BOOL
-VAR_INPUT
-	IDATE : DATE;
-END_VAR
-VAR
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.2	24. jan. 2011
 programmer 	hugo
 tested by	oscat
@@ -18,6 +10,15 @@ tested by	oscat
 leap_day is true if the tested day is a leap day (29. of february).
 
 *)
+FUNCTION LEAP_DAY : BOOL
+VAR_INPUT
+	IDATE : DATE;
+END_VAR
+VAR
+END_VAR
+
+
+
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[LEAP_DAY := DATE_TO_UDINT(IDATE) MOD 126230400 = 68169600;

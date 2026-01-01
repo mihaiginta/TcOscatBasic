@@ -1,13 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FRACT" Id="{1898b21d-9c6b-4827-9f9a-d071803cb353}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION FRACT : REAL
-VAR_INPUT
-	x : REAL;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.3	10. mar. 2009
 programmer 	hugo
 tested by		tobias
@@ -15,7 +9,14 @@ tested by		tobias
 this function returns the fraction of a real number
 fract(3.14) = 0.14
 
-*)]]></Declaration>
+*)
+FUNCTION FRACT : REAL
+VAR_INPUT
+	x : REAL;
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF ABS(x) < 2.0E9 THEN
 	FRACT := x - DINT_TO_REAL(D_TRUNC(x));

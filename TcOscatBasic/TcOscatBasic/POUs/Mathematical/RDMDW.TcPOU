@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="RDMDW" Id="{3e61c145-468e-47db-937c-760fe65efb9b}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION RDMDW : DWORD
+    <Declaration><![CDATA[(*
+version 1.2	18. oct. 2008
+programmer 	hugo
+tested by		tobias
+
+this function calculates a DWORD pseudo random number.
+
+*)
+FUNCTION RDMDW : DWORD
 VAR_INPUT
 	last : DWORD;
 END_VAR
@@ -13,14 +21,7 @@ END_VAR
 
 
 
-(*
-version 1.2	18. oct. 2008
-programmer 	hugo
-tested by		tobias
-
-this function calculates a DWORD pseudo random number.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[M := BIT_COUNT(last);
 RX := RDM(FRACT(M * math.PI));

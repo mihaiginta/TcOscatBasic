@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="IS_NCC" Id="{84425ddc-7550-40d6-b8d6-8e08a4ff4281}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION IS_NCC : BOOL
+    <Declaration><![CDATA[(*
+version 1.1	29. mar. 2008
+programmer 	Tobias
+tested by		hugo
+
+IS_NCC testet ob in einem string keine Zeichen des Strings CMP enthalten sind.
+
+*)
+FUNCTION IS_NCC : BOOL
 VAR_INPUT
 	str : STRING(STRING_LENGTH);
 	cmp : STRING(STRING_LENGTH);
@@ -11,14 +19,7 @@ VAR
 	pos: INT;
 END_VAR
 
-(*
-version 1.1	29. mar. 2008
-programmer 	Tobias
-tested by		hugo
-
-IS_NCC testet ob in einem string keine Zeichen des Strings CMP enthalten sind.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[L := LEN(str);
 FOR pos := 1 TO L DO

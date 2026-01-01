@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="LAMBERT_W" Id="{5487a5dd-6c80-481b-b4ba-f4e276bd2ff8}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION LAMBERT_W : REAL
+    <Declaration><![CDATA[(*
+version 1.1	10. mar. 2009
+programmer 	hugo
+tested by		oscat
+
+this function calculates the lambert_w function.
+
+*)
+FUNCTION LAMBERT_W : REAL
 VAR_INPUT
 	X : REAL;
 END_VAR
@@ -16,14 +24,7 @@ END_VAR
 
 
 
-(*
-version 1.1	10. mar. 2009
-programmer 	hugo
-tested by		oscat
-
-this function calculates the lambert_w function.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* check for valid input and return -1000 if too low *)
 IF x < -0.367879441171442 THEN

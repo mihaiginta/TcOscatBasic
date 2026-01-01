@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="V3_NORM" Id="{26a1ae4b-7492-44d4-ac21-e925fef53f8f}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION V3_NORM : vector_3
+    <Declaration><![CDATA[(*
+version 1.1	10. mar. 2009
+programmer 	hugo
+tested by		tobias
+
+this function generates a vectors with absolute length 1 from a vector A in a 3 dimensional space
+
+*)
+FUNCTION V3_NORM : vector_3
 VAR_INPUT
 	A : Vector_3;
 END_VAR
@@ -9,14 +17,7 @@ VAR
 	la: REAL;
 END_VAR
 
-(*
-version 1.1	10. mar. 2009
-programmer 	hugo
-tested by		tobias
-
-this function generates a vectors with absolute length 1 from a vector A in a 3 dimensional space
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[la := V3_ABS(A);
 IF la > 0.0 THEN

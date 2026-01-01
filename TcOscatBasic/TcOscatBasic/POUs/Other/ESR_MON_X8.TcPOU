@@ -1,7 +1,20 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ESR_MON_X8" Id="{13c1e283-dfd8-4bd3-a4ec-b24aaf7af7d6}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK ESR_MON_X8
+    <Declaration><![CDATA[(*
+version 1.2	1. dec. 2009
+programmer 	hugo
+tested by		tobias
+
+ESR_MON_X8 is a status and error collector.
+the module checks 8 status inputs for a change and reports up to 4 input changes with time and adress stamp to the output.
+the mode can be
+1 for error only
+2 for error and status
+3 for error, status and debug
+the adress label of the 8 inputs can be configured individually.
+*)
+FUNCTION_BLOCK ESR_MON_X8
 VAR_INPUT
 	s0, s1, s2, s3, s4, s5, s6, s7 : BYTE;
 	DT_in : DT;
@@ -22,19 +35,7 @@ VAR
 	cnt : INT;
 END_VAR
 
-(*
-version 1.2	1. dec. 2009
-programmer 	hugo
-tested by		tobias
 
-ESR_MON_X8 is a status and error collector.
-the module checks 8 status inputs for a change and reports up to 4 input changes with time and adress stamp to the output.
-the mode can be
-1 for error only
-2 for error and status
-3 for error, status and debug
-the adress label of the 8 inputs can be configured individually.
-*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read system timer *)

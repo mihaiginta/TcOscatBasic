@@ -1,7 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="REAL_TO_STRF" Id="{bc22d45e-6210-4e20-ac09-0a18e8954fb7}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION REAL_TO_STRF : STRING(20)
+    <Declaration><![CDATA[(*
+version 1.8	2. jan 2012
+programmer 	hugo
+tested by	oscat
+
+Real_to_strf converts a Real to a fixed length String.
+the string will be filles with zeroes to achieve the fixed length N after the decimal separator.
+the input parameter specifies the decimal separator to be used in the output string.
+
+*)
+FUNCTION REAL_TO_STRF : STRING(20)
 VAR_INPUT
 	IN : REAL;
 	N : INT;
@@ -12,16 +22,7 @@ VAR
 	i: INT;
 END_VAR
 
-(*
-version 1.8	2. jan 2012
-programmer 	hugo
-tested by	oscat
 
-Real_to_strf converts a Real to a fixed length String.
-the string will be filles with zeroes to achieve the fixed length N after the decimal separator.
-the input parameter specifies the decimal separator to be used in the output string.
-
-*)
 
 ]]></Declaration>
     <Implementation>

@@ -1,13 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="YEAR_BEGIN" Id="{bb6b182d-2378-4a36-a311-42e60b47878e}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION YEAR_BEGIN : DATE
-VAR_INPUT
-	y : INT;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.2	7. Apr. 2008
 programmer 	hugo
 tested by	tobias
@@ -15,7 +9,14 @@ tested by	tobias
 returs the date of january 1st for the given year
 the function works for dates from 1970 - 2099
 
-*)]]></Declaration>
+*)
+FUNCTION YEAR_BEGIN : DATE
+VAR_INPUT
+	y : INT;
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[YEAR_BEGIN := DWORD_TO_DATE(SHR(INT_TO_DWORD(y) * 1461 - 2878169,2) * 86400);
 

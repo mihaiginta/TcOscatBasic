@@ -1,7 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DW_TO_REAL" Id="{e338f6d7-c40f-471d-b5e8-40b7e78c7185}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION DW_TO_REAL : REAL
+    <Declaration><![CDATA[(*
+version 1.0	18. apr. 2008
+programmer 	hugo
+tested by		tobias
+
+this function converts a DWORD to REAL in a bitwise manner.
+*)
+FUNCTION DW_TO_REAL : REAL
 VAR_INPUT
 	X : DWORD;
 END_VAR
@@ -9,13 +16,7 @@ VAR
 	pt : POINTER TO REAL;
 END_VAR
 
-(*
-version 1.0	18. apr. 2008
-programmer 	hugo
-tested by		tobias
 
-this function converts a DWORD to REAL in a bitwise manner.
-*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[pt := ADR(X);

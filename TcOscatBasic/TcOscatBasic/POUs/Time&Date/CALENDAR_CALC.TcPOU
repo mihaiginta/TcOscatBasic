@@ -1,7 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CALENDAR_CALC" Id="{0221f6a2-cf8d-448d-ab78-9eb5468f98c2}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK CALENDAR_CALC
+    <Declaration><![CDATA[(*
+version 1.7	3. Feb. 2021
+programmer 	hugo
+tested by		oscat
+
+calendar_calc liest die weltzeit .UTC aus einer CALENDAR Struktur und berechnet die restlichen Werte der Struktur.
+calendar_calc stellt sicher das die Werte fortlaufend aktualisiert werden und dabei funktionen nur dann aufgerufen werden wenn dies n?tig ist.
+calendar_calc will calculate sun position data when SPE = TRUE;
+
+*)
+FUNCTION_BLOCK CALENDAR_CALC
 VAR_INPUT
 	SPE : BOOL;
 	H : REAL := -0.83333333333;
@@ -26,16 +36,7 @@ VAR
 END_VAR
 
 
-(*
-version 1.7	3. Feb. 2021
-programmer 	hugo
-tested by		oscat
 
-calendar_calc liest die weltzeit .UTC aus einer CALENDAR Struktur und berechnet die restlichen Werte der Struktur.
-calendar_calc stellt sicher das die Werte fortlaufend aktualisiert werden und dabei funktionen nur dann aufgerufen werden wenn dies n�tig ist.
-calendar_calc will calculate sun position data when SPE = TRUE;
-
-*)
 
 ]]></Declaration>
     <Implementation>

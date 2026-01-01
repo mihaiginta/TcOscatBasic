@@ -1,7 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CLICK_CNT" Id="{ab7379f0-d0d8-4e67-bfc9-76a73648a73f}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK CLICK_CNT
+    <Declaration><![CDATA[(*
+version 1.0	16. jul. 2008
+programmer 	hugo
+tested by	oscat
+
+this Module decodes a specified number of clicks.
+the output trig is high for one cycle if N clicks are present within a specified time TC.
+
+*)
+FUNCTION_BLOCK CLICK_CNT
 VAR_INPUT
 	IN : BOOL;
 	N : INT;
@@ -16,15 +25,7 @@ VAR
 	cnt: INT := -1;
 END_VAR
 
-(*
-version 1.0	16. jul. 2008
-programmer 	hugo
-tested by	oscat
 
-this Module decodes a specified number of clicks.
-the output trig is high for one cycle if N clicks are present within a specified time TC.
-
-*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* Q shall only be active for one cycle only *)

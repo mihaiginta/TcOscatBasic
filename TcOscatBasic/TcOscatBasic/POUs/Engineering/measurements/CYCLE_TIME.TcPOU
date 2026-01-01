@@ -1,7 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CYCLE_TIME" Id="{3d521b0c-4bbe-4828-8bf7-8e5c3ec0cac8}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK CYCLE_TIME
+    <Declaration><![CDATA[(*
+	version 1.2	16 sep 2007
+	programmer 	hugo
+	tested BY		hans
+
+this function block measures the cycle time and displays the last, min and max cycle time of the current task.
+the resolution is 1ms.
+the cycles output is a dword counter which counts the cycles.
+a rst pulse on the input will reset all data.
+
+
+*)
+FUNCTION_BLOCK CYCLE_TIME
 VAR_INPUT
 	RST : BOOL;
 END_VAR
@@ -20,18 +32,7 @@ VAR
 END_VAR
 
 
-(*
-	version 1.2	16 sep 2007
-	programmer 	hugo
-	tested BY		hans
-
-this function block measures the cycle time and displays the last, min and max cycle time of the current task.
-the resolution is 1ms.
-the cycles output is a dword counter which counts the cycles.
-a rst pulse on the input will reset all data.
-
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[tx := DWORD_TO_TIME(T_PLC_MS()) - last_cycle;
 IF rst THEN

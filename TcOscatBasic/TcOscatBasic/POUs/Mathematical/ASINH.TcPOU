@@ -1,20 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ASINH" Id="{dfa79a85-a911-463f-97af-c1478f532aa1}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION ASINH : REAL
-VAR_INPUT
-	X : REAL;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.3	10. mar 2009
 programmer 	hugo
 tested by		tobias
 
 this function calculates the arcus sin hyperbolicus
 
-*)]]></Declaration>
+*)
+FUNCTION ASINH : REAL
+VAR_INPUT
+	X : REAL;
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[ASINH := LN(SQRT(X * X + 1.0)+X);
 

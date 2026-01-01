@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="COUNT_CHAR" Id="{0c76f088-5057-49bb-8c1a-d9d3d91f8eb4}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION COUNT_CHAR : INT
+    <Declaration><![CDATA[(*
+version 1.1	29. mar. 2008
+programmer 		kurt
+tested by		hugo
+
+COUNT_CHAR counts how often a character CHAR occurs within a string STR.
+
+*)
+FUNCTION COUNT_CHAR : INT
 VAR_INPUT
 	str : STRING(STRING_LENGTH);
 	chr : BYTE;
@@ -13,14 +21,7 @@ VAR
 END_VAR
 
 
-(*
-version 1.1	29. mar. 2008
-programmer 		kurt
-tested by		hugo
-
-COUNT_CHAR counts how often a character CHAR occurs within a string STR.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[PT := ADR(str);
 l := LEN(str);
