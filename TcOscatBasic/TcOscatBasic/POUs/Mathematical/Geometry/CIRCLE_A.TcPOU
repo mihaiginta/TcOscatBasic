@@ -1,14 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CIRCLE_A" Id="{3a6291e1-5144-4470-bebb-c1065423220a}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION CIRCLE_A : REAL
-VAR_INPUT
-	rx : REAL;
-	ax : REAL;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.2	22. feb 2008
 programmer 	hugo
 tested by		tobias
@@ -17,6 +10,14 @@ circle_A calculates the Area of a circle segement if ax = 360 the whole circle i
 
 
 *)
+FUNCTION CIRCLE_A : REAL
+VAR_INPUT
+	rx : REAL;
+	ax : REAL;
+END_VAR
+
+
+
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[circle_A := Rx * RX * 8.726646E-3 * Ax;

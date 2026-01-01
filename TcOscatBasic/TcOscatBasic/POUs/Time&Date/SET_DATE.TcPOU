@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SET_DATE" Id="{07257dd1-02df-438f-b796-4101e754a16a}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION SET_DATE : DATE
+    <Declaration><![CDATA[(*
+version 2.4	3. feb. 2021
+programmer 	hugo
+tested by	tobias
+
+creates a date output from year, month and day of month   
+
+*)
+FUNCTION SET_DATE : DATE
 VAR_INPUT
 	YEAR : INT;
 	MONTH : INT;
@@ -12,14 +20,7 @@ VAR
 	ofs: ARRAY[1..12] OF INT := [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
 END_VAR
 
-(*
-version 2.4	3. feb. 2021
-programmer 	hugo
-tested by	tobias
-
-creates a date output from year, month and day of month   
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF (MONTH > 2) AND (SHL(YEAR,14) = 0)
 THEN (* we add one day for leap year *)

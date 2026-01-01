@@ -1,21 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BETA" Id="{81925f76-62f9-4211-b728-04c6ef48f27b}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION BETA : REAL
-VAR_INPUT
-	X : REAL;
-	Y : REAL;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.0	26. oct. 2008
 programmer 	hugo
 tested by		oscat
 
 this function calculates the beta function for real number > 0.
 
-*)]]></Declaration>
+*)
+FUNCTION BETA : REAL
+VAR_INPUT
+	X : REAL;
+	Y : REAL;
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[BETA := GAMMA(X) * GAMMA(Y) / GAMMA(x + y);
 

@@ -1,7 +1,17 @@
-ï»¿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ASTRO" Id="{d968f53a-df44-4e46-b0e8-d288ad08575d}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK ASTRO
+    <Declaration><![CDATA[(*
+version 1.1	11. mar. 2009
+programmer 	hugo
+tested by		oscat
+
+this function converts different length units
+any unused input can simply be left open.
+different inputs connected at the same time will be added up.
+
+*)
+FUNCTION_BLOCK ASTRO
 VAR_INPUT
 	m : REAL;
 	AE : REAL;
@@ -16,16 +26,7 @@ VAR_OUTPUT
 END_VAR
 
 
-(*
-version 1.1	11. mar. 2009
-programmer 	hugo
-tested by		oscat
-
-this function converts different length units
-any unused input can simply be left open.
-different inputs connected at the same time will be added up.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[YAE :=	AE
 		+ m * 6.6845871535E-012
@@ -37,18 +38,18 @@ YLJ := YAE * 1.5812776724E-005;
 
 
 (*
-LÃ¤nge Meter m SI-Basiseinheit
-Astronomische Einheit* AE 1 AE = 149,597 870 Â· E9 m
-Parsec pc 1 pc = 206265 AE = 30,857 Â· E15 m
-Lichtjahr Lj 1 Lj = 9,460 530 Â· E15 m = 63240 AE = 0,306 59 pc
-Ã…ngstrÃ¶m Ã… 1 Ã… = Eâ€“l0 m
-typograph. Punkt p 1 p = 0,376 065 mm â€¢ im Druckereigewerbe
-inch** in 1 in = 2,54 Â· Eâ€“2 m = 25,4 mm***
+Länge Meter m SI-Basiseinheit
+Astronomische Einheit* AE 1 AE = 149,597 870 · E9 m
+Parsec pc 1 pc = 206265 AE = 30,857 · E15 m
+Lichtjahr Lj 1 Lj = 9,460 530 · E15 m = 63240 AE = 0,306 59 pc
+Ångström Å 1 Å = E–l0 m
+typograph. Punkt p 1 p = 0,376 065 mm • im Druckereigewerbe
+inch** in 1 in = 2,54 · E–2 m = 25,4 mm***
 foot ft 1 ft = 0,3048 m = 30,48 cm
 yard yd 1 yd = 0,9144 m
 mile mile 1 mile = 1609,344 m
 Internat. Seemeile sm 1 sm = 1852 m
-Fathom fm 1 fm = 1,829 m â€¢ in der Seeschifffahrt
+Fathom fm 1 fm = 1,829 m • in der Seeschifffahrt
 *)
 
 (* revision history

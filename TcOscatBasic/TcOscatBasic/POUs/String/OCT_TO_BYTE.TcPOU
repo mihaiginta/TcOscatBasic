@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="OCT_TO_BYTE" Id="{9e66a626-b4bd-4b95-8013-b2c483e5e517}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION OCT_TO_BYTE : BYTE
+    <Declaration><![CDATA[(*
+version 1.1	20. sep. 2008
+programmer 	hugo
+tested by		oscat
+
+OCT_TO_BYTE converts a octagonal string into a byte.
+
+*)
+FUNCTION OCT_TO_BYTE : BYTE
 VAR_INPUT
 	OCT : STRING(10);
 END_VAR
@@ -12,14 +20,7 @@ VAR
 	stop: INT;
 END_VAR
 
-(*
-version 1.1	20. sep. 2008
-programmer 	hugo
-tested by		oscat
-
-OCT_TO_BYTE converts a octagonal string into a byte.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[pt := ADR(oct);
 stop := LEN(oct);

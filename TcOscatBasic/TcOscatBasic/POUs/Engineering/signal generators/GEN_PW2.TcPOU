@@ -1,7 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="GEN_PW2" Id="{cb6e9399-ee17-44d5-893a-df8e9fc5520a}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK GEN_PW2
+    <Declaration><![CDATA[(*
+version 1.1	14. mar. 2009
+programmer 	hugo
+tested by		oscat
+
+GEN_PW2 generates a time TH? followed by a time TL?.
+the input ts selects between 2 sets of timings for the operation.
+
+
+*)
+FUNCTION_BLOCK GEN_PW2
 VAR_INPUT
 	ENQ : BOOL;
 	TH1 : TIME;
@@ -24,16 +34,7 @@ VAR
 	et : TIME;
 END_VAR
 
-(*
-version 1.1	14. mar. 2009
-programmer 	hugo
-tested by		oscat
-
-GEN_PW2 generates a time TH? followed by a time TL?.
-the input ts selects between 2 sets of timings for the operation.
-
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read system timer *)
 tx := DWORD_TO_TIME(T_PLC_MS());

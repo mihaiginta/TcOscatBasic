@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="IS_HEX" Id="{b82322ef-7a1e-467d-af85-854997e9c3d6}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION IS_HEX : BOOL
+    <Declaration><![CDATA[(*
+version 1.1	29. mar. 2008
+programmer 		kurt
+tested by		hugo
+
+IS_HEX testet ob in einem string nur Zahlen 0..9 oder A..F oder a..f  vorkommen.
+
+*)
+FUNCTION IS_HEX : BOOL
 VAR_INPUT
 	str : STRING(STRING_LENGTH);
 END_VAR
@@ -11,14 +19,7 @@ VAR
 	pos: INT;
 END_VAR
 
-(*
-version 1.1	29. mar. 2008
-programmer 		kurt
-tested by		hugo
-
-IS_HEX testet ob in einem string nur Zahlen 0..9 oder A..F oder a..f  vorkommen.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[PT := ADR(str);
 L := LEN(str);

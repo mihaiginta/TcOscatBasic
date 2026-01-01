@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="PARSET" Id="{6279e3b7-38a9-431c-bf0a-d23cfc0edd24}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK PARSET
+    <Declaration><![CDATA[(*
+version 1.1	16. mar. 2008
+programmer 	hugo
+tested by		tobias
+
+parset selects on of 4 parameter sets adressed by the inputs A0 and A1. if TC is specified, the change of the outputs
+is ramped by the time tc
+*)
+FUNCTION_BLOCK PARSET
 VAR_INPUT
 	A0, A1 : BOOL;
 END_VAR
@@ -24,14 +32,7 @@ VAR
 	init: BOOL;
 END_VAR
 
-(*
-version 1.1	16. mar. 2008
-programmer 	hugo
-tested by		tobias
 
-parset selects on of 4 parameter sets adressed by the inputs A0 and A1. if TC is specified, the change of the outputs
-is ramped by the time tc
-*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read system_time *)

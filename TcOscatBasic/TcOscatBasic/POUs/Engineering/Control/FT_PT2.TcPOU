@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FT_PT2" Id="{e0b320e0-771c-4e42-8cab-c3e399af9d74}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FT_PT2
+    <Declaration><![CDATA[(*
+version 1.5	11. mar. 2009
+programmer 	hugo
+tested by		oscat
+
+FT_PT2 is a 2nd grade filter with programmable times T, D and faktor K.
+
+*)
+FUNCTION_BLOCK FT_PT2
 VAR_INPUT
 	in : REAL;
 	T : TIME;
@@ -20,14 +28,7 @@ VAR
 	tn2: REAL;
 END_VAR
 
-(*
-version 1.5	11. mar. 2009
-programmer 	hugo
-tested by		oscat
-
-FT_PT2 is a 2nd grade filter with programmable times T, D and faktor K.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* startup initialisation *)
 IF NOT init OR T = T#0s THEN

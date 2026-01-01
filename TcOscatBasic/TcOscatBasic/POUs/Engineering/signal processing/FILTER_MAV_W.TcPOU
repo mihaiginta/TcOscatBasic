@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FILTER_MAV_W" Id="{204c944e-7746-4732-b8ed-8b5e5daee4ad}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK FILTER_MAV_W
+    <Declaration><![CDATA[(*
+version 1.4	26. MAR. 2011
+programmer 	hugo
+tested by		oscat
+
+FILTER_MAV_W is a moving average filter with programmable length N for WORD Data.
+
+*)
+FUNCTION_BLOCK FILTER_MAV_W
 VAR_INPUT
 	X : WORD;
 	N : UINT;
@@ -20,14 +28,7 @@ VAR
 	tmp : INT;
 END_VAR
 
-(*
-version 1.4	26. MAR. 2011
-programmer 	hugo
-tested by		oscat
-
-FILTER_MAV_W is a moving average filter with programmable length N for WORD Data.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* limit N to size of buffer *)
 N := MIN(N, 32);

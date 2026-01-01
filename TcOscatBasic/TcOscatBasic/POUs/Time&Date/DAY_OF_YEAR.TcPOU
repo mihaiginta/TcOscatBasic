@@ -1,20 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DAY_OF_YEAR" Id="{4c616ccc-5b7b-40d4-8408-2087d8051f52}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION DAY_OF_YEAR : INT
-VAR_INPUT
-	IDATE : DATE;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.4		28. jan. 2011
 programmer 	hugo
 tested by		oscat
 
 calculates the day of the year
 
-*)]]></Declaration>
+*)
+FUNCTION DAY_OF_YEAR : INT
+VAR_INPUT
+	IDATE : DATE;
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[DAY_OF_YEAR := UDINT_TO_INT((DATE_TO_UDINT(idate) / UDINT#86400) MOD UDINT#1461);
 IF DAY_OF_YEAR > 729 THEN

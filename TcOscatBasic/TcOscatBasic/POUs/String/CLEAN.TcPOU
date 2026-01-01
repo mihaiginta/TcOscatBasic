@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CLEAN" Id="{0d0656f4-0eb0-403b-a8e4-fbaf0d7657c6}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION CLEAN : STRING(STRING_LENGTH)
+    <Declaration><![CDATA[(*
+version 1.0	18. jun. 2008
+programmer 	hugo
+tested by	oscat
+
+Clean deletes all characters from a string except the ones specified in CX.
+
+*)
+FUNCTION CLEAN : STRING(STRING_LENGTH)
 VAR_INPUT
 	IN : STRING(STRING_LENGTH);
 	CX : STRING(80);
@@ -12,14 +20,7 @@ VAR
 END_VAR
 
 
-(*
-version 1.0	18. jun. 2008
-programmer 	hugo
-tested by	oscat
 
-Clean deletes all characters from a string except the ones specified in CX.
-
-*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* copy input string *)

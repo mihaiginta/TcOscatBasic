@@ -1,7 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="GEN_SIN" Id="{b779e2d6-a634-4fd9-bbbb-f272fe67e88c}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK GEN_SIN
+    <Declaration><![CDATA[(*
+version 1.6	11. mar. 2009
+programmer 	oscat
+tested BY	oscat
+
+this signal generator generates a sine wave output. The sine wave signal is defined by period time (PT),
+amplitude (AM), offset (OS) and a specific delay for the output signal (DL).
+The Output waveform will have its max peak at AM/2 + OS and its minimum peak at -AM/2 + OS.
+The delay input can delay a signal up to PT, this can be useful to synchronize different generators
+and generate interleaving signals. A Cos wave can be generated accordingly.
+in addition to a analog output Out there is a second boolean output Q with the corresponding binary signal.
+*)
+FUNCTION_BLOCK GEN_SIN
 VAR_INPUT
 	PT : TIME;
 	AM : REAL := 1.0;
@@ -19,18 +31,7 @@ VAR
 	temp : REAL;
 END_VAR
 
-(*
-version 1.6	11. mar. 2009
-programmer 	oscat
-tested BY	oscat
-
-this signal generator generates a sine wave output. The sine wave signal is defined by period time (PT),
-amplitude (AM), offset (OS) and a specific delay for the output signal (DL).
-The Output waveform will have its max peak at AM/2 + OS and its minimum peak at -AM/2 + OS.
-The delay input can delay a signal up to PT, this can be useful to synchronize different generators
-and generate interleaving signals. A Cos wave can be generated accordingly.
-in addition to a analog output Out there is a second boolean output Q with the corresponding binary signal.
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* read system time and prepare input data *)
 tx := DWORD_TO_TIME(T_PLC_MS()) - last;

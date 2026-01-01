@@ -1,7 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CLK_DIV" Id="{7bea032c-d3c4-49dc-a77e-b92637308a07}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK CLK_DIV
+    <Declaration><![CDATA[(*
+version 1.1	2 jan 2008
+programmer 	hugo
+tested by		tobias
+
+this is a clock divider
+each output divides the signal by 2
+Q0 = clk / 2 , Q1 = Q0 / 2 and so on.
+the outputs have a 50% duty cycle each.
+
+
+*)
+FUNCTION_BLOCK CLK_DIV
 VAR_INPUT
 	clk : BOOL;
 	rst: BOOL;
@@ -20,18 +32,7 @@ VAR
 	cnt: BYTE;
 END_VAR
 
-(*
-version 1.1	2 jan 2008
-programmer 	hugo
-tested by		tobias
 
-this is a clock divider
-each output divides the signal by 2
-Q0 = clk / 2 , Q1 = Q0 / 2 and so on.
-the outputs have a 50% duty cycle each.
-
-
-*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF rst THEN

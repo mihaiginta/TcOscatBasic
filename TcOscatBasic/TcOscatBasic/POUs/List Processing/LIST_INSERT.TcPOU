@@ -1,7 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="LIST_INSERT" Id="{849283b9-c9e8-4c8c-82b7-538b8bb05ac2}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION LIST_INSERT : BOOL
+    <Declaration><![CDATA[(*
+version 2.0	21. mar. 2011
+programmer 	hugo
+tested by		oscat
+
+LIST_INSERT setzt ein element an der stelle pos in eine liste ein.
+die liste liegt als string von elementen vor die mit den zeichen SEP am anfang markiert sind.
+
+*)
+FUNCTION LIST_INSERT : BOOL
 VAR_INPUT
 	SEP : BYTE;
 	POS : INT;
@@ -16,15 +25,7 @@ VAR
 END_VAR
 
 
-(*
-version 2.0	21. mar. 2011
-programmer 	hugo
-tested by		oscat
 
-LIST_INSERT setzt ein element an der stelle pos in eine liste ein.
-die liste liegt als string von elementen vor die mit den zeichen SEP am anfang markiert sind.
-
-*)
 (*All VAR_IN_OUT variables have been moved to the end of the declaration due to compatibility reasons*)
 VAR_IN_OUT
 	LIST : STRING(LIST_LENGTH);

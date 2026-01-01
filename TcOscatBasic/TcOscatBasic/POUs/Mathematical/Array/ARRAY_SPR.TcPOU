@@ -1,7 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ARRAY_SPR" Id="{6d098226-5cf1-4e0d-9a14-fcc471a88c31}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION ARRAY_SPR : REAL
+    <Declaration><![CDATA[(*
+version 1.1	16. mar. 2008
+programmer 	hugo
+tested by		tobias
+
+this function will calculate the spread of a given array.
+the function needs to be called:	array_spr(adr("array"),sizeof("array"));
+for example: spread of [12,0,4,1,7] is 12 - 0 = 12.
+because this function works with pointers its very time efficient and it needs no extra memory.
+
+*)
+FUNCTION ARRAY_SPR : REAL
 VAR_INPUT
 	pt : POINTER TO ARRAY[0..32000] OF REAL;
 	size : UINT;
@@ -13,17 +24,7 @@ VAR
 	array_min : REAL;
 END_VAR
 
-(*
-version 1.1	16. mar. 2008
-programmer 	hugo
-tested by		tobias
-
-this function will calculate the spread of a given array.
-the function needs to be called:	array_spr(adr("array"),sizeof("array"));
-for example: spread of [12,0,4,1,7] is 12 - 0 = 12.
-because this function works with pointers its very time efficient and it needs no extra memory.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[stop := (size -SIZEOF(pt)) / SIZEOF(pt);
 array_min := pt^[0];

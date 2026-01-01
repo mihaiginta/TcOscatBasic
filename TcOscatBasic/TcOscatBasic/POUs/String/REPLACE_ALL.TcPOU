@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="REPLACE_ALL" Id="{cb43f9d0-ef7c-4e0d-a45e-76021b7f911e}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION REPLACE_ALL : STRING(STRING_LENGTH)
+    <Declaration><![CDATA[(*
+version 1.1	29. mar. 2008
+programmer 	hugo
+tested by	tobias
+
+the function replace_all replaces all occurences of src in str and replaces them by rep.
+
+*)
+FUNCTION REPLACE_ALL : STRING(STRING_LENGTH)
 VAR_INPUT
 	str : STRING(STRING_LENGTH);
 	src : STRING(STRING_LENGTH);
@@ -13,14 +21,7 @@ VAR
 	lx : INT;
 END_VAR
 
-(*
-version 1.1	29. mar. 2008
-programmer 	hugo
-tested by	tobias
-
-the function replace_all replaces all occurences of src in str and replaces them by rep.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[REPLACE_ALL := str;
 lx := LEN(src);

@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FRMP_B" Id="{36413049-313a-4a5a-96b4-335d3f4f66a4}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION FRMP_B : BYTE
+    <Declaration><![CDATA[(*
+version 1.0		17. feb. 2011
+programmer 	hugo
+tested by		oscat
+
+this function calculates a ramp and limits the output to 0 .. 255 without overflow problems
+
+*)
+FUNCTION FRMP_B : BYTE
 VAR_INPUT
 	START : BYTE;
 	DIR : BOOL;
@@ -12,14 +20,7 @@ VAR
 END_VAR
 
 
-(*
-version 1.0		17. feb. 2011
-programmer 	hugo
-tested by		oscat
-
-this function calculates a ramp and limits the output to 0 .. 255 without overflow problems
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF TD < TR THEN
 	FRMP_B := MIN(DWORD_TO_BYTE(SHL(TIME_TO_DWORD(TD), 8) / TIME_TO_DWORD(TR)), SEL(DIR, START, BYTE#255 - START));

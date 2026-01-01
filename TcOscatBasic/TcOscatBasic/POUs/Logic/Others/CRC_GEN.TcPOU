@@ -1,7 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CRC_GEN" Id="{a06d2b05-acf9-4fec-b839-453fb9e31f3b}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION CRC_GEN : DWORD
+    <Declaration><![CDATA[(*
+version 2.1	3. feb. 2021
+programmer 	hugo
+tested by		tobias
+
+CRC_GEN generates a CRC checksum from a block of data and returns  the checksum in a DWORD to be connected to the data for transmission.
+the CRC Polynom is specified with the config variable PN and the length of the Polynom is specified by PL
+A Polynom x4 + X + 1 is represented by 0011 with length 4, the highest order bit is not specified at all..
+The input data is an array of byte of any size, the function is called by CRC_GEN(ADR(array),SIZEOF(array), ....).
+
+*)
+FUNCTION CRC_GEN : DWORD
 
 VAR_INPUT
 	PT : POINTER TO ARRAY[0..32000] OF BYTE;
@@ -20,17 +31,7 @@ VAR
 	bits: INT;
 END_VAR
 
-(*
-version 2.1	3. feb. 2021
-programmer 	hugo
-tested by		tobias
-
-CRC_GEN generates a CRC checksum from a block of data and returns  the checksum in a DWORD to be connected to the data for transmission.
-the CRC Polynom is specified with the config variable PN and the length of the Polynom is specified by PL
-A Polynom x4 + X + 1 is represented by 0011 with length 4, the highest order bit is not specified at all..
-The input data is an array of byte of any size, the function is called by CRC_GEN(ADR(array),SIZEOF(array), ....).
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[(* align polygon *)
 shift := 32 - PL;
@@ -77,7 +78,7 @@ CRC_GEN := SHR(CRC_GEN, shift) XOR XOR_OUT;
 IF REV_OUT THEN CRC_GEN := REFLECT(CRC_GEN, PL); END_IF;
 
 (* suggested optimization by deninis klopke
-die betreffs genannte Funktion kann folgendermaßen optimiert werden:
+die betreffs genannte Funktion kann folgenderma�en optimiert werden:
 In Zeilen 33 und 35 des Implementierungsteils kann jeweils der Teil OR BOOL_TO_DWORD(DX.7) entfallen, da nach 8maligem Linksshift von DX in Zeile 26 der Wert von DX = BYTE#0 ist. Eine weitere Veroderung mit diesem Wert hat keine Auswirkungen auf das Ergebnis mehr.
 *)
 

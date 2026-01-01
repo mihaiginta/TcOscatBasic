@@ -1,14 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="BYTE_OF_DWORD" Id="{783b6e76-b84d-470a-aa15-e38da32765b9}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION BYTE_OF_DWORD : BYTE
-VAR_INPUT
-	in : DWORD;
-	N : BYTE;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.2	30. oct. 2008
 programmer 	hugo
 tested by	oscat
@@ -16,6 +9,14 @@ tested by	oscat
 this function extracts a single byte from the nth position from right (right is lowest byte)
 the lower byte (starting with Bit0 from in) is selected with N=0.
 *)
+FUNCTION BYTE_OF_DWORD : BYTE
+VAR_INPUT
+	in : DWORD;
+	N : BYTE;
+END_VAR
+
+
+
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[BYTE_OF_DWORD := DWORD_TO_BYTE(SHR(in,SHL(n,3)));

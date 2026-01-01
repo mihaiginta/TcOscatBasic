@@ -1,20 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="ISC_CTRL" Id="{d314b17a-9e93-4850-99c5-bec456ebc7a1}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION ISC_CTRL : BOOL
-VAR_INPUT
-	IN : BYTE;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.0	6. mar 2008
 programmer 	oscat
 tested by		hugo
 
 ISC_ALPHA checks if a character is a control character.
 
-*)]]></Declaration>
+*)
+FUNCTION ISC_CTRL : BOOL
+VAR_INPUT
+	IN : BYTE;
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[ISC_CTRL := IN < 32 OR IN = 127;
 

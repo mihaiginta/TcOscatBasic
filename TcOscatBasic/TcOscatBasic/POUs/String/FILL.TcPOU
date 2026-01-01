@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FILL" Id="{5fc8e1dc-1db6-4ecf-9bbd-46eb9de5f89a}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION FILL : STRING(STRING_LENGTH)
+    <Declaration><![CDATA[(*
+version 1.1	17. dec. 2008
+programmer 	hugo
+tested by		tobias
+
+the function fill creates a string at length L of characters C.
+
+*)
+FUNCTION FILL : STRING(STRING_LENGTH)
 VAR_INPUT
 	C : BYTE;
 	L : INT;
@@ -11,14 +19,7 @@ VAR
 	sx: STRING(1);
 END_VAR
 
-(*
-version 1.1	17. dec. 2008
-programmer 	hugo
-tested by		tobias
-
-the function fill creates a string at length L of characters C.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[Sx := CHR_TO_STRING(c);
 (* limit L to maximum 80 characters the length of a standard string *)

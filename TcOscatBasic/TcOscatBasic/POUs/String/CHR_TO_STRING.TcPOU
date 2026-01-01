@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CHR_TO_STRING" Id="{15410595-7aea-4dda-a8a7-cb4522ed167d}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION CHR_TO_STRING : STRING(1)
+    <Declaration><![CDATA[(*
+version 1.3	17. dec. 2008
+programmer 	hugo
+tested by	oscat
+
+CHR creates a character from a byte input and stuffs it in a one character length string.
+
+*)
+FUNCTION CHR_TO_STRING : STRING(1)
 VAR_INPUT
 	C : BYTE;
 END_VAR
@@ -9,14 +17,7 @@ VAR
 	PT : POINTER TO BYTE;
 END_VAR
 
-(*
-version 1.3	17. dec. 2008
-programmer 	hugo
-tested by	oscat
-
-CHR creates a character from a byte input and stuffs it in a one character length string.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[PT := ADR(CHR_TO_STRING);
 PT^ := C;

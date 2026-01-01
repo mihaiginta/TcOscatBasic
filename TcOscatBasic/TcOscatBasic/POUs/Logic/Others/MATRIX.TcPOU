@@ -1,7 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MATRIX" Id="{b6528e42-0c66-4b40-9e15-a32240c2a3b5}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK MATRIX
+    <Declaration><![CDATA[(* scan line inputs *)
+FUNCTION_BLOCK MATRIX
 VAR_INPUT
 	x1, x2, x3, x4, X5 : BOOL;
 END_VAR
@@ -16,7 +17,7 @@ VAR_OUTPUT
 END_VAR
 VAR
 	line : BYTE;
-	X : ARRAY[0..3] OF BYTE; (* scan line inputs *)
+	X : ARRAY[0..3] OF BYTE; 
 	L : ARRAY[0..3] OF BYTE; (* scan line status *)
 	i: INT;
 	temp: BYTE;

@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="V3_XANG" Id="{65032912-474c-46de-b1db-d0b841370efb}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION V3_XANG : REAL
+    <Declaration><![CDATA[(*
+version 1.1	10. mar. 2009
+programmer 	hugo
+tested by		tobias
+
+this function calculates the angle between the X-axis and a vectors in a 3 dimensional space
+
+*)
+FUNCTION V3_XANG : REAL
 VAR_INPUT
 	A : Vector_3;
 END_VAR
@@ -9,14 +17,7 @@ VAR
 	la: REAL;
 END_VAR
 
-(*
-version 1.1	10. mar. 2009
-programmer 	hugo
-tested by		tobias
-
-this function calculates the angle between the X-axis and a vectors in a 3 dimensional space
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[la := V3_ABS(a);
 IF la > 0.0 THEN

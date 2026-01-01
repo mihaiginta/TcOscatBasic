@@ -1,7 +1,13 @@
-ï»¿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="RES_NI" Id="{d3285441-0e33-4a08-b70f-a2b30839d5fe}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION RES_NI : REAL
+    <Declaration><![CDATA[(*
+version 1.2	2 dec 2007
+programmer 	hugo
+tested by		tobias
+
+this function returs the resistance for a nickel sensor for a temperature range from -60..+180 °C *)
+FUNCTION RES_NI : REAL
 VAR_INPUT
 	T : REAL;
 	R0 : REAL;
@@ -15,12 +21,7 @@ VAR
 	T2: REAL;
 END_VAR
 
-(*
-version 1.2	2 dec 2007
-programmer 	hugo
-tested by		tobias
-
-this function returs the resistance for a nickel sensor for a temperature range from -60..+180 Â°C *)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[T2 := T * T;
 RES_NI := R0 + A * T + B * T2 + C * T2 * T2;
@@ -39,9 +40,9 @@ hm	2. dec. 2007	rev 1.2
 
 (*
 
- Auszug aus DIN 43760 fÃ¼r Ni100
+ Auszug aus DIN 43760 für Ni100
 
-Â°C		R		Â°C		R		Â°C	R		Â°C		R		Â°C		R
+°C		R		°C		R		°C	R		°C		R		°C		R
 
 -60 	69,5 	-10 	94,6 	40 	123,0 	90 		154,9 	140 	190,9
 -55 	71,9 	-5 		97,3 	45 	126,0 	95 		158,3 	145 	194,8

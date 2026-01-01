@@ -1,7 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CTRL_PID" Id="{13a4f0c7-5f2d-4812-9818-ab2721f8b920}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK CTRL_PID
+    <Declaration><![CDATA[(*
+version 2.0	30. jun. 2008
+programmer 	hugo
+tested by	oscat
+
+FT_PI is a PI controller with manual functionality.
+The PID controller works according to the fomula Y = e *(KP+ KI * INTEG(e) ) + offset, while e = set_point - actual.
+a rst will reset all internal data, while a switch to manual will cause the controller to follow the function Y = manual_in + offset.
+limit_h and Limit_l set the possible output range of Y.
+the output flags lim will signal that the output limits are active.
+
+*)
+FUNCTION_BLOCK CTRL_PID
 VAR_INPUT
 	ACT, SET, SUP, OFS, M_I : REAL;
 	MAN : BOOL;
@@ -25,18 +37,7 @@ END_VAR
 
 
 
-(*
-version 2.0	30. jun. 2008
-programmer 	hugo
-tested by	oscat
 
-FT_PI is a PI controller with manual functionality.
-The PID controller works according to the fomula Y = e *(KP+ KI * INTEG(e) ) + offset, while e = set_point - actual.
-a rst will reset all internal data, while a switch to manual will cause the controller to follow the function Y = manual_in + offset.
-limit_h and Limit_l set the possible output range of Y.
-the output flags lim will signal that the output limits are active.
-
-*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF REV THEN

@@ -1,7 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DRIVER_1" Id="{2247c4d3-54d4-4e13-94eb-e01b0444bcd4}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK DRIVER_1
+    <Declaration><![CDATA[(*
+version 1.0	2 jan 2008
+programmer 	hugo
+tested by		tobias
+
+driver_1 is a multi purpose driver.
+a rising edge on in sets the output high if toggle is flase. while toggle is true, a rising edge on in toggles the output Q.
+if a timeout is specified the output q will be reset to false automatically after the timeout has elapsed.
+a asynchronous reset and set will force the output high or low respectively.
+
+*)
+FUNCTION_BLOCK DRIVER_1
 VAR_INPUT CONSTANT
 	Toggle_Mode : BOOL;
 	Timeout : TIME;
@@ -19,17 +30,7 @@ VAR
 	edge: BOOL;
 END_VAR
 
-(*
-version 1.0	2 jan 2008
-programmer 	hugo
-tested by		tobias
-
-driver_1 is a multi purpose driver.
-a rising edge on in sets the output high if toggle is flase. while toggle is true, a rising edge on in toggles the output Q.
-if a timeout is specified the output q will be reset to false automatically after the timeout has elapsed.
-a asynchronous reset and set will force the output high or low respectively.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF off.Q THEN Q := FALSE; END_IF;
 IF rst THEN

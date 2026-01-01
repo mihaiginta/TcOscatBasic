@@ -1,7 +1,17 @@
-ï»¿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CHARCODE" Id="{215d5512-92b8-4388-ad2b-87e2ae3ffc6c}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION CHARCODE : BYTE
+    <Declaration><![CDATA[(*
+version 1.2		24. oct. 2008
+programmer 		hugo
+tested by		hugo
+
+CHARCODE converts a HTML Character NAME INTO ITS code
+'äuml' is convterted to ä
+'euro' is converted to €
+
+*)
+FUNCTION CHARCODE : BYTE
 VAR_INPUT
 	STR : STRING(10);
 END_VAR
@@ -12,16 +22,7 @@ VAR
 	i: INT;
 END_VAR
 
-(*
-version 1.2		24. oct. 2008
-programmer 		hugo
-tested by		hugo
-
-CHARCODE converts a HTML Character NAME INTO ITS code
-'Ã¤uml' is convterted to Ã¤
-'euro' is converted to â‚¬
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF LEN(str) = 1 THEN
 	CHARCODE := CODE(STR, 1);

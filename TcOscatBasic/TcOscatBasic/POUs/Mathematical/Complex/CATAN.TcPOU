@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="CATAN" Id="{b45e19b1-32bf-429f-879a-c5066a516555}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION CATAN : complex
+    <Declaration><![CDATA[(*
+version 1.0	21 feb 2008
+programmer 	hugo
+tested by	oscat
+
+this function calculates the complex arcus tangens
+
+*)
+FUNCTION CATAN : complex
 VAR_INPUT
 	X : complex;
 END_VAR
@@ -10,14 +18,7 @@ VAR
 	num, den : REAL;
 END_VAR
 
-(*
-version 1.0	21 feb 2008
-programmer 	hugo
-tested by	oscat
-
-this function calculates the complex arcus tangens
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[r2 := x.re * x.re;
 den := 1.0 - r2 - x.im * x.im;

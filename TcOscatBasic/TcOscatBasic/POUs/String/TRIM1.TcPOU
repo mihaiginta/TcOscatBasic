@@ -1,15 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="TRIM1" Id="{918c6621-c115-4439-a0c9-f417a6cbc577}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION TRIM1 : STRING(STRING_LENGTH)
-VAR_INPUT
-	str : STRING(STRING_LENGTH);
-END_VAR
-VAR
-	pos: INT;
-END_VAR
-
-(*
+    <Declaration><![CDATA[(*
 version 1.2	29. mar. 2008
 programmer 	hugo
 tested by		tobias
@@ -17,7 +9,16 @@ tested by		tobias
 the function replaces all multiple blanks within a string by only one blank.
 leading and ending blanks will be deleted
 
-*)]]></Declaration>
+*)
+FUNCTION TRIM1 : STRING(STRING_LENGTH)
+VAR_INPUT
+	str : STRING(STRING_LENGTH);
+END_VAR
+VAR
+	pos: INT;
+END_VAR
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[TRIM1 := str;
 REPEAT

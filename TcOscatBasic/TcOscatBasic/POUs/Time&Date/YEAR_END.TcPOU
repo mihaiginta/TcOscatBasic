@@ -1,13 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="YEAR_END" Id="{5c8ec53e-0e0a-4e33-bf23-f27a78d66abb}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION YEAR_END : DATE
-VAR_INPUT
-	y : INT;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.1	24. jan. 2011
 programmer 	hugo
 tested by	oscat
@@ -15,7 +9,14 @@ tested by	oscat
 returs the date of december 31st for the given year
 the function works for dates from 1970 - 2099
 
-*)]]></Declaration>
+*)
+FUNCTION YEAR_END : DATE
+VAR_INPUT
+	y : INT;
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[YEAR_END := DWORD_TO_DATE(SHR(INT_TO_DWORD(y) * 1461 - 2876712, 2) * 86400);
 

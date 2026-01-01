@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="OCT_TO_DWORD" Id="{66975ca6-611e-4ea1-9c3f-34f9603b0827}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION OCT_TO_DWORD : DWORD
+    <Declaration><![CDATA[(*
+version 1.0	18. jun 2008
+programmer 	hugo
+tested by	oscat
+
+OCT_TO_DWORD converts a octagonal string into a dword.
+
+*)
+FUNCTION OCT_TO_DWORD : DWORD
 VAR_INPUT
 	OCT : STRING(20);
 END_VAR
@@ -12,14 +20,7 @@ VAR
 	stop: INT;
 END_VAR
 
-(*
-version 1.0	18. jun 2008
-programmer 	hugo
-tested by	oscat
-
-OCT_TO_DWORD converts a octagonal string into a dword.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[pt := ADR(oct);
 stop := LEN(oct);

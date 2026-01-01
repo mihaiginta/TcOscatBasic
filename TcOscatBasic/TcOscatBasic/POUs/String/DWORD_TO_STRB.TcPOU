@@ -1,7 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="DWORD_TO_STRB" Id="{29aaf123-fa2f-4922-b34d-f8e907c5d877}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION DWORD_TO_STRB : STRING(32)
+    <Declaration><![CDATA[(*
+version 1.3	20. jun. 2008
+programmer 	hugo
+tested by	oscat
+
+DWORD_TO_STRINGB converts a DWORD to a String of Bits represented by '0' and '1' s.
+The lowest order bit will be on the right and the high order bit on the left.
+
+*)
+FUNCTION DWORD_TO_STRB : STRING(32)
 VAR_INPUT
 	IN : DWORD;
 END_VAR
@@ -10,17 +19,9 @@ VAR
 	i: INT;
 END_VAR
 
-(*
-version 1.3	20. jun. 2008
-programmer 	hugo
-tested by	oscat
-
-DWORD_TO_STRINGB converts a DWORD to a String of Bits represented by '0' and '1' s.
-The lowest order bit will be on the right and the high order bit on the left.
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* pointer für die ausgabe ermitteln *)
+      <ST><![CDATA[(* pointer f�r die ausgabe ermitteln *)
 pt := ADR(DWORD_TO_STRB);
 (* die 8 ausgabecharacter ermitteln und schreiben *)
 FOR i := 1 TO 32 DO

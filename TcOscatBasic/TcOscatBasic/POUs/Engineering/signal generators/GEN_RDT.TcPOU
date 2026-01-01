@@ -1,11 +1,12 @@
-ï»¿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="GEN_RDT" Id="{bedbd061-6205-4823-af0e-523618a5e013}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION_BLOCK GEN_RDT
+    <Declaration><![CDATA[(* min Taktzeit *)
+FUNCTION_BLOCK GEN_RDT
 
 VAR_INPUT
 	Enable		 : BOOL := TRUE ;
-	Min_Time_ms	: TIME := t#1s ; (* min Taktzeit *)
+	Min_Time_ms	: TIME := t#1s ; 
 	Max_Time_ms	: TIME := t#1.2s ; (* Max Taktzeit *)
 	TP_Q		 : TIME := t#100ms ; (* Zeit Ausgang auf TRUE *)
 END_VAR
@@ -15,7 +16,7 @@ END_VAR
 VAR
 	(* Taktgenerator Simulation *)
 	tonRDMTimer	: TON ; (* Zeitbaustein Taktgenerator *)
-	tof_xQ		: TOF ; (* AusschaltverzÃ¶gerung Taktgenerator *)
+	tof_xQ		: TOF ; (* Ausschaltverzögerung Taktgenerator *)
 	tRDMTime	: TIME ; (* Sollzeit *)
 	rRDMTime	: REAL ; (* Zufalswert Timer *)
 END_VAR
@@ -36,10 +37,10 @@ FUNCTION_BLOCK RDMTimer
 		 Ersteller / author :		 		 		 		 		 J.Schohaus
 		 Datum / date:		 		 		 		 		 		 13.07.2007
 ###############################################################################
-		 Ã„nderungen / Datum / Ersteller :
+		 Änderungen / Datum / Ersteller :
 		 moditication / date / author :
 ###############################################################################
-		 Verwendete Bibliotheken		 ( * werden im Baustein nicht benÃ¶tigt )
+		 Verwendete Bibliotheken		 ( * werden im Baustein nicht benötigt )
 		 		 		 		 Oscat.lib
 ###############################################################################
 Beschreibung:

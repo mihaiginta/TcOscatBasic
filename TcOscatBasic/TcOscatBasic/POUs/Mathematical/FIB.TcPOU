@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="FIB" Id="{95f789a0-b7f6-468e-8e07-8bd044ec5759}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION FIB : DINT
+    <Declaration><![CDATA[(*
+version 1.3	26. mar. 2008
+programmer 	hugo
+tested by		tobias
+
+this function calculates the fibonacci sequence
+
+*)
+FUNCTION FIB : DINT
 VAR_INPUT
 	X : INT;
 END_VAR
@@ -9,14 +17,7 @@ VAR
 	t1, t2: DINT;
 END_VAR
 
-(*
-version 1.3	26. mar. 2008
-programmer 	hugo
-tested by		tobias
-
-this function calculates the fibonacci sequence
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF X < 0 OR X > 46 THEN
 	FIB := -1;

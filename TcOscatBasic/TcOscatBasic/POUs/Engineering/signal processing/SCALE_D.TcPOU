@@ -1,7 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SCALE_D" Id="{eba2eff8-64ce-4f46-abe2-9d7c5f44ebe2}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION SCALE_D : REAL
+    <Declaration><![CDATA[(*
+version 1.2	11. jan. 2011
+programmer 	hugo
+tested by		oscat
+
+Scale_D is used to translate and scale a DWORD input x to a real output.
+the input is limited to I_LO <= X <= I_HI.
+
+*)
+FUNCTION SCALE_D : REAL
 VAR_INPUT
 	X : DWORD;
 	I_LO : DWORD;
@@ -11,15 +20,7 @@ VAR_INPUT
 END_VAR
 
 
-(*
-version 1.2	11. jan. 2011
-programmer 	hugo
-tested by		oscat
 
-Scale_D is used to translate and scale a DWORD input x to a real output.
-the input is limited to I_LO <= X <= I_HI.
-
-*)
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF I_HI = I_LO THEN

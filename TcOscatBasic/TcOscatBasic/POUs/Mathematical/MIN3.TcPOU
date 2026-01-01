@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="MIN3" Id="{cd8068e6-ec94-4146-a431-d17d2b7ec266}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION MIN3 : REAL
+    <Declaration><![CDATA[(*
+version 1.1	18. mar. 2011
+programmer 	hugo
+tested by		tobias
+
+this function returns the lowest of 3 real values
+
+*)
+FUNCTION MIN3 : REAL
 VAR_INPUT
 	in1 : REAL;
 	in2 : REAL;
@@ -9,14 +17,7 @@ VAR_INPUT
 END_VAR
 
 
-(*
-version 1.1	18. mar. 2011
-programmer 	hugo
-tested by		tobias
-
-this function returns the lowest of 3 real values
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[MIN3 := MIN(MIN(IN1,IN2),IN3);
 

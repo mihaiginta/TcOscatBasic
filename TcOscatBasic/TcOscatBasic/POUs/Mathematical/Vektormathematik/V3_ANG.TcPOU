@@ -1,7 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="V3_ANG" Id="{e77d590a-0b34-4ca7-9010-854bdf2d5ea2}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION V3_ANG : REAL
+    <Declaration><![CDATA[(*
+version 1.1	10. mar. 2009
+programmer 	hugo
+tested by		tobias
+
+this function calculates the angle between two vectors in a 3 dimensional space
+
+*)
+FUNCTION V3_ANG : REAL
 VAR_INPUT
 	A : Vector_3;
 	B : Vector_3;
@@ -10,14 +18,7 @@ VAR
 	d : REAL;
 END_VAR
 
-(*
-version 1.1	10. mar. 2009
-programmer 	hugo
-tested by		tobias
-
-this function calculates the angle between two vectors in a 3 dimensional space
-
-*)]]></Declaration>
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[d := V3_ABS(A) * V3_ABS(B);
 IF d > 0 THEN

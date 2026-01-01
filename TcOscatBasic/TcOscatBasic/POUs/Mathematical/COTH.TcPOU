@@ -1,20 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="COTH" Id="{f6d273d6-dc19-4d41-872f-825ccc4208cb}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION COTH : REAL
-VAR_INPUT
-	X : REAL;
-END_VAR
-
-
-(*
+    <Declaration><![CDATA[(*
 version 1.4	10. mar. 2009
 programmer 	hugo
 tested by		tobias
 
 this function calculates the cotangens hyperbolicus
 
-*)]]></Declaration>
+*)
+FUNCTION COTH : REAL
+VAR_INPUT
+	X : REAL;
+END_VAR
+
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF X > 20.0 THEN
 	COTH :=1.0;

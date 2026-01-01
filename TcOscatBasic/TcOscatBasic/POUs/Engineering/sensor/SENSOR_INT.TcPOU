@@ -1,18 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="SENSOR_INT" Id="{2324fd08-2dd2-4712-a5dd-39abd9cf0b78}" SpecialFunc="None">
-    <Declaration><![CDATA[FUNCTION SENSOR_INT : REAL
-VAR_INPUT
-	Voltage : REAL;
-	Current : REAL;
-	RP : REAL;
-	RS : REAL;
-END_VAR
-VAR
-	RG: REAL;
-END_VAR
-
-(*
+    <Declaration><![CDATA[(*
 version 1.3	11. mar. 2009
 programmer 	hugo
 tested by		tobias
@@ -23,7 +12,19 @@ for a humidity sensor, the parallel resistor is more dramatic and needs to be co
 the function allows to consider a parallel and serial resistor at the same time.
 with this function and known parasitic serial and parallel resistors the true resistance of the sensor can be calculated.
 
-*)]]></Declaration>
+*)
+FUNCTION SENSOR_INT : REAL
+VAR_INPUT
+	Voltage : REAL;
+	Current : REAL;
+	RP : REAL;
+	RS : REAL;
+END_VAR
+VAR
+	RG: REAL;
+END_VAR
+
+]]></Declaration>
     <Implementation>
       <ST><![CDATA[IF current <> 0.0 THEN
 	RG := voltage / current;
