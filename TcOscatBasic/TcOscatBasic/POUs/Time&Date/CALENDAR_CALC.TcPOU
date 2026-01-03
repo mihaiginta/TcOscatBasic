@@ -6,8 +6,8 @@ version 1.7	3. Feb. 2021
 programmer 	hugo
 tested by		oscat
 
-calendar_calc liest die weltzeit .UTC aus einer CALENDAR Struktur und berechnet die restlichen Werte der Struktur.
-calendar_calc stellt sicher das die Werte fortlaufend aktualisiert werden und dabei funktionen nur dann aufgerufen werden wenn dies n�tig ist.
+calendar_calc reads the world time .UTC from a CALENDAR structure and calculates the remaining values of the structure.
+calendar_calc ensures that the values are continuously updated and that functions are only called when necessary.
 calendar_calc will calculate sun position data when SPE = TRUE;
 
 *)

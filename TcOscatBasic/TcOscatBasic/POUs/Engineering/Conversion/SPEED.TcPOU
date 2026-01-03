@@ -37,9 +37,9 @@ Ykn := Yms * 1.94384466037535;
 Ymh := Yms * 2.23693629205440;
 
 (*
-Geschwindigkeit Meter durch Sekunde m/s 1 m/s = 3,6 km/h
-km durch (pro) Stunde, nicht „Stundenkilometer“ verwenden
-Knoten kn 1 kn = 1 sm/h = 0,5144 m/s
+Speed meter per second m/s 1 m/s = 3.6 km/h
+km per hour, do not use "Stundenkilometer"
+Knot kn 1 kn = 1 nautical mile/h = 0.5144 m/s
 
 *)
 

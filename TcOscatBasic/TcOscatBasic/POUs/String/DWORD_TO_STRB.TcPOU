@@ -21,16 +21,16 @@ END_VAR
 
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* pointer für die ausgabe ermitteln *)
+      <ST><![CDATA[(* get pointer for output *)
 pt := ADR(DWORD_TO_STRB);
-(* die 8 ausgabecharacter ermitteln und schreiben *)
+(* determine and write the 8 output characters *)
 FOR i := 1 TO 32 DO
 	pt^:= BOOL_TO_BYTE(in.31) + 48;
 	in := SHL(in,1);
 	pt := pt + 1;
 END_FOR;
 
-(* der ausgabestring muss nochg mit 0 abgeschlossen werden *)
+(* the output string must be terminated with 0 *)
 pt^ := 0;
 
 (* revision history

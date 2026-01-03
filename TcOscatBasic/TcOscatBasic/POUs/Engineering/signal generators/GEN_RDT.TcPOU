@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="GEN_RDT" Id="{bedbd061-6205-4823-af0e-523618a5e013}" SpecialFunc="None">
-    <Declaration><![CDATA[(* min Taktzeit *)
+    <Declaration><![CDATA[(* min cycle time *)
 FUNCTION_BLOCK GEN_RDT
 
 VAR_INPUT
 	Enable		 : BOOL := TRUE ;
 	Min_Time_ms	: TIME := t#1s ; 
-	Max_Time_ms	: TIME := t#1.2s ; (* Max Taktzeit *)
-	TP_Q		 : TIME := t#100ms ; (* Zeit Ausgang auf TRUE *)
+	Max_Time_ms	: TIME := t#1.2s ; (* max cycle time *)
+	TP_Q		 : TIME := t#100ms ; (* time output TRUE *)
 END_VAR
 VAR_OUTPUT
 	xQ		 : BOOL ;
 END_VAR
 VAR
-	(* Taktgenerator Simulation *)
-	tonRDMTimer	: TON ; (* Zeitbaustein Taktgenerator *)
-	tof_xQ		: TOF ; (* Ausschaltverzögerung Taktgenerator *)
-	tRDMTime	: TIME ; (* Sollzeit *)
-	rRDMTime	: REAL ; (* Zufalswert Timer *)
+	(* clock generator simulation *)
+	tonRDMTimer	: TON ; (* timer block clock generator *)
+	tof_xQ		: TOF ; (* off-delay timer clock generator *)
+	tRDMTime	: TIME ; (* setpoint time *)
+	rRDMTime	: REAL ; (* random value timer *)
 END_VAR
 
 (*
@@ -34,16 +34,16 @@ RDMT generates a defined pulse with pulse width TP_Q at random times. the random
 (*
 FUNCTION_BLOCK RDMTimer
 ###############################################################################
-		 Ersteller / author :		 		 		 		 		 J.Schohaus
-		 Datum / date:		 		 		 		 		 		 13.07.2007
+		 Author :		 		 		 		 		 J.Schohaus
+		 Date:		 		 		 		 		 		 13.07.2007
 ###############################################################################
-		 Änderungen / Datum / Ersteller :
-		 moditication / date / author :
+		 Changes / Date / Author :
+		 modification / date / author :
 ###############################################################################
-		 Verwendete Bibliotheken		 ( * werden im Baustein nicht benötigt )
+		 Used libraries		 ( * are not needed in the block )
 		 		 		 		 Oscat.lib
 ###############################################################################
-Beschreibung:
+Description:
 *)]]></Declaration>
     <Implementation>
       <ST><![CDATA[tonRDMTimer ( IN:= Enable , PT:= tRDMTime );

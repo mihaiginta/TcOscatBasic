@@ -11,8 +11,7 @@ the register can shift up or down
 it also has a serial input.
 the Din input is on Bit0 for up shift and on bit 7 for down shift
 the Dout output is on Bit7 for up shift and on bit 0 for down shift
-paralle clock is performed clock synchron while a shift is performed first and then the register is reloaded
-
+parallel clock is performed clock synchronous while a shift is performed first and then the register is reloaded
 
 *)
 FUNCTION_BLOCK SHR_8PLE
@@ -34,11 +33,11 @@ END_VAR
 
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* flankenerkennung clk wird high und edge war high reset ist nicht aktiv und set ist nicht aktiv *)
+      <ST><![CDATA[(* edge detection clk goes high and edge was high, reset is not active and set is not active *)
 IF CLK AND edge AND NOT rst THEN
-	edge := FALSE;	(* flanke wurde erkannt und weitere flankenerkennung wird verhindert bis edge wieder true ist *)
-	(* hier ist der code für das flankenevent *)
-	IF UP THEN						(*shift up *)
+	edge := FALSE;	(* edge was detected and further edge detection is prevented until edge is true again *)
+	(* here is the code for the edge event *)
+	IF UP THEN						(* shift up *)
 		register := SHL(register,1);
 		register.0 := Din;
 		Dout := register.7;
@@ -52,8 +51,8 @@ IF CLK AND edge AND NOT rst THEN
 		IF up THEN Dout := register.7; ELSE Dout := register.0; END_IF;
 	END_IF;
 END_IF;
-IF NOT clk THEN edge := TRUE; END_IF;	(* sobald clk wieder low wird warten auf nächste flanke *)
-IF rst THEN									(* wenn reset aktiv dann ausgang rücksetzen *)
+IF NOT clk THEN edge := TRUE; END_IF;	(* as soon as clk goes low again, wait for next edge *)
+IF rst THEN									(* if reset is active then reset output *)
 	register := 0;
 	Dout := FALSE;
 END_IF;

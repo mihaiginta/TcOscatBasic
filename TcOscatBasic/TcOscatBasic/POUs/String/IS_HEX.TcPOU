@@ -6,7 +6,7 @@ version 1.1	29. mar. 2008
 programmer 		kurt
 tested by		hugo
 
-IS_HEX testet ob in einem string nur Zahlen 0..9 oder A..F oder a..f  vorkommen.
+IS_HEX tests whether a string contains only digits 0..9 or A..F or a..f.
 
 *)
 FUNCTION IS_HEX : BOOL
