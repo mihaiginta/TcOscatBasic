@@ -28,11 +28,11 @@ END_VAR
       <ST><![CDATA[(* berechne den 1.1 des jahres von idate. *)
 yr := YEAR_OF_DATE(idate);
 d1 := YEAR_BEGIN(yr);
-(* wochentag von d1 *)
+(* weekday of d1 *)
 w1 := DAY_OF_WEEK(d1);
-(* offset des montags der eletzten KW des vorjahres *)
-(* wenn der erste tag des jahres größer als donnerstag ist dann beginnt die letzte kw am montag davor *)
-(* wenn der erste tag des jahres ein donnerstag oder kleiner ist beginnt die erste kw 2 montage davor *)
+(* offset of the Monday of the last calendar week of the previous year *)
+(* if the first day of the year is greater than Thursday, then the last calendar week starts on the Monday before *)
+(* if the first day of the year is a Thursday or earlier, the first calendar week starts two Mondays before *)
 IF w1 < 5 THEN
 	ds := DATE_TO_DWORD(d1) - INT_TO_DWORD(w1+6) * 86400;
 ELSE
