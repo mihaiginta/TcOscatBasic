@@ -6,7 +6,7 @@ version 1.1	29. mar. 2008
 programmer 		kurt
 tested by		hugo
 
-IS_ALPHA testet ob in einem string nur Zeichen a-z oder A - Z vorkommen.
+IS_ALPHA tests whether a string contains only characters a-z or A-Z.
 
 *)
 FUNCTION IS_ALPHA : BOOL

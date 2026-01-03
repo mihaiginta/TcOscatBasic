@@ -6,10 +6,10 @@ version 1.2	18. jan. 2011
 programmer 	hugo
 tested by		oscat
 
-DEAD_BAND ist eine lineare Übertragungsfunktion mit Totzone. Die Funktion verschiebt den positiven Teil der Kurve um +L und den negativen Teil der Kurve um -L.
-DEAD_BAND = X - L wenn X > L)
-DEAD_BAND = X + L wenn X < -L
-DEAD_BAND = 0 wenn Abs(X) <= L
+DEAD_BAND is a linear transfer function with a dead zone. The function shifts the positive part of the curve by +L and the negative part by -L.
+DEAD_BAND = X - L when X > L
+DEAD_BAND = X + L when X < -L
+DEAD_BAND = 0 when Abs(X) <= L
 
 *)
 FUNCTION DEAD_BAND : REAL

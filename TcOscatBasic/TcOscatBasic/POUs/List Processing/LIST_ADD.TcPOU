@@ -6,8 +6,8 @@ version 2.0		21. mar. 2011
 programmer 	hugo
 tested by		kurt
 
-LIST_ADD hängt ein weiteres element ans ende einer liste.
-die liste liegt als string von elementen vor die mit den zeichen SEP am anfang makiert sind.
+LIST_ADD appends another element to the end of a list.
+The list is represented as a string of elements, each starting with the character SEP.
 
 *)
 FUNCTION LIST_ADD : BOOL

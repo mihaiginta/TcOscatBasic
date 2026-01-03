@@ -6,7 +6,7 @@ version 1.0		14. may. 2008
 programmer 		hugo
 tested by			hugo
 
-REPLACE_CHARS erstezt alle character die im string src aufgeführt sind mit dem an der selben stelle im string rep gelisteten character.
+REPLACE_CHARS replaces all characters listed in the string src with the character listed at the same position in the string rep.
 
 *)
 FUNCTION REPLACE_CHARS : STRING(STRING_LENGTH)

@@ -34,21 +34,21 @@ END_IF;
 
 
 
-(* alternativer algorithmus ueber das pasah fest
+(* alternative algorithm via the Passover festival
 execution time roughly 200us
-Der sog. Passah-Vollmond wird berechnet, in dem das Jahr durch 19 ge-
-teilt wird und der Rest mit der folgenden Tabelle verglichen wird:
+The so-called Passover full moon is calculated by dividing the year by 19,
+and the remainder is compared with the following table:
 
-    0: Apr 14       5: Apr 18      10: Mrz 25      15: Mrz 30
+    0: Apr 14       5: Apr 18      10: Mar 25      15: Mar 30
     1: Apr 03       6: Apr 08      11: Apr 13      16: Apr 17
-    2: Mrz 23       7: Mrz 28      12: Apr 02      17: Apr 07
-    3: Apr 11       8: Apr 16      13: Mrz 22      18: Mrz 27
-    4: Mrz 31       9: Apr 05      14: Apr 10
+    2: Mar 23       7: Mar 28      12: Apr 02      17: Apr 07
+    3: Apr 11       8: Apr 16      13: Mar 22      18: Mar 27
+    4: Mar 31       9: Apr 05      14: Apr 10
 
-Faellt dieses Datum auf einen Sonntag, ist Ostern der naechste Sonntag!
+If this date falls on a Sunday, Easter is the next Sunday!
 
-Beispiel: 1992 MOD 19 = 16, daraus folgt 17.04., der naechste Sonntag
-          ist dann der 19. April (Ostersonntag)
+Example: 1992 MOD 19 = 16, which results in 17.04., the next Sunday
+         is then April 19 (Easter Sunday)
 *)
 
 
@@ -71,8 +71,8 @@ o := x MOD 31 + 1;
 
 easter := set_Date(year,n,o);
 *)
-(*
-Im Magazin "Nature" vom 20. April 1876 veröffentlichte ein anonymer Autor eine Tabelle mit Regeln zur Berechnung des (Gregorianischen) Ostersonntages des Jahres J. In Formeln ausgedrückt erhält man das Folgende:
+(* 
+In the magazine "Nature" from April 20, 1876, an anonymous author published a table with rules for calculating the (Gregorian) Easter Sunday of year J. Expressed in formulas, the following is obtained:
 a	=	J mod 19
 b	=	int(J / 100)
 c	=	J mod 100
@@ -88,8 +88,7 @@ m	=	int((a + 11 · h + 22 · l) / 451)
 n	=	int((h + l - 7 · m + 114) / 31)
 o	=	(h + l - 7 · m + 114) mod 31
 
-n ist hierbei die Nummer des Monats, o + 1 die Nummer des Tages auf welchen der Ostersonntag im Jahr J fällt. Dieser Algorithmus kommt ohne Hilfszahlen aus.
-
+n is the number of the month, o + 1 the number of the day on which Easter Sunday falls in year J. This algorithm does not require auxiliary numbers.
 *)
 
 (* revision history

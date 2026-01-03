@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1">
   <POU Name="_ARRAY_SORT" Id="{35ac169c-abe2-4943-ad54-dc395d0be0dc}" SpecialFunc="None">
-    <Declaration><![CDATA[(* Laufvariable Stack*)
+    <Declaration><![CDATA[(* loop variable stack *)
 FUNCTION _ARRAY_SORT : BOOL
 VAR_INPUT
 	PT : POINTER TO ARRAY[1..32000] OF REAL;
@@ -9,16 +9,16 @@ VAR_INPUT
 END_VAR
 VAR
 	stack_count: UINT;				
-	stack: ARRAY[1..32] OF UINT;	(* Stackgröße~ 1,6*Log(n)/log(2) *)
-										(* Stackgröße 32 => ~1 Mio Elemente *)
-	links: UINT;						(* Anfangselement des Arrays *)
-	rechts: UINT;						(* Endelement des Arrays *)
-	pivot: REAL;						(* temporärer Schwellwert für Tauschbedingung *)
-	i: UINT;							(* Laufvariable1 *)
-	j: UINT;							(* Laufvariable2 *)
-	ende_innen: BOOL;				(* Ende innere Schleife *)
-	ende_aussen: BOOL;				(* Ende äußere Schleife *)
-	tmp: REAL;						(* Hilfsvariable zum Tauschen von Werten *)
+	stack: ARRAY[1..32] OF UINT;	(* stack size ~ 1.6*Log(n)/log(2) *)
+										(* stack size 32 => ~1 million elements *)
+	links: UINT;						(* first element of the array *)
+	rechts: UINT;						(* last element of the array *)
+	pivot: REAL;						(* temporary threshold for swap condition *)
+	i: UINT;							(* loop variable 1 *)
+	j: UINT;							(* loop variable 2 *)
+	ende_innen: BOOL;				(* end of inner loop *)
+	ende_aussen: BOOL;				(* end of outer loop *)
+	tmp: REAL;						(* helper variable for swapping values *)
 END_VAR
 
 
@@ -36,27 +36,27 @@ because this function works with pointers its very time efficient and it needs n
 
 *)]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(* Startwerte zur Arraygröße *)
-links := 1;					(* Anfangselement des Arrays *)
-rechts := SHR(size,2);		(* Endelement des Arrays *)
-stack_count := 1;			(* Laufvariable Stack *)
+      <ST><![CDATA[(* initial values for array size *)
+links := 1;					(* first element of the array *)
+rechts := SHR(size,2);		(* last element of the array *)
+stack_count := 1;			(* loop variable stack *)
 
-WHILE NOT ende_aussen DO						(* äußere Schleife *)
+WHILE NOT ende_aussen DO						(* outer loop *)
 	IF links < rechts THEN
-		pivot := PT^[SHR(rechts+links,1)];			(* Wert des mittleren Elements als Pivot-Wert *)
+		pivot := PT^[SHR(rechts+links,1)];			(* value of the middle element as pivot value *)
 		i := links -1;
 		j := rechts +1;
 
-		(* innere Schleife, teile Feld *)
+		(* inner loop, split field *)
 		ende_innen := FALSE;
 		REPEAT
 
-			(* steigende Reihenfolge *)
+			(* ascending order *)
 			REPEAT	i := i+1;	UNTIL (PT^[i] >= pivot) OR NOT (i < rechts)	END_REPEAT;
 			REPEAT	j := j-1;	UNTIL (PT^[j] <= pivot) OR NOT (j > links)	END_REPEAT;
 
 
-			(*sinkende Reihenfolge *)
+			(* descending order *)
 (*			REPEAT	i := i+1;	UNTIL (PT^[i] <= pivot) OR NOT (i < rechts)	END_REPEAT	*)
 (*			REPEAT	j := j-1;	UNTIL (PT^[j] >= pivot) OR NOT (j > links)	END_REPEAT	*)
 
@@ -70,16 +70,16 @@ WHILE NOT ende_aussen DO						(* äußere Schleife *)
 
 		UNTIL ende_innen END_REPEAT;
 
-		(* Push stack *)
-		stack[stack_count] := rechts;		(* rechten Teil später sortieren *)
+		(* push stack *)
+		stack[stack_count] := rechts;		(* sort right part later *)
 		IF Stack_count < 32 THEN
 			stack_count := stack_count +1;
 		ELSE
 			ende_aussen := TRUE;
-			_ARRAY_SORT := FALSE;					(* Fehler: Stack zu klein *)
+			_ARRAY_SORT := FALSE;					(* error: stack too small *)
 		END_IF;
 
-		(* linken Teil sortiern *)
+		(* sort left part *)
 		rechts := MAX(links, i-1);
 
 	ELSE
@@ -91,7 +91,7 @@ WHILE NOT ende_aussen DO						(* äußere Schleife *)
 			links := rechts+1;
 
 			(* pop stack *)
-			stack_count := stack_count -1;		(* jetzt rechten Teil sortierne *)
+			stack_count := stack_count -1;		(* now sort right part *)
 			rechts:= stack[stack_count];
 		END_IF;
 
@@ -99,7 +99,7 @@ WHILE NOT ende_aussen DO						(* äußere Schleife *)
 
 END_WHILE;
 
-_ARRAY_SORT := TRUE;				(* Sortierung beendet *)
+_ARRAY_SORT := TRUE;				(* sorting finished *)
 
 
 (* algorithm used before rev 2.0

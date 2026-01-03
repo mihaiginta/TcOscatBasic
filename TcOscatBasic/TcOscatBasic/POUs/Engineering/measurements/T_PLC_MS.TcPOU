@@ -25,13 +25,13 @@ END_VAR
     <Implementation>
       <ST><![CDATA[tx := TIME();
 T_PLC_MS := TIME_TO_DWORD(Tx);
-(* hier muss die korrektur für step7 stattfinden
-plctime muss den vollen wertebereich von time ausnutzen:
-wenn bei step7 time -24tage bis plus 24 tage ist dann muss der timer auch beim überlauf auf -24tage springen
-und auf keinen fall auf 0 !!!!
-für siemens muss ein weiterer fb im main eingebunden werden der sicherstellt das alle 32 bits durchgezählt werden.
-es kann nur ein fb sein den er muss sich das oberste (32te) bit merken.
-oder etwa spring s7 bei überlauf auf -24 tage????? dann wäre keine korrektur nötig.
+(* Here, the correction for Step7 must take place
+plctime must use the full value range of time:
+if, in Step7, time is from -24 days to +24 days, then the timer must also jump to -24 days on overflow
+and under no circumstances to 0!!!!
+for Siemens, another FB must be integrated in the main program to ensure that all 32 bits are counted.
+It can only be one FB because it must remember the highest (32nd) bit.
+Or does S7 jump to -24 days on overflow????? Then no correction would be necessary.
 *)
 IF debug THEN
 	T_PLC_MS := (SHL(T_PLC_MS,N) OR SHL(DWORD#1,N)-1) + OFFSET;

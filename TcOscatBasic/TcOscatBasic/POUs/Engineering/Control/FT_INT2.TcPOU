@@ -9,7 +9,7 @@ tested by		oscat
 FT_int2 is an integrator with input IN and factor K.
 integration is only done while run = true, if run is false integration is stopped and the out remains at the last value.
 if run is left unconnected, run is considered true by the function block.
-the out_min and out_max values can be set to ,imit the output value range.
+the out_min and out_max values can be set to limit the output value range.
 the default for K is 1.
 FT_INT2 has double presision accuracy (14 digits).
 

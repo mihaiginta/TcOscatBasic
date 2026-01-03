@@ -56,7 +56,7 @@ ELSE
 	lx := MIN(language.LMAX, LANGU);
 END_IF;
 
-(* berechnung von ostern für das aktuelle jahr *)
+(* calculation of easter for the current year *)
 jahr := YEAR_OF_DATE(date_in);
 ostern := EASTER(jahr);
 wdx := DAY_OF_WEEK(DATE_IN);
@@ -97,12 +97,11 @@ ELSE
 	NAME := '';
 END_IF;
 
-
-(*
+(* 
 Neujahrstag 	1. Januar 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	•
 Heilige Drei Könige 	6. Januar 	• 	• 												•
 Karfreitag 	Ostersonntag - 2d 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	•
-Ostersonntag 	siehe Osterdatum 				(•)
+Ostersonntag 	see Easter date 				(•)
 Ostermontag 	Ostersonntag + 1d 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	•
 Tag der Arbeit 	1. Mai 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	•
 Christi Himmelfahrt 	Ostersonntag + 39d 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	•
@@ -114,7 +113,7 @@ Mariä Himmelfahrt 	15. August 		(5) 										•
 Tag der Deutschen Einheit 	3. Oktober 6) 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	•
 Reformationstag 	31. Oktober 				• 				• 					• 	• 		•
 Allerheiligen 	1. November 	• 	• 								• 	• 	•
-Buß- und Bettag 4) 	Mittwoch vor dem 23.11. 			7 										•
+Buß- und Bettag 4) 	Wednesday before 23.11. 			7 										•
 1. Weihnachtstag 	25. Dezember 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	•
 2. Weihnachtstag 	26. Dezember 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	• 	•
 *)

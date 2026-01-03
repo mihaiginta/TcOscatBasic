@@ -38,10 +38,10 @@ ELSE
 	in2 := in;
 END_IF;
 
-(* begrenze in auf die zulässigen werte *)
+(* limit in to the allowed values *)
 in2 := LIMIT(low, in2, high);
 
-(* Berechne den Ausgangswert *)
+(* calculate the output value *)
 AOUT1 := SHL(REAL_TO_DWORD((in2 - low) / (high - low) * DWORD_TO_REAL(SHL(ff,bit_n - Bit_0 + 1) -1)),Bit_0);
 IF sx THEN AOUT1 := SHL(ff,sign) OR AOUT1; END_IF;
 
