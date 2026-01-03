@@ -6,8 +6,8 @@ version 2.0		21. mar. 2011
 programmer 	hugo
 tested by		oscat
 
-LIST_RETRIEVE_LAST liefert das letzte element einer liste und löscht das element aus der liste.
-die liste liegt als string von elementen vor die mit den zeichen SEP beginnen.
+LIST_RETRIEVE_LAST returns the last element of a list and deletes the element from the list.
+The list is represented as a string of elements, each starting with the character SEP.
 
 *)
 FUNCTION LIST_RETRIEVE_LAST : STRING(LIST_LENGTH)

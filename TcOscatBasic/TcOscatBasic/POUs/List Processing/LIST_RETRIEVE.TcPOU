@@ -6,8 +6,8 @@ version 2.0		21. mar. 2011
 programmer 	hugo
 tested by		oscat
 
-LIST_RETRIEVE liefert das element an der stelle pos einer liste und löscht das element aus der liste.
-die liste liegt als string von elementen vor die mit den zeichen SEP separiert sind.
+LIST_RETRIEVE returns the element at position pos of a list and deletes the element from the list.
+The list is represented as a string of elements, separated by the character SEP.
 
 *)
 FUNCTION LIST_RETRIEVE : STRING(LIST_LENGTH)

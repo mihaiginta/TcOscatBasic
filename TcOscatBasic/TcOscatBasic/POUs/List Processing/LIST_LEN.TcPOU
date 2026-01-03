@@ -6,8 +6,8 @@ version 2.0	21. mar. 2011
 programmer 	hugo
 tested by		oscat
 
-LIST_LEN liefert die anzahl der elemente einer liste.
-die liste liegt als string von elementen vor die mit den zeichen SEP am anfang markiert sind.
+LIST_LEN returns the number of elements in a list.
+The list is represented as a string of elements, each starting with the character SEP.
 
 *)
 FUNCTION LIST_LEN : INT

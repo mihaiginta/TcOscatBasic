@@ -6,8 +6,8 @@ version 2.0	21. mar. 2011
 programmer 	hugo
 tested by		oscat
 
-LIST_INSERT setzt ein element an der stelle pos in eine liste ein.
-die liste liegt als string von elementen vor die mit den zeichen SEP am anfang markiert sind.
+LIST_INSERT inserts an element at position pos in a list.
+The list is represented as a string of elements, each starting with the character SEP.
 
 *)
 FUNCTION LIST_INSERT : BOOL
