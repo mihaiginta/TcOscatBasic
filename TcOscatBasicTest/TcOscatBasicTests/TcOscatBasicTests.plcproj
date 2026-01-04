@@ -17,6 +17,10 @@
     <Implicit_Jitter_Distribution>{b54af0dd-20bd-4b5e-b431-4191f683b085}</Implicit_Jitter_Distribution>
     <LibraryReferences>{62a2b0d6-623e-4c4d-a24f-8284d26aaf01}</LibraryReferences>
     <Released>false</Released>
+    <Company>Mihai Gînța</Company>
+    <Title>TcOscatBasic Unit Tests</Title>
+    <Author>TcOscatBasic developers</Author>
+    <Description>Unit tests for TcOscatBasic, it uses TcUnit and TcOscatBasic as referenced library.</Description>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="PlcTask.TcTTO">
