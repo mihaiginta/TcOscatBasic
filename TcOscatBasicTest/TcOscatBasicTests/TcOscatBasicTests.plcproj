@@ -57,7 +57,7 @@
       <SystemLibrary>true</SystemLibrary>
     </PlaceholderReference>
     <PlaceholderReference Include="TcOscatBasic">
-      <DefaultResolution>[TcOscatBasic], * (github.com/mihaiginta)</DefaultResolution>
+      <DefaultResolution>[TcOscatBasic], * (Mihai Gînța)</DefaultResolution>
       <Namespace>TcOscatBasic</Namespace>
     </PlaceholderReference>
     <PlaceholderReference Include="TcUnit">
