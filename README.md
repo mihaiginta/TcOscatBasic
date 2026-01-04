@@ -2,19 +2,12 @@
 
 ## Description
 
-This TwinCAT 3 library is a fork of [AixOCAT](https://github.com/RWTH-EBC/AixOCAT), being a standalone PLC library for the [OSCAT Basic library](http://www.oscat.de/en/component/jdownloads/category/2-oscat-basic.html?Itemid=0).
+This TwinCAT 3 library is a fork of the [OSCAT-Basic library](http://www.oscat.de/en/component/jdownloads/category/2-oscat-basic.html?Itemid=0).It is distributed under the same license as the original, found in [LICENSE.md](./LICENSE.md).
 
-Official [OSCAT-Basic changelog](http://www.oscat.de/en/component/jdownloads/send/2-oscat-basic/2-oscat-revision-history.html?Itemid=0).
+For the original source code, download the *Basic* version from the [OSCAT website](http://www.oscat.de/en/component/jdownloads/category/2-oscat-basic.html?Itemid=0) and open the *.lib file in a text editor.
 
-For source code, download the *Basic* version from the [OSCAT website](http://www.oscat.de/en/component/jdownloads/category/2-oscat-basic.html?Itemid=0) and open the *.lib file in a text editor.
+The original [OSCAT-Basic changelog](http://www.oscat.de/en/component/jdownloads/send/2-oscat-basic/2-oscat-revision-history.html?Itemid=0).
 
 ## Installation
 
-### Git filters
-
-Implement git clean/smudge filters as described [here](https://cookncode.com/twincat/2021/06/07/tc-source-control-tips.html#4-git-filters).
-
-### Pre-commit hooks
-
-* [TwinCAT pre-commit hooks](https://cookncode.com/twincat/2021/06/07/tc-source-control-tips.html#2-pre-commit-hooks)
-
+In order to build and run the test project, the [TcUnit library](https://github.com/tcunit/TcUnit/tree/master) is needed.
