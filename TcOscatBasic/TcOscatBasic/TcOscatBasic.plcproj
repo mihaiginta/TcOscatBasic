@@ -17,12 +17,11 @@
     <CombineIds>false</CombineIds>
     <Released>false</Released>
     <ProjectVersion>3.35.0.0</ProjectVersion>
-    <Company>github.com/mihaiginta</Company>
+    <Company>Mihai Gînța</Company>
     <Title>TcOscatBasic</Title>
-    <Description>This is a Twincat fork of the OSCAT basic library (http://www.oscat.de/)</Description>
+    <Description>TcOscatBasic is a TwinCAT fork of the OSCAT basic library (http://www.oscat.de/). It's a library offering a broad set of reusable function blocks, data types, and utilities for industrial automation.</Description>
     <WriteProductVersion>false</WriteProductVersion>
-    <Author>
-    </Author>
+    <Author>TcOscatBasic developers</Author>
     <VirtualLibrary>true</VirtualLibrary>
     <LibraryCategories>
       <LibraryCategory xmlns="">
