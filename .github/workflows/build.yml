@@ -43,4 +43,4 @@ jobs:
           username: ${{ secrets.ACTIONS_ZGWK_USERNAME }}
           password: ${{ secrets.ACTIONS_ZGWK_PASSWORD }}
           tcversion: TC3.1.4024.56
-          workspace: TcOscatBasic_TC3.1.4024
+          workspace: TcOscatBasic_TC3.1.4024/TcOscatBasic_TC3.1.4024
