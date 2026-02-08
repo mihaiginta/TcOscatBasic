@@ -5,6 +5,7 @@ on:
       - main
     paths:
       - 'TcOscatBasic/**'
+      - 'TcOscatBasic_TC3.1.4024/**'
   pull_request:
     branches: [ main ]
   workflow_dispatch:
