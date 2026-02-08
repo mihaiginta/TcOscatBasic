@@ -1,0 +1,107 @@
+{
+  "fileversion": 1,
+  "solution": "TcOscatBasic.sln",
+  "projects": [
+    {
+      "name": "TcOscatBasic",
+      "plcs": [
+        {
+          "version": "3.35.0.0",
+          "distributor-name": "Mihai Gînța",
+          "name": "TcOscatBasic",
+          "title": "TcOscatBasic",
+          "type": "Library",
+          "frameworks": {
+            "zeugwerk": {
+              "version": "",
+              "references": [],
+              "repositories": [
+                "https://framework.zeugwerk.dev/Distribution"
+              ],
+              "hide": false,
+              "qualified-only": true
+            }
+          },
+          "packages": [],
+          "references": {
+            "*": [
+              "Tc2_Standard=*"
+            ]
+          },
+          "repositories": [],
+          "bindings": {},
+          "patches": {
+            "platform": {},
+            "argument": {},
+            "license": {}
+          },
+          "description": "TcOscatBasic is a TwinCAT fork of the OSCAT basic library (http://www.oscat.de/). It\u0027s a library offering a broad set of reusable function blocks, data types, and utilities for industrial automation.",
+          "icon-file": "",
+          "project-url": "https://github.com/mihaiginta/TcOscatBasic",
+          "display-name": "TcOscatBasic",
+          "authors": "TcOscatBasic developers",
+          "entitlement": "",
+          "license": "MIT License"
+        }
+      ]
+    },
+    {
+      "name": "TcOscatBasicTest",
+      "plcs": [
+        {
+          "version": "1.0.0.0",
+          "distributor-name": "Mihai Gînța",
+          "name": "TcOscatBasicTests",
+          "title": "TcOscatBasicTests",
+          "type": "UnitTestApplication",
+          "frameworks": {
+            "zeugwerk": {
+              "version": "",
+              "references": [],
+              "repositories": [
+                "https://framework.zeugwerk.dev/Distribution"
+              ],
+              "hide": false,
+              "qualified-only": true
+            }
+          },
+          "packages": [
+            {
+              "version": null,
+              "name": "TcUnit",
+              "branch": "main",
+              "target": "TC3.1",
+              "configuration": "Release",
+              "distributor-name": "www.tcunit.org"
+            }
+          ],
+          "references": {
+            "*": [
+              "Tc2_Standard=*",
+              "Tc2_System=*",
+              "Tc3_Module=*",
+              "[TcOscatBasic]=*"
+            ]
+          },
+          "repositories": [],
+          "bindings": {},
+          "patches": {
+            "platform": {},
+            "argument": {},
+            "license": {}
+          },
+          "description": "Unit tests for TcOscatBasic, it uses TcUnit and TcOscatBasic as referenced library.",
+          "icon-file": "",
+          "project-url": "",
+          "display-name": "TcOscatBasicTests",
+          "authors": "TcOscatBasic developers",
+          "entitlement": "",
+          "license": "",
+          "license-file": "",
+          "license-tmc-file": ""
+        }
+      ]
+    }
+  ],
+  "directories": null
+}

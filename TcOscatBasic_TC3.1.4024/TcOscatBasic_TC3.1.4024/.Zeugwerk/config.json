@@ -1,0 +1,52 @@
+{
+  "fileversion": 1,
+  "solution": "TcOscatBasic_TC3.1.4024.sln",
+  "projects": [
+    {
+      "name": "TcOscatBasic_TC3.1.4024",
+      "plcs": [
+        {
+          "version": "3.35.0.0",
+          "distributor-name": "Mihai Ginta",
+          "name": "TcOscatBasic",
+          "title": "TcOscatBasic",
+          "type": "Library",
+          "frameworks": {
+            "zeugwerk": {
+              "version": "",
+              "references": [],
+              "repositories": [
+                "https://framework.zeugwerk.dev/Distribution"
+              ],
+              "hide": false,
+              "qualified-only": true
+            }
+          },
+          "packages": [],
+          "references": {
+            "*": [
+              "Tc2_Standard=*"
+            ]
+          },
+          "repositories": [],
+          "bindings": {},
+          "patches": {
+            "platform": {},
+            "argument": {},
+            "license": {}
+          },
+          "description": "TcOscatBasic is a TwinCAT fork of the OSCAT basic library (http://www.oscat.de/). It\u0027s a library offering a broad set of reusable function blocks, data types, and utilities for industrial automation.",
+          "icon-file": "",
+          "project-url": "",
+          "display-name": "TcOscatBasic",
+          "authors": "TcOscatBasic developers",
+          "entitlement": "",
+          "license": "",
+          "license-file": "",
+          "license-tmc-file": ""
+        }
+      ]
+    }
+  ],
+  "directories": null
+}
