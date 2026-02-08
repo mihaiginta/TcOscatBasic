@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.71">
+	<Project ProjectGUID="{EF9806AE-8A36-4D42-93BC-0957829F8641}" Target64Bit="true" ShowHideConfigurations="#x6">
+		<Plc>
+			<Project GUID="{697CA4B2-5F5F-413E-A571-698BCD1320F5}" Name="TcOscatBasic" PrjFilePath="..\..\TcOscatBasic\TcOscatBasic\TcOscatBasic.plcproj" TmcFilePath="..\..\TcOscatBasic\TcOscatBasic\TcOscatBasic.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e"/>
+		</Plc>
+	</Project>
+</TcSmProject>
