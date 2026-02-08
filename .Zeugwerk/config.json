@@ -7,7 +7,7 @@
       "plcs": [
         {
           "version": "3.35.0.0",
-          "distributor-name": "Mihai G\u00EEn\u021Ba",
+          "distributor-name": "Mihai Ginta",
           "name": "TcOscatBasic",
           "title": "TcOscatBasic",
           "type": "Library",
@@ -50,7 +50,7 @@
       "plcs": [
         {
           "version": "1.0.0.0",
-          "distributor-name": "Mihai G\u00EEn\u021Ba",
+          "distributor-name": "Mihai Ginta",
           "name": "TcOscatBasicTests",
           "title": "TcOscatBasic Unit Tests",
           "type": "UnitTestApplication",
