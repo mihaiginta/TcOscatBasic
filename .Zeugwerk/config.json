@@ -52,7 +52,7 @@
           "version": "1.0.0.0",
           "distributor-name": "Mihai Ginta",
           "name": "TcOscatBasicTests",
-          "title": "TcOscatBasic Unit Tests",
+          "title": "TcOscatBasicTests",
           "type": "UnitTestApplication",
           "frameworks": {
             "zeugwerk": {
@@ -93,7 +93,7 @@
           "description": "Unit tests for TcOscatBasic, it uses TcUnit and TcOscatBasic as referenced library.",
           "icon-file": "",
           "project-url": "",
-          "display-name": "TcOscatBasic Unit Tests",
+          "display-name": "TcOscatBasicTests",
           "authors": "TcOscatBasic developers",
           "entitlement": "",
           "license": "",
