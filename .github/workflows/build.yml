@@ -30,4 +30,16 @@ jobs:
         with:
           name: TcOscatBasic
           path: |
-            **/*library    
+            **/*library
+
+  BuildTC4024:
+    name: Build_TC3.1.4024
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        uses: Zeugwerk/zkbuild-action@1.0.0
+        with:
+          username: ${{ secrets.ACTIONS_ZGWK_USERNAME }}
+          password: ${{ secrets.ACTIONS_ZGWK_PASSWORD }}
+          tcversion: TC3.1.4024
