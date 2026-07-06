@@ -9,7 +9,7 @@
     <WriteProductVersion>false</WriteProductVersion>
     <GenerateTpy>false</GenerateTpy>
     <Name>TcOscatBasicTests</Name>
-    <ProgramVersion>3.1.4026.20</ProgramVersion>
+    <ProgramVersion>3.1.4026.22</ProgramVersion>
     <Application>{2a916fa0-6c1c-4549-b396-d94f4eed09d2}</Application>
     <TypeSystem>{3d9fd883-a0d4-4bb2-abd0-6a27512edcae}</TypeSystem>
     <Implicit_Task_Info>{a823b44f-1548-4563-9e4b-c12ec8589dab}</Implicit_Task_Info>
@@ -18,7 +18,7 @@
     <LibraryReferences>{62a2b0d6-623e-4c4d-a24f-8284d26aaf01}</LibraryReferences>
     <Released>false</Released>
     <Company>Mihai Gînța</Company>
-    <Title>TcOscatBasic Unit Tests</Title>
+    <Title>TcOscatBasicTests</Title>
     <Author>TcOscatBasic developers</Author>
     <Description>Unit tests for TcOscatBasic, it uses TcUnit and TcOscatBasic as referenced library.</Description>
   </PropertyGroup>

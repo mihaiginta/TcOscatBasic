@@ -7,7 +7,7 @@
     <ProjectGuid>{697ca4b2-5f5f-413e-a571-698bcd1320f5}</ProjectGuid>
     <SubObjectsSortedByName>True</SubObjectsSortedByName>
     <Name>TcOscatBasic</Name>
-    <ProgramVersion>3.1.4026.20</ProgramVersion>
+    <ProgramVersion>3.1.4026.22</ProgramVersion>
     <Application>{24090bd9-c421-4f68-8952-b49be475612b}</Application>
     <TypeSystem>{53cef978-f119-46f2-afcb-ed96775e6b4e}</TypeSystem>
     <Implicit_Task_Info>{01840c9c-5456-4f2f-b789-6a998d1fbf60}</Implicit_Task_Info>
